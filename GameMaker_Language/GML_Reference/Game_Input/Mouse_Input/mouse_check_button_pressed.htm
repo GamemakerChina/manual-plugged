@@ -924,8 +924,9 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mouse_check_button_pressed</h1>
-  <p>This function will return <span class="inline">true</span> if the mouse button being checked has been pressed or <span class="inline">false</span> if it has not. This function will only be triggered <i>once</i> for any mouse button when it is first pressed and to trigger it again the button will need to have been released and pressed again. Note that it will be considered triggered for the duration of the step, and for all instances that have any mouse events or that use this same function.</p>
+  <h1><span data-field="title" data-format="default">mouse_check_button_pressed</span></h1>
+  <p>This function will return <span class="inline2">true</span> if the mouse button being checked has been pressed or <span class="inline2">false</span> if it has not.</p>
+  <p>This function will only return <span class="inline2">true</span>&nbsp;<i>once</i> for any mouse button when it is first pressed and in order for it to return <span class="inline2">true</span> again the button will need to have been released and pressed again. Note that it will be considered pressed for the duration of the step, and for all instances that have any mouse events or that use this same function.</p>
   <p>You supply the mouse button to check from one of the following constants:</p>
   <div data-conref="../../../../assets/snippets/Mouse_input_constants.hts">
   <table>
@@ -975,7 +976,7 @@
 
 </div>
   <h4>Syntax:</h4>
-  <p class="code">mouse_check_button_pressed(numb);</p>
+  <p class="code"><span data-field="title" data-format="default">mouse_check_button_pressed</span>(numb);</p>
   <table>
     <tbody>
       <tr>
@@ -995,18 +996,17 @@
   <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if mouse_check_button_pressed(mb_left)<br>
+  <p class="code">if <span data-field="title" data-format="default">mouse_check_button_pressed</span>(mb_left)<br>
     {<br>
     &nbsp; &nbsp; score += 50;<br>
     }</p>
   <p>The above code will check to see if the left mouse button has been pressed and if it has it will add 50 to the score.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
-  <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Mouse_Input.htm">Mouse Input</a></div>
+        <div style="float:left">Back:&nbsp;<a href="Mouse_Input.htm">Mouse Input</a></div>
         <div style="float:right">Next:&nbsp;<a href="mouse_check_button_released.htm">mouse_check_button_released</a></div>
       </div>
     </div>

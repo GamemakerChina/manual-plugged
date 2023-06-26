@@ -922,8 +922,10 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mouse_check_button_released</h1>
-  <p>This function will return <span class="inline">true</span> if the mouse button being checked has been released or <span class="inline">false</span> if it has not. This function will only be triggered <i>once</i> for any mouse button when it is released and to trigger it again the button will need to have been pressed and released again. You supply the mouse button to check from one of the following constants:</p>
+  <h1><span data-field="title" data-format="default">mouse_check_button_released</span></h1>
+  <p>This function will return <span class="inline2">true</span> if the mouse button being checked has been released or <span class="inline2">false</span> if it has not.</p>
+  <p>This function will only return <span class="inline2">true</span>&nbsp;<i>once</i> for any mouse button when it is released and in order for it to return <span class="inline2">true</span> again the button will need to have been pressed and released again.&nbsp;Note that it will be considered released for the duration of the step, and for all instances that have any mouse events or that use this same function.</p>
+  <p>You supply the mouse button to check from one of the following constants:</p>
   <div data-conref="../../../../assets/snippets/Mouse_input_constants.hts">
   <table>
     <colgroup>
@@ -972,7 +974,7 @@
 
 </div>
   <h4>Syntax:</h4>
-  <p class="code">mouse_check_button_released(numb);</p>
+  <p class="code"><span data-field="title" data-format="default">mouse_check_button_released</span>(numb);</p>
   <table>
     <tbody>
       <tr>
@@ -992,18 +994,17 @@
   <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if mouse_check_button_released(mb_right)<br>
+  <p class="code">if <span data-field="title" data-format="default">mouse_check_button_released</span>(mb_right)<br>
     {<br>
     &nbsp; &nbsp; speed = point_distance(x, y, mouse_x, mouse_y) / 10;<br>
     }</p>
   <p>The above code will check to see if the right mouse button has been released and if it has it will set the speed of the instance to a tenth of the distance between the current x/y position and the mouse x/y position.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
-  <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Mouse_Input.htm">Mouse Input</a></div>
+        <div style="float:left">Back:&nbsp;<a href="Mouse_Input.htm">Mouse Input</a></div>
         <div style="float:right">Next:&nbsp;<a href="mouse_clear.htm">mouse_clear</a></div>
       </div>
     </div>

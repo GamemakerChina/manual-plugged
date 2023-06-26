@@ -1004,6 +1004,8 @@
   <p class="code">#macro ad_id ""<br>
     #macro Android:ad_id "com.yoyogames.googlegame"<br>
     #macro iOS:ad_id "com.yoyogames.appstoregame"</p>
+  <p>Configurations do not necessarily have to be named after a platform. You might e.g. also have a specific configuration for a demo version of your game:&nbsp;</p>
+  <p class="code">#macro&nbsp;<span>DemoVersion:ad_id ""</span></p>
   <p>As you can see, you give the config name first then a colon <span class="inline">:</span> and then the macro name and value. Note that you cannot have any white-space between the colon <span class="inline">:</span> and either the config name nor the macro name otherwise you will get an error.</p>
   <h2 id="enumhead">Enums</h2>
   <p>An enum is an "enumerator"; it essentially permits you to create your own limited data type with a list of constant values. They have the following structure:</p>

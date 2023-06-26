@@ -887,14 +887,14 @@
   <meta name="topic-status" content="Draft">
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>variable_struct_set</title>
+  <title>struct_set</title>
   <meta name="generator" content="Adobe RoboHelp 2020">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
   <meta name="topic-comment" content="Page explaining the function variable_struct_set">
-  <meta name="rh-index-keywords" content="variable_struct_set">
-  <meta name="search-keywords" content="variable_struct_set">
+  <meta name="rh-index-keywords" content="variable_struct_set,struct_set">
+  <meta name="search-keywords" content="variable_struct_set,struct_set">
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_struct_remove.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_struct_get.htm"></head>
 
 <body>
@@ -902,8 +902,8 @@
     <div class="logo">
     </div>
     <div class="nav">
-      <div class="title" title="variable_struct_set">
-        <span>variable_struct_set</span>
+      <div class="title" title="struct_set">
+        <span>struct_set</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
         <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
@@ -915,11 +915,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_struct_set</h1>
+  <h1><span data-field="title" data-format="default">struct_set</span></h1>
   <p>With this function you can set the value of a given variable in a struct. You supply the struct reference as well as the name of the variable to set the value of <i>as a string</i> (see example code below), and then finally the value to set (can be any valid <a href="../../GML_Overview/Data_Types.htm">data type</a>). If the variable does not exist already in the struct it will be created and then assigned the value.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">variable_struct_set(struct, name, val);</p>
+  <p class="code"><span data-field="title" data-format="default">struct_set</span>(struct, name, val);</p>
   <table>
     <tbody>
       <tr>
@@ -949,12 +949,11 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if !variable_struct_exists(mystruct, "shields")<br>
+  <p class="code">if !struct_exists(mystruct, "shields")<br>
     {<br>
-    &nbsp; &nbsp; variable_struct_set(mystruct, "shields", 0);<br>
+    &nbsp; &nbsp; <span data-field="title" data-format="default">struct_set</span>(mystruct, "shields", 0);<br>
     }</p>
   <p>The above code will check to see if the given variable exists in the given struct and if it does not then it is created and set to 0.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

@@ -915,26 +915,29 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>move_random</h1>
+  <h1><span data-field="title" data-format="default">move_random</span></h1>
   <p>With this function you can set the instance to a position anywhere in the room, but aligned to an "invisible" grid. So a value of 32 for the hsnap and vsnap will set the instance to a random position that is aligned to a grid of 32x32 squares. you can set these values to 1 to get a position anywhere in the room.</p>
-  <p class="note"><b>NOTE</b>: This function will snap to the same positions every time the game is run afresh due to the fact that <span data-keyref="GameMaker Name">GameMaker</span> generates the same initial random seed every time to make debugging code a far easier task. To avoid this behaviour use <span style="font-size:1px;"><a href="../../Maths_And_Numbers/Number_Functions/randomise.htm"><span class="inline">randomise()</span></a></span> at the start of your game. This is only true when testing and debugging the game, as the final executable package will not show this behaviour and will be random every play.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function will snap to the same positions every time the game is run afresh due to the fact that <span data-keyref="GameMaker Name">GameMaker</span> generates the same initial random seed every time to make debugging code a far easier task. To avoid this behaviour use&nbsp;<span class="inline3_func"><a href="../../Maths_And_Numbers/Number_Functions/randomise.htm">randomise</a></span> at the start of your game. This is only true when testing and debugging the game, as the final executable package will not show this behaviour and will be random every play.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">move_random(hsnap, vsnap);</p>
+  <p class="code"><span data-field="title" data-format="default">move_random</span>(hsnap, vsnap);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>hsnap</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>hsnap</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The horizontal snapping (the size in pixels between 'cells').</td>
-     </tr>
+      </tr>
       <tr>
-        <td>vsnap</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>vsnap</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The vertical snapping (the size in pixels between 'cells').</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -944,17 +947,16 @@
   <h4>Example:</h4>
   <p class="code">if keyboard_check(vk_space)<br>
     {<br>
-    &nbsp; &nbsp; move_random(1, 1);<br>
+    &nbsp; &nbsp; <span data-field="title" data-format="default">move_random</span>(1, 1);<br>
     }</p>
   <p>This will move the instance to a random position anywhere in the room when the space key is pressed.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back:&nbsp;<a href="Movement.htm">Movement</a></div>
-        <div style="float:right">Next: <a href="move_snap.htm">move_snap</a></div>
+        <div style="float:right">Next:&nbsp;<a href="move_snap.htm">move_snap</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

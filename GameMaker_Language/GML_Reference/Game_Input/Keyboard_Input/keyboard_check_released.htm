@@ -914,21 +914,25 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>keyboard_check_released</h1>
-  <p>With this function you can check to see if a key has been released or not. Unlike the <a href="keyboard_check.htm"><span class="inline">keyboard_check()</span></a> function, this function will only run once for every time the key is lifted, so for it to trigger again, the key must be first pressed and then released again. The function will take a keycode value as returned by the function <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> (only <i>capital</i> letters from A-Z or numbers from 0-9), or any of the <span class="inline">vk_*</span> constants listed on the main <a href="Keyboard_Input.htm">Keyboard Input</a> page.</p>
+  <h1><span data-field="title" data-format="default">keyboard_check_released</span></h1>
+  <p>With this function you can check to see if a key has been released or not.</p>
+  <p>Unlike the&nbsp;<span class="inline3_func"><a href="keyboard_check.htm">keyboard_check</a></span> function, this function will only return <span class="inline2">true</span> once in the step the key is lifted,&nbsp;i.e. when it switches from held down in the previous step to no longer held down in the current step.&nbsp;So for it to return <span class="inline2">true</span> again, the key must be first pressed and then released again.&nbsp;In all other steps, the function returns <span class="inline2">false</span>.</p>
+  <p>The function will take a keycode value as returned by the function&nbsp;<span class="inline3_func"><a href="../../Strings/ord.htm">ord</a></span> (only <i>capital</i> letters from A-Z or numbers from 0-9), or any of the <span class="inline">vk_*</span> constants listed on the main&nbsp;<a href="Keyboard_Input.htm">Keyboard Input</a> page.</p>
   <p>&nbsp;</p>
   <h4><b>Syntax:</b></h4>
-  <p class="code">keyboard_check_released(key);</p>
+  <p class="code"><span data-field="title" data-format="default">keyboard_check_released</span>(key);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>key</td><td><span data-keyref="Type_Constant_VK"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">Virtual Key Constant (vk_*)</a></span></td>
+        <td>key</td>
+        <td><span data-keyref="Type_Constant_VK"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">Virtual Key Constant (vk_*)</a></span></td>
         <td>The key to check the released state of.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -936,18 +940,17 @@
   <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4><b>Example:</b></h4>
-  <p class="code">if keyboard_check_released(ord("P"))<br>
+  <p class="code">if <span data-field="title" data-format="default">keyboard_check_released</span>(ord("P"))<br>
     {<br>
     &nbsp; &nbsp; instance_create_layer(0, 0, "Controllers", obj_Pause);<br>
     }</p>
-  <p>The above code will check to see if the "P" key has been released and if so, create an instance of "obj_Pause".</p>
-  <p>&nbsp;</p>
+  <p>The above code will check to see if the "P" key has been released and if so, create an instance of <span class="inline2">obj_Pause</span>.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Keyboard_Input.htm">Keyboard Input</a></div>
+        <div style="float:left">Back:&nbsp;<a href="Keyboard_Input.htm">Keyboard Input</a></div>
         <div style="float:right">Next:&nbsp;<a href="keyboard_check_direct.htm">keyboard_check_direct</a></div>
       </div>
     </div>

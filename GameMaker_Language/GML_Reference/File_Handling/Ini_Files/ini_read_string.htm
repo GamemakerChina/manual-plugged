@@ -916,12 +916,13 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ini_read_string</h1>
-  <p>You can use this function to read a string (text) from an ini data file. Ini Files are split into <b>sections</b> and then each section is subsequently split into <b>key</b> - <b>value</b> pairs. So a typical ini file would look something like this:</p>
+  <h1><span data-field="title" data-format="default">ini_read_string</span></h1>
+  <p>You can use this function to read a string (text) from an INI data file.</p>
+  <p>INI files are split into <b>sections</b> and then each section is subsequently split into <b>key</b> - <b>value</b> pairs. So a typical INI file would look something like this:&nbsp;</p>
   <p><img alt="Ini file contents example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Files/IniExample.png"></p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">ini_read_string(section, key, default);</p>
+  <p class="code"><span data-field="title" data-format="default">ini_read_string</span>(section, key, default);</p>
   <table>
     <tbody>
       <tr>
@@ -952,16 +953,15 @@
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">ini_open("savedata.ini");<br>
-    global.name = ini_read_string("player", "name', "Player1");<br>
+    global.name = <span data-field="title" data-format="default">ini_read_string</span>("player", "name", "Player1");<br>
     ini_close();</p>
-  <p>This will open "savedata.ini" and set global.name to the string under "save1" &gt; "Name" in it, then close the .ini again. Should there be no string under "save1" &gt; "Name", or there no "savedata.ini" file present, global.name will be set to "Player1".</p>
-  <p>&nbsp;</p>
+  <p>This will open <span class="inline2">"savedata.ini"</span> and set <span class="inline2">global.name</span> to the string under <span class="inline2">"save1"</span> &gt; <span class="inline2">"Name"</span> in it, then close the .ini again. If there is no string under <span class="inline2">"save1"</span> &gt; <span class="inline2">"Name"</span>, or no file named "<span class="inline2">savedata.ini"</span>&nbsp;is present, <span class="inline2">global.name</span> will be set to <span class="inline2">"Player1"</span>.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Ini_Files.htm">Ini Files</a></div>
+        <div style="float:left">Back:&nbsp;<a href="Ini_Files.htm">Ini Files</a></div>
         <div style="float:right">Next:&nbsp;<a href="ini_key_exists.htm">ini_key_exists</a></div>
       </div>
     </div>

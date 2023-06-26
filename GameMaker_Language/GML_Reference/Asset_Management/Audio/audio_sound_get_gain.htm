@@ -915,7 +915,12 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_sound_get_gain</span></h1>
-  <p>This function will return the current gain value for the given sound. The sound can either be one referenced from an index for an individual sound being played which has been stored in a variable when using the <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> or <a href="audio_play_sound_at.htm"><span class="inline">audio_play_sound_at()</span></a> functions, or an actual sound asset from the Asset Browser. Gain is usually calculated as a value from 0 to 1, but on some platforms you can have a gain of greater than 1, although a value of 1 is considered "full volume" and anything greater may introduce audio clipping.</p>
+  <p>This function will return the current gain value for the given sound. The sound can either be one referenced from an index for an individual sound being played which has been stored in a variable when using the <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> or <a href="audio_play_sound_at.htm"><span class="inline">audio_play_sound_at()</span></a> functions, or an actual sound asset from the Asset Browser.</p>
+  <p>Gain is usually calculated as a value from 0 to 1, but on some platforms you can have a gain of greater than 1, although a value of 1 is considered "full volume" and anything greater may introduce audio clipping.</p>
+  <div data-conref="../../../../assets/snippets/Note_Gain_Linear_dB.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;Use&nbsp;<span class="inline3_func"><a href="db_to_lin.htm">db_to_lin</a></span>&nbsp;and&nbsp;<span class="inline3_func"><a href="lin_to_db.htm">lin_to_db</a></span>&nbsp;to convert back and forth between linear gains and gains expressed in decibels (dB).</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">audio_sound_get_gain</span>(index);</p>

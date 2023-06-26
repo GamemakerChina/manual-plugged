@@ -925,6 +925,10 @@
   <h1><span data-field="title" data-format="default">audio_sound_gain</span></h1>
   <p>With this function you can fade a sound asset or instance in or out over a given length of time, or it can be used to set the sound gain instantly.</p>
   <p>The time is measured in milliseconds, and the function requires that you input a final level of gain for the sound to have reached by the end of that time. This gain can be between 0 (silent) and any value greater than 0, although normally you'd consider the maximum volume as 1. Anything over 1 can be used but, depending on the sound used and the platform being compiled to, you may get distortion or clipping when the sound is played back. Note that the gain scale is linear, and to instantly change the gain, simply set the time argument to 0.</p>
+  <div data-conref="../../../../assets/snippets/Note_Gain_Linear_dB.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;Use&nbsp;<span class="inline3_func"><a href="db_to_lin.htm">db_to_lin</a></span>&nbsp;and&nbsp;<span class="inline3_func"><a href="lin_to_db.htm">lin_to_db</a></span>&nbsp;to convert back and forth between linear gains and gains expressed in decibels (dB).</p>
+
+</div>
   <p>This function will affect <i>all</i> instances of the sound that are playing currently in the room if the index is a sound resource, and the final volume will be the volume at which all further instances of the sound will be played. However if you have used the index returned from a function like&nbsp;<span class="inline2"><a href="audio_play_sound.htm">audio_play_sound</a></span> it will only affect that one instance of the sound.</p>
   <p>The default value for the sound <strong>asset</strong> gain is taken from the "Volume" slider in the Sound Editor:&nbsp;</p>
   <p><img class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Asset_Gain_IDE.png"></p>
@@ -971,7 +975,7 @@
   <h4>Example 2:</h4>
   <p class="code"><span data-field="title" data-format="default">audio_sound_gain</span>(snd_fountain, 0.5, 0);<br>
     var snd = audio_play_sound(snd_fountain, 0, true, 2);</p>
-  <p>The above code first sets the gain of the sound asset "snd_fountain" to 0.5. It then plays this sound using&nbsp;<span class="inline2"><a href="audio_play_sound.htm">audio_play_sound</a></span>&nbsp;and sets the gain of this new sound instance to 2 (using the optional "gain" parameter of the function)</p>
+  <p>The above code first sets the gain of the sound asset "snd_fountain" to 0.5. It then plays this sound using&nbsp;<span class="inline2"><a href="audio_play_sound.htm">audio_play_sound</a></span>&nbsp;and sets the gain of this new sound instance to 2 (using the optional "gain" parameter of the function).</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

@@ -1073,6 +1073,28 @@
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The Unicode character 9647 (▯) is used to substitute any missing <a class="tooltip" title="A glyph is a particular visual appearance of a character. It is the appearance of a character using a given font.">glyph</a>s that you may have in your designated font when rendering it in the draw event. So if your font doesn't have, for example, the ° symbol, then writing 90° will actually produce 90▯.</p>
 
 </div>
+  <h3 id="h4">Template Strings</h3>
+  <p>Template strings give you a convenient syntax to create and format strings. You can create them by prefixing a string literal with the <span class="inline2"><a id="$"></a>$</span> character, and including expressions inside <span class="inline2">{}</span>:&nbsp;</p>
+  <p class="code">var _world = "Earth";<br>
+    var _template = $"Hello {_world}!";</p>
+  <p>Which produces the same string as:&nbsp;</p>
+  <p class="code">var _world = "Earth";<br>
+    var _template = string("Hello {0}!", _world);</p>
+  <p>Everything written between curly braces <span class="inline2">{ }</span>&nbsp;inside a template string is executed as regular GML. The result of the GML expression between the braces is inserted into the string:&nbsp;</p>
+  <p class="code">var _template = $"The result of a random complicated calculation is {5 * power(pi, 3) + 37.84094}";</p>
+  <p>To make it more clear that this is regular GML,&nbsp;<a href="../../../The_Asset_Editors/Scripts.htm">The Script Editor</a>&nbsp;also highlights this code normally.&nbsp;<a href="../../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>&nbsp;also checks these GML expressions for any errors, e.g.:&nbsp;</p>
+  <p class="code">var _arr = [ 1, 2, 3, 4 ];<br>
+    var _a = $"The first value is {_arr[| 0]}"; // GM1028 - Accessor is intended for type of 'Id.DsList' but 'Array&lt;Real&gt;' appears instead.</p>
+  <p>You can split a template string across multiple lines, however you can only do this in the expression parts of the templates. Any newline and other&nbsp;white-space characters&nbsp;that need to be added to the actual string have to be added using&nbsp;<a href="Strings.htm#h1">Escape Characters</a>.</p>
+  <p>The following code shows a valid and an invalid way of splitting a template string across multiple lines:&nbsp;</p>
+  <p class="code">var _a = $"This is the \n{<br>
+    valid<br>
+    }\nway to split&nbsp;a template across multiple lines";<br>
+    <br>
+    var _b = $"This is the&nbsp;<br>
+    {invalid}<br>
+    way to split&nbsp;a template across multiple lines";
+  </p>
   <h2 id="h3">toString() Method</h2>
   <p>When a reference to a struct or an instance of an object is passed as an argument to any of&nbsp;<span class="inline2"><a href="string.htm">string</a></span>&nbsp;/ <span class="inline2"><a href="string_ext.htm">string_ext</a></span>&nbsp;/&nbsp;<span class="inline2"><a href="../Debugging/show_debug_message.htm">show_debug_message</a></span>&nbsp;/ <span class="inline2"><a href="show_debug_message_ext.htm">show_debug_message_ext</a></span>, it will have its <span class="inline2">toString</span> method called, if it has one set.</p>
   <p class="code">toString = function()<br>

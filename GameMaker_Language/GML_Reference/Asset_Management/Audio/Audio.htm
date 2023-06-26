@@ -1024,7 +1024,7 @@
   <h3>Audio Looping</h3>
   <p>A sound can be looped by setting it to loop. This can either be done when playing the sound using any of the <span class="inline2">audio_play_sound_</span> functions:&nbsp;</p>
   <p class="code">ins_sound = audio_play_sound(snd_Engine, 100, true);</p>
-  <p>or afterwards, when the sound is already playing, using the function&nbsp;<span class="inline2"><a href="Audio_Loop_Points/audio_sound_loop.htm">audio_sound_loop</a></span>:&nbsp;</p>
+  <p>or afterwards, when the sound is already playing, using the function&nbsp;<span class="inline3_func"><a href="Audio_Loop_Points/audio_sound_loop.htm">audio_sound_loop</a></span>:&nbsp;</p>
   <p class="code">audio_sound_loop(ins_sound, true);</p>
   <p>By default a sound loops from its start to its end. The start and end position can be changed using&nbsp;<span class="inline3_func"><a href="Audio_Loop_Points/audio_sound_loop_start.htm">audio_sound_loop_start</a></span>&nbsp;and&nbsp;<span class="inline3_func"><a href="Audio_Loop_Points/audio_sound_loop_end.htm">audio_sound_loop_end</a></span>&nbsp;respectively, also while the sound is playing (i.e. <span class="inline2">ins_sound</span> refers to a sound instance for which <span class="inline3_func"><a href="audio_is_playing.htm">audio_is_playing</a></span>&nbsp;returns <span class="inline2">true</span>).</p>
   <p>When the track position reaches the loop end position if a sound is set to loop, it continues playing from the start position.</p>
@@ -1094,7 +1094,7 @@
     <li><a href="audio_sound_get_listener_mask.htm">audio_sound_get_listener_mask</a></li>
   </ul>
   <h3><a href="Audio_Loop_Points/Audio_Loop_Points.htm">Audio Loop Points</a></h3>
-  <ul class="Disc">
+  <ul class="colour">
     <li><a href="Audio_Loop_Points/audio_sound_loop.htm">audio_sound_loop</a></li>
     <li><a href="Audio_Loop_Points/audio_sound_get_loop.htm">audio_sound_get_loop</a></li>
     <li><a href="Audio_Loop_Points/audio_sound_loop_start.htm">audio_sound_loop_start</a></li>
@@ -1103,7 +1103,7 @@
     <li><a href="Audio_Loop_Points/audio_sound_get_loop_end.htm">audio_sound_get_loop_end</a></li>
   </ul>
   <h3>Configuration</h3>
-  <ul class="Disc">
+  <ul class="colour">
     <li><a href="audio_master_gain.htm">audio_master_gain</a></li>
     <li><a href="audio_set_master_gain.htm">audio_set_master_gain</a></li>
     <li><a href="audio_get_master_gain.htm">audio_get_master_gain</a></li>
@@ -1115,6 +1115,11 @@
   <h3>Debugging</h3>
   <ul class="colour">
     <li><a href="audio_debug.htm">audio_debug</a></li>
+  </ul>
+  <h3>Gain Conversion</h3>
+  <ul class="colour">
+    <li><a href="lin_to_db.htm">lin_to_db</a></li>
+    <li><a href="db_to_lin.htm">db_to_lin</a></li>
   </ul>
   <h3>Audio Streams</h3>
   <ul class="colour">

@@ -880,7 +880,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "6.3.1.1.0_10";
+    gTopicId = "6.3.1.2.0_11";
   
 //]]></script>
 
@@ -923,12 +923,10 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Save / Load</h1>
-  <p><img alt="Save / Load Event" class="center" src="../../../assets/Images/Asset_Editors/Async_SaveLoad.png">This event will be triggered by the <a class="tooltip" title="A callback is simply a function that runs and then triggers another function (or code block) when it has finished doing whatever it was assigned to do. For example, the funtion sprite_add() will trigger a callback in the asynchronous Image Loaded event when the sprite has been loaded.">callback</a> from certain functions related to loading
-    and saving buffers to files, as well as when loading or unloading audio from memory. The event itself will contain the built in <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>    DS map which will be populated by the keys required for the specific function. These are listed in the sections below.</p>
+  <p><img alt="Save / Load Event" class="center" src="../../../assets/Images/Asset_Editors/Async_SaveLoad.png">This event will be triggered by the <a class="tooltip" title="A callback is simply a function that runs and then triggers another function (or code block) when it has finished doing whatever it was assigned to do. For example, the funtion sprite_add() will trigger a callback in the asynchronous Image Loaded event when the sprite has been loaded.">callback</a> from certain functions related to loading and saving buffers to files, as well as when loading or unloading audio from memory. The event itself will contain the built in <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> DS map which will be populated by the keys required for the specific function. These are listed in the sections below.</p>
   <p>&nbsp;</p>
   <h2>Buffers</h2>
-  <p>When you use the functions <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a>&nbsp;or <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a>&nbsp;an
-    asynchronous event will be triggered when the data transfer has been completed. This event will populate the <span class="inline">async_load </span>map with the following key/value pairs</p>
+  <p>When you use the functions <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a>&nbsp;or <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a>&nbsp;an asynchronous event will be triggered when the data transfer has been completed. This event will populate the <span class="inline">async_load </span>map with the following key/value pairs</p>
   <ul class="colour">
     <li>"<span class="inline">id</span>": the ID of the async function as returned by the function used.</li>
     <li>"<span class="inline">status</span>": will return true if the data was saved/loaded correctly, and false otherwise.</li>
@@ -936,15 +934,12 @@
   <p>This permits you to poll the saving/loading progress and display a message or change rooms etc... when the process is complete.</p>
   <p>&nbsp;</p>
   <h2>Audio Groups</h2>
-  <p>When working with <a href="../../../Settings/Audio_Groups.htm">Audio Groups</a>, you can load them an unload them from memory using the functions <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_load.htm"><span class="inline">audio_group_load()</span></a>&nbsp;and
-    <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_unload.htm"><span class="inline">audio_group_unload()</span></a>. When using the load function, it will trigger this event when the full set of audio
-    files set for the group has been loaded into memory and will populate the map with the following key/value pairs:</p>
+  <p>When working with <a href="../../../Settings/Audio_Groups.htm">Audio Groups</a>, you can load them an unload them from memory using the functions <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_load.htm"><span class="inline">audio_group_load()</span></a>&nbsp;and <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_unload.htm"><span class="inline">audio_group_unload()</span></a>. When using the load function, it will trigger this event when the full set of audio files set for the group has been loaded into memory and will populate the map with the following key/value pairs:</p>
   <ul class="colour">
     <li>"<span class="inline">type</span>": this tells us the type of event being called and will be "audiogroup_load" for loading audio.</li>
     <li>"<span class="inline">group_id</span>": will return the ID of the audio group that has been loaded (as defined in the <a href="../../../Settings/Audio_Groups.htm">Audio Group Editor</a>).</li>
   </ul>
   <p>When all audio has been loaded for a group, this event will trigger and it can then be used to change rooms, or play a music track etc...</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

@@ -948,7 +948,7 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">font_get_info</span></h1>
-  <p>This function is used to retrieve information&nbsp;for the given font. You supply a font index (which can be an asset added through the <a href="../../../../Introduction/The_Asset_Browser.htm">Asset Browser</a> or a font <a href="font_add.htm">added</a> at runtime)</p>
+  <p>This function is used to retrieve information&nbsp;for the given font. You supply a font index, which can be an asset added through <a href="../../../../Introduction/The_Asset_Browser.htm">The Asset Browser</a>&nbsp;or a font <a href="font_add.htm">added</a> at runtime.</p>
   <p>The function returns a <a href="../../../GML_Overview/Structs.htm">struct</a> with the following variables:</p>
   <table>
     <colgroup>
@@ -964,6 +964,11 @@
         <th>Variable Name</th>
         <th style="">Data Type</th>
         <th style="">Description</th>
+      </tr>
+      <tr>
+        <td><span class="inline">ascender</span></td>
+        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="">The height of the font's <a href="https://en.wikipedia.org/wiki/Ascender_(typography)">ascender</a> (in pixels)</td>
       </tr>
       <tr>
         <td><span class="inline">ascenderOffset</span></td>
@@ -993,12 +998,12 @@
       <tr>
         <td><span class="inline">bold</span></td>
         <td style=""><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
-        <td style=""><span class="inline">true</span> if the font is bold, otherwise <span class="inline">false</span> <em>(see <strong>NOTE </strong>below)</em></td>
+        <td style=""><span class="inline2">true</span> if the font is bold, otherwise <span class="inline2">false</span>&nbsp;<em>(see <strong>NOTE </strong>below)</em></td>
       </tr>
       <tr>
         <td><span class="inline">italic</span></td>
         <td style=""><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
-        <td style=""><span class="inline">true</span> if the font is italic, otherwise <span class="inline">false</span><em> (see <strong>NOTE </strong>below)</em></td>
+        <td style=""><span class="inline2">true</span> if the font is italic, otherwise <span class="inline2">false</span>&nbsp;<em>(see <strong>NOTE </strong>below)</em></td>
       </tr>
       <tr>
         <td><span class="inline">glyphs</span></td>
@@ -1008,7 +1013,7 @@
     </tbody>
   </table>
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The <span class="inline"><strong>bold</strong></span> and&nbsp;<span class="inline">i</span><span class="inline">talic</span> variables only reflect the user's settings for the font, so they may not be accurate for fonts that&nbsp;appear bold or italic by default.</p>
-  <p>If the supplied font doesn't exist, the function will return <span class="inline">undefined</span>.</p>
+  <p>If the supplied font doesn't exist, the function will return <span class="inline2">undefined</span>.</p>
   <p>Also note that changing the values of any of these variables, or any variables contained within the <span class="inline">glyphs</span> struct, will not change how the font is rendered,&nbsp;so this information should be considered <strong>read-only</strong>.</p>
   <h2 id="glyphs">Glyphs&nbsp;Struct</h2>
   <p>The <span class="inline">glyphs</span> variable in the returned struct will be a struct on its own, containing information for each glyph included in the font. Each variable in this&nbsp;struct will be a glyph's character name, which will hold a struct containing information for that glyph. You can imagine these nested structs in the following format (starting from the main struct):</p>
@@ -1088,7 +1093,7 @@
       <tr>
         <td><span class="inline">kerning</span></td>
         <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
-        <td style="">An array of integers containing kerning information in pairs (or groups of 2). The first integer in a pair is the Unicode value for a character, and the second integer is the amount to add to that character's shift value (can be positive or negative) if it is preceeded by this glyph's character.</td>
+        <td style="">An array of integers containing kerning information in pairs (or groups of 2). The first integer in a pair is the Unicode value for a character, and the second integer is the amount to add to that character's shift value (can be positive or negative) if it is preceded by this glyph's character.</td>
       </tr>
     </tbody>
   </table>
@@ -1123,7 +1128,7 @@
     &nbsp;&nbsp; &nbsp;image_yscale *= 2;<br>
     }
   </p>
-  <p>This code retrieves information for the font stored in the <span class="inline">my_font</span> variable. If the returned value is <strong>not </strong><span class="inline">undefined</span>&nbsp;and the given font is bold, the instance's scale is doubled.</p>
+  <p>This code retrieves information for the font stored in the <span class="inline2">my_font</span>&nbsp;variable. If the returned value is <strong>not </strong><span class="inline2">undefined</span> and the given font is bold, the instance's scale is doubled.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

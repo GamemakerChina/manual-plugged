@@ -885,14 +885,14 @@
   <meta name="topic-status" content="Draft">
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>variable_struct_names_count</title>
+  <title>struct_names_count</title>
   <meta name="generator" content="Adobe RoboHelp 2020">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
   <meta name="topic-comment" content="Page explaining the function variable_struct_names_count">
-  <meta name="rh-index-keywords" content="variable_struct_names_count">
-  <meta name="search-keywords" content="variable_struct_names_count">
+  <meta name="rh-index-keywords" content="variable_struct_names_count,struct_names_count">
+  <meta name="search-keywords" content="variable_struct_names_count,struct_names_count">
   <meta name="is_pure" content="true">
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/instanceof.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_struct_get_names.htm"></head>
 
@@ -901,8 +901,8 @@
     <div class="logo">
     </div>
     <div class="nav">
-      <div class="title" title="variable_struct_names_count">
-        <span>variable_struct_names_count</span>
+      <div class="title" title="struct_names_count">
+        <span>struct_names_count</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
         <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
@@ -914,22 +914,24 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_struct_names_count</h1>
-  <p>With this function you can find the total number number of variables defined for a struct. You supply the struct ID to check, and the function will return an integer value for the number of variables encountered, or (if no struct of the given ID exists)
-    -1.</p>
+  <h1><span data-field="title" data-format="default">struct_names_count</span></h1>
+  <p>This function gets the total number number of variables defined in a struct.</p>
+  <p>You supply the struct ID to check, and the function will return an integer value for the number of variables encountered, or (if no struct of the given ID exists) -1.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">variable_struct_names_count(struct_id);</p>
+  <p class="code"><span data-field="title" data-format="default">struct_names_count</span>(struct_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>struct_id</td><td><span data-keyref="Type_Struct"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">Struct</a></span></td>
+        <td>struct_id</td>
+        <td><span data-keyref="Type_Struct"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">Struct</a></span></td>
         <td>The unique ID value of the struct to check.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -937,9 +939,9 @@
   <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">var _num = variable_struct_names_count(mystruct);<br> show_debug_message("Struct Variables = " + string(_num));</p>
+  <p class="code">var _num = <span data-field="title" data-format="default">struct_names_count</span>(mystruct);<br>
+    show_debug_message("Struct Variables = " + string(_num));</p>
   <p>The above code will retrieve the number of variables in the given struct and show a debug message in the console output with this value.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

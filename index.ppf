@@ -658,6 +658,10 @@
     </topic>
     
     <topic>
+      The_Asset_Editors\Object_Properties\Wallpaper_Config_Event.htm
+    </topic>
+    
+    <topic>
       The_Asset_Editors\Object_Properties\Draw_Events.htm
     </topic>
     
@@ -667,6 +671,10 @@
     
     <topic>
       The_Asset_Editors\Object_Properties\Async_Events\Audio_Playback.htm
+    </topic>
+    
+    <topic>
+      The_Asset_Editors\Object_Properties\Async_Events\Audio_Playback_Ended.htm
     </topic>
     
     <topic>
@@ -915,6 +923,10 @@
     
     <topic>
       Additional_Information\Guide_To_Using_Blendmodes.htm
+    </topic>
+    
+    <topic>
+      Additional_Information\Project_Format.htm
     </topic>
     
     <topic>
@@ -2462,6 +2474,26 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\struct_foreach.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\struct_get_from_hash.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\struct_set_from_hash.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\variable_get_hash.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\variable_clone.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\is_string.htm
     </topic>
     
@@ -2563,6 +2595,10 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\array_pop.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\array_shift.htm
     </topic>
     
     <topic>
@@ -2794,6 +2830,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_exists.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Information\sprite_get_name.htm
     </topic>
     
@@ -2870,47 +2910,7 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_exists.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_add.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_replace.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_duplicate.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_assign.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_merge.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_create_from_surface.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_add_from_surface.htm
-    </topic>
-    
-    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_collision_mask.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_nineslice_create.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_set_nineslice.htm
     </topic>
     
     <topic>
@@ -2930,7 +2930,35 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_set_nineslice.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_add.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_add_ext.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_delete.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_replace.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_duplicate.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_assign.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_merge.htm
     </topic>
     
     <topic>
@@ -2938,11 +2966,15 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_set_cache_size.htm
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_nineslice_create.htm
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_set_cache_size_ext.htm
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_create_from_surface.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_add_from_surface.htm
     </topic>
     
     <topic>
@@ -2954,11 +2986,11 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_flush.htm
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_set_cache_size.htm
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_flush_multi.htm
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_set_cache_size_ext.htm
     </topic>
     
     <topic>
@@ -2967,6 +2999,14 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_prefetch_multi.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_flush.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_flush_multi.htm
     </topic>
     
     <topic>
@@ -3435,6 +3475,14 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_debug.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\lin_to_db.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\db_to_lin.htm
     </topic>
     
     <topic>
@@ -5414,6 +5462,14 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Extensions\extension_exists.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Extensions\extension_get_version.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Extensions\extension_get_options.htm
     </topic>
     
@@ -5427,10 +5483,6 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Extensions\extension_get_option_count.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Extensions\extension_exists.htm
     </topic>
     
     <topic>
@@ -6686,6 +6738,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Drawing\Particles\particle_get_info.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Drawing\Particles\Particle_Systems\Particle_Systems.htm
     </topic>
     
@@ -7294,7 +7350,7 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_center.htm
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_device.htm
     </topic>
     
     <topic>
@@ -7302,11 +7358,71 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_get_caption.htm
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_has_focus.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_mouse_get_x.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_mouse_get_y.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_mouse_set.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_view_mouse_get_x.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_view_mouse_get_y.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_views_mouse_get_x.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_views_mouse_get_y.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_cursor.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_get_cursor.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_colour.htm
     </topic>
     
     <topic>
       GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_get_colour.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_caption.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_get_caption.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_WIndow\window_set_showborder.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_WIndow\window_get_showborder.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_center.htm
     </topic>
     
     <topic>
@@ -7330,31 +7446,7 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_get_cursor.htm
-    </topic>
-    
-    <topic>
       GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_get_visible_rects.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_mouse_get_x.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_mouse_get_y.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_mouse_set.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_caption.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_colour.htm
     </topic>
     
     <topic>
@@ -7374,15 +7466,7 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_cursor.htm
-    </topic>
-    
-    <topic>
       GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_min_width.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_min_height.htm
     </topic>
     
     <topic>
@@ -7390,31 +7474,11 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_min_height.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_set_max_height.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_has_focus.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_device.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_view_mouse_get_x.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_view_mouse_get_y.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_views_mouse_get_x.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_views_mouse_get_y.htm
     </topic>
     
     <topic>
@@ -8607,6 +8671,18 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Strings\string_hash_to_newline.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Strings\string_trim.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Strings\string_trim_start.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Strings\string_trim_end.htm
     </topic>
     
     <topic>
@@ -10054,10 +10130,6 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Steam\Steam.htm
-    </topic>
-    
-    <topic>
       GameMaker_Language\GML_Reference\File_Handling\File_Handling.htm
     </topic>
     
@@ -11007,6 +11079,18 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Garbage_Collection\weak_ref_any_alive.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Steam\Steam.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Live_Wallpapers\Live_Wallpapers.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Live_Wallpapers\wallpaper_set_config.htm
     </topic>
     
     <topic>

@@ -915,9 +915,13 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Matrix Functions</h1>
-  <p>A matrix is a collection of numbers arranged into a fixed number of rows and columns. Usually the numbers are real numbers, but that doesn't always have to be the case. The following image shows in general how a matrix is constructed with four rows and four columns:</p>
+  <h1><span data-field="title" data-format="default">Matrix Functions</span></h1>
+  <p>A matrix is a collection of numbers arranged into a fixed number of rows and columns.</p>
+  <p>Usually the numbers are real numbers, but that doesn't always have to be the case. The following image shows in general how a matrix is constructed with four rows and four columns:</p>
   <p><img alt="Matrix example image" class="center" height="178" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/Matrix_Example.png" width="309">The top row is row 1, the leftmost column is column 1, and this matrix is a 4x4 matrix because it has four rows and four columns (other sized matrices can be constructed). In describing matrices, the format is always rows / columns, and each number that makes up a matrix is called an <i>element</i> of the matrix. The elements in a matrix have specific locations, described by their row and column position where the upper left corner of the matrix is row 1 column 1. In the above matrix example, the element at row 1 col 1 is the value "1". The element at row 2 column 3 is the value "4.8".</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;Matrices do not have their own datatype in&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;and are always stored in&nbsp;<a href="../../../GML_Overview/Arrays.htm">Arrays</a>.</p>
+  <h2 id="func_ref">Function Reference</h2>
+  <h3 id="func_ref_general">General Matrix Functions</h3>
   <p>Matrices are very important for many things but are used most in dealing with 3D space, for example they can be used for setting the camera view or for translating or transforming a model. The following functions exist for dealing with matrices in <span data-keyref="GameMaker Name">GameMaker</span>:</p>
   <ul class="colour">
     <li><a href="matrix_get.htm">matrix_get</a></li>
@@ -931,7 +935,7 @@
     <li><a href="matrix_build_projection_perspective_fov.htm">matrix_build_projection_perspective_fov</a></li>
     <li><a href="matrix_transform_vertex.htm">matrix_transform_vertex</a></li>
   </ul>
-  <p>&nbsp;</p>
+  <h3 id="func_ref_stack">Matrix Stack Functions</h3>
   <p>The following functions are for using a matrix&nbsp;<strong>stack</strong>, which is similar to a <a href="../../Data_Structures/DS_Stacks/DS_Stacks.htm">DS stack</a>, but designed for use only with matrices. This is a handy way to apply multiple matrix operations (like transforms) one after another when creating a 3D scene.</p>
   <ul class="colour">
     <li><a href="matrix_stack_is_empty.htm">matrix_stack_is_empty</a></li>
@@ -943,12 +947,11 @@
   </ul>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
-  <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Maths_And_Numbers.htm">Maths And Numbers</a></div>
-        <div style="float:right">Next: <a href="../Date_And_Time/Date_And_Time.htm">Date And TIme</a></div>
+        <div style="float:left">Back:&nbsp;<a href="../Maths_And_Numbers.htm">Maths And Numbers</a></div>
+        <div style="float:right">Next:&nbsp;<a href="../Date_And_Time/Date_And_Time.htm">Date And Time</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

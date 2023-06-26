@@ -885,14 +885,14 @@
   <meta name="topic-status" content="Draft">
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>variable_struct_get_names</title>
+  <title>struct_get_names</title>
   <meta name="generator" content="Adobe RoboHelp 2020">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
   <meta name="topic-comment" content="Page explaining the function variable_struct_get_names">
-  <meta name="rh-index-keywords" content="variable_struct_get_names">
-  <meta name="search-keywords" content="variable_struct_get_names">
+  <meta name="rh-index-keywords" content="variable_struct_get_names,struct_get_names">
+  <meta name="search-keywords" content="variable_struct_get_names,struct_get_names">
   <meta name="is_pure" content="true">
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_struct_names_count.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_struct_remove.htm"></head>
 
@@ -901,8 +901,8 @@
     <div class="logo">
     </div>
     <div class="nav">
-      <div class="title" title="variable_struct_get_names">
-        <span>variable_struct_get_names</span>
+      <div class="title" title="struct_get_names">
+        <span>struct_get_names</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
         <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
@@ -914,21 +914,23 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_struct_get_names</h1>
+  <h1><span data-field="title" data-format="default">struct_get_names</span></h1>
   <p>With this function you can retrieve an array populated with the variable names from a struct. You pass in the struct reference to check, and each entry in the array will be a <b>string</b> of the variable names that the struct contains.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">variable_struct_get_names(struct);</p>
+  <p class="code"><span data-field="title" data-format="default">struct_get_names</span>(struct);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>struct</td><td><span data-keyref="Type_Struct"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">Struct</a></span></td>
+        <td>struct</td>
+        <td><span data-keyref="Type_Struct"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">Struct</a></span></td>
         <td>The struct reference to check.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -937,15 +939,14 @@
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var str = "";<br>
-    var array = variable_struct_get_names(mystruct);<br>
+    var array = <span data-field="title" data-format="default">struct_get_names</span>(mystruct);<br>
     show_debug_message("Variables for struct: " + string(array));<br>
     for (var i = 0; i &lt; array_length(array); i++;)<br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;str = array[i] + ":" + string(variable_struct_get(mystruct, array[i]));<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;str = array[i] + ":" + string(struct_get(mystruct, array[i]));<br>
     &nbsp;&nbsp;&nbsp;&nbsp;show_debug_message(str);<br>
     }</p>
   <p>The above code will retrieve an array of the variable names for the given struct and then display these along with their values in the debug output.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

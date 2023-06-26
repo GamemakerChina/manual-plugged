@@ -1076,6 +1076,7 @@
   <p class="code">var _value = mystruct[$ "x"];</p>
   <p>and writing:&nbsp;</p>
   <p class="code">mystruct[$ "x"] = 200;</p>
+  <p>If you need to use strings to access a struct variable, it is faster to <a href="../GML_Reference/Variable_Functions/variable_get_hash.htm">get its hash</a> and use that in <a href="../GML_Reference/Variable_Functions/struct_get_from_hash.htm">read</a>/<a href="../GML_Reference/Variable_Functions/struct_set_from_hash.htm">write</a> to the variable.</p>
   <p>When a struct is no longer required it can be removed from memory using the <a href="Language_Features/delete.htm"><span class="inline">delete</span></a> operator, which flags the struct as being able to be garbage collected. This is not strictly required as the <a class="tooltip" title="The garbage collector is an automated tool that is part of the game code and is used to remove certain things (like arrays and structs) from memory when they are no longer referenced in your code, without the need for you to explicitly remove them.">garbage collector</a> may do this automatically if the struct is no longer referenced in your code, but it is good practice to do so and we recommend it (for example, call <span class="inline">delete</span> in the <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up event</a> of an instance to explicitly tell the garbage collector that an instance scope struct is to be deleted). Here is an example:</p>
   <p class="code">// Create event<br>
     mystruct =<br>
@@ -1143,7 +1144,7 @@
     }
   </p>
   <p>As you can see, when defining the function we use a colon "<span class="inline">:</span>" to separate the new constructor from the parent&nbsp;constructor to be inherited from. The child constructor (<span class="inline">Vector3</span>) passes the <span class="inline">_x</span> and <span class="inline">_y</span> arguments into the parent (<span class="inline">Vector2</span>) constructor, which are used to run the parent's constructor first, after which the child's constructor is executed. This way the child constructor gets the parent's variables (<span class="inline">x</span> and <span class="inline">y</span>) and can also define its own (<span class="inline">z</span>).</p>
-  <p>You can also pass constant values into the parent constructor, so that a certain child constructor always provides the same values to its parent constructor:</p>
+  <p>You can also pass values into the parent constructor, so that a certain child constructor always provides the same values to its parent constructor:</p>
   <p class="code">function item(damage) constructor<br>
     {<br>
     &nbsp;&nbsp; &nbsp;my_damage = damage;<br>

@@ -886,14 +886,14 @@
   <meta name="topic-status" content="Draft">
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>variable_struct_remove</title>
+  <title>struct_remove</title>
   <meta name="generator" content="Adobe RoboHelp 2020">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
   <meta name="topic-comment" content="Page explaining the function variable_struct_remove">
-  <meta name="rh-index-keywords" content="variable_struct_remove">
-  <meta name="search-keywords" content="variable_struct_remove">
+  <meta name="rh-index-keywords" content="variable_struct_remove,struct_remove">
+  <meta name="search-keywords" content="variable_struct_remove,struct_remove">
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_struct_get_names.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_struct_set.htm"></head>
 
 <body>
@@ -901,8 +901,8 @@
     <div class="logo">
     </div>
     <div class="nav">
-      <div class="title" title="variable_struct_remove">
-        <span>variable_struct_remove</span>
+      <div class="title" title="struct_remove">
+        <span>struct_remove</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
         <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
@@ -914,11 +914,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">variable_struct_remove</span></h1>
-  <p><span>With this function you can remove a variable from a struct. You supply the struct ID to remove the variable from and the string name of the variable to be removed.</span></p>
+  <h1><span data-field="title" data-format="default">struct_remove</span></h1>
+  <p><span>This function removes a variable from a struct. You supply the struct ID to remove the variable from and the string name of the variable to be removed.</span></p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">variable_struct_remove</span>(struct, name);</p>
+  <p class="code"><span data-field="title" data-format="default">struct_remove</span>(struct, name);</p>
   <table>
     <tbody>
       <tr>
@@ -943,19 +943,18 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if variable_struct_exists(mystruct, "shields")<br>
+  <p class="code">if struct_exists(mystruct, "shields")<br>
     {<br>
-    &nbsp; &nbsp; <span data-field="title" data-format="default">variable_struct_remove</span>(mystruct, "shields");<br>
+    &nbsp; &nbsp; <span data-field="title" data-format="default">struct_remove</span>(mystruct, "shields");<br>
     }</p>
   <p>The above code will check to see if the given variable exists in the given struct and if it does then it is removed.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back:&nbsp;<a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next:&nbsp;<a href="variable_struct_get_names.htm">variable_struct_get_names</a></div>
+        <div style="float:right">Next:&nbsp;<a href="variable_struct_get_names.htm">struct_get_names</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

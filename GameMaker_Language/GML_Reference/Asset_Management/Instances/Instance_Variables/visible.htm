@@ -912,30 +912,29 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>visible</h1>
-  <p>An instance can be flagged as <span class="inline">visible</span> or not by setting this variable to <span class="inline">true</span> (visible) or <span class="inline">false</span> (invisible). This works by telling <span data-keyref="GameMaker Name">GameMaker</span> to skip the draw event for this instance, so care must be taken when using this as it means that no code placed in the draw event will be run while the instance is not visible. Also note that if the <a href="layer.htm">layer</a>&nbsp;that the instance is assigned to is flagged as invisible, setting this variable to <span class="inline">true</span> will have no effect until the layer itself is flagged as visible too.</p>
+  <h1><span data-field="title" data-format="default">visible</span></h1>
+  <p>An instance can be flagged as <em>visible</em>&nbsp;or not by setting this variable to <span class="inline2">true</span>&nbsp;(visible) or <span class="inline2">false</span>&nbsp;(invisible). This works by telling <span data-keyref="GameMaker Name">GameMaker</span> to skip the draw event for this instance, so care must be taken when using this as it means that no code placed in the draw event will be run while the instance is not visible. Also note that if the <a href="layer.htm">layer</a>&nbsp;that the instance is assigned to is flagged as invisible, setting this variable to <span class="inline2">true</span>&nbsp;will have no effect until the layer itself is flagged as visible too.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">visible;</p>
+  <p class="code"><span data-field="title" data-format="default">visible</span></p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if other.visible = true<br>
+  <p class="code">if other.visible == true<br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;x = xprevious;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;y = yprevious;<br>
     }</p>
-  <p>The above code will check the visible flag of the "other" instance in a <i>collision event</i> and if it is set to <span class="inline">true</span> move that instance back to its previous position.</p>
-  <p>&nbsp;</p>
+  <p>The above code will check the <span class="inline2">visible</span> flag of the "other" instance in a <i>collision event</i> and if it is set to <span class="inline2">true</span>&nbsp;move that instance back to its previous position.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Variables.htm">Instance Variables</a></div>
-        <div style="float:right">Next: <a href="solid.htm">solid</a></div>
+        <div style="float:left">Back:&nbsp;<a href="Instance_Variables.htm">Instance Variables</a></div>
+        <div style="float:right">Next:&nbsp;<a href="solid.htm">solid</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

@@ -914,7 +914,12 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_stop_sound</span></h1>
-  <p>This function will stop the given sound if it is currently playing. The sound can either be a single instance of a sound (the index for individual sounds being played can be stored in a variable when using the <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> or <a href="audio_play_sound_at.htm"><span class="inline">audio_play_sound_at()</span></a> functions) or a sound asset, in which case <i>all</i> instances of the given sound will be stopped.</p>
+  <p>This function will stop the given sound if it is currently playing.&nbsp;This includes all sounds that have been paused using <span class="inline3_func"><a href="audio_pause_sound.htm">audio_pause_sound</a></span>&nbsp;or&nbsp;<span class="inline3_func"><a href="audio_pause_all.htm">audio_pause_all</a></span>.</p>
+  <p>The sound can either be a single instance of a sound (the index for individual sounds being played can be stored in a variable when using the&nbsp;<span class="inline3_func"><a href="audio_play_sound.htm">audio_play_sound</a></span>&nbsp;or&nbsp;<span class="inline3_func"><a href="audio_play_sound_at.htm">audio_play_sound_at</a></span>&nbsp;functions) or a sound asset, in which case <i>all</i> instances of the given sound will be stopped.</p>
+  <div data-conref="../../../../assets/snippets/Note_Function_Triggers_Audio_Playback_Ended.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function triggers an&nbsp;<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback_Ended.htm">Audio Playback Ended</a>&nbsp;Async Event for every sound instance that is affected by it.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">audio_stop_sound</span>(index);</p>

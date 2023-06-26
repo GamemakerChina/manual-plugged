@@ -875,7 +875,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.2.0_8";
+    gTopicId = "8.2.2.2.0_9";
   
 //]]></script>
 
@@ -917,12 +917,13 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span>array_insert</span></h1>
-  <p>With this function you can insert a value (or values) into an array at any given position. The function requires you to provide a variable that holds the array, the index (position) in the array to insert at, as well as at least&nbsp;<em>one</em>&nbsp;value to insert, although you can optionally provide further arguments and they will all be inserted into the array in consecutive order from the given index.</p>
-  <p>Note that if the given index is outside of the length of the array, the values will be added at the given index, and any empty slots in the array between its last value and the inserted values will be set to a default value of 0.</p>
+  <h1><span data-field="title" data-format="default">array_insert</span></h1>
+  <p>This function inserts a value (or multiple values) into an array at any given position.</p>
+  <p>You provide the array, the index (position) in the array to insert at, as well as at least&nbsp;<em>one</em>&nbsp;value to insert, although you can optionally provide further arguments and they'll all be inserted into the array in consecutive order from the given index.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;If the given index is outside of the length of the array, the values will be added at the given index, and any empty slots in the array between its last value and the inserted values will be set to a default value of 0.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">array_insert(variable, index, value, [value], [value], [etc...]);</p>
+  <p class="code"><span data-field="title" data-format="default">array_insert</span>(variable, index, value, [value], [value], [etc...]);</p>
   <table>
     <tbody>
       <tr>
@@ -938,7 +939,7 @@
       <tr>
         <td>index</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The index (position) in the array to insert the value(s)&nbsp;</td>
+        <td>The index (position) in the array to insert the value(s).&nbsp;Negative indices are supported and count from the end of the array. An offset of -1 refers to the last element of the array, an offset of -2 to the one before last element, etc. (see&nbsp;<a href="Array_Functions.htm#h1">Offset And Length</a>)</td>
       </tr>
       <tr>
         <td>value</td>
@@ -948,7 +949,7 @@
       <tr>
         <td>[value], [value], [etc...]</td>
         <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
-        <td><span class="optional">OPTIONAL</span> Further values to insert into the array</td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;Additional values to insert into the array</td>
       </tr>
     </tbody>
   </table>
@@ -956,9 +957,20 @@
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
-  <h4>Example:</h4>
-  <p class="code">array_insert(score_array, score_rank, current_score);</p>
-  <p>The above code will insert the current score into the score array,&nbsp;at the index defined by the <span class="inline">score_rank</span> variable.</p>
+  <h4>Example 1: Inserting a single value</h4>
+  <p class="code">array = [1, 2, 3, 5];<br>
+    var _missing_value = 4;<br>
+    <span data-field="title" data-format="default">array_insert</span>(array, 3, _missing_value);<br>
+    show_debug_message(array);
+  </p>
+  <p>The above code inserts a missing value into an array <span class="inline2">array</span>,&nbsp;at index 3. A debug message shows the array's contents after insertion of the value.</p>
+  <p>&nbsp;</p>
+  <h4>Example 2: Inserting multiple values</h4>
+  <p class="code">var _array = ["G", "a", "k", "e", "r"];<br>
+    <span data-field="title" data-format="default">array_insert</span>(_array, 2, "m", "e", "M", "a");<br>
+    show_debug_message(string_join_ext("", _array));
+  </p>
+  <p>The above code creates a temporary array <span class="inline2">_array</span> and then uses&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">array_insert</span></span>&nbsp;to insert a couple of values at index 6. After that,&nbsp;<span class="inline3_func"><a href="../Strings/string_join_ext.htm">string_join_ext</a></span>&nbsp;is called n the array to concatenate the letters and the resulting string is output as a debug message.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

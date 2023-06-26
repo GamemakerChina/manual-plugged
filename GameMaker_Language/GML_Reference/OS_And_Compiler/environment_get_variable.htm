@@ -915,12 +915,13 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>environment_get_variable</h1>
-  <p>This function returns the value (a string) of the environment variable with the given name (also a string). You can get the available environment variables on macOS and Ubuntu (Linux) by typing "<span class="inline">env</span>" into the terminal app, and for information on Windows environment variables, if you are using the command prompt then type "<span class="inline">echo %PATH%</span>", and using PowerShell it's "<span class="inline">ls env</span>". Note that on both macOS and Ubuntu (Linux) the "HOME" environment variable will return the "<span class="inline">~/</span>" path which maps to "<span class="inline">/Users/&lt;username&gt;</span>" on macOS and "<span class="inline">/home/&lt;username&gt;</span>" on Ubuntu (Linux).</p>
-  <p class="note"><b>NOTE</b>: This function is for Windows, macOS and Ubuntu (Linux) only.</p>
+  <h1><span data-field="title" data-format="default">environment_get_variable</span></h1>
+  <p>This function returns the value (a string) of the environment variable with the given name (also a string).</p>
+  <p>You can get the available environment variables on macOS and Ubuntu (Linux) by typing "<span class="inline">env</span>" into the terminal app, and for information on Windows environment variables, if you are using the command prompt then type "<span class="inline">echo %PATH%</span>", and using PowerShell it's "<span class="inline">ls env</span>". Note that on both macOS and Ubuntu (Linux) the "HOME" environment variable will return the "<span class="inline">~/</span>" path which maps to "<span class="inline">/Users/&lt;username&gt;</span>" on macOS and "<span class="inline">/home/&lt;username&gt;</span>" on Ubuntu (Linux).</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function is for Windows, macOS and Ubuntu (Linux) only.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">environment_get_variable(name);</p>
+  <p class="code"><span data-field="title" data-format="default">environment_get_variable</span>(name);</p>
   <table>
     <tbody>
       <tr>
@@ -940,15 +941,14 @@
   <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">e_str = environment_get_variable("APPDATA");</p>
+  <p class="code">e_str = <span data-field="title" data-format="default">environment_get_variable</span>("APPDATA");</p>
   <p>The above code will return the full path for the environment variable "<span class="inline">%appdata%</span>", which is normally "<span class="inline">C:\Users\{username}\AppData\Roaming</span>".</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:left">Back:&nbsp;<a href="OS_And_Compiler.htm">OS And Compiler</a></div>
         <div style="float:right">Next:&nbsp;<a href="scheduler_resolution_get.htm">scheduler_resolution_get</a></div>
       </div>
     </div>
