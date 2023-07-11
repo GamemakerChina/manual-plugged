@@ -289,6 +289,8 @@
     "Example 1: Basic Use":"示例1：基本使用",
     "Example 1: Check if any of the given values is present in an array":"示例1：检查数组中是否存在任何给定值",
     "Example 1: Copying an entire buffer\u0027s contents":"示例 1：复制整个缓冲区的内容",
+    "Example 1: Deleting the first 5 elements":"示例1：删除前5个元素",
+    "Example 1: Inserting a single value":"示例1：插入单个值",
     "Example 1: Particle Type Info":"示例1：粒子类型信息",
     "Example 1: Playing a basic sound (similar to audio_play_sound)":"示例 1：播放基本声音 (类似于 audio_play_sound)",
     "Example 1: Replace an object ID with another object ID":"示例 1：用另一个对象 ID 替换对象 ID",
@@ -296,7 +298,10 @@
     "Example 2:":"示例2：",
     "Example 2: Check if all values are present in an array":"示例2：检查数组中是否存在所有值",
     "Example 2: Copying from a buffer, starting at an offset":"示例 2：从偏移量开始从缓冲区复制",
+    "Example 2: Deleting the last 3 elements":"示例2：删除最后3个元素",
+    "Example 2: Inserting multiple values":"示例2：插入多个值",
     "Example 2: Listing Emitter Names":"示例2：列出发射器名称",
+    "Example 2: Negative Length":"示例2：负长度",
     "Example 2: Playing a sound on an emitter (similar to audio_play_sound_on)":"示例 2：在发射器上播放声音 (类似于 audio_play_sound_on)",
     "Example 2: Pretty Print":"示例2：美化输出",
     "Example 2: Queue using array_shift and array_push":"示例2：使用 array_shift 和 array_push 的队列",
@@ -305,6 +310,7 @@
     "Example 2: Showing Instances Collided With":"例2：显示与之碰撞的实例",
     "Example 2: array of arrays":"示例2：数组的数组",
     "Example 2:&nbsp;Finding the top-left corner position of a tile":"示例2：查找拼贴的左上角位置",
+    "Example 3: Deleting a range":"示例3：删除范围",
     "Example 3: Playing a sound at a given position in 3D audio space (similar to audio_play_sound_at)":"示例 3：在 3D 音频空间中的给定位置播放声音 (类似于 audio_play_sound_at)",
     "Example 3: Rotate an Array":"示例3：旋转数组",
     "Example:":"例子:",
@@ -800,11 +806,21 @@
     "{}{}Mouse Button Constant{}{}":"{}{}鼠标按钮常量{}{}"
 }
 	var json={
+    "A reference to an array.":"对数组的引用。",
+    "Note that you can achieve the same by setting the index to the third last element and using a positive number:&nbsp;{}{}array_delete{}(_values, -3, 3);{}":"请注意，您可以通过将索引设置为倒数第三个元素并使用正数来实现同样的效果：{}{}array_delete{}(_values, -3, 3);{}",
+    "The above code creates a temporary array {}_values{} and then deletes the last 3 elements using&nbsp;{}{}array_delete{}{}.&nbsp;":"上面的代码创建了一个临时数组 {}_values{}，然后使用 {}{}array_delete{}{} 删除最后 3 个元素。",
+    "The above code deletes the first 5 elements in the given array {}_score_array{}, starting at index 0 (so indices 0 to 4 will be removed from the array). After the function has executed, the contents of the array are&nbsp;{}[93, 80, 12, 65, 71]{}.":"上面的代码从索引 0 开始删除给定数组 {}_score_array{} 中的前 5 个元素 (因此索引 0 到 4 将从数组中删除)。函数执行后，数组的内容为 {}[93，80，12，65，71]{}。",
+    "The above code removes all the {}undefined{} values in the array&nbsp;{}_array_with_undefined{}. The index of 6 refers to the index of the first {}undefined{} value, the number of 3 to the number of {}undefined{} values.":"上面的代码删除了数组 {2}_array_with_undefined{3} 中的所有 {}undefined{} 值。索引 6 是指索引中的第一个 {}undefined{} 值，编号为 3 的 {}undefined{} 值。",
     "The above code will delete the first 10 values&nbsp;in the given array starting at index 0 (so indices 0 to 9 will be removed from the array).":"上面的代码将删除给定数组中从索引0开始的前10个值(因此索引0到9将从数组中删除)。",
+    "The function supports specifying negative values for the index and number of elements, as described under&nbsp;{}Offset And Length{}.":"该函数支持为索引和元素数量指定负值，如{}偏移量和长度{}中所述。",
     "The index (position) in the array to delete the value(s) from.":"要从中删除值的数组中的索引(位置)。",
+    "The index (position) in the array to delete the value(s) from. Negative indices are supported and count from the end of the array. An offset of -1 refers to the last element of the array, an offset of -2 to the one before last element, etc. (see&nbsp;{}Offset And Length{})":"要从中删除值的数组中的索引(位置)。支持负索引，并从数组的末尾开始计数。偏移量-1表示数组的最后一个元素，偏移量-2表示最后一个元素之前的一个元素，依此类推(参见{}偏移量和长度{})",
     "The number of values to delete.":"要删除的值的数目。",
+    "The number of values to delete. A negative number means elements are deleted backwards, starting at the offset index. E.g. when index is 5, the indices 5, 6 and 7 will be deleted when number is 3, and indices 5, 4 and 3 will be deleted when number is -3. (see&nbsp;{}Offset And Length{})":"要删除的值数。负数表示从偏移量索引开始向后删除元素。例如，当索引为5时，当编号为3时，索引5、6、7将被删除当编号为-3时，索引5、4、3将被删除。(请参阅{}偏移量和长度{})",
     "The variable that holds the array.":"保存数组的变量。",
-    "With this function you can delete a value (or values) from an array at any given position. The function requires you to provide a variable that holds the array, the index (position) in the array to delete from, as well as the number of values to delete.":"使用此函数，您可以从数组中的任何给定位置删除一个值(或多个值)。该函数要求您提供保存数组的变量、要从中删除的数组中的索引(位置)以及要删除的值的数量。"
+    "This function deletes a single value or a range of values from an array at any given position.":"此函数用于从数组中的任意给定位置删除单个值或一系列值。",
+    "With this function you can delete a value (or values) from an array at any given position. The function requires you to provide a variable that holds the array, the index (position) in the array to delete from, as well as the number of values to delete.":"使用此函数，您可以从数组中的任何给定位置删除一个值(或多个值)。该函数要求您提供保存数组的变量、要从中删除的数组中的索引(位置)以及要删除的值的数量。",
+    "You provide a variable that holds the array, the index (position) in the array to delete from and the number of values to delete.":"您可以提供一个变量来保存数组、要从中删除的索引(位置)和要删除的值数。"
 }
 
 	$(function(){
