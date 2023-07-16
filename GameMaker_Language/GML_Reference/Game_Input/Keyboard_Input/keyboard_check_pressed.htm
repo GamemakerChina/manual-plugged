@@ -436,6 +436,7 @@
     "Key":"键",
     "Keyboard Input":"键盘输入",
     "Keyboard Shortcuts":"键盘快捷键",
+    "Keyboard Type":"键盘类型",
     "Keyword":"关键字",
     "Keywords are special words that are reserved by a programming language or a program as they have a special meaning. These keywords are reserved to perform certain tasks, and they can be either commands or parameters. Each programming language has a set of reserved keywords (also known as reserved names) which cannot be used as variable names, and the GameMaker Language is no exception, where words like return, while, if and break are all reserved kewords used in the programming language.":"关键字是编程语言或程序保留的特殊字，因为它们有特殊的意义。这些关键字被保留以执行某些任务，它们可以是命令或参数。每种编程语言都有一组不能用作变量名的保留关键字(也称为保留名称)，GameMaker语言也不例外，如return、while、if和break等词都是编程语言中使用的保留kewords。",
     "Language":"语文",
@@ -548,6 +549,7 @@
     "Repository Options":"仓库选项",
     "Required SDKs":"所需的 SDK",
     "Resources":"资源",
+    "Return Type":"返回类型",
     "Return Value (examples)":"返回值(示例)",
     "Returns":"返回",
     "Returns:":"返回:",
@@ -813,8 +815,11 @@
 }
 	var json={
     "The above code will advance to the next room if the player presses any of the keyboard\u0027s keys (working like a \"Press Any Key to Continue\"&nbsp;prompt).":"如果玩家按下键盘上的任意键(其作用类似于 “按任意键继续” 提示)，上面的代码将进入下一个房间。",
+    "The function will take a keycode value as returned by the function&nbsp;{}{}ord{}{} (only {}capital{} letters from A-Z or numbers from 0-9), or any of the {}vk_*{} constants listed on the main&nbsp;{}Keyboard Input{} page.":"该函数将采用函数 {}{}ord{}{} 返回的 keycode 值 (仅 {}a-Z 的大写字母 {} 或 0-9 的数字)，或主{}键盘输入{}页面上列出的 {6}vk_*{7} 常量中的任何一个。",
     "The key to check the pressed state of.":"检查按下状态的键。",
+    "Unlike the&nbsp;{}{}keyboard_check{}{} function, this function will only return {}true{} in the step the key is pressed down, i.e. when it switches from not held down in the previous step to held down in the current step. So for it to return {}true{} again, the key must be first released and then pressed again. In all other steps, the function returns {}false{}.":"与 {}{}keyboard_check{}{} 函数不同，此函数仅在按下按键的步骤中返回 {}true{}，即当其从前一步骤中的未保持向下切换到当前步骤中的保持向下时。因此，要再次返回 {}true{}，必须先释放该键，然后再次按下。在所有其他步骤中，函数返回 {}false{}。",
     "Virtual Key Constant (vk_*)":"虚拟按键常数 (vk_*)",
+    "With this function you can check to see if a key has been pressed or not.":"使用此函数，您可以检查是否按下了键。",
     "With this function you can check to see if a key has been pressed or not. Unlike the {}{}keyboard_check(){}{} function, this function will only run once for every time the key is pressed down, so for it to trigger again, the key must be first released and then pressed again. The function will take a keycode value as returned by the function {}{}ord(){}{} (only {}capital{} letters from A-Z or numbers from 0-9), or any of the {}vk_*{} constants listed on the main {}Keyboard Input{} page.":"使用此函数，您可以检查是否按下了键。与 {}{}keyboard_check(){}{} 函数不同，该函数每次按下该键时只会运行一次，因此要使其再次触发，必须先释放该键，然后再按下。该函数将采用函数 {}{}ord(){}{} 返回的 keycode 值 (仅 {}a-Z 的大写字母 {} 或 0-9 的数字)，或主{}键盘输入{}页面上列出的 {10}vk_*{11} 常量中的任何一个。"
 }
 
