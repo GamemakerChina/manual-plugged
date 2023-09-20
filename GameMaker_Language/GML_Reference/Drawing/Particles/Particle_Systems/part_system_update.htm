@@ -276,6 +276,7 @@
     "Device Input":"设备输入",
     "Dialog":"对话框",
     "Direction":"方向",
+    "Disabled":"禁用",
     "Domain Name System - This system associates domain names (e.g. gamemaker.io) to other info, such as IP addresses. DNS records are returned from a DNS lookup.":"域名系统——该系统将域名(如gamemaker.io)与其他信息(如IP地址)相关联。DNS记录从DNS查找返回。",
     "Double Tap Event":"双击事件",
     "Downsampling is the process of reducing samples in audio and, more generally, in signals. For audio it means that samples are thrown away and less samples remain, leading to a loss of information. The sample frequency of the audio is lowered as well as the quality of the audio. This change distorts the audio.":"降采样是在音频和信号中减少样本的过程。对于音频来说，这意味着样本被丢弃，剩下的样本更少，导致信息丢失。音频的采样频率和音频的质量都降低了。这个改变会使音频失真。",
@@ -289,6 +290,7 @@
     "Editing Code":"编辑代码",
     "Effects (in-game only)":"特效(仅限于游戏中)",
     "Emitter Properties":"发射器属性",
+    "Enabled":"启用",
     "Encoding And Hashing":"编码和哈希",
     "Encoding transforms data into another format using a scheme that is publicly available so that it can easily be reversed. This is not the same as encryption, as it does not require a key to decode it. Encoding is generally used to either change the data into a format for eaiser use by a different system (like sending data to a server), or for making data unreadable to the human eye.":"编码使用公开可用的方案将数据转换为另一种格式，以便可以轻松地将其反转。这与加密不同，因为它不需要密钥对其进行解码。编码通常用于将数据更改为易于由其他系统使用的格式（例如，将数据发送到服务器），或用于使人眼无法读取的数据。",
     "Error":"错误(Error)",
@@ -322,11 +324,13 @@
     "Example 2: Reserved Strings":"示例2：保留字符串",
     "Example 2: Showing Instances Collided With":"例2：显示与之碰撞的实例",
     "Example 2: array of arrays":"示例2：数组的数组",
+    "Example 2:&nbsp;Animated Sprite That Starts Playing at Sub-image":"示例2：在子图像处开始播放的动画精灵",
     "Example 2:&nbsp;Finding the top-left corner position of a tile":"示例2：查找拼贴的左上角位置",
     "Example 3: Deleting a range":"示例3：删除范围",
     "Example 3: Playing a sound at a given position in 3D audio space (similar to audio_play_sound_at)":"示例 3：在 3D 音频空间中的给定位置播放声音 (类似于 audio_play_sound_at)",
     "Example 3: Rotate an Array":"示例3：旋转数组",
     "Example:":"例子:",
+    "Example: Particle System Following an Instance":"示例：跟随实例的粒子系统",
     "Example: Sprite View for an Instance\u0027s Sprite":"示例：一个实例的精灵的精灵视图",
     "Expressions And Operators":"表达式和运算符",
     "Extended Blend Mode":"扩展混合模式",
@@ -832,8 +836,10 @@
 }
 	var json={
     "The above code will advance the particle system indexed in the global variable \"RainSys\" by 3 seconds.":"上述代码将把全球变量 \"RainSys\" 中索引的粒子系统提前 3 秒。",
+    "The above code will advance the particle system indexed in the global variable {}RainSys{}&nbsp;by 3 seconds.":"上述代码将使全局变量{}RainSys{}中索引的粒子系统前进3秒。",
     "The index of the particle system to update.":"要更新的粒子系统的索引。",
-    "This function will advance the given particle system one step in game time and can be used to simulate the particle system behaviour when automatic updating is off, or it can be used to advance a particle system to a specific point all in one step. For example, if you have a particle system for snow, and you want it to appear that the snow is falling right from the moment the player enters the room then you may wish to advance your snow particles for a few seconds in the create event of an instance so that the first time they are drawn, there are particles all over the screen (the code example below shows this). You can also use this function when automatic updating of the system is switched off by the function {}{}part_system_automatic_update(){}{} to move the system along.":"该函数将在游戏时间内将给定粒子系统提前一步，并且可以用于模拟自动更新关闭时的粒子系统行为，或者可以用于将粒子系统提前到特定点，所有这一切都在一个步骤中完成。例如，如果您有一个用于雪的粒子系统，并希望它看起来从播放器进入房间的那一刻开始就在下雪，那么您可能希望在实例的创建事件中将雪粒子前进几秒钟，这样在第一次绘制雪粒子时，屏幕上到处都是粒子 (下面的代码示例显示了这一点)。当函数 {}{}part_system_automatic_update(){}{} 关闭系统的自动更新时，也可以使用此函数来移动系统。"
+    "This function will advance the given particle system one step in game time and can be used to simulate the particle system behaviour when automatic updating is off, or it can be used to advance a particle system to a specific point all in one step. For example, if you have a particle system for snow, and you want it to appear that the snow is falling right from the moment the player enters the room then you may wish to advance your snow particles for a few seconds in the create event of an instance so that the first time they are drawn, there are particles all over the screen (the code example below shows this). You can also use this function when automatic updating of the system is switched off by the function {}{}part_system_automatic_update(){}{} to move the system along.":"该函数将在游戏时间内将给定粒子系统提前一步，并且可以用于模拟自动更新关闭时的粒子系统行为，或者可以用于将粒子系统提前到特定点，所有这一切都在一个步骤中完成。例如，如果您有一个用于雪的粒子系统，并希望它看起来从播放器进入房间的那一刻开始就在下雪，那么您可能希望在实例的创建事件中将雪粒子前进几秒钟，这样在第一次绘制雪粒子时，屏幕上到处都是粒子 (下面的代码示例显示了这一点)。当函数 {}{}part_system_automatic_update(){}{} 关闭系统的自动更新时，也可以使用此函数来移动系统。",
+    "This function will advance the given particle system one step in game time and can be used to simulate the particle system behaviour when automatic updating is off, or it can be used to advance a particle system to a specific point all in one step. For example, if you have a particle system for snow, and you want it to appear that the snow is falling right from the moment the player enters the room then you may wish to advance your snow particles for a few seconds in the create event of an instance so that the first time they are drawn, there are particles all over the screen (the code example below shows this). You can also use this function when automatic updating of the system is switched off by the function&nbsp;{}{}part_system_automatic_update{}{}&nbsp;to move the system along.":"该函数将在游戏时间内将给定的粒子系统推进一步，并且可以用于在自动更新关闭时模拟粒子系统行为，或者可以用于在一步中将粒子系统推进到特定点。例如，如果你有一个雪的粒子系统，你想让它看起来从玩家进入房间的那一刻起雪就在落下，那么你可能希望在一个实例的创建事件中将你的雪粒子提前几秒钟，这样当它们第一次被绘制时，屏幕上到处都是粒子(下面的代码示例显示了这一点)。当系统的自动更新被功能{}{}part_system_automatic_update{}{}关闭时，您也可以使用此功能来移动系统。"
 }
 
 	$(function(){

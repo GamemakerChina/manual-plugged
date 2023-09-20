@@ -276,6 +276,7 @@
     "Device Input":"设备输入",
     "Dialog":"对话框",
     "Direction":"方向",
+    "Disabled":"禁用",
     "Domain Name System - This system associates domain names (e.g. gamemaker.io) to other info, such as IP addresses. DNS records are returned from a DNS lookup.":"域名系统——该系统将域名(如gamemaker.io)与其他信息(如IP地址)相关联。DNS记录从DNS查找返回。",
     "Double Tap Event":"双击事件",
     "Downsampling is the process of reducing samples in audio and, more generally, in signals. For audio it means that samples are thrown away and less samples remain, leading to a loss of information. The sample frequency of the audio is lowered as well as the quality of the audio. This change distorts the audio.":"降采样是在音频和信号中减少样本的过程。对于音频来说，这意味着样本被丢弃，剩下的样本更少，导致信息丢失。音频的采样频率和音频的质量都降低了。这个改变会使音频失真。",
@@ -289,6 +290,7 @@
     "Editing Code":"编辑代码",
     "Effects (in-game only)":"特效(仅限于游戏中)",
     "Emitter Properties":"发射器属性",
+    "Enabled":"启用",
     "Encoding And Hashing":"编码和哈希",
     "Encoding transforms data into another format using a scheme that is publicly available so that it can easily be reversed. This is not the same as encryption, as it does not require a key to decode it. Encoding is generally used to either change the data into a format for eaiser use by a different system (like sending data to a server), or for making data unreadable to the human eye.":"编码使用公开可用的方案将数据转换为另一种格式，以便可以轻松地将其反转。这与加密不同，因为它不需要密钥对其进行解码。编码通常用于将数据更改为易于由其他系统使用的格式（例如，将数据发送到服务器），或用于使人眼无法读取的数据。",
     "Error":"错误(Error)",
@@ -322,11 +324,13 @@
     "Example 2: Reserved Strings":"示例2：保留字符串",
     "Example 2: Showing Instances Collided With":"例2：显示与之碰撞的实例",
     "Example 2: array of arrays":"示例2：数组的数组",
+    "Example 2:&nbsp;Animated Sprite That Starts Playing at Sub-image":"示例2：在子图像处开始播放的动画精灵",
     "Example 2:&nbsp;Finding the top-left corner position of a tile":"示例2：查找拼贴的左上角位置",
     "Example 3: Deleting a range":"示例3：删除范围",
     "Example 3: Playing a sound at a given position in 3D audio space (similar to audio_play_sound_at)":"示例 3：在 3D 音频空间中的给定位置播放声音 (类似于 audio_play_sound_at)",
     "Example 3: Rotate an Array":"示例3：旋转数组",
     "Example:":"例子:",
+    "Example: Particle System Following an Instance":"示例：跟随实例的粒子系统",
     "Example: Sprite View for an Instance\u0027s Sprite":"示例：一个实例的精灵的精灵视图",
     "Expressions And Operators":"表达式和运算符",
     "Extended Blend Mode":"扩展混合模式",
@@ -831,13 +835,21 @@
     "{}{}Mouse Button Constant{}{}":"{}{}鼠标按钮常量{}{}"
 }
 	var json={
+    "If the emitter has relative mode enabled using&nbsp;{}{}part_emitter_relative{}{}, the number parameter does not refer to the actual number&nbsp;of particles created but&nbsp;indicates the percent coverage of the emitter region.":"如果使用{}{}part_emitter_relative{}{}启用了发射器的相对模式，则number参数不是指创建的粒子的实际数量，而是指示发射器区域的覆盖百分比。",
     "The above code will stream 1 particle every step of the game until the emitter is destroyed or the stream set to 0.":"上述代码将在游戏的每个步骤中流1粒子，直到发射器被破坏或流被设置为0。",
     "The index (type) of the particles to be created.":"要创建的粒子的索引(类型)。",
     "The index of the emitter to burst from.":"要突发的发射器的索引。",
     "The index of the emitter to stream from.":"要从中进行流式发射器的索引。",
+    "The number of particles to create per step, or the density (i.e. percent coverage of the emitter region) with relative mode enabled (see&nbsp;{}{}part_emitter_relative{}{})":"每个步骤要创建的粒子的数量，或密度(即，粒子的密度)。发射器区域的覆盖百分比)，并启用相对模式(参见{}{}part_emitter_relative{}{})",
     "The number of particles to create per step.":"每个步骤要创建的粒子数。",
     "The particle system that the emitter is in.":"发射器所在的粒子系统。",
-    "This function allows you to set an emitter to stream a specific type of particle and is typically used the create event as it is a one off code that sets the emitter to generate the number of particles specified every step of the game there-after. The particles are emitted following the distribution, shape and position set by the function {}{}part_emitter_region(){}{}. You can set the number of particles being streamed to zero and call this function again to \"switch off\" the particle streaming, and the function will also accept negative numbers for the amount, in which case the emitter will produce particles based on random chance. For example, if you have the particle number set to -5, there is a 1:5 chance that a particle will be produced every step. Should you need the particles to appear all at once rather than every step, you should be using the function {}{}part_emitter_burst(){}{}.":"此函数允许您将发射器设置为流式处理特定类型的粒子，并且通常使用创建事件，因为它是一个一次性代码，用于设置发射器以生成游戏中每个步骤后指定的粒子数。粒子按照{}{}part_emitter_region(){}{}函数设置的分布、形状和位置发射。您可以将正在流动的粒子数设置为零，然后再次调用此函数以\"关闭\"粒子流，并且该函数还将接受该数量的负数，在这种情况下，发射器将基于随机机会生成粒子。例如，如果将粒子数设定为-5，则每个步骤都有1:5的几率生成粒子。如果需要粒子一次出现而不是每个步骤，则应使用函数{}{}part_emitter_burst(){}{}。"
+    "The particles are emitted following the distribution, shape and position set by the function {}{}part_emitter_region{}{}.":"粒子按照函数{}{}part_emitter_region{}{}设置的分布、形状和位置发射。",
+    "This function allows you to set an emitter to stream a specific type of particle and is typically used the create event as it is a one off code that sets the emitter to generate the number of particles specified every step of the game there-after. The particles are emitted following the distribution, shape and position set by the function {}{}part_emitter_region(){}{}. You can set the number of particles being streamed to zero and call this function again to \"switch off\" the particle streaming, and the function will also accept negative numbers for the amount, in which case the emitter will produce particles based on random chance. For example, if you have the particle number set to -5, there is a 1:5 chance that a particle will be produced every step. Should you need the particles to appear all at once rather than every step, you should be using the function {}{}part_emitter_burst(){}{}.":"此函数允许您将发射器设置为流式处理特定类型的粒子，并且通常使用创建事件，因为它是一个一次性代码，用于设置发射器以生成游戏中每个步骤后指定的粒子数。粒子按照{}{}part_emitter_region(){}{}函数设置的分布、形状和位置发射。您可以将正在流动的粒子数设置为零，然后再次调用此函数以\"关闭\"粒子流，并且该函数还将接受该数量的负数，在这种情况下，发射器将基于随机机会生成粒子。例如，如果将粒子数设定为-5，则每个步骤都有1:5的几率生成粒子。如果需要粒子一次出现而不是每个步骤，则应使用函数{}{}part_emitter_burst(){}{}。",
+    "This function is typically used in the Create event as it is a one-off code that sets the emitter to generate the number of particles specified every step of the game thereafter.":"此函数通常用于Create事件，因为它是一次性代码，用于设置发射器以生成此后游戏中每一步指定的粒子数。",
+    "This function sets an emitter to stream a specific type of particle.":"此函数将发射器设置为传输特定类型的粒子。",
+    "Usage Notes":"用法注释",
+    "You can set the number of particles being streamed to zero and call this function again to \"switch off\" the particle streaming, and the function will also accept negative numbers for the amount, in which case the emitter will produce particles based on random chance. For example, if you have the particle number set to -5, there is a 1:5 chance that a particle will be produced every step.":"您可以将粒子流的数量设置为零，并再次调用此函数以\"关闭\"粒子流，并且该函数还将接受数量的负数，在这种情况下，发射器将基于随机机会产生粒子。例如，如果将粒子数设置为-5，则每一步生成粒子的概率为1：5。",
+    "{}{}NOTE{}{}&nbsp;Should you need the particles to appear all at once rather than every step, you should be using the function {}{}part_emitter_burst{}{}.":"{}{}注意{}{}如果您需要粒子同时出现而不是每一步出现，则应使用函数{}{}part_emitter_burst{}{}。"
 }
 
 	$(function(){
