@@ -948,7 +948,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>physics_fixture_set_sensor</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -977,7 +977,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_fixture_set_sensor</h1>
   <p>Some times you will want your game to detect and recognise when two instances with fixtures collide, but not have any physical reaction to the collision. This can be done by converting the fixture into a sensor, which basically means that they will generate a collision event but with no physical response so that you can use these instances as "triggers" for other events to happen in the game room. Any fixture can be flagged as a sensor, and it makes no difference if the instance it is bound to is static or in movement.</p>
-  <p class="note"><b>NOTE</b>: A sensor fixture will fire off the collision event when the collision <b>first occurs only</b>, meaning you don't get a stream of collision events as the two bodies continue to overlap (which is what would traditionally occur). If they stop overlapping and overlap subsequently there will be another collision event triggered.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;A sensor fixture will fire off the collision event when the collision <b>first occurs only</b>, meaning you don't get a stream of collision events as the two bodies continue to overlap (which is what would traditionally occur). If they stop overlapping and overlap subsequently there will be another collision event triggered.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">physics_fixture_set_sensor(fixture, state)</p>

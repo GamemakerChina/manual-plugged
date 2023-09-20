@@ -946,7 +946,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>surface_reset_target</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -973,15 +973,19 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_reset_target</h1>
-  <p>With this function you reset all further drawing from the target surface back to the screen. Please note that to start drawing to a surface you must first have called the function <a href="surface_set_target.htm"><span class="inline">surface_set_target()</span></a> and then this one after you have finished, <i>for each surface target that you have set</i> or else nothing will be drawn on the screen as all further drawing (even in other instances) will be done on the surface. You should also realise that nothing will be seen if the surface itself is not drawn on the screen in the draw event of an instance.</p>
-  <p class="note"><b>NOTE</b>: If you have not previously set a render target with the function <span style="font-size:1px;"><a href="surface_set_target.htm"><span class="inline">surface_set_target()</span></a></span>, using this function will silently (ie: without any error messages) end all further code execution for the event.</p>
+  <h1 id="h"><span data-field="title" data-format="default">surface_reset_target</span></h1>
+  <p>This function resets all further drawing from the target surface back to the screen.</p>
+  <p>Please note that to start drawing to a surface you must first have called the function&nbsp;<span class="inline3_func"><a href="surface_set_target.htm#h">surface_set_target</a></span> and then this one after you have finished, <i>for each surface target that you have set</i> or else nothing will be drawn on the screen as all further drawing (even in other instances) will be done on the surface. You should also realise that nothing will be seen if the surface itself is not drawn on the screen in the draw event of an instance.</p>
+  <div data-conref="../../../../assets/snippets/Note_Surface_Check_That_It_Exists.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;If you have not previously set a render target with the function <span class="inline3_func"><a href="surface_set_target.htm#h">surface_set_target</a></span>,&nbsp;using this function will silently (i.e.&nbsp;without any error messages) end all further code execution for the event.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">surface_reset_target();</p>
+  <p class="code"><span data-field="title" data-format="default">surface_reset_target</span>();</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span>&nbsp;Whether the render target was reset successfully</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">if view_current = 0<br>
@@ -998,7 +1002,6 @@
     &nbsp;&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
     }</p>
   <p>The above code will check to see which view is currently being drawn, and if it is view[0] it sets the draw target to a surface and draws all instances of the object "obj_Effect" before resetting the draw target again. If the view is not view[0] the surface is drawn to the screen.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

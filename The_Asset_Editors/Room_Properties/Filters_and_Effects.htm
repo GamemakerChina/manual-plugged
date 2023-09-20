@@ -973,7 +973,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Filters and Effects</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css">
   <script src="../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo">
@@ -1016,7 +1016,15 @@
   <p>For example, "<strong>Colourise</strong>" is a Filter, where "<strong>Windblown Particles</strong>" is an Effect.</p>
   <h2>Effect Types</h2>
   <p>All the Filters and Effects in the&nbsp;<strong>"Effect Type"</strong> drop-down list are documented on this page:&nbsp;<a href="FX/All_Filter_Effect_Types.htm">FX Types &amp; Parameters</a>.</p>
-  <div data-conref="../../assets/snippets/FX_Limitations.hts"><h2 class="">Limitations</h2><p>There is currently one limitation to keep in mind:</p><ul class="colour"><li>Filters/effects will not work when the <a href="../../GameMaker_Language/GML_Reference/Drawing/Surfaces/application_surface_enable.htm">application surface is disabled</a>. It's enabled by default, and you shouldn't usually require disabling it, however you may do so to gain performance on mobile devices. In such cases you wouldn't be able to use filters/effects as they require the surface texture for shader manipulations.</li></ul></div>
+  <div data-conref="../../assets/snippets/FX_Limitations.hts">
+  <h2>Limitations</h2>
+  <p>There are some limitations to keep in mind when using filters/effects:</p>
+  <ul class="colour">
+    <li>Filters/effects will not work when the <a href="../../GameMaker_Language/GML_Reference/Drawing/Surfaces/application_surface_enable.htm">application surface is disabled</a>. It's enabled by default, and you shouldn't usually require disabling it, however you may do so to gain performance on mobile devices. In such cases you wouldn't be able to use filters/effects as they require the surface texture for shader manipulations.</li>
+    <li>Filters/effects that take a texture image, require that image to be on a separate texture page. You can set this through the <a href="../Sprites.htm">sprite editor</a>.</li>
+  </ul>
+
+</div>
   <h2 id="h">Single-Layer FX</h2>
   <p>While you can create an FX layer&nbsp;to apply a filter to multiple layers, you are also able to assign a filter to one specific layer only, through the <a href="../../IDE_Tools/The_Inspector.htm">Inspector</a>.</p>
   <p>Selecting a room layer will allow you to apply a filter/effect to it in the Inspector, and if that layer is a non-FX layer (e.g. Instance Layer, Asset Layer, etc.) then the effect will only be applied to that layer and not to any other layers below it.</p>

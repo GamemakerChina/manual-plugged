@@ -952,7 +952,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>game_restart</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -979,7 +979,7 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_restart</h1>
+  <h1><span data-field="title" data-format="default">game_restart</span></h1>
   <p>With this function you can restart the game. This is essentially the same as running the game for the first time and so the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game Start Event</a> will be triggered, <i>as well as</i> the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game End Event</a>.</p>
   <div data-conref="../../../assets/snippets/changing_room_stops_instance_creation.hts">
   <p class="note"><span class="note">NOTE</span>&nbsp;You will not be able to create new instances in the same event after this function has been called.</p>
@@ -993,25 +993,25 @@
     <li>Any asset from the Asset Browser that has been changed at run time within the game - for example if you change the origin for a sprite resource or shift the position of a path resource - will <i>not</i> be reset.</li>
     <li>Dynamic resources like buffers, surfaces, data-structures or imported sprites will also not be cleaned up or removed (although you may lose references to them, so take care when using this function to either use global references for the dynamic resource, or to clean them up before the function is called).</li>
     <br>
+    <br>
     &nbsp;
   </ul>
   <h4>Syntax:</h4>
-  <p class="code">game_restart();</p>
+  <p class="code"><span data-field="title" data-format="default">game_restart</span>();</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(ord("R")) game_restart();</p>
+  <p class="code">if keyboard_check_pressed(ord("R")) <span data-field="title" data-format="default">game_restart</span>();</p>
   <p>This would restart the game when the player presses the "R" key.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back: <a href="General_Game_Control.htm">General&nbsp;Game Control</a></div>
-        <div style="float:right">Next:&nbsp;<a href="game_load.htm">game_load</a></div>
+        <div style="float:right">Next:&nbsp;<a href="game_change.htm">game_change</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

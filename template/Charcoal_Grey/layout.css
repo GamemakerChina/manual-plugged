@@ -1921,8 +1921,6 @@ body.media-mobile {
     bottom: 3em;
     width: 100%;
     padding-top: 0em;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
     padding-bottom: 0; }
   body.media-mobile div.toc-holder, body.media-mobile div.idx-holder, body.media-mobile div.glo-holder {
     width: 100%;
@@ -1966,6 +1964,8 @@ body.media-mobile {
       display: flex; }
     body.media-mobile div.header div {
       height: 1.625em; }
+      body.media-mobile div.header h1 {
+        height: 1.625em; }
       body.media-mobile div.header div.logo {
         float: left;
         width: 1.625em;
@@ -1983,6 +1983,20 @@ body.media-mobile {
         body.media-mobile div.header div.title a {
           text-decoration: none;
           color: inherit; }
+          body.media-mobile div.header h1.title {
+            line-height: 100%;
+            font-size: 1.225em;
+            overflow: auto;
+            position: absolute;
+            top: 0.7em;
+            left: 2.8em;
+            margin: 0;
+font-weight: inherit;
+
+            right: 4em; }
+            body.media-mobile div.header h1.title a {
+              text-decoration: none;
+              color: inherit; }
       body.media-mobile div.header div.brs_next, body.media-mobile div.header div.brs_previous, body.media-mobile div.header div.search {
         height: 3.125em;
         width: 3em;
@@ -2294,8 +2308,37 @@ body.media-mobile {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain; }
+    body.media-mobile div.topic div.functionholder {
+      display: block;
+      height: 3.1em;
+      border-bottom-width: 0.1em;
+      border-bottom-style: solid;
+      border-bottom-color: #232323;
+      padding-top: 0.775em;
+      padding-right: 2em;
+      width: 100%;
+      background-color: #777777; }
+      
+        body.media-mobile div.topic div.functionholder > div {
+          width: 1.55em;
+          height: 1.55em;
+          margin-left: 2em;
+          float: left; }
+          body.media-mobile div.topic div.functionholder > div a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: transparent; }
   body.media-mobile div.topic div.topic-state.loading {
-    top: 3.1em; }
+    top: 3.1em; 
+    margin-left: 0.25em;
+    margin-right: 0.25em;}
+    body.media-mobile div.topic iframe.topic {
+      margin-left: 0.25em;
+      margin-right: 0.25em; }
   body.media-mobile div.social_buttons {
     bottom: 2.2em; }
   body.media-mobile div.mobileheader,
@@ -2377,6 +2420,8 @@ body.media-landscape {
       display: flex; }
     body.media-landscape div.header div {
       height: 1.875em; }
+      body.media-landscape div.header h1 {
+        height: 1.875em; }
       body.media-landscape div.header div.logo {
         float: left;
         height: 2.8125em;
@@ -2399,6 +2444,21 @@ body.media-landscape {
         body.media-landscape div.header div.title a {
           text-decoration: none;
           color: inherit; }
+          body.media-landscape div.header h1.title {
+            position: absolute;
+            top: 0.625em;
+            left: 2.8125em;
+            right: 4.6875em;
+            margin: 0;
+font-weight: inherit;
+
+            height: 1.1em;
+            line-height: 100%;
+            font-size: 1.875em;
+            overflow: auto; }
+            body.media-landscape div.header h1.title a {
+              text-decoration: none;
+              color: inherit; }
       body.media-landscape div.header div.brs_next {
         width: 1.875em;
         margin-right: 2.5em; }
@@ -2667,6 +2727,29 @@ body.media-landscape {
     -moz-perspective: 1000;
     -ms-perspective: 1000;
     perspective: 1000; }
+    body.media-landscape div.topic div.functionholder {
+      display: block;
+      height: 4em;
+      border-bottom-width: 0.1em;
+      border-bottom-style: solid;
+      border-bottom-color: #232323;
+      padding-top: 1em;
+      padding-right: 2em;
+      width: 100%;
+      background-color: #777777; }
+        body.media-landscape div.topic div.functionholder > div {
+          width: 2em;
+          height: 2em;
+          margin-left: 2em;
+          float: left; }
+          body.media-landscape div.topic div.functionholder > div a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: transparent; }
     body.media-landscape div.topic.sidebar-opened {
       left: 25em; }
   body.media-landscape div.idx-holder input,
@@ -2778,6 +2861,8 @@ body.media-desktop {
     padding: 2em; }
     body.media-desktop div.header div {
       float: left; }
+      body.media-desktop div.header h1 {
+        float: left; }
       body.media-desktop div.header div.logo {
         height: 7em;
         width: 70px;
@@ -2809,6 +2894,17 @@ body.media-desktop {
         body.media-desktop div.header div.title a {
           text-decoration: none;
           color: inherit; }
+          body.media-desktop div.header h1.title {
+            height: 1.3333333333em;
+            line-height: 100%;
+            font-size: 3em;
+            margin: 0;
+            font-weight: inherit;
+            max-width: 28em;
+            overflow: auto; }
+            body.media-desktop div.header h1.title a {
+              text-decoration: none;
+              color: inherit; }
       body.media-desktop div.header div.brs_next, body.media-desktop div.header div.brs_previous, body.media-desktop div.header div.search {
         display: none; }
   body.media-desktop div.functionbar {

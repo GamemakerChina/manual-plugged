@@ -946,19 +946,19 @@
   <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css">
   <meta name="topic-status" content="Draft">
 <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"><script src="../../../../../assets/scripts/main_script.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="generator" content="Adobe RoboHelp 2020">
-    <title>video_get_format</title>
-    <meta name="topic-status" content="Draft">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css">
-    <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-    <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt">
-    <meta name="rh-authors" content="Gurpreet S. Matharoo">
-    <meta name="topic-comment" content="Reference page for video_get_format">
-    <meta name="rh-index-keywords" content="video_get_format">
-    <meta name="search-keywords" content="video_get_format, video format">
-    <meta name="condition-tags" content="">
-  <meta name="brsnext" value="GameMaker_Language/GML_Reference/Drawing/draw_enable_drawevent.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Drawing/Videos/video_get_status.htm"></head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe RoboHelp 2022">
+  <title>video_get_format</title>
+  <meta name="topic-status" content="Draft">
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css">
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt">
+  <meta name="rh-authors" content="Gurpreet S. Matharoo">
+  <meta name="topic-comment" content="Reference page for video_get_format">
+  <meta name="rh-index-keywords" content="video_get_format,video_format_rgba,video_format_yuv">
+  <meta name="search-keywords" content="video_get_format,video format,video_format_rgba,video_format_yuv">
+  <meta name="condition-tags" content="">
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Drawing/draw_enable_drawevent.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Drawing/Videos/video_get_status.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -980,53 +980,55 @@
   <div>
   </div>
   <div>
-    <h1 id="h">video_get_format</h1>
-    <p>This function returns the colour format of the currently loaded video. This can be any one of the following constants:</p>
-    <table>
-      <tbody>
-        <tr>
-          <th colspan="2"><span data-keyref="Type_Constant_Video_Format">Video Format Constant</span></th>
-        </tr>
-        <tr>
-          <th>Constant</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><span class="inline">video_format_rgba</span></td>
-          <td>The video surface uses the RGBA color model</td>
-        </tr>
-        <tr>
-          <td><span class="inline">video_format_yuv</span></td>
-          <td>The video surface uses the YUV color model</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Windows, macOS, GX.games, Android, iOS, and HTML5 use the RGBA model for videos. All other platforms use the YUV model.</p>
-    <p>As the drawing methods for RGBA and YUV videos are different, the return value from this function may be used to run different code based on the format of the playing video. See&nbsp;<a href="YUV_Videos.htm#h">Draw Video</a>&nbsp;for an example.</p>
-    <p>&nbsp;</p>
-    <h4>Syntax:</h4>
-    <p class="code">video_get_format();</p>
-    <p>&nbsp;</p>
-    <h4>Returns:</h4>
-    <p class="code"><span data-keyref="Type_Constant_Video_Format">Video Format Constant</span></p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <div class="footer">
-      <div class="buttons">
-        <div class="clear">
-          <div>Back:&nbsp;<a href="Videos.htm">Video Playback</a></div>
-          <div>Next:&nbsp;<a href="video_open.htm#h">video_open</a></div>
-        </div>
+  <h1 id="h">video_get_format</h1>
+  <p>This function returns the colour format of the currently loaded video. This can be any one of the following constants:</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_Video_Format">Video Format Constant</span></th>
+      </tr>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="inline">video_format_rgba</span></td>
+        <td>The video surface uses the RGBA color model</td>
+      </tr>
+      <tr>
+        <td><span class="inline">video_format_yuv</span></td>
+        <td>The video surface uses the YUV color model</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Windows, macOS, GX.games, Android, iOS, and HTML5 use the RGBA model for videos. All other platforms use the YUV model.</p>
+  <p>As the drawing methods for RGBA and YUV videos are different, the return value from this function may be used to run different code based on the format of the playing video. See&nbsp;<a href="YUV_Videos.htm#h">Draw Video</a>&nbsp;for an example.</p>
+  <p>&nbsp;</p>
+  <h4>Syntax:</h4>
+  <p class="code">video_get_format();</p>
+  <p>&nbsp;</p>
+  <h4>Returns:</h4>
+  <p class="code"><span data-keyref="Type_Constant_Video_Format">Video Format Constant</span></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back:&nbsp;<a href="Videos.htm">Video Playback</a></div>
+        <div>Next:&nbsp;<a href="video_open.htm#h">video_open</a></div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
     </div>
-    <!-- KEYWORDS
-video_get_format
---><!-- TAGS
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
 video_get_format
 -->
+  <!-- TAGS
+video_get_format
+-->
+
 </div>
   <!-- KEYWORDS
 -->

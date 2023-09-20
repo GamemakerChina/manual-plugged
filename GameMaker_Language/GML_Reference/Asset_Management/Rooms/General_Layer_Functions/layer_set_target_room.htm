@@ -947,7 +947,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>layer_set_target_room</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -974,22 +974,25 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_set_target_room</h1>
-  <p>When you call this function you are telling <span data-keyref="GameMaker Name">GameMaker</span> that <i>all further layer functions should be applied to the given room</i>. In this way you can procedurally change or generate layers and layer contents in a room that is not the current room. When you are finished adding layers or layer elements to a room, call the function <a href="layer_reset_target_room.htm"><span class="inline">layer_reset_target_room()</span></a> to reset the room target (or call this function again with a room argument of -1). Note that this function can only be used on <i>rooms other than the current room</i>, and is designed so that you can add/remove layers and layer elements to rooms other than the room that is currently running.</p>
-  <p class="note"><b>WARNING!</b> While targeting another room, you can use all the regular layer functions <b>except</b> you cannot create instances using <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a></span> or <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><span class="inline">instance_create_depth()</span></a></span>, nor will the layer function <a href="layer_add_instance.htm"><span style="font-size:1px;"><span class="inline">layer_add_instance()</span></span></a> be available.</p>
+  <h1><span data-field="title" data-format="default">layer_set_target_room</span></h1>
+  <p>This function tells&nbsp;<span data-keyref="GameMaker Name">GameMaker</span> that <i>all further layer functions should be applied to the given room</i>. In this way you can procedurally change or generate layers and layer contents in a room that is not the current room.</p>
+  <p>When you are finished adding layers or layer elements to a room, call the function&nbsp;<span class="inline3_func"><a href="layer_reset_target_room.htm">layer_reset_target_room</a></span> to reset the room target or call this function again with a <span class="inline2">room</span> argument of <span class="inline2">-1</span>.</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;While targeting another room, you can use all the regular layer functions <b>except</b> you cannot create instances using&nbsp;<span class="inline3_func"><a href="../../Instances/instance_create_layer.htm">instance_create_layer</a></span> or <span class="inline3_func"><a href="../../Instances/instance_create_depth.htm">instance_create_depth</a></span>, nor will the layer function&nbsp;<span class="inline3_func"><a href="layer_add_instance.htm">layer_add_instance</a></span> be available.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">layer_set_target_room(room)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_target_room</span>(room);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>room</td><td><span data-keyref="Type_Asset_Room"><a target="_blank" href="../../../../../../The_Asset_Editors/Rooms.htm">Room Asset</a></span></td>
-        <td>The room to target for all further layer functions</td>
-     </tr>
+        <td>room</td>
+        <td><span data-keyref="Type_Asset_Room"><a target="_blank" href="../../../../../../The_Asset_Editors/Rooms.htm">Room Asset</a></span></td>
+        <td>The room to target for all further layer functions,&nbsp;or -1 for the current room</td>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1007,7 +1010,6 @@
     }<br>
     layer_reset_target_room();</p>
   <p>The above code sets the target room to the room "rm_Game" and then gets the layer ID for the layer called "SpriteAssets" in that room. This layer ID is then used to add 50 random sprite assets to the layer, before the layer target is reset to the current room.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

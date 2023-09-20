@@ -940,7 +940,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "8.2.2.6.10.2.0_15";
+    gTopicId = "8.2.2.6.10.2.0_18";
   
 //]]></script>
 
@@ -955,7 +955,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>part_type_colour_hsv</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -982,11 +982,12 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_type_colour_hsv</h1>
-  <p>With this function you can set a hue, saturation and value range for all particles of the given type. You supply a minimum value and a maximum value for each of the three components and the particles created will have a random colour based on the given range of parameters. In this way you can create particles of the same hue but different saturations, or of different hues but the same value (luminosity) etc... All values must be between 0 and 255.</p>
+  <h1><span data-field="title" data-format="default">part_type_colour_hsv</span></h1>
+  <p>This function sets a hue, saturation and value range for all particles of the given type.</p>
+  <p>You supply a minimum value and a maximum value for each of the three components and the particles created will have a random colour based on the given range of parameters. In this way you can create particles of the same hue but different saturations, or of different hues but the same value (luminosity), etc. All values must be between 0 and 255 (inclusive).</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">part_type_colour_hsv(ind, hmin, hmax, smin, smax, vmin, vmax);</p>
+  <p class="code"><span data-field="title" data-format="default">part_type_colour_hsv</span>(ind, hmin, hmax, smin, smax, vmin, vmax);</p>
   <table>
     <tbody>
       <tr>
@@ -1036,9 +1037,11 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">part_type_hsv(global.Stars, 0, 255, 0, 255, 255, 255 );</p>
-  <p>The above code sets each particle emitted of the particle type indexed in the global variable "Stars" to have different colours and saturations, but the same value (luminosity).</p>
-  <p>&nbsp;</p>
+  <p class="code">pt_stars = part_type_create();<br>
+    part_type_shape(pt_stars, pt_shape_star);<br>
+    <span data-field="title" data-format="default">part_type_colour_hsv</span>(pt_stars, 0, 255, 0, 255, 255, 255);
+  </p>
+  <p>The above code creates a new particle type, stores its index in a variable <span class="inline2">pt_stars</span>&nbsp;and gives it a star shape <span class="inline2">pt_shape_star</span>. It then sets each particle emitted of this particle type to have different colours and saturations, but the same value (luminosity).</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

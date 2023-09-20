@@ -1011,7 +1011,7 @@
   <meta name="topic-status" content="Draft">
 <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"><script src="../../../assets/scripts/main_script.js"></script>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <title>Emitter Properties</title>
   <meta name="topic-status" content="Draft">
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css">
@@ -1056,15 +1056,27 @@
   <h3>Mode</h3>
   <p>In&nbsp;<strong>Stream</strong> mode the emitter&nbsp;<em>streams</em>&nbsp;the number of particles set under <strong>Particle Count</strong> <em>continuously</em>. The emitter creates&nbsp;<strong>Particle Count</strong> particles every step&nbsp;(or frame).</p>
   <p>In <strong>Burst</strong> mode the emitter creates the number of particles&nbsp;set under <strong>Particle Count</strong>&nbsp;<em>exactly once</em>.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;In <strong>Burst</strong> mode&nbsp;<a href="../Particle_Systems.htm">The Particle System Editor</a>&nbsp;will burst the given number of particles repeatedly, but in-game this will happen only<em>&nbsp;once</em>.</p>
+  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;In <strong>Burst</strong> mode&nbsp;<a href="../Particle_Systems.htm">The Particle System Editor</a>&nbsp;will burst the given number of particles only <em>once</em>. You can click the&nbsp;<a href="../Particle_Systems.htm#restart_animation">Restart Animation</a>&nbsp;button to make the editor play it again.</p>
   <h3 id="h">Particle Count</h3>
   <p>In case of a positive value this setting determines the number of particles to be created:&nbsp;</p>
   <ul class="Disc">
-    <li><em>Every step</em>&nbsp;when in&nbsp;<strong>Stream</strong> mode</li>
+    <li><em>Every step</em>&nbsp;when in&nbsp;<strong>Stream</strong> mode,&nbsp;<em>or</em>&nbsp;at a custom&nbsp;<em>interval</em><i> </i>set under&nbsp;<a href="Emitter_Properties.htm#interval_interval_units">Interval &amp; Interval units</a></li>
     <li><em>Once</em>&nbsp;when in <strong>Burst</strong> mode</li>
   </ul>
   <p>You can also set a negative value. This means that a particle will be created with a chance of 1 out of "<strong>Particle Count</strong>", e.g. with the Particle Count set to&nbsp;<span class="inline2">-10</span>, there is a 1 out of 10 chance that a particle will be created.</p>
   <p>If this value is set to 0 the emitter will not create any particles.</p>
+  <h3>Delay &amp; Delay units</h3>
+  <p>These two settings set the delay for an emitter set to <strong>Stream</strong> mode:&nbsp;</p>
+  <ul class="Disc">
+    <li>A random value between&nbsp;<strong>Min</strong> and <strong>Max</strong>&nbsp;is chosen as the delay.&nbsp;The emitter waits this amount of time before it bursts its first <strong>Particle Count</strong> particles.</li>
+    <li>The values for <strong>Min</strong> and <strong>Max</strong> are expressed in <strong>Delay units</strong>: <strong>Seconds</strong> (the default)&nbsp;or <strong>Frames</strong>.</li>
+  </ul>
+  <h3 id="interval_interval_units">Interval &amp; Interval units</h3>
+  <p>These two settings set the interval between consecutive bursts&nbsp;of particles for an emitter set to <strong>Stream</strong> mode:&nbsp;</p>
+  <ul class="Disc">
+    <li>A random value ranging from&nbsp;<strong>Min</strong> to&nbsp;<strong>Max</strong> is chosen for every subsequent burst&nbsp;of <strong>Particle Count</strong> particles. The emitter will use the same interval all the time if you set&nbsp;<strong>Min</strong> and <strong>Max</strong>&nbsp;to the same value.</li>
+    <li>The values for <strong>Min</strong> and <strong>Max</strong> are expressed in <strong>Interval units</strong>: <strong>Seconds</strong> (the default)&nbsp;or <strong>Frames</strong>.</li>
+  </ul>
   <h3>Distribution</h3>
   <p>This setting determines the distribution of the particles over the shape, i.e. where they are created.</p>
   <ul class="Disc">

@@ -948,7 +948,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>timeline_moment_add_script</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -975,11 +975,12 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>timeline_moment_add_script</h1>
-  <p>With this function you can dynamically add a <a href="../../../GML_Overview/Script_Functions.htm">script&nbsp;function</a> to Timelines at any given "moment" within that time line, where a "moment" is the equivalent of one game tick (or step). In this way you can create a new time line using the <a href="timeline_add.htm"><span class="inline">timeline_add()</span></a> function and add different behaviours at any point, or simply modify a previously created time line resource with new behaviours. Note that the function cannot require any additional arguments when using this function, and if you use it to modify a Timeline asset present in the Asset Browser, then all instances that use this timeline will be affected, and the change will last until the end of the game (calling <span class="inline">game_restart()</span> will not reset the change either).</p>
+  <h1><span data-field="title" data-format="default">timeline_moment_add_script</span></h1>
+  <p>With this function you can dynamically add a <a href="../../../GML_Overview/Script_Functions.htm">script&nbsp;function</a> to Timelines at any given "moment" within that time line, where a "moment" is the equivalent of one game tick (or step).</p>
+  <p>In this way you can create a new time line using the&nbsp;<span class="inline3_func"><a href="timeline_add.htm">timeline_add</a></span> function and add different behaviours at any point, or simply modify a previously created time line resource with new behaviours. Note that the function cannot require any additional arguments when using this function, and if you use it to modify a Timeline asset present in the Asset Browser, then all instances that use this timeline will be affected, and the change will last until the end of the game (calling&nbsp;<span class="inline3_func"><a href="../../General_Game_Control/game_restart.htm">game_restart</a></span>&nbsp;will not reset the change either).</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">timeline_moment_add_script(ind, step, script);</p>
+  <p class="code"><span data-field="title" data-format="default">timeline_moment_add_script</span>(ind, step, script);</p>
   <table>
     <tbody>
       <tr>
@@ -1010,14 +1011,13 @@
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">global.tl = timeline_add();<br>
-    var i = room_speed * 60;<br>
+    var i = game_get_speed(gamespeed_fps) * 60;<br>
     repeat(3)<br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;timeline_moment_add_script(global.tl, i, choose(Attack_1, Attack_2, Attack_3);<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;i += room_speed * 60;<br>
+    &nbsp; &nbsp; <span data-field="title" data-format="default">timeline_moment_add_script</span>(global.tl, i, choose(Attack_1, Attack_2, Attack_3);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;i += game_get_speed(gamespeed_fps) * 60;<br>
     }</p>
-  <p>The above code will create a new time line and store its index in the variable "global.tl". It will then add three scripts to the time line, chosen at random, at one minute intervals.</p>
-  <p>&nbsp;</p>
+  <p>The above code will create a new time line and store its index in the variable <span class="inline2">global.tl</span>. It will then add three scripts to the time line, chosen at random, at one minute intervals.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

@@ -931,7 +931,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.4.0_7";
+    gTopicId = "8.2.2.4.0_8";
   
 //]]></script>
 
@@ -946,7 +946,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>game_load</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -973,11 +973,13 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_load</h1>
-  <p>With this function you can load a game that has been previously saved using <a href="game_save.htm"><span class="inline">game_save()</span></a>. Note that it will restore the version of the game that was used to create the save, so any updates made after it will not be visible. For more info, read the page on&nbsp;<a href="game_save.htm"><span class="inline">game_save()</span></a>.</p>
+  <h1><span data-field="title" data-format="default">game_load</span>&nbsp;<span data-conref="../../../assets/snippets/Tag_deprecated.hts"><span class="warning">DEPRECATED</span></span></h1>
+  <p>With this function you can load a game that has been previously saved using <span class="inline3_func"><a href="game_save.htm">game_save</a></span>.</p>
+  <p>Note that it will restore the version of the game that was used to create the save, so any updates made after it will not be visible.</p>
+  <p>For more info, read the page on <span class="inline3_func"><a href="game_save.htm">game_save</a></span>.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">game_load(filename);</p>
+  <p class="code"><span data-field="title" data-format="default">game_load</span>(filename);</p>
   <table>
     <tbody>
       <tr>
@@ -1002,7 +1004,6 @@
     &nbsp;&nbsp;&nbsp;&nbsp;if (global.Save) game_load("Save.dat");<br>
     }</p>
   <p>The above code will load a previously saved game if a global variable is <span class="inline">true</span> when the player presses the "L" key.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

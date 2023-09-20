@@ -1046,7 +1046,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Object Events</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <meta name="rh-authors" content="Mark Alexander">
   <meta name="topic-comment" content="Page detailing the events system and the different events in an object">
   <meta name="rh-index-keywords" content="Objects - Events">
@@ -1073,17 +1073,17 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Object Events</h1>
-  <p>So, what are object <strong>events</strong>? Basically, these are discreet moments in the game loop where things are made to happen based on what you have programmed for them. <span data-keyref="GameMaker Name">GameMaker</span> works with cycles of these events - from the moment a room is started to the moment it is finished there is a game loop running where every <strong>step </strong>a series of events are run or checked, and you can choose to place code or GML Visual actions in your objects that respond to these events (a step is a moment in game time, governed by the room speed setting, and can also be called a <strong>frame</strong>) .</p>
+  <h1><span data-field="title" data-format="default">Object Events</span></h1>
+  <p>So, what are <span data-field="title" data-format="default">Object Events</span>? Basically, these are discreet moments in the game loop where things are made to happen based on what you have programmed for them. <span data-keyref="GameMaker Name">GameMaker</span> works with cycles of these events - from the moment a room is started to the moment it is finished there is a game loop running where every <strong>step </strong>a series of events are run or checked, and you can choose to place&nbsp;<span data-keyref="GML_Code">GML Code</span> or <span data-keyref="GML_Visual">GML Visual</span>&nbsp;actions in your objects that respond to these events (a step is a moment in game time, governed by the&nbsp;<a href="../../Settings/Game_Options.htm">Game Frames Per Second</a> setting, and can also be called a <strong>frame</strong>) .</p>
   <p>Let's look at a typical object setup with events and code:</p>
-  <p><img alt="Object Editor Events View" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Events.png">As you can see in our example object there are a number of events listed that it should respond to, but initially when you create an object this list is empty and you must decide which events you need and what instances of that object should do when those events are triggered. To add events into the object, you press the <em>Add Event</em> button found at the bottom of the events list which will bring up the following window:</p>
+  <p><img alt="Object Editor Events View" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Events.png">As you can see in our example object there are a number of events listed that it should respond to, but initially when you create an object this list is empty and you must decide which events you need and what instances of that object should do when those events are triggered. To add events into the object, you press the <strong>Add Event</strong> button found at the bottom of the events list which will bring up the following window:&nbsp;</p>
   <p><img alt="Object Editor Events List" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_EventList.png">This is the list of all the basic events and event categories which an object can respond to, and within each category are sub events to further refine behaviours. For example, if you click on the <strong>K</strong><strong>ey Press</strong> <img alt="Key Press Icon" height="16" src="../../assets/Images/Icons/Icon_KeyboardPress.png" width="16">&nbsp;event category you will then get a further window popping up with the events that allow you to select <em>which </em>key the object should respond to.</p>
   <p>Once you have selected your event, the event's editor window&nbsp;will be chained to it and open up on the right.</p>
   <div data-conref="../../assets/snippets/Visual_Code_Choice.hts">
   <p class="note">At this point, you may be asked to choose between&nbsp;<span data-keyref="GML_Visual">GML Visual</span>&nbsp;and&nbsp;<span data-keyref="GML_Code">GML Code</span>. See&nbsp;<a href="../../GameMaker_Language.htm">GameMaker Language</a> for more information.</p>
 
 </div>
-  <p>You can now edit the GML code (or blocks) to give your object a specific behaviour or reaction to that event.</p>
+  <p>You can now edit the <span data-keyref="GML_Code">GML Code</span>&nbsp;(or blocks) to give your object a specific behaviour or reaction to that event.</p>
   <p>You can click the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png" style="">&nbsp;on any event that has been added to an object to get the following menu options:</p>
   <p><img alt="Object Editor Events Menu" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_RMBMenu.png">These options are:</p>
   <ul class="colour">
@@ -1093,10 +1093,10 @@
     <li><strong>Cut </strong>/ <strong>Copy </strong>/ <strong>Paste Events</strong> - Cut, copy or paste the selected event. You can use the standard keyboard shortcuts too: <img alt="CTRL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55">&nbsp;/&nbsp;<img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"> + <span class="inline">X</span>, <img alt="CTRL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55">&nbsp;/&nbsp;<img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55">&nbsp;+ <span class="inline">C</span>, and <img alt="CTRL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55">&nbsp;/&nbsp;<img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55">&nbsp;+ <span class="inline">V</span>.</li>
     <li><strong>Duplicate Event</strong> - Duplicate the chosen event. This will take the contents of the chosen event and duplicate them in another event that you specify.</li>
     <li><strong>Change Event</strong> - Change the event. This will prompt you to choose another event category and once selected the contents of the current event will be changed to the new event (removing the original event in the process).</li>
-    <li><strong>Convert To GML Visual / Code</strong> - Object events will be created using the method chosen when you created the project, either using GML Code or GML Visual actions. With this option you can convert from one to the other, regardless of the project type.</li>
+    <li><strong>Convert To GML Visual / Code</strong> - Object events will be created using the method chosen when you created the project, either using <span data-keyref="GML_Code">GML Code</span>&nbsp;or <span data-keyref="GML_Visual">GML Visual</span>&nbsp;actions. With this option you can convert from one to the other, regardless of the project type.</li>
     <li><strong>Delete Event</strong> - Delete the event (or events).</li>
   </ul>
-  <p>When removing events, you can use <img alt="Shift Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Shift.png" width="55">&nbsp;+ <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png">&nbsp;to select multiple events and then delete them all together.Each object you create has its own discreet list of events which are added into it from the <strong>Object Editor</strong>. These events fall into two categories:</p>
+  <p>When removing events, you can use <img alt="Shift Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Shift.png" width="55">&nbsp;+ <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png">&nbsp;to select multiple events and then delete them all together.Each object you create has its own discreet list of events which are added into it from <a href="../Objects.htm">The Object Editor</a>. These events fall into two categories:</p>
   <ul class="colour">
     <li>those that run every single game step</li>
     <li>those that are "triggered" by a game event, like the instance reaching the room edge or a keyboard or mouse press.</li>
@@ -1256,7 +1256,6 @@
     <li><a href="Async_Events.htm">The Async Events</a></li>
     <li><a href="Gesture_Events.htm">The Gesture Events</a></li>
   </ul>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

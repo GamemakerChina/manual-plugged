@@ -951,7 +951,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Collision Compatibility Mode</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo">
@@ -979,7 +979,7 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Collision Compatibility Mode</h1>
-  <p>In the <a href="../../../../Settings/Game_Options.htm">General Game Options</a> for your project, you can enable "<strong>Collision Compatibility Mode</strong>" to switch to the legacy collision system. You would only need to do this if you noticed odd behaviour with collisions in your existing project(s)&nbsp;after upgrading to&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;2022.1, which changed how collisions work.</p>
+  <p>In the <a href="../../../../Settings/Game_Options.htm">General Game Options</a> for your project, you can enable "<strong>Collision Compatibility Mode</strong>" to switch to the legacy collision system. You would only need to do this if you noticed odd behaviour with collisions in your existing project(s)&nbsp;after upgrading to&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;2022.1 or a newer version, which changed how collisions work.</p>
   <p><img alt="Collision Compatibility Mode option in Game Options" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/collision_compatibility_mode.png"></p>
   <h2>Changes in Collisions</h2>
   <p>In the legacy collision system, all bounding box coordinates were rounded to integers and were "exclusive", i.e. they would exclude the bottom-most and right-most edges of a collision mask. For example, the bounding box for a&nbsp;16x16&nbsp;collision mask would be generated from <span class="inline2">(0, 0)</span> to <span class="inline2">(15, 15)</span> (relative). This would work fine for instances that used only integer values for positioning and scaling, however using&nbsp;<a class="tooltip" title="Floating point numbers are numbers that contain decimal points. For example, the numbers 5.5, 0.001, and -2,345.6789 are floating point numbers. Numbers that do not have decimal places are called integers (e.g. 2, 56, 1400).">floating point</a> values would cause unexpected behaviour and a slight disconnect between rendering and collision checking, as GameMaker would then always&nbsp;round the bounding box values for performing collision checks.</p>

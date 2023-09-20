@@ -951,7 +951,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>buffer_peek</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -981,7 +981,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>buffer_peek</h1>
   <p>With the <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a> function, you can read data from the given buffer at the current "seek" position, with each piece of data being read advancing this position by the bytes being read or written. However, it may be necessary for you to read a given piece of data without wanting to change the current seek position, and that's when you would use this function. You simply supply the function with a buffer id, and then an offset position (from the buffer start) within that buffer to read from, as well as the data type that you are wanting to read.</p>
-  <p class="note"><b>NOTE</b>: Using the incorrect data type for the data being read will result in erroneous values!</p>
+  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span></b> Using the incorrect data type for the data being read will result in erroneous values!</p>
   <p>If the function succeeds then a value (Real, string, boolean, etc...) will be returned depending on the data type, while a failure will return simply 0.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>

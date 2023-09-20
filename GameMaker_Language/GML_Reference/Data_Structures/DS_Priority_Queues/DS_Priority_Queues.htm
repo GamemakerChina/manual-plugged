@@ -948,7 +948,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>DS Priority Queues</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -977,8 +977,14 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>DS&nbsp;Priority Queues</h1>
   <p>A DS priority queue is a special data structure similar to a <a href="../DS_Queues/DS_Queues.htm"><span class="inline">DS queue</span></a>, only here the queue of values is ordered by the priorities (always real numbers) that the values have been assigned. This structure can be very useful for constructing leaderboards or information lists where the importance of each entry can be weighted.</p>
-  <p class="note"><b>NOTE</b>: As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
-  <p class="note"><b>NOTE</b>: If you need to check if a data structure exists, you can use the <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> function.</p>
+  <div data-conref="../../../../assets/snippets/Note_DS_Destroy_When_No_Longer_Needed.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
+
+</div>
+  <div data-conref="../../../../assets/snippets/Note_DS_Use_ds_exists_To_Check_For_Existence.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;If you need to check if a data structure exists, you can use the&nbsp;<span class="inline3_func"><a href="../ds_exists.htm">ds_exists</a></span> function.</p>
+
+</div>
   <p>The following functions exist that deal with DS priority queues:</p>
   <ul class="colour">
     <li><a href="ds_priority_create.htm">ds_priority_create</a></li>

@@ -963,7 +963,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>tag_get_asset_ids</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -992,7 +992,8 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">tag_get_asset_ids</span></h1>
-  <p>With this function you can get all the assets of a given type that have the given tags assigned to them. You supply either a single tag (as a string) or an array, where each item in the array is a tag (as a string), as well as the type of asset to check. The type of asset should be one of the following constants:</p>
+  <p>This function gets all the assets of a given type that have the given tags assigned to them.</p>
+  <p>You supply either a single tag (as a string) or an array, where each item in the array is a tag (as a string), as well as the type of asset to check. The type of asset should be one of the following constants:</p>
   <div data-conref="../../../../assets/snippets/Asset_Type_Constants.hts">
   <table style="caption-side: top">
     <caption>Asset Type Constant</caption>
@@ -1093,7 +1094,6 @@
     var _num = irandom(array_length(_paths) - 1);<br>
     path_start(_paths[_num], 1, path_action_reverse, false);</p>
   <p>The above code uses the tag "enemy" to find all the path assets with that tag, before choosing one at random and assigning it to the instance running the code.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

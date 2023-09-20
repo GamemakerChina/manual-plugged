@@ -945,7 +945,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>display_get_gui_width</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -972,26 +972,30 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_get_gui_width</h1>
-  <p>With this function you can get the width (in pixels) of the GUI as used in the <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a>.</p>
+  <h1><span data-field="title" data-format="default">display_get_gui_width</span></h1>
+  <p>This function gets the width (in pixels) of the GUI as used in the <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a>.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">display_get_gui_width();</p>
+  <p class="code"><span data-field="title" data-format="default">display_get_gui_width</span>();</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">ads_move(display_get_gui_width() - ads_get_display_width(0), 0, 0);</p>
-  <p>The above code will set an advert to display at the top right-hand of the display.</p>
-  <p>&nbsp;</p>
+  <p class="code_heading">Draw GUI Event</p>
+  <p class="code">var _width =&nbsp;<span data-field="title" data-format="default">display_get_gui_width</span>();<br>
+    var _halign = draw_get_halign();<br>
+    draw_set_halign(fa_right);<br>
+    draw_text(_width - 5, 5, "This text is drawn in the top-right corner of the GUI");<br>
+    draw_set_halign(_halign);</p>
+  <p>The above code draws a text in the GUI: it first gets the GUI width using&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">display_get_gui_width</span></span>&nbsp;and then sets the horizontal text alignment to <span class="inline2">fa_right</span>, then draws a line of text using&nbsp;<span class="inline3_func"><a href="../Drawing/Text/draw_text.htm">draw_text</a></span>&nbsp;and finally resets the horizontal text alignment to its previous value.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back:&nbsp;<a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="display_get_gui_height.htm">display_get_gui_height</a></div>
+        <div style="float:right">Next:&nbsp;<a href="display_get_gui_height.htm">display_get_gui_height</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

@@ -972,7 +972,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>vertex_format_add_custom</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -1127,7 +1127,7 @@
   <ul class="colour">
     <li>Blend weights are usually stored in an array and then accessed using blend indices, but you can see here that instead of defining <span class="inline">in_BlendIndices</span> as an <span class="inline">ivec4</span> attribute, it's a <span class="inline">vec4</span>, then cast to an <span class="inline">ivec4</span> in the code. This is then used to index the array created using the <span class="inline">gm_Matrix</span> (you can only access an array using an <span class="inline">INT</span> value - not a float).</li>
     <br>
-    &nbsp;
+    <li>&nbsp;</li>
   </ul>
   <h4>Syntax:</h4>
   <p class="code">vertex_format_add_custom(type, usage);</p>
@@ -1156,7 +1156,7 @@
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">vertex_format_begin();<br>
-    vertex_format_add_textcoord();<br>
+    vertex_format_add_texcoord();<br>
     vertex_format_add_custom(vertex_type_float3, vertex_usage_position);<br>
     my_format = vertex_format_end();</p>
   <p>The above code will create a new vertex format with just texture and 3 custom floating point values for position. It is then stores the format id in the variable "my_format".</p>

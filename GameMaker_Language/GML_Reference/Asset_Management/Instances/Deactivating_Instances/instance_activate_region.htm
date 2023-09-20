@@ -951,7 +951,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>instance_activate_region</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -979,12 +979,12 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_activate_region</h1>
+  <h1><span data-field="title" data-format="default">instance_activate_region</span></h1>
   <p>With this function you can define a region within the room to activate instances that have previously been deactivated. This region can either be flagged as "inside" or "outside" as demonstrated in the following image:</p>
   <p><img alt="Instance activate region example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Instances/instance_activate_region.png">You can see in the image above that the "apple" instance is always active because, even if the sprite itself doesn't overlap the region, the bounding box does. So, instances are considered to be within the region specified when their <i>bounding box</i> overlaps with it, and the state of the collision mask (precise or not) is not taken into consideration. Note that activation is not instantaneous, and an instance that has been activated in this way will not be considered to be active until the end of the event in which the function was called.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">instance_activate_region(left, top, width, height, inside);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_activate_region</span>(left, top, width, height, inside);</p>
   <table>
     <tbody>
       <tr>
@@ -1029,9 +1029,9 @@
     var _vy = camera_get_view_y(view_camera[0]);<br>
     var _vw = camera_get_view_width(view_camera[0]);<br>
     var _vh = camera_get_view_height(view_camera[0]);<br>
-    instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);</p>
+    <span data-field="title" data-format="default">instance_activate_region</span>(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);
+  </p>
   <p>The above code deactivates all instances except the one that is running the code and then activates a region within the room.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

@@ -959,7 +959,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>http_get</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -990,7 +990,7 @@
   <p>With this function, you connect to the specified URL in order to retrieve information. As this is an asynchronous function, <span data-keyref="GameMaker Name">GameMaker</span> will not block while waiting for a reply, but will keep on running unless it gets callback information. This information will be in the form of a string and will trigger an <b>Async Event</b> in any instance that has one defined in their object properties. You should also note that HTTP request parameters (the bits sometimes "tacked on" to the end of a URL when you submit a form on a web page) are perfectly acceptable when using this function, for example:</p>
   <p class="code">http_get("http://www.example.com/logon?username="+name);</p>
   <p>will pass the string held in the variable "name" to the server as well a retrieve the data from that URL. So, essentially, any time a simple, short piece of data needs to be passed from the client to the server, this would be reasonable choice as the function to use.</p>
-  <p class="note"><b>NOTE</b>: You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results. Please see the section on <a href="HTTP.htm">Cross Domain Issues</a> for further details.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results. Please see the section on <a href="HTTP.htm">Cross Domain Issues</a> for further details.</p>
   <p>This function will generate multiple "call backs" which are picked up by any <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP Events</a>. These will generate a <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> (more commonly known as a "dictionary") that is exclusive to this event and is stored in the special variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. This DS map will contain different values depending on whether there is data being returned or not. For example, if you have requested a file, the event will trigger multiple times as each packet of data is received so that you can show a progress bar, for example. The general structure for the DS map will be as follows:</p>
   <ul class="colour">
     <li><b>id: </b>The ID which was returned from the command. If you fire off a series of <span class="inline">http_</span> requests then you need to know which one you are getting the reply to, and so you would use this value to compare to the value you stored when you originally sent the request to find the right one.</li>

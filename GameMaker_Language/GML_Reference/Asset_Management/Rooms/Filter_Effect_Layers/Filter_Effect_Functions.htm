@@ -978,7 +978,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Filter and Effect Functions</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo">
@@ -1028,7 +1028,15 @@
     var _fxshake = fx_create(_filter_to_use);
   </p>
   <p>To ensure that the latter method works, you can simply add the filter&nbsp;to at least one room in your project, or ensure that <span class="inline"><a href="fx_create.htm">fx_create()</a></span> is called anywhere in your project with the filter name as a string constant (and not a variable).</p>
-  <div data-conref="../../../../../assets/snippets/FX_Limitations.hts"><h2 class="">Limitations</h2><p>There is currently one limitation to keep in mind:</p><ul class="colour"><li>Filters/effects will not work when the <a href="../../../Drawing/Surfaces/application_surface_enable.htm">application surface is disabled</a>. It's enabled by default, and you shouldn't usually require disabling it, however you may do so to gain performance on mobile devices. In such cases you wouldn't be able to use filters/effects as they require the surface texture for shader manipulations.</li></ul></div>
+  <div data-conref="../../../../../assets/snippets/FX_Limitations.hts">
+  <h2>Limitations</h2>
+  <p>There are some limitations to keep in mind when using filters/effects:</p>
+  <ul class="colour">
+    <li>Filters/effects will not work when the <a href="../../../Drawing/Surfaces/application_surface_enable.htm">application surface is disabled</a>. It's enabled by default, and you shouldn't usually require disabling it, however you may do so to gain performance on mobile devices. In such cases you wouldn't be able to use filters/effects as they require the surface texture for shader manipulations.</li>
+    <li>Filters/effects that take a texture image, require that image to be on a separate texture page. You can set this through the <a href="../../../../../The_Asset_Editors/Sprites.htm">sprite editor</a>.</li>
+  </ul>
+
+</div>
   <h2>Function List</h2>
   <p>The following functions are used to create and manage "FX Structs" containing effect data:</p>
   <ul class="colour">

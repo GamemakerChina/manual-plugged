@@ -945,7 +945,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>display_get_gui_height</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -973,26 +973,30 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_get_gui_height</h1>
-  <p>With this function you can get the height (in pixels) of the GUI as used in the <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a>.</p>
+  <h1><span data-field="title" data-format="default">display_get_gui_height</span></h1>
+  <p>This function gets the height (in pixels) of the GUI as used in the <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a>.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">display_get_gui_height();</p>
+  <p class="code"><span data-field="title" data-format="default">display_get_gui_height</span>();</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">ads_move(0, display_get_gui_height() - ads_get_display_height(0), 0);</p>
-  <p>The above code will set an advert to display at the bottom left-hand corner of the display.</p>
-  <p>&nbsp;</p>
+  <p class="code_heading">Draw GUI Event</p>
+  <p class="code">var _height = <span data-field="title" data-format="default">display_get_gui_height</span>();<br>
+    var _valign = draw_get_valign();<br>
+    draw_set_valign(fa_bottom);<br>
+    draw_text(5, _height - 5, "I am drawn in the bottom-left corner of the GUI");<br>
+    draw_set_valign(_valign);</p>
+  <p>The above code draws a text in the GUI: it first gets the GUI height using&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">display_get_gui_height</span></span>&nbsp;and then sets the vertical text alignment to <span class="inline2">fa_bottom</span>, then draws a line of text using&nbsp;<span class="inline3_func"><a href="../Drawing/Text/draw_text.htm">draw_text</a></span>&nbsp;and finally resets the vertical text alignment to its previous value.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back:&nbsp;<a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="display_get_timing_method.htm">display_get_timing_method</a></div>
+        <div style="float:right">Next:&nbsp;<a href="display_get_timing_method.htm">display_get_timing_method</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

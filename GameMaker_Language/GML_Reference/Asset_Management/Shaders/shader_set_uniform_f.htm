@@ -950,7 +950,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>shader_set_uniform_f</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -991,8 +991,11 @@
     &nbsp;&nbsp;&nbsp;&nbsp;attribute vec4 in_Colour1;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;attribute vec2 in_TextureCoord;
   </p>
-  <p>Note too that if you want to do compressed normals etc... using a 4 byte colour format, then you will also have to use the same "in_Colour" format as shown above too.</p>
-  <p class="note"><b></b><b>NOTE</b>: All uniforms must be set <b>after</b> calling the function <span style="font-size:1px;"><a href="shader_set.htm"><span class="inline">shader_set()</span></a></span>, and before calling <span style="font-size:1px;"><a href="shader_reset.htm"><span class="inline">shader_reset()</span></a></span>.</p>
+  <p>Note too that if you want to do compressed normals, etc. using a 4 byte colour format, then you will also have to use the same "in_Colour" format as shown above too.<b></b></p>
+  <div data-conref="../../../../assets/snippets/Note_Set_Uniforms_After_Shader_Set.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;All uniforms must be set <em>after</em> calling the function <span class="inline2"><a href="shader_set.htm">shader_set</a></span>&nbsp;and <em>before</em> calling <span class="inline2"><a href="shader_reset.htm">shader_reset</a></span>.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">shader_set_uniform_f(handle, value1 [, value2, value3, value4]);</p>

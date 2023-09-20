@@ -937,7 +937,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.1.0_21";
+    gTopicId = "8.2.2.1.0_23";
   
 //]]></script>
 
@@ -952,7 +952,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>static_set</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo">
@@ -1014,7 +1014,7 @@
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
-  <h4>Example:</h4>
+  <h4>Example 1: Basic Use</h4>
   <div data-conref="../../../assets/snippets/static_set_example.hts">
   <p class="code">var _potion = json_parse(_json_string);<br>
     <br>
@@ -1030,12 +1030,40 @@
 
 </div>
   <p>&nbsp;</p>
+  <h4>Example 2: Assigning a Static Struct to a Pure Data Struct</h4>
+  <p class="code">function vec2(_x, _y) constructor<br>
+    {<br>
+    &nbsp;&nbsp; &nbsp;x = _x;<br>
+    &nbsp;&nbsp; &nbsp;y = _y;<br>
+    &nbsp;&nbsp; &nbsp;<br>
+    &nbsp;&nbsp; &nbsp;static add = function(_vecb)<br>
+    &nbsp;&nbsp; &nbsp;{<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;x += _vecb.x;<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;y += _vecb.y;<br>
+    &nbsp;&nbsp; &nbsp;}<br>
+    &nbsp;&nbsp; &nbsp;<br>
+    &nbsp;&nbsp; &nbsp;// ...<br>
+    }<br>
+    <br>
+    var _a = new vec2(10, 10);<br>
+    var _b = {x: 4, y: 9};<br>
+    <br>
+    static_set(_b, static_get(vec2));<br>
+    <br>
+    _b.add(_a);<br>
+    <br>
+    show_debug_message(_b);
+  </p>
+  <p>The code above first defines a constructor function to create <span class="inline2">vec2</span> structs. The constructor function assigns the parameters <span class="inline2">_x</span> and <span class="inline2">_y</span> to the struct's <span class="inline2">x</span> and <span class="inline2">y</span> variables respectively. It also defines a static <span class="inline2">add</span>&nbsp;function (and possibly many others, indicated by the <span class="inline2">// ...</span> comment), which can be used by all structs that have this constructor's static struct as their static struct.</p>
+  <p>Two struct variables are then defined: <span class="inline2">_a</span> is created using the <span class="inline2">vec2</span> constructor function and gets an (x, y) of (10, 10), <span class="inline2">_b</span> is created as a basic struct with just two variables: <span class="inline2">x</span> set to 4 and <span class="inline2">y</span> set to 9.</p>
+  <p>The struct variable <span class="inline2">_b</span> is then assigned the static struct of <span class="inline2">vec2</span>&nbsp;using&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">static_set</span></span>, this turns <span class="inline2">_b</span> into a <span class="inline2">vec2</span> struct, making the static variables and functions of <span class="inline2">vec2</span>&nbsp;available to <span class="inline2">_b</span>. After that, <span class="inline2">_a</span> is added to <span class="inline2">_b</span> by calling the <span class="inline2">add</span> function on <span class="inline2">_b</span>. <span class="inline2">_b</span> is then shown using&nbsp;<span class="inline3_func"><a href="../Debugging/show_debug_message.htm">show_debug_message</a></span>. This debug output will show&nbsp;<span class="inline2">{ x : 14, y : 19 }</span>.</p>
+  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div>Back:&nbsp;<a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div>Next:&nbsp;<a href="variable_instance_exists.htm">variable_instance_exists</a></div>
+        <div>Next:&nbsp;<a href="instanceof.htm">instanceof</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

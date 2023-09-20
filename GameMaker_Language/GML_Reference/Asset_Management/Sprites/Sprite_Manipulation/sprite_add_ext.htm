@@ -970,13 +970,13 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>sprite_add_ext</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="">
   <meta name="topic-comment" content="">
-  <meta name="rh-index-keywords" content="sprite_add_ext">
-  <meta name="search-keywords" content="sprite_add_ext">
+  <meta name="rh-index-keywords" content="sprite_add_ext,sprite_add_ext_error_unknown,sprite_add_ext_error_cancelled,sprite_add_ext_error_spritenotfound,sprite_add_ext_error_loadfailed,sprite_add_ext_error_decompressfailed,sprite_add_ext_error_setupfailed">
+  <meta name="search-keywords" content="sprite_add_ext,sprite_add_ext_error_unknown,sprite_add_ext_error_cancelled,sprite_add_ext_error_spritenotfound,sprite_add_ext_error_loadfailed,sprite_add_ext_error_decompressfailed,sprite_add_ext_error_setupfailed">
   <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt">
 </head>
 
@@ -1100,7 +1100,6 @@
   <p class="code"><span data-keyref="Type_Asset_Sprite"><a target="_blank" href="../../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p>&nbsp;</p>
   <p class="code_heading">Create Event</p>
   <p class="code">sprite_index = -1;<br>
     new_sprite =&nbsp;<span data-field="title" data-format="default">sprite_add_ext</span>("my_new_sprite_index.png", 1, 0, 0, true);</p>
@@ -1115,7 +1114,7 @@
     {<br>
     &nbsp; &nbsp; draw_self();<br>
     }</p>
-  <p>The above example defines code in three&nbsp;<a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Object Events</a>. In the <strong>Create</strong> event the instance's&nbsp;<span class="inline2"><a href="../Sprite_Instance_Variables/sprite_index.htm">sprite_index</a></span>&nbsp;is first set to <span class="inline2">-1</span> and the function&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">sprite_add_ext</span></span>&nbsp;is called with <span class="inline2">fname</span>&nbsp;set to <span class="inline2">"my_new_sprite_index.png"</span> (i.e. an image file in the root of the datafiles directory). The sprite ID returned by the function is stored in an instance variable <span class="inline2">new_sprite</span>.</p>
+  <p>The above example defines code in three&nbsp;<a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Object Events</a>. In the <strong>Create</strong> event the instance's&nbsp;<span class="inline2"><a href="../Sprite_Instance_Variables/sprite_index.htm">sprite_index</a></span>&nbsp;is first set to <span class="inline2">-1</span> and the function&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">sprite_add_ext</span></span>&nbsp;is called with <span class="inline2">fname</span>&nbsp;set to <span class="inline2">"my_new_sprite_index.png"</span> (i.e. an image file in the root of the <span class="inline2"><span data-keyref="Const_IncludedFiles_FolderName">datafiles</span></span>&nbsp;directory). The sprite ID returned by the function is stored in an instance variable <span class="inline2">new_sprite</span>.</p>
   <p>In the async&nbsp;<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">Image Loaded</a>&nbsp;event the value stored in&nbsp;<span class="inline2">async_load[?"id"]</span> is compared to the value in <span class="inline2">new_sprite</span>. If the two are equal, it means this Image Loaded event was triggered for the call to&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">sprite_add_ext</span></span>&nbsp;made earlier in the Create event (there may be <em>many</em> other calls to <span class="inline3_func"><span data-field="title" data-format="default">sprite_add_ext</span></span>). The ID of the newly loaded sprite is then assigned as this instance's <span class="inline2">sprite_index</span>.</p>
   <p>In the&nbsp;<a href="../../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Event</a>&nbsp;instances of the object call&nbsp;<span class="inline3_func"><a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm">draw_self</a></span>&nbsp;if their <span class="inline2">sprite_index</span> is not set to <span class="inline2">-1</span>&nbsp;(or, rather, <em>no longer</em> set to <span class="inline2">-1</span>).</p>
   <p>&nbsp;</p>

@@ -965,7 +965,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>GX.games</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css">
   <script src="../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo">
@@ -993,9 +993,10 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">GX.games</span>&nbsp;Game Options</h1>
-  <p>The GX.games Game Options allow you to modify the properties for your&nbsp;game. The following sections are provided:</p>
+  <p>The GX.games Game Options allow you to modify the properties for your&nbsp;game and mod. The following sections are provided:</p>
   <h2>General</h2>
-  <p><img class="center" src="../../assets/Images/Settings/Game_Options/Opera_GX_General_Options.png">This window shows your GX.games sign-in status. You can click on the&nbsp;<img class="icon" src="../../assets/Images/Icons/Icon_Refresh.png">&nbsp;Refresh icon to log in using your Opera account.</p>
+  <p><img class="center" src="../../assets/Images/Settings/Game_Options/Opera_GX_General_Options.png">This section displays the options that are used when you select "<strong>Upload as Game</strong>" when creating an executable for GX.games.</p>
+  <p>This window shows your GX.games sign-in status. You can click on the&nbsp;<img class="icon" src="../../assets/Images/Icons/Icon_Refresh.png">&nbsp;Refresh icon to log in using your Opera account.</p>
   <p>You then have the following options:</p>
   <ul class="colour">
     <li><b>Select game</b>: From this list, you can either select an existing game to update, or choose to upload a new game.</li>
@@ -1017,9 +1018,9 @@
     <li><strong>Next Version:</strong>&nbsp;This is the version number used for your next GX.games upload. You can only change this after your game has been uploaded to GX.games. You do not need to modify this manually for each upload, as GameMaker will automatically increment the last digit of the version number for you.</li>
     <li><b>Register on GX.games</b>: Click on this button to register a new entry on GX.games. This is only valid when "<strong>Select game</strong>" is set to "<strong>New game</strong>".</li>
     <li><strong>Select group</strong>: Before uploading a new game, you can select the studio that the game will belong to.</li>
-    <li><strong>Edit Game on Opera</strong>: This opens GX.games DevCloud and takes you to your game's "Game details" page. This is only clickable when you're logged in and your game is uploaded.</li>
-    <li><strong>Internal Share URL</strong>: This opens the private version of your game, only when it has been enabled on GX.games DevCloud.</li>
-    <li><strong>Public Share URL</strong>: This opens the public version of your game, only when it has been enabled on GX.games DevCloud.<br>
+    <li><strong>Edit Game on Opera</strong>: This opens GX.create&nbsp;and takes you to your game's "Game details" page. This is only clickable when you're logged in and your game is uploaded.</li>
+    <li><strong>Internal Share URL</strong>: This opens the private version of your game, only when it has been enabled on GX.create.</li>
+    <li><strong>Public Share URL</strong>: This opens the public version of your game, only when it has been enabled on GX.create.<br>
       <br>
       Both of these URLs can be shared with others to allow them to play your game.
     </li>
@@ -1032,6 +1033,37 @@
     <li><strong>Scaling</strong>: Your game can be configured to scale the draw canvas automatically to <strong>maintain the aspect ratio </strong>within the browser, or you can select to have it run <strong>full scale</strong>. The full scale option will not full screen the game in the browser, but rather stretch what is drawn to fit the canvas size, as defined by the first room of the game.&nbsp;This is set to keep aspect ratio&nbsp;by default.</li>
   </ul>
   <p>Finally there is the option to set the size of the <a class="tooltip" title="A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192.&nbsp;There is also a button marked <strong><strong>Preview&nbsp;</strong></strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
+  <h2>Mod</h2>
+  <p><img class="center" src="../../assets/Images/Settings/Game_Options/Opera_GX_Mod_Options.png">This section displays the options that are used when you select "<strong>Upload as Live Wallpaper Mod</strong>" when creating an executable for GX.games.</p>
+  <p>This window also shows your GX.games sign-in status. You can click on the&nbsp;<img class="icon" src="../../assets/Images/Icons/Icon_Refresh.png">&nbsp;Refresh icon to log in using your Opera account.</p>
+  <p>You then have the following options:</p>
+  <ul class="colour">
+    <li><b>Select Mod</b>: From this list, you can either select an existing mod to update, or choose to upload a new mod.</li>
+    <li><strong>Mod Name</strong>: This is your mod's name (title) on GX.games.<br>
+      <br>
+      <span class="important">IMPORTANT</span>&nbsp;In order for the upload to GX.games to succeed, it's important that you only use allowed characters in the game's name (which, by default, is set to your GameMaker project's name, so make sure to either choose a valid project name or change the game's name manually afterwards).<br>
+      <br>
+      If you upload a game with a title that has forbidden characters, you will get this error:&nbsp;<span><span class="inline2">Incorrect Data. Check the output</span></span><br>
+      <br>
+      The allowed characters are:
+      <ul>
+        <li>a-z, A-Z (with a support of local schemas such as å)</li>
+        <li>0-9</li>
+        <li>whitespace</li>
+        <li>: - ! ? . , ' &amp; ( )</li>
+      </ul>
+    </li>
+    <li><strong>Version</strong>: This is the version of the mod that was last uploaded. You can only change this field before your mod has been uploaded to GX.games.</li>
+    <li><strong>Next Version:</strong>&nbsp;This is the version number used for your next GX.games upload. You can only change this after your mod has been uploaded to GX.games. You do not need to modify this manually for each upload, as GameMaker will automatically increment the last digit of the version number for you.</li>
+    <li><b>Register on GX.games</b>: Click on this button to register a new entry on GX.games. This is only valid when "<strong>Select Mod</strong>" is set to "<strong>New mod</strong>".</li>
+    <li><strong>Select group</strong>: Before uploading a new mod, you can select the studio that the mod will belong to.</li>
+    <li><strong>Edit Mod on Opera</strong>: This opens GX.create and takes you to your mod's details page. This is only clickable when you're logged in and your mod is uploaded.</li>
+    <li><strong>Internal Share URL</strong>: This opens the private version of your mod, only when it has been enabled on GX.create.</li>
+    <li><strong>Public Share URL</strong>: This opens the public version of your mod, only when it has been enabled on GX.create.<br>
+      <br>
+      Both of these URLs can be shared with others to allow them to get your mod.
+    </li>
+  </ul>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>

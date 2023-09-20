@@ -946,7 +946,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>instance_activate_layer</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -974,11 +974,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_activate_layer</h1>
-  <p>With this function you can activate a layer that has been deactivated previously. You need to supply the <b>layer ID</b>, which can either be the name of the layer as written in the code editor (as a string) or the actual layer ID value as returned by the <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>&nbsp;and all deactivated instances on that layer will activated once again. Note that if you have deactivated a layer that has persistent instances, you will need to reactivate the layer again with this function before changing room, otherwise any persistent instances will <i>not</i> be carried over and will be discarded. Note too that activation is not instantaneous, and an instance that has been activated in this way will not be considered to be active until the end of the event in which the function was called.</p>
+  <h1><span data-field="title" data-format="default">instance_activate_layer</span></h1>
+  <p>With this function you can activate a layer that has been deactivated previously. You need to supply the <b>layer ID</b>, which can either be the name of the layer as written in the code editor (as a string) or the actual layer ID value as returned by the&nbsp;<span class="inline3_func"><a href="../../Rooms/General_Layer_Functions/layer_create.htm">layer_create</a></span> and all deactivated instances on that layer will activated once again. Note that if you have deactivated a layer that has persistent instances, you will need to reactivate the layer again with this function before changing room, otherwise any persistent instances will <i>not</i> be carried over and will be discarded. Note too that activation is not instantaneous, and an instance that has been activated in this way will not be considered to be active until the end of the event in which the function was called.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">instance_activate_layer(layer_id);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_activate_layer</span>(layer_id);</p>
   <table>
     <tbody>
       <tr>
@@ -999,12 +999,15 @@
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">instance_activate_all();<br>
-    var _vx = camera_get_view_x(view_camera[0]);<br>
-    var _vy = camera_get_view_y(view_camera[0]);<br>
-    instance_deactivate_region(view_xview[0] - 64, view_yview - 64, _vx + 128, _vy + 128, false, false);<br>
-    instance_activate_layer("Player_Layer");</p>
+    var _cam = view_camera[0];<br>
+    var _vx = camera_get_view_x(_cam);<br>
+    var _vy = camera_get_view_y(_cam);<br>
+    var _vw = camera_get_view_width(_cam);<br>
+    var _vh = camera_get_view_height(_cam);<br>
+    instance_deactivate_region(_vx&nbsp;- 64, _vy - 64, _vw + 128, _vh + 128, false, false);<br>
+    <span data-field="title" data-format="default">instance_activate_layer</span>("Player_Layer");
+  </p>
   <p>The above code activates all instances within the room and then deactivates those that are outside of the limits of the current camera view, except for the instances on the layer "Player_Layer" which are re-activated again at the end.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

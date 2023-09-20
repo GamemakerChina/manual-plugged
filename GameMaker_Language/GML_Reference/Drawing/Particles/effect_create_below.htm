@@ -953,7 +953,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.6.10.0_1";
+    gTopicId = "8.2.2.6.10.0_3";
   
 //]]></script>
 
@@ -968,7 +968,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>effect_create_below</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -995,10 +995,16 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>effect_create_below</h1>
-  <p>With this function you can create a simple effect beneath all instances of your room (it is actually created at a depth of 100000). If the effect is anything other <span class="inline">ef_rain</span> or <span class="inline">ef_snow</span> then you can define an x/y position to create the effect, and the size can be a value of 0, 1, or 2, where 0 is small, 1 is medium and 2 is large.</p>
-  <p>It is worth noting that these effects can have their drawing toggled on and off, as well as have their drawing paused, by using the functions <a href="Particle_Systems/part_system_automatic_draw.htm"><span class="inline">part_system_automatic_draw()</span></a> and <a href="Particle_Systems/part_system_automatic_update.htm"><span class="inline">part_system_automatic_update()</span></a> with the appropriate value for the particle system index (where 0 is for effects below and 1 is for effects above).</p>
-  <p>The available constants for the different particle kinds are:</p>
+  <h1><span data-field="title" data-format="default">effect_create_below</span>&nbsp;<span data-conref="../../../../assets/snippets/Tag_deprecated.hts"><span class="warning">DEPRECATED</span></span></h1>
+  <p>This function creates a simple effect below all instances of your room (it is actually created at a depth of 50).</p>
+  <div data-conref="../../../../assets/snippets/Note_Use_Effect_Create_Layer_Depth_Functions.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function is deprecated. To create a particle effect at any depth or layer, you can use&nbsp;<span class="inline3_func"><a href="effect_create_depth.htm">effect_create_depth</a></span>&nbsp;or&nbsp;<span class="inline3_func"><a href="effect_create_layer.htm">effect_create_layer</a></span>&nbsp;instead.</p>
+
+</div>
+  <p>The effect types <span class="inline2">ef_rain</span>&nbsp;and <span class="inline2">ef_snow</span> don't use the x/y position (although you must provide them). The size can be a value of 0, 1, or 2, where 0 is small, 1 is medium and 2 is large.</p>
+  <p>&nbsp;</p>
+  <p>The available constants for the different particle kinds are:&nbsp;</p>
+  <div data-conref="../../../../assets/snippets/Table_Effect_Type_Constant.hts">
   <table>
     <tbody>
       <tr>
@@ -1068,9 +1074,11 @@
       </tr>
     </tbody>
   </table>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">effect_create_below(kind, x, y, size, colour);</p>
+  <p class="code"><span data-field="title" data-format="default">effect_create_below</span>(kind, x, y, size, colour);</p>
   <table>
     <tbody>
       <tr>
@@ -1112,17 +1120,16 @@
   <h4>Example:</h4>
   <p class="code">if speed &gt; 0<br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;effect_create_below(ef_smoke, x, y, 0, c_gray);<br>
+    &nbsp; &nbsp; <span data-field="title" data-format="default">effect_create_below</span>(ef_smoke, x, y, 0, c_gray);<br>
     }</p>
   <p>The above code will create a small puff of gray smoke every step that the instance speed is greater than 0 at the instance x,y coordinates.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particles.htm">Particles</a></div>
-        <div style="float:right">Next: <a href="effect_create_above.htm">effect_create_above</a></div>
+        <div style="float:left">Back:&nbsp;<a href="Particles.htm">Particles</a></div>
+        <div style="float:right">Next:&nbsp;<a href="effect_create_above.htm">effect_create_above</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>

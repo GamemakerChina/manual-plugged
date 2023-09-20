@@ -954,7 +954,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>array_contains_ext</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="">
@@ -984,7 +984,7 @@
   <h1><span data-field="title" data-format="default">array_contains_ext</span></h1>
   <p>This function checks if the given array (or a part of it) contains any or all of the given values.</p>
   <p>The <span class="inline2">matchAll</span>&nbsp;argument determines&nbsp;if <em>all</em> values should be present in the array (<span class="inline2">true</span>) or if&nbsp;<em>any one</em> of the values will do (<span class="inline2">false</span>).</p>
-  <p>The array of values may contain duplicates. This way you can check if there are multiple (or <em>enough</em>) occurrences of a value in an array. To avoid this, you can run&nbsp;<span class="inline2"><a href="array_unique.htm">array_unique</a></span>&nbsp;on your array first to guarantee only single occurrences.</p>
+  <p>The <span class="inline2">values</span> array may contain duplicates. When <span class="inline2">matchAll</span> is enabled, this allows you to check exactly how many occurrences of a value exist in the original array.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span>&nbsp;To check if an array not just <em>contains</em> a value but rather contains a value <em>that satisfies a certain condition</em>, use&nbsp;<span class="inline2"><a href="array_any.htm">array_any</a></span>.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
@@ -1040,11 +1040,11 @@
   <p>The above code first creates an array <span class="inline2">hand</span>&nbsp;with 13 values. It then defines another array <span class="inline2">_high_cards</span> that defines which are considered "high" cards. Next the <span class="inline2">hand</span> array is checked for any of these using&nbsp;<span class="inline2"><span data-field="title" data-format="default">array_contains_ext</span></span>&nbsp;and the result is stored in a temporary variable <span class="inline2">_any_high_cards</span>. Finally a debug message shows the value of the variable <span class="inline2">_any_high_cards</span>.</p>
   <p>&nbsp;</p>
   <h4>Example 2: Check if all values are present in an array</h4>
-  <p class="code">inventory = ["potion", "elixir", "potion", "herb", "herb", "special spice"];<br>
-    var _required_items = ["herb", "herb"];<br>
-    var _can_make_potion = <span data-field="title" data-format="default">array_contains_ext</span>(inventory, _required_items, true);<br>
-    show_debug_message("A potion can{0} be made using the inventory's current contents", _can_make_potion ? "" : "not");</p>
-  <p>The above code first creates an array that stores a basic inventory of items. The items are stored as strings. It then defines a temporary array <span class="inline2">_required_items</span>&nbsp;that contains the items required to make a "potion". Next&nbsp;<span class="inline2"><span data-field="title" data-format="default">array_contains_ext</span></span>&nbsp;is called to check if <em>all</em> values in <span class="inline2">_required_items</span> are present in <span class="inline2">inventory</span>. This is done by setting the <span class="inline2">matchAll</span> argument to <span class="inline2">true</span>. The result is stored in the variable <span class="inline2">_can_make_potion</span>. Finally a debug message is shown saying if a "potion" can be made or not from the inventory's current contents.</p>
+  <p class="code">inputs = ["left", "right", "left", "left", "up", "down", "right"];<br>
+    var _required_inputs = ["left", "left", "left"];<br>
+    var _input_valid = array_contains_ext(inputs, _required_inputs, true);<br>
+    show_debug_message(_input_valid);</p>
+  <p>The above code creates an array containing a sequence of inputs. Then it creates another array which contains the inputs that make the sequence valid (i.e. having&nbsp;<em>only</em> three occurrences of "left"). It then calls&nbsp;<span class="inline2"><span data-field="title" data-format="default">array_contains_ext</span></span>&nbsp;to validate the inputs array, stores the result in a variable and prints it to the output log.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>

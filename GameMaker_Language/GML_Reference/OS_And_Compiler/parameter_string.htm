@@ -930,7 +930,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.20.0_23";
+    gTopicId = "8.2.2.20.0_24";
   
 //]]></script>
 
@@ -945,7 +945,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>parameter_string</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -973,11 +973,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>parameter_string</h1>
-  <p>Command-line parameters are those extra commands that you can add to an exe to change how the program is run and with this function you can get the chosen command-line parameter as a string. You can find the number of parameters for the current game using the function <a href="parameter_count.htm"><span class="inline">parameter_count()</span></a>, where the first parameter has index 1 and the last one has the index returned by the function (a value of 0 is special on that it is the filename of the game executable, including the path). It should be noted that this function will work for on the HTML5 platform, retrieving the url parameters.</p>
+  <h1><span data-field="title" data-format="default">parameter_string</span></h1>
+  <p>Command-line parameters are those extra commands that you can add to an exe to change how the program is run and with this function you can get the chosen command-line parameter as a string. You can find the number of parameters for the current game using the function <span class="inline3_func"><a href="parameter_count.htm">parameter_count</a></span>, where the first parameter has index 1 and the last one has the index returned by the function (a value of 0 is special on that it is the filename of the game executable, including the path). It should be noted that this function will work for on the HTML5 platform, retrieving the URL parameters.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">parameter_string(n);</p>
+  <p class="code"><span data-field="title" data-format="default">parameter_string</span>(n);</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
@@ -990,11 +990,10 @@
     &nbsp; &nbsp; var i;<br>
     &nbsp; &nbsp; for (i = 0; i &lt; p_num; i += 1)<br>
     &nbsp; &nbsp; {<br>
-    &nbsp; &nbsp; &nbsp; &nbsp; p_string[i] = parameter_string(i + 1);<br>
+    &nbsp; &nbsp; &nbsp; &nbsp; p_string[i] = <span data-field="title" data-format="default">parameter_string</span>(i + 1);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
     }</p>
   <p>The above code will get the number of command-line parameters, and if there is 1 or more it will loop through them and store them as strings in an array.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

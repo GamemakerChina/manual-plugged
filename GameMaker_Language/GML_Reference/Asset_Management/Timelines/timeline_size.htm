@@ -946,7 +946,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>timeline_size</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -974,21 +974,23 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>timeline_size</h1>
-  <p>With this function you can get the total number of active moments for a timeline (an "active" moment is one which has code or GML Visual added to it). This can be handy when creating dynamic timelines using the <a href="timeline_moment_add_script.htm"><span class="inline">timeline_moment_add_script()</span></a> and <a href="timeline_moment_clear.htm"><span class="inline">timeline_moment_clear()</span></a> functions, as you can check to see if a given timeline has the correct number of active moments or none at all.</p>
+  <h1><span data-field="title" data-format="default">timeline_size</span></h1>
+  <p>With this function you can get the total number of active moments for a timeline (an "active" moment is one which has code or GML Visual added to it). This can be handy when creating dynamic timelines using the&nbsp;<span class="inline3_func"><a href="timeline_moment_add_script.htm">timeline_moment_add_script</a></span>&nbsp;and&nbsp;<span class="inline3_func"><a href="timeline_moment_clear.htm">timeline_moment_clear</a></span> functions, as you can check to see if a given timeline has the correct number of active moments or none at all.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">timeline_size(ind);</p>
+  <p class="code"><span data-field="title" data-format="default">timeline_size</span>(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Timeline"><a target="_blank" href="../../../../../The_Asset_Editors/Timelines.htm">Timeline Asset</a></span></td>
+        <td>ind</td>
+        <td><span data-keyref="Type_Asset_Timeline"><a target="_blank" href="../../../../../The_Asset_Editors/Timelines.htm">Timeline Asset</a></span></td>
         <td>The index of the timeline get the information from.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -996,12 +998,12 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if timeline_size(global.tl) == 0<br>
+  <p class="code">if <span data-field="title" data-format="default">timeline_size</span>(global.tl) == 0<br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;timeline_moment_add_script(global.tl, room_speed + irandom(room_speed), spawn_enemy);<br>
+    &nbsp; &nbsp; var _gamespeed = game_get_speed(gamespeed_fps);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;timeline_moment_add_script(global.tl, _gamespeed + irandom(_gamespeed), spawn_enemy);<br>
     }</p>
-  <p>The above code check the given timeline size, and if it returns 0 (ie: the timeline has no active moments) it will add a script function to be used at a random moment within the timeline indexed in the global variable "tl".</p>
-  <p>&nbsp;</p>
+  <p>The above code check the given timeline size, and if it returns 0 (ie: the timeline has no active moments) it will add a script function to be used at a random moment within the timeline indexed in the global variable <span class="inline2">tl</span>.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

@@ -947,7 +947,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Encoding And Hashing</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -975,7 +975,7 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Encoding And Hashing</h1>
-  <p>When dealing with external files, there is always the possibility that the end user could open and change the information that they contain, and so change your game. This can result in broken game-play elements or fraudulent scores on-line (for example), and so <span data-keyref="GameMaker Name">GameMaker</span> provides you with some basic <a class="tooltip" title="Encoding transforms data into another format using a scheme that is publicly available so that it can easily be reversed. This is not the same as encryption, as it does not require a key to decode it. Encoding is generally used to either change the data into a format for eaiser use by a different system (like sending data to a server), or for making data unreadable to the human eye.">encoding</a> functions as well as functions to perform <a class="tooltip" title="Hashing is the method of creating a string or value that relates to a single source - usually a file - and ONLY that source. For example., in GameMaker you can generate a hash for a save file, then, before accessing it later, generate another hash for it and check the original hash and the new hash to determine if the file has been tampered with.">hashing</a> checks on strings and files to make sure that they have maintained their integrity before being used. There are also some functions supplied for encoding and decoding <a class="tooltip" title="JSON stands for JavaScript Object Notatio, and is a lightweight format for storing data. JSON is often used when data is sent from a server to a web page and is considered 'self-describing' and easy to understand and follow when viewed.">JSON</a>&nbsp;format strings.</p>
+  <p>When dealing with external files, there is always the possibility that the end user could open and change the information that they contain, and so change your game. This can result in broken game-play elements or fraudulent scores on-line (for example), and so <span data-keyref="GameMaker Name">GameMaker</span> provides you with some basic <a class="tooltip" title="Encoding transforms data into another format using a scheme that is publicly available so that it can easily be reversed. This is not the same as encryption, as it does not require a key to decode it. Encoding is generally used to either change the data into a format for eaiser use by a different system (like sending data to a server), or for making data unreadable to the human eye.">encoding</a> functions as well as functions to perform <a class="tooltip" title="Hashing is the method of creating a string or value that relates to a single source - usually a file - and ONLY that source. For example., in GameMaker you can generate a hash for a save file, then, before accessing it later, generate another hash for it and check the original hash and the new hash to determine if the file has been tampered with.">hashing</a> checks on strings and files to make sure that they have maintained their integrity before being used. There are also some functions supplied for encoding and decoding <a class="tooltip" title="JSON stands for JavaScript Object Notatio, and is a lightweight format for storing data. JSON is often used when data is sent from a server to a web page and is considered 'self-describing' and easy to understand and follow when viewed.">JSON</a>&nbsp;format strings, as well as for creating ZIP files.</p>
   <p class="note"><b><span class="note">NOTE</span> </b>Encoding is NOT encryption! A base64 encoding renders the file unreadable to the naked eye and will require an effort on behalf of the user to decode, but it is not secure from hacking. It is recommended that you mix those functions with your own encryption (there are many forms of encryption and script functions&nbsp;for GameMaker are available on the internet).</p>
   <ul class="colour">
     <li><a href="json_encode.htm">json_encode</a></li>
@@ -990,8 +990,16 @@
     <li><a href="sha1_string_utf8.htm">sha1_string_utf8</a></li>
     <li><a href="sha1_string_unicode.htm">sha1_string_unicode</a></li>
     <li><a href="sha1_file.htm">sha1_file</a></li>
-    <li><a href="zip_unzip.htm">zip_unzip</a></li>
     <li><a href="load_csv.htm">load_csv</a></li>
+  </ul>
+  <p>&nbsp;</p>
+  <p>The following functions are provided for working with ZIP files:</p>
+  <ul class="colour">
+    <li><a href="zip_unzip.htm">zip_unzip</a></li>
+    <li><a href="zip_unzip_async.htm">zip_unzip_async</a></li>
+    <li><a href="zip_create.htm">zip_create</a></li>
+    <li><a href="zip_add_file.htm">zip_add_file</a></li>
+    <li><a href="zip_save.htm">zip_save</a></li>
   </ul>
   <p>&nbsp;</p>
   <p>It is worth noting that there are also a number of functions related to encoding and hashing&nbsp;<a href="../../Buffers/Buffers.htm">Buffers</a>, which you can find from the following links:</p>

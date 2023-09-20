@@ -947,7 +947,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>layer_force_draw_depth</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -974,11 +974,12 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_force_draw_depth</h1>
-  <p>This function forces <i>all</i> layers to be drawn at the specified z depth. This <b>does not change the order the layers are rendered in</b> and they'll still be drawn in depth order, it simply changes what z value is used. In general you do not need to worry about this, but if you have layers that have a depth outside of the legal range (-16000 to 16000) then they won't be rendered, so you can force the Z depth to a reasonable value - 0 for example - and they will all be rendered fine. Note that this is generally only for use with legacy projects from previous version of <i>GameMaker</i> where you could have draw depths higher or lower than the permitted layer range.</p>
+  <h1><span data-field="title" data-format="default">layer_force_draw_depth</span></h1>
+  <p>This function forces <i>all</i> layers to be drawn at the specified z depth.</p>
+  <p>This <b>does not change the order the layers are rendered in</b> and they'll still be drawn in depth order, it simply changes what z value is used. In general you do not need to worry about this, but if you have layers that have a depth outside of the legal range (<span data-keyref="Const_Depth_Min">-16000</span> to <span data-keyref="Const_Depth_Max">16000</span>) then they won't be rendered, so you can force the Z depth to a reasonable value - 0 for example - and they will all be rendered fine. Note that this is generally only for use with legacy projects from previous version of&nbsp;<span data-keyref="GameMaker Name">GameMaker</span> where you could have draw depths higher or lower than the permitted layer range.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">layer_force_draw_depth(force, depth)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_force_draw_depth</span>(force, depth)</p>
   <table>
     <tbody>
       <tr>
@@ -1008,7 +1009,6 @@
     &nbsp; &nbsp; layer_force_draw_depth(true, 0);<br>
     }</p>
   <p>The above code checks to see if the layer Z depth is forced or not and if it is not, it sets the Z depth to 0 and enables it.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

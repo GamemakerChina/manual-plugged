@@ -954,7 +954,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>audio_sync_group_debug</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -981,8 +981,8 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sync_group_debug</h1>
-  <p>This function can be used to display debug information about any given sync group (the group index is the value returned when the group was created using the function <a href="audio_create_sync_group.htm"><span class="inline">audio_create_sync_group()</span></a>). You can call the function with a value of -1 to switch off the overlay.</p>
+  <h1><span data-field="title" data-format="default">audio_sync_group_debug</span></h1>
+  <p>This function displays debug information about any given sync group (the group index is the value returned when the group was created using the function <span class="inline3_func"><a href="audio_create_sync_group.htm">audio_create_sync_group</a></span>). You can call the function with a value of -1 to switch off the overlay.</p>
   <p>When you are debugging the audio sync groups, the overlay will show:</p>
   <ul class="colour">
     <li>Which sync group&nbsp;is debugging</li>
@@ -1005,14 +1005,14 @@
       </ul>
     </li>
   </ul>
-  <p>Note that for general debugging of audio, you also have the function <a href="../audio_debug.htm"><span class="inline">audio_debug()</span></a>.</p>
+  <p>Note that for general debugging of audio, you also have the function <span class="inline3_func"><a href="../audio_debug.htm">audio_debug</a></span>.</p>
   <div data-conref="../../../../../assets/snippets/HTML5_Not_Available.hts">
   <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This functionality is not available for the HTML5 target platform.</p>
 
 </div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">audio_sync_group_debug(group_index);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sync_group_debug</span>(group_index);</p>
   <table>
     <tbody>
       <tr>
@@ -1034,14 +1034,13 @@
   <h4>Example:</h4>
   <p class="code">if (debug_mode)<br>
     {<br>
-    &nbsp; &nbsp; audio_sync_group_debug(sg);<br>
+    &nbsp; &nbsp; <span data-field="title" data-format="default">audio_sync_group_debug</span>(sg);<br>
     }<br>
     else<br>
     {<br>
-    &nbsp; &nbsp; audio_sync_group_debug(-1);<br>
+    &nbsp; &nbsp; <span data-field="title" data-format="default">audio_sync_group_debug</span>(-1);<br>
     }</p>
-  <p>The above code will switch on or off the audio sync group debug overlay showing the sync group indexed in the variable "sg" depending on whether the game is run in debug mode or not.</p>
-  <p>&nbsp;</p>
+  <p>The above code will switch on or off the audio sync group debug overlay showing the sync group indexed in the variable <span class="inline2">sg</span>&nbsp;depending on whether the game is run in debug mode or not.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

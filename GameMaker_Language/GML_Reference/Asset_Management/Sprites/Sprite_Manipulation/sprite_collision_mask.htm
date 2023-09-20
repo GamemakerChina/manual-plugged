@@ -965,13 +965,13 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>sprite_collision_mask</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
   <meta name="topic-comment" content="Page explaining the function sprite_collision_mask">
-  <meta name="rh-index-keywords" content="sprite_collision_mask">
-  <meta name="search-keywords" content="sprite_collision_mask">
+  <meta name="rh-index-keywords" content="sprite_collision_mask,bboxkind_precise,bboxkind_diamond,bboxkind_ellipse,bboxkind_rectangular">
+  <meta name="search-keywords" content="sprite_collision_mask,bboxkind_rectangular,bboxkind_ellipse,bboxkind_diamond,bboxkind_precise">
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_nineslice_create.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_add_from_surface.htm"></head>
 
 <body>
@@ -995,7 +995,7 @@
   <h1>sprite_collision_mask</h1>
   <p>With this function you can set the properties of the collision mask that a sprite should have. If you select either automatic (0) or full image (1) as the bounding box mode then the individual bounding box values can be set to 0. However for a user defined mask (2) you will have to set these values. The different bounding box values are always relative to the top left corner of the sprite (irrespective of the x and y origin) which is considered position (0, 0).</p>
   <p>Setting the kind of mask sets the general shape for the mask itself, but note that anything other than a rectangular mask will require more processing power when resolving collisions, with a subsequent drop in performance. In general, you should only use mask types other than rectangular when absolutely necessary.</p>
-  <p class="note"><b>NOTE</b>: This function does not permit the <b>rotated rectangle</b> collision mask kind.</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function does not permit the <b>rotated rectangle</b> collision mask kind.</p>
   <p>The kind of mask that can be set will be one of the following constants:</p>
   <table>
     <colgroup>
@@ -1029,9 +1029,9 @@
     </tbody>
   </table>
   <p><br>
-    Finally, tolerance is used to define how precise the precise the mask is (when used with a "full image" mask, this will have no effect), with a tolerance of 0 meaning that the mask will follow every single pixel that has a transparency over 0, while other values will shift the collision mask perimeter depending on the transparency of the pixels.</p>
-  <p class="note"><b>NOTE</b>: This function is only useful for <b>bitmap</b> sprites and will not work with SWF or JSON (Spine) sprites.</p>
-  <p class="note"><b>NOTE</b>: This function will only work on added sprites or duplicated sprites and <b>not</b> directly on pre-made resources. You can duplicate sprites using the function <span style="font-size:1px;"><a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a></span>.</p>
+    Finally, tolerance is used to define how precise&nbsp;the mask is (when used with a "full image" mask, this will have no effect), with a tolerance of 0 meaning that the mask will follow every single pixel that has a transparency over 0, while other values will shift the collision mask perimeter depending on the transparency of the pixels.</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function is only useful for <b>bitmap</b> sprites and will not work with SWF or JSON (Spine) sprites.</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function will only work on added sprites or duplicated sprites and <b>not</b> directly on pre-made resources. You can duplicate sprites using the function <span style="font-size:1px;"><a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a></span>.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">sprite_collision_mask(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p>
@@ -1097,7 +1097,6 @@
   <p class="code">spr = sprite_add("player_5.png", 16, true, true, 0, 0);<br>
     sprite_collision_mask(spr, true, 1, 0, 0, 0, 0, 0, 0);</p>
   <p>The above code loads a sprite from an external source and stores the new index in the variable "spr". The code then sets the new sprite to have a precise collision mask for each of its sub-images.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

@@ -938,7 +938,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "8.2.2.6.10.2.0_9";
+    gTopicId = "8.2.2.6.10.2.0_12";
   
 //]]></script>
 
@@ -953,7 +953,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>part_type_speed</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -984,6 +984,10 @@
   <p>This function is used to set the movement speed of the particle when it is created and can also be used to make the particle increase or decrease its speed over its lifetime. The minimum and maximum speed values default at 1, which means that the particle will move 1 pixel each step, and if they are set to the same value, the initial speed for all particles will be the same, but if set to different values, each particle will start with a random speed from within the given range. For example if you have a minimum of 3 and a maximum of 6, all particles will be created with a speed between three and six pixels per step.</p>
   <p>You can also set an increment value that will make the particle move faster (if a positive number) or slower (if a negative number) over its lifetime, with the given amount being added to the particle speed each and every step. This value can be a minimum of (+/-)0.01.</p>
   <p>Finally, you can set the "wiggle" factor. This is a value that will be added or subtracted randomly to the speed each step of the particles lifetime. Obviously larger values are more pronounced than smaller ones, and this value can even be a negative with the maximum range being between -20 and 20.</p>
+  <div data-conref="../../../../../assets/snippets/Note_Particle_Property_Can_Be_Changed.hts">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The <span class="inline2">*_incr</span> and <span class="inline2">*_wiggle</span>&nbsp;parameters of this particle type property affect existing particles of the given particle type.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">part_type_speed(ind, speed_min, speed_max, speed_incr, speed_wiggle);</p>

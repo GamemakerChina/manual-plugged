@@ -948,7 +948,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>DS Queues</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -977,8 +977,14 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>DS&nbsp;Queues</h1>
   <p>A DS queue is somewhat similar to a <a href="../DS_Stacks/DS_Stacks.htm">DS stack</a> but it works on a first-in first-out (FIFO) basis. The value that is put into the queue <i>first</i> is also the first to be removed from it. You can think of it like a queue in a shop for paying, where the person that is first in the queue pays first and then leaves the shop. Queues are typically used to store actions or behaviours (in the form of scripts, for example) that still need to be done by an instance but there are many other uses.</p>
-  <p class="note"><b>NOTE</b>: As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
-  <p class="note"><b>NOTE</b>: if you need to check if a data structure exists, you can use the <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> function.</p>
+  <div data-conref="../../../../assets/snippets/Note_DS_Destroy_When_No_Longer_Needed.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
+
+</div>
+  <div data-conref="../../../../assets/snippets/Note_DS_Use_ds_exists_To_Check_For_Existence.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;If you need to check if a data structure exists, you can use the&nbsp;<span class="inline3_func"><a href="../ds_exists.htm">ds_exists</a></span> function.</p>
+
+</div>
   <p>The following functions exist that deal with DS queues:</p>
   <ul class="colour">
     <li><a href="ds_queue_create.htm">ds_queue_create</a></li>

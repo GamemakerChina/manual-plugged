@@ -1018,7 +1018,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Structs &amp; Constructors</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css">
   <script src="../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo">
@@ -1045,7 +1045,7 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Structs &amp; Constructors</h1>
+  <h1><span data-field="title" data-format="default">Structs &amp; Constructors</span></h1>
   <p>A <strong><a id="struct"></a>struct </strong>is a variable that holds a collection of other variables. The variables that a struct holds can be of any <a href="Data_Types.htm">data type</a> previously mentioned and these variables can be read from and written to after the initial struct declaration, and you can also add more variables to a struct after it has been declared.</p>
   <p>The variables used in a struct should follow the usual variable naming scheme, i.e.: they cannot start with a number and should only be made up of alphanumeric characters and the underscore "_" character, and also note that the contents of a struct are <em>independent of the instance or function that created it</em>, and as such you can - if you wish - use&nbsp;built-in variable names such as&nbsp;<span class="inline">image_index</span> or <span class="inline">x</span> and <span class="inline">y</span>.</p>
   <p>After the initial creation, structs have no processing overhead while they exist, although they <i>will</i> take up space in memory. The struct syntax is as follows:</p>
@@ -1066,7 +1066,7 @@
   <p class="code">mystruct = {};</p>
   <p>Variables can then be added to this struct at a later point in the game code. To add them afterwards you use the dot operator (in the same way as in&nbsp;<a href="Addressing_Variables_In_Other_Instances.htm">Addressing Variables In Other Instances</a>):&nbsp;</p>
   <p class="code">mystruct.newItem = "Some Text";</p>
-  <p>This has the same result as initializing the struct like this:&nbsp;</p>
+  <p>This has the same result as initialising the struct like this:&nbsp;</p>
   <p class="code">mystruct =<br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;newItem : "Some Text"<br>
@@ -1104,6 +1104,30 @@
     }</p>
   <p>The error occurs because the variables <span class="inline">a</span>&nbsp;and <span class="inline">b</span>&nbsp;are actually being evaluated at the scope of whatever is defining the struct (they are on the right-hand side of the colon ":"), and are&nbsp;<em>not</em>&nbsp;the ones being defined within the struct itself.<strong></strong></p>
   <p class="note" style="padding-left: 20px;"><span data-conref="../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;You cannot use any built-in <strong>global variables</strong> as struct member names, eg: <span class="inline">game_id</span> or <span class="inline">fps</span>. You can find a full list of these global variables on&nbsp;<a href="Struct_Forbidden_Variables.htm">Struct Forbidden Variables</a>.</p>
+  <h3>Shorthand Initialisation&nbsp;of Variables With The Same Name</h3>
+  <p>Struct variables that you initialise with the value&nbsp;of an existing variable&nbsp;of the same name (a local or instance variable), can be written using a shorthand notation. Instead&nbsp;of having to write:</p>
+  <p class="code">var a = 12;<br>
+    b = 14;<br>
+    <br>
+    mystruct =&nbsp;<br>
+    {<br>
+    &nbsp; &nbsp; a : a,<br>
+    &nbsp; &nbsp; b : b,<br>
+    &nbsp; &nbsp; c : 101<br>
+    }
+  </p>
+  <p>You can write:&nbsp;</p>
+  <p class="code">var a = 12;<br>
+    b = 14;<br>
+    <br>
+    mystruct =&nbsp;<br>
+    {<br>
+    &nbsp; &nbsp; a,<br>
+    &nbsp; &nbsp; b,<br>
+    &nbsp; &nbsp; c: 101<br>
+    }
+  </p>
+  <p>In both cases <span class="inline2">mystruct.a</span>&nbsp;will be assigned the value <span class="inline2">12</span> and <span class="inline2">mystruct.b</span> the value <span class="inline2">14</span>, as it will look for a variable with the same name in the scope where the struct is being initialised.</p>
   <h3>Accessing Struct Variables</h3>
   <p>Once a struct has been defined, you can access the data within it using the "point" notation, like this:</p>
   <p class="code">mystruct =<br>

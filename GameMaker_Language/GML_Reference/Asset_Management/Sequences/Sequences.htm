@@ -975,12 +975,12 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Sequences</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Sequences">
-  <meta name="rh-index-keywords" content="">
+  <meta name="rh-index-keywords" content="Sequences">
   <meta name="search-keywords" content="Sequences">
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Sequences/sequence_exists.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Shaders/Shader_Constants.htm"></head>
 
@@ -1071,7 +1071,7 @@
     var paramtracks = array_create(1);<br>
     paramtracks[0] = sequence_track_new(seqtracktype_real);<br>
     paramtracks[0].name = "position";<br>
-    paramtracks[0].interpolation = true;<br>
+    paramtracks[0].interpolation = seqinterpolation_lerp;<br>
     // Create the keyframe struct to hold the parameter channel data and set the frame position for the keyframe<br>
     var paramkeys = array_create(2);<br>
     paramkeys[0] = sequence_keyframe_new(seqtracktype_real);<br>

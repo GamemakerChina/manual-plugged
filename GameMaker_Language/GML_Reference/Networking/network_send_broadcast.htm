@@ -952,7 +952,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>network_send_broadcast</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -979,9 +979,10 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_broadcast</h1>
-  <p>With this function you can broadcast the data from a buffer locally to a range of IP addresses (for more information on buffers see <a href="../Buffers/Buffers.htm">Reference - Buffers</a>). The range is limited to that of the device running the server, such that if the device has an IP of 92.168.11.130, then the data will be broadcast over the range 92.168.11.*. The function will return the number of bytes of data sent, or a number less than 0 if the send has failed.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function will only work when used with UDP - your server needs to be TCP and your client needs to have a UDP client socket created with <span style="font-size:1px;"><a href="network_create_socket_ext.htm"><span class="inline">network_create_socket_ext()</span></a></span> in order to receive any broadcasts sent from the server.</p>
+  <h1><span data-field="title" data-format="default">network_send_broadcast</span></h1>
+  <p>This function broadcasts the data from a buffer locally to a range of IP addresses (for more information on buffers see <a href="../Buffers/Buffers.htm">Reference - Buffers</a>).</p>
+  <p>The range is limited to that of the device running the server, such that if the device has an IP of 92.168.11.130, then the data will be broadcast over the range 92.168.11.*. The function will return the number of bytes of data sent, or a number less than 0 if the send has failed.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function will only work when used with UDP - your server needs to be TCP and your client needs to have a UDP client socket created with&nbsp;<span class="inline3_func"><a href="network_create_socket_ext.htm">network_create_socket_ext</a></span>&nbsp;in order to receive any broadcasts sent from the server.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function will not work when used in a project running on the HTML5 target.</p>
   <div data-conref="../../../assets/snippets/iOS_14_IP_Multicast_Permissions.hts">
   <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;iOS 14 and later require that you request the multicast entitlement (<a href="https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_networking_multicast">com.apple.developer.networking.multicast</a>) and enable it in order to <strong>send and receive</strong>&nbsp;multicasts and broadcasts.<br>
@@ -990,7 +991,7 @@
 
 </div>
   <h4>Syntax:</h4>
-  <p class="code">network_send_broadcast(socket, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_broadcast</span>(socket, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>
@@ -1029,7 +1030,6 @@
     buffer_write(broadcast_buffer, buffer_string, global.ServerName);<br>
     network_send_broadcast(server, 6511, broadcast_buffer, buffer_tell(broadcast_buffer));</p>
   <p>The above code writes the name string of the current server (stored in "global.ServerName"), then writes it to a binary buffer with the id "broadcast_buffer". This data is then broadcast locally to a range of IPs (the device IP is currently implied as the broadcast base range) to port 6511.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

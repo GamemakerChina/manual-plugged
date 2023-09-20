@@ -949,7 +949,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>gif_open</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -977,12 +977,13 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gif_open</h1>
-  <p>With this function you can create an empty GIF format image, ready to have data added to it. When you call the function, you need to specify the width and height of the GIF (in pixels, and there is no upper limit on size except for available memory), and the function will return the unique ID value used to identify the gift in subsequent functions, or it will return -1 if the gif could not be initialized (for example, if the width/height are too big for the memory available). You may also specify an optional argument to set the "clear colour" for the GIF. This is an RGB value (no alpha component), and will clear the gif to this colour before anything is added to it. If you do not supply a clear colour argument, the default colour of black will be used.</p>
-  <p>Note that when using this function you must call <a href="gif_save.htm"><span class="inline">gif_save()</span></a> to end the creation of the GIF&nbsp;before open another file for recording (so for every <span class="inline">gif_open()</span> there must be an accompanying <span class="inline">gif_save()</span>).</p>
+  <h1><span data-field="title" data-format="default">gif_open</span></h1>
+  <p>This function creates an empty GIF format image, ready to have data added to it.</p>
+  <p>When you call the function, you need to specify the width and height of the GIF (in pixels, and there is no upper limit on size except for available memory), and the function will return the unique ID value used to identify the GIF in subsequent functions, or it will return -1 if the GIF could not be initialized (for example, if the width/height are too big for the memory available). You may also specify an optional argument to set the "clear colour" for the GIF. This is an RGB value (no alpha component), and will clear the GIF to this colour before anything is added to it. If you do not supply a clear colour argument, the default colour of black will be used.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;When using this function you must call&nbsp;<span class="inline3_func"><a href="gif_save.htm">gif_save</a></span>&nbsp;to end the creation of the GIF&nbsp;before open another file for recording (so for every <span class="inline3_func"><a href="gif_open.htm">gif_open</a></span>&nbsp;there must be an accompanying <span class="inline3_func"><a href="gif_save.htm">gif_save</a></span>).</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">gif_open(width, height, [clear_colour]);</p>
+  <p class="code"><span data-field="title" data-format="default">gif_open</span>(width, height, [clear_colour]);</p>
   <table>
     <tbody>
       <tr>
@@ -993,17 +994,17 @@
       <tr>
         <td>width</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The width of the gif to create</td>
+        <td>The width of the GIF to create</td>
       </tr>
       <tr>
         <td>height</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The height of the gif to create</td>
+        <td>The height of the GIF to create</td>
       </tr>
       <tr>
         <td>[clear_colour]</td>
         <td><span data-keyref="Type_Constant_Colour"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">Colour</a></span></td>
-        <td><span class="optional">OPTIONAL</span>&nbsp;The colour (RGB) to clear the gif to</td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;The colour (RGB) to clear the GIF to</td>
       </tr>
     </tbody>
   </table>
@@ -1031,7 +1032,6 @@
     &nbsp; &nbsp; count++;<br>
     }</p>
   <p>The above code will create a GIF image file with 30 frames taken from the application surface and then save it.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

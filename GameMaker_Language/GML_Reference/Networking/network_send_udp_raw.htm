@@ -952,7 +952,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>network_send_udp_raw</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -979,12 +979,19 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_udp_raw</h1>
-  <p>With this function you can send data over the network using UDP to a server. The function takes the <i>socket id</i> to connect through, the URL to connect to and the port to use. You must then supply the <i>buffer id</i> which contains the data to be sent (for more information on buffers see <a href="../Buffers/Buffers.htm">Reference - Buffers</a>) and finally the size (in bytes) of the data. UDP is "connectionless" in that you don't actually do a connect, you just send a packet directly to an IP, and the server gets incoming data from an IP address and has to deal with it "as is". The data sent is not formatted by <span data-keyref="GameMaker Name">GameMaker</span> in any way and the receiving devices will get the data as a stream which means you will have to handle it yourself. The function will return the number of bytes of data sent, or a number less than 0 if the send has failed.</p>
+  <h1><span data-field="title" data-format="default">network_send_udp_raw</span></h1>
+  <p>This function sends data over the network using UDP to a server.</p>
+  <p>The function takes the&nbsp;<span data-keyref="Type_ID_Network_Socket"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm">Network Socket ID</a></span> to connect through, the URL to connect to and the port to use. You must then supply the&nbsp;<span data-keyref="Type_ID_Buffer"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer ID</a></span> which contains the data to be sent (for more information on buffers see <a href="../Buffers/Buffers.htm">Reference - Buffers</a>) and finally the size (in bytes) of the data. The function returns the number of bytes of data sent, or a number less than 0 if the send has failed.</p>
+  <p>The data sent is not formatted by <span data-keyref="GameMaker Name">GameMaker</span> in any way and the receiving devices will get the data as a stream which means you will have to handle it yourself.</p>
+  <p>UDP is "connectionless" in that you don't actually do a connect, you just send a packet directly to an IP, and the server gets incoming data from an IP address and has to deal with it "as is".</p>
   <p class="note"><span class="note">NOTE</span>&nbsp;This function will not work when used in a project running on the HTML5 target, and neither will HTML5 projects be able to receive UDP.</p>
+  <div data-conref="../../../assets/snippets/Note_Networking_UDP_like.hts">
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function uses a UDP-like socket (i.e. <span class="inline2">network_socket_udp</span>). It may work with other socket types as well, but this isn't guaranteed.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">network_send_udp_raw(socket, url, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_udp_raw</span>(socket, url, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>
@@ -1026,7 +1033,6 @@
   <h4>Example:</h4>
   <p class="code">network_send_udp_raw(sock, "www.macsweeneygames.com", 6510, buff, buffer_tell(buff));</p>
   <p>The above code will send a raw UDP packet to the server defined by the URL on the port 6510. The data is taken from the buffer indexed in the variable "buff".</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

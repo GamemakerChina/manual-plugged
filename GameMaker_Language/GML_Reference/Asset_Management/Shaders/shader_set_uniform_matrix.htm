@@ -947,7 +947,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>shader_set_uniform_matrix</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -975,8 +975,11 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>shader_set_uniform_matrix</h1>
-  <p>With this function you can set the value (or values) of a shader constant to the current transform matrix (as set using the <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">Matrix Functions</a>). You must previously have gotten the "handle" of the constant using the function <a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>.</p>
-  <p class="note"><b></b><b>NOTE</b>: All uniforms must be set <b>after</b> calling the function <span style="font-size:1px;"><a href="shader_set.htm"><span class="inline">shader_set()</span></a></span>, and before calling <span style="font-size:1px;"><a href="shader_reset.htm"><span class="inline">shader_reset()</span></a></span>.</p>
+  <p>With this function you can set the value (or values) of a shader constant to the current transform matrix (as set using the <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">Matrix Functions</a>). You must previously have gotten the "handle" of the constant using the function <a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>.<b></b></p>
+  <div data-conref="../../../../assets/snippets/Note_Set_Uniforms_After_Shader_Set.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;All uniforms must be set <em>after</em> calling the function <span class="inline2"><a href="shader_set.htm">shader_set</a></span>&nbsp;and <em>before</em> calling <span class="inline2"><a href="shader_reset.htm">shader_reset</a></span>.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">shader_set_uniform_matrix(handle);</p>

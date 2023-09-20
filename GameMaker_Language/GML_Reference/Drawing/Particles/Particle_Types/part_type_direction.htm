@@ -938,7 +938,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "8.2.2.6.10.2.0_10";
+    gTopicId = "8.2.2.6.10.2.0_13";
   
 //]]></script>
 
@@ -953,7 +953,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>part_type_direction</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -984,6 +984,10 @@
   <p>This function is used to determine the direction of the particle when it is created and can also be used to make the particle increase or decrease its direction over its lifetime. The minimum and maximum direction values default at 0, which means that the particle will move to the right with no variation, but these values can be changed to limit the direction of movement following the standard <span data-keyref="GameMaker Name">GameMaker</span> directions of 0 being right, 90 being up, 180 being left and 270 being down. If you set them to the same value the particles will only move in one direction.</p>
   <p>You can also set an increment value which will add (if a positive number) or subtract (if a negative number) an amount of degrees to the direction over its lifetime. This value can be a minimum of (+/-) 0.01.</p>
   <p>Finally, you can set the "wiggle" factor. This is a value that will be added or subtracted randomly to the direction each step of the particles lifetime. Obviously larger values are more pronounced than smaller ones, and this value can even be a negative with the maximum range being between -20 and 20.</p>
+  <div data-conref="../../../../../assets/snippets/Note_Particle_Property_Can_Be_Changed.hts">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The <span class="inline2">*_incr</span> and <span class="inline2">*_wiggle</span>&nbsp;parameters of this particle type property affect existing particles of the given particle type.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">part_type_direction(ind, dir_min, dir_max, dir_incr, dir_wiggle);</p>

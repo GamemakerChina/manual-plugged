@@ -949,7 +949,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>gamepad_set_vibration</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -976,30 +976,34 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_set_vibration</h1>
-  <p>With this function you can set the vibration of the gamepad motors, with either motor using a value from 0 (no vibration) to 1 (full vibration). Note that there is no time limit on this function, so you will need to use a variable or an alarm to switch off the vibration (set motors to 0) after a given time has passed otherwise the gamepad will continue to vibrate indefinitely.</p>
-  <p class="note"><b>NOTE</b>: This function is currently only available for the standard <b>Windows</b>, <b>PS4</b> and <b>Xbox One</b> target modules.</p>
+  <h1><span data-field="title" data-format="default">gamepad_set_vibration</span></h1>
+  <p>With this function you can set the vibration of the gamepad motors, with either motor using a value from 0 (no vibration) to 1 (full vibration). Note that there is no time limit on this function, so you will need to use a variable or an alarm to switch off the vibration (set motors to 0) after a given time has passed, otherwise the gamepad will continue to vibrate indefinitely.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function is currently only available for the standard <b>Windows</b>, <b>PS4</b> and <b>Xbox One</b> target modules.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">gamepad_set_vibration(device, left_motor, right_motor);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_set_vibration</span>(device, left_motor, right_motor);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>device</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>device</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>Which gamepad device "slot" to check.</td>
-     </tr>
+      </tr>
       <tr>
-        <td>left_motor</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>left_motor</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The amount of vibration from the left motor from 0 to 1.</td>
-     </tr>
+      </tr>
       <tr>
-        <td>right_motor</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>right_motor</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The amount of vibration from the right motor from 0 to 1.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1007,13 +1011,12 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if lives = 0<br>
+  <p class="code">if lives == 0<br>
     {<br>
-    &nbsp; &nbsp;&nbsp;gamepad_set_vibration(0, 1, 1);<br>
-    &nbsp; &nbsp; alarm[0] = room_speed / 2;<br>
+    &nbsp; &nbsp;&nbsp;<span data-field="title" data-format="default">gamepad_set_vibration</span>(0, 1, 1);<br>
+    &nbsp; &nbsp; alarm[0] = game_get_speed(gamespeed_fps) / 2;<br>
     }</p>
   <p>The above code would be used (for example) in a collision event to make the gamepad plugged into "slot" 0 vibrate for half a second, with the alarm that is set being used to switch it off again once that time has passed.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

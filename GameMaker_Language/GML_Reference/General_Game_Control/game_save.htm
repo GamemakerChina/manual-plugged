@@ -933,7 +933,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.4.0_9";
+    gTopicId = "8.2.2.4.0_10";
   
 //]]></script>
 
@@ -948,7 +948,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>game_save</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -975,23 +975,25 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_save</h1>
-  <p>This is a legacy function that can be used to save the current state of the game, and is not recommended for use anymore. Use the <a href="../File_Handling/File_Handling.htm">File functions</a> instead to create a custom save system where you only save and load specific game data.</p>
+  <h1><span data-field="title" data-format="default">game_save</span>&nbsp;<span data-conref="../../../assets/snippets/Tag_deprecated.hts"><span class="warning">DEPRECATED</span></span></h1>
+  <p>This is a legacy function that can be used to save the current state of the game, and is not recommended for use anymore. Use the <a href="../File_Handling/File_Handling.htm">file functions</a>&nbsp;or&nbsp;<a href="../Buffers/Buffers.htm">buffer functions</a> instead to create a custom save system where you only save and load specific game data.</p>
   <p>This function will save the game's state as it is, however it will not save any dynamic resources being used at that time, such as data structures, surfaces, assets added at runtime, etc. If such a save file is loaded, any game updates that were made after the save will not be visible,&nbsp;as it will restore the version of the game that was used to create the save.</p>
-  <p>Note that save files created using this function may not be supported by updated&nbsp;<a class="tooltip" title="The runtime in GameMaker is the collection of compiler assets that is required by the program to create a final executable package for a given target platform. These are installed seperately from the IDE, and can be changed and updated at any time.">Runtime</a>&nbsp;versions, so replacing this function with a new save system is essential to ensure compatibility with future GameMaker updates, and for&nbsp;the reasons listed above, updates made to your own game.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_deprecated.hts"><span class="warning">DEPRECATED</span></span>&nbsp;Save files created using this function may not be supported by updated&nbsp;<a class="tooltip" title="The runtime in GameMaker is the collection of compiler assets that is required by the program to create a final executable package for a given target platform. These are installed seperately from the IDE, and can be changed and updated at any time.">Runtime</a>&nbsp;versions, so replacing this function with a new save system is essential to ensure compatibility with future <span data-keyref="GameMaker Name">GameMaker</span>&nbsp;updates, and for&nbsp;the reasons listed above, updates made to your own game.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">game_save(filename);</p>
+  <p class="code"><span data-field="title" data-format="default">game_save</span>(filename);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>filename</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>filename</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The name of the file to save the game to.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1005,7 +1007,6 @@
     &nbsp;&nbsp;&nbsp;&nbsp;game_save("Save.dat");<br>
     }</p>
   <p>The above code will set a global variable to <span class="inline">true</span> and then save&nbsp;the game to the file "Save.dat" when the key "S" is pressed.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

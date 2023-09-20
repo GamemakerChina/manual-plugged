@@ -946,7 +946,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>room</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -973,11 +973,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room</h1>
-  <p>This variable holds the room index for the current room that your game is running. This is <i>not</i> a read only variable, however changing this will not change the index value for the current room, but rather change the room to match the index that you have set the variable to. Care should be taken when doing this as if the index you change the variable to is not valid the game will throw an error and close. In general it is much better practice to use <a href="room_goto.htm"><span class="inline">room_goto()</span></a> to change rooms.</p>
-  <p class="note"><strong>Note</strong>: Room IDs are not based on their order in the Asset Browser or the Room Manager, and so you should avoid supplying a number value directly. Instead, use the room&nbsp;<a class="tooltip" title="A constant is a term used to describe a named value that does not change throughout the execution of the program. GameMaker Studio 2 has a number of built-in constants - for example os_windows - but you can also create your own constant values for use in your projects (called Macros) and extensions.">constant</a>&nbsp;for the asset you want to reference (which is simply its name) or retrieve it through a function.</p>
+  <h1><span data-field="title" data-format="default">room</span></h1>
+  <p>This variable holds the room index for the current room that your game is running. This is <i>not</i> a read only variable, however changing this will not change the index value for the current room, but rather change the room to match the index that you have set the variable to. Care should be taken when doing this as if the index you change the variable to is not valid the game will throw an error and close. In general it is much better practice to use&nbsp;<span class="inline3_func"><a href="room_goto.htm">room_goto</a></span> to change rooms.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;Room IDs are not based on their order in&nbsp;<a href="../../../../Introduction/The_Asset_Browser.htm">The Asset Browser</a> or <a href="../../../../Settings/The_Room_Manager.htm">The Room Manager</a>, and so you should avoid supplying a number value directly. Instead, use the room&nbsp;<a class="tooltip" title="A constant is a term used to describe a named value that does not change throughout the execution of the program. GameMaker Studio 2 has a number of built-in constants - for example os_windows - but you can also create your own constant values for use in your projects (called Macros) and extensions.">constant</a>&nbsp;for the asset you want to reference (which is simply its name) or retrieve it through a function.</p>
   <h4>Syntax:</h4>
-  <p class="code">room;</p>
+  <p class="code"><span data-field="title" data-format="default">room</span></p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Asset_Room"><a target="_blank" href="../../../../../The_Asset_Editors/Rooms.htm">Room Asset</a></span></p>
@@ -988,7 +988,6 @@
     &nbsp; &nbsp; audio_play_sound(snd_level1, 1, 1);<br>
     }</p>
   <p>The above code will check&nbsp;if the current room is the first level, and in that case play that level's music.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

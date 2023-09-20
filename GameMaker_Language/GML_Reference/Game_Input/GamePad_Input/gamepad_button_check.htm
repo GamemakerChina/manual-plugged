@@ -947,7 +947,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>gamepad_button_check</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -975,11 +975,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_button_check</h1>
-  <p>This function will return <span class="inline">true</span> or <span class="inline">false</span> depending on whether the given gamepad button is detected as being held down or not. If you are checking an analogue button, then the check will take into consideration the <a href="gamepad_set_button_threshold.htm">threshold setting</a> and only return <span class="inline">true</span> while the raw input value is over the given threshold (you can get this raw value using the function <span class="inline"><a href="gamepad_button_value.htm">gamepad_button_value()</a></span>).</p>
+  <h1><span data-field="title" data-format="default">gamepad_button_check</span></h1>
+  <p>This function will return <span class="inline2">true</span>&nbsp;or <span class="inline2">false</span> depending on whether the given gamepad button is detected as being held down or not. If you are checking an analogue button, then the check will take into consideration the <a href="gamepad_set_button_threshold.htm">threshold setting</a> and only return <span class="inline2">true</span> while the raw input value is over the given threshold (you can get this raw value using the function <span class="inline3_func"><a href="gamepad_button_value.htm">gamepad_button_value</a></span>).</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">gamepad_button_check(device, button);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_button_check</span>(device, button);</p>
   <table>
     <tbody>
       <tr>
@@ -1004,18 +1004,17 @@
   <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if gamepad_button_check(0, gp_face1)<br>
+  <p class="code">if <span data-field="title" data-format="default">gamepad_button_check</span>(0, gp_face1)<br>
     {<br>
     &nbsp; &nbsp; if canshoot = true<br>
     &nbsp;&nbsp;&nbsp;&nbsp;{<br>
     &nbsp; &nbsp; &nbsp; &nbsp; audio_play_sound(snd_Shoot, 0, false);<br>
     &nbsp; &nbsp; &nbsp; &nbsp; instance_create_layer(x, y, "Bullets", obj_Bullet)<br>
     &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;canshoot = false;<br>
-    &nbsp; &nbsp; &nbsp; &nbsp; alarm[0] = room_speed / 2;<br>
+    &nbsp; &nbsp; &nbsp; &nbsp; alarm[0] = game_get_speed(gamespeed_fps) / 2;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
     }</p>
-  <p>The above code will detect whether the bottom button of the top face (the "X" on a ps3 controller) is being held down and if so, it will shoot a "bullet" instance and set an alarm.</p>
-  <p>&nbsp;</p>
+  <p>The above code will detect whether the bottom button of the top face (the "X" on a PS3 controller) is being held down and if so, it will shoot a "bullet" instance and set an alarm.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

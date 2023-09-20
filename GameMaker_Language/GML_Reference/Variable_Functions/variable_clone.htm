@@ -934,7 +934,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.1.0_27";
+    gTopicId = "8.2.2.1.0_29";
   
 //]]></script>
 
@@ -949,7 +949,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>variable_clone</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css">
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="">
@@ -978,7 +978,7 @@
 
   <h1><span data-field="title" data-format="default">variable_clone</span></h1>
   <p>This function clones the value you pass it and returns the new clone.</p>
-  <p>It clones nested structs and arrays up to a given depth (128 by default), which you can override by providing the&nbsp;optional <span class="inline2">depth</span> parameter.</p>
+  <p>It clones nested structs and arrays up to a given depth (<span data-keyref="Const_Data_Clone_Depth">128</span> by default), which you can override by providing the&nbsp;optional <span class="inline2">depth</span> parameter.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The built-in&nbsp;<a href="../Data_Structures/Data_Structures.htm">Data Structures</a>&nbsp;and&nbsp;<a href="../Asset_Management/Instances/Instances.htm">Instances</a>&nbsp;are <em>not</em> cloned; for this type of variable the actual value (data structure ID&nbsp;or instance ID, respectively) is written.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
@@ -1003,7 +1003,7 @@
       <tr>
         <td>depth</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;The maximum depth level to clone the variable, in case this is e.g. a nested struct. The default is 128, the maximum possible value.</td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;The maximum depth level to clone the variable, in case this is e.g. a nested struct. The default is <span data-keyref="Const_Data_Clone_Depth">128</span>, the maximum possible value.</td>
       </tr>
     </tbody>
   </table>

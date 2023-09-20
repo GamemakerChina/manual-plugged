@@ -956,7 +956,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>audio_create_play_queue</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -1006,8 +1006,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
-    Note that you should free up any audio queues created with this function when no longer required to prevent memory leaks using the function <a href="audio_free_play_queue.htm"><span class="inline">audio_free_play_queue()</span></a>.</p>
+  <p>Note that you should free up any audio queues created with this function when no longer required to prevent memory leaks using the function <a href="audio_free_play_queue.htm"><span class="inline">audio_free_play_queue()</span></a>.</p>
   <p>This function will trigger an <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback Asynchronous Event</a> when the queue has reached the end, and in this event a special <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS&nbsp;map</a>&nbsp;will be created in the variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> with the following key/value pairs:</p>
   <ul class="colour">
     <li>"<strong>queue_id</strong>" - the queue that has finished playing data</li>

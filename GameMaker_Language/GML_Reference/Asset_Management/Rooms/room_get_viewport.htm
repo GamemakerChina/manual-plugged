@@ -952,7 +952,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>room_get_viewport</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css">
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -980,7 +980,7 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_get_viewport</h1>
+  <h1><span data-field="title" data-format="default">room_get_viewport</span></h1>
   <p>With this function you can retrieve the details of a view port in a room other than the current one. You give the room ID and the index of the view port to retrieve (from 0 to 7) and the function will return an <a href="../../../GML_Overview/Arrays.htm">array</a> of 5 indices, where:</p>
   <ul class="colour">
     <li>[0] = visible (Boolean: <span class="inline">true</span> / <span class="inline">false</span>)</li>
@@ -991,7 +991,7 @@
   </ul>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">room_get_viewport(rm, vind);</p>
+  <p class="code"><span data-field="title" data-format="default">room_get_viewport</span>(rm, vind);</p>
   <table>
     <tbody>
       <tr>
@@ -1016,15 +1016,10 @@
   <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (5 elements: visible, x, y, width, height)</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">v_vals = room_get_viewport(rm_Game, 0);<br>
-    <br>
-    if v_vals[0] == false<br>
-    {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;room_set_view(rm_Game, true, v_vals[1], v_vals[2], v_vals[3], v_vals[4]);<br>
-    }
-  </p>
+  <p class="code">var _view_values = <span data-field="title" data-format="default">room_get_viewport</span>(rm_Game, 0);<br>
+    var _visible_text = _view_values[0] ? "visible" : "invisible";<br>
+    show_debug_message($"Viewport 0 in rm_Game is {_visible_text} and drawn at the position: {_view_values[1]}, {_view_values[2]}. Its dimensions are {_view_values[3]}x{_view_values[4]}.");</p>
   <p>The above code retrieves the view port data for the given room then checks to see if the port is flagged as visible. If it is not, the view port data is set to make it visible.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

@@ -954,7 +954,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>instance_deactivate_region</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -982,14 +982,19 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_deactivate_region</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_region</span></h1>
   <p>With this function you can define a region within the room to deactivate instances that have previously been activated. This region can either be flagged as "inside" or "outside" as demonstrated in the following image:</p>
   <p><img alt="Instance deactivate region example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Instances/instance_deactivate_region.png">You can see in the image above that the "apple" instance is always inactive because, even if the sprite itself doesn't overlap the region, the bounding box does. So, instances are considered to be within the region specified when their <i>bounding box</i> overlaps with it, and the state of the collision mask (precise or not) is <b>not</b> taken into consideration. Note that deactivation is not instantaneous, and an instance that has been deactivated in this way will not be considered to be inactive until the end of the event in which the function was called.</p>
-  <p class="note"><b>NOTE</b>: If you deactivate an instance on room start (ie:from the room creation code, or from an instance create event of an instance within the room) all instances that are placed within the room from the room editor <b>will still run their create event</b> before being deactivated.</p>
-  <p class="note"><b>WARNING</b>: Deactivating instances that have physics enabled will <b>NOT</b> stop their fixtures from interacting within the physics simulation. For that you should set their <a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline"><span style="font-size:14px;">phy_active</span></span></a>&nbsp;variable to <span class="inline">true</span> or <span class="inline">false</span> as you activate/deactivate the instances.</p>
-  <p>&nbsp;</p>
+  <div data-conref="../../../../../assets/snippets/Note_Deactivate_On_Room_Start_Create_Event.hts">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;If you deactivate an instance on room start (i.e.&nbsp;from the Room Creation Code, or from an instance <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Create event</a> of an instance within the room) all instances that are placed within the room from&nbsp;<a href="../../../../../The_Asset_Editors/Rooms.htm">The Room Editor</a>&nbsp;<b>will still run their Create event</b> before being deactivated.</p>
+
+</div>
+  <div data-conref="../../../../../assets/snippets/Note_Warning_Deactivating_Physics_Instances.hts">
+  <p class="note"><b><span data-conref="../../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>Deactivating instances that have physics enabled will <strong>NOT</strong> stop their fixtures from interacting within the physics simulation. For that you should set their&nbsp;<span class="inline2"><a href="../../../Physics/Physics_Variables/phy_active.htm">phy_active</a></span> variable to <span class="inline2">true</span> or <span class="inline2">false</span> as you activate/deactivate the instances.</p>
+
+</div>
   <h4>Syntax:</h4>
-  <p class="code">instance_deactivate_region(left, top, width, height, inside, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_region</span>(left, top, width, height, inside, notme);</p>
   <table>
     <tbody>
       <tr>
@@ -1041,7 +1046,6 @@
     var _vh = camera_get_view_height(view_camera[0]);<br>
     instance_deactivate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false, false);</p>
   <p>The above code activates all instances and then deactivates a region within the room.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

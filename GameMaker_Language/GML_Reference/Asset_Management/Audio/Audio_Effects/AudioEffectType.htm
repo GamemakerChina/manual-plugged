@@ -971,7 +971,7 @@
   <meta name="topic-status" content="Draft">
 <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css"><script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <title>AudioEffectType Enum</title>
   <meta name="topic-status" content="Draft">
   <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css">
@@ -1005,22 +1005,19 @@
   </div>
   <div>
   <h1><span data-field="title" data-format="default">AudioEffectType Enum</span></h1>
-  <p>This is one of the built-in&nbsp;<a href="../../../../GML_Overview/Variables/Constants.htm#enumhead">Enums</a>&nbsp;that&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;provides. Pass a value of this enum to&nbsp;<span class="inline3_func"><a href="audio_effect_create.htm">audio_effect_create</a></span>&nbsp;to determine the type of audio effect that you want to create.</p>
-  <p>Below is a list of audio effects that are currently available to choose from.</p>
+  <p>This is one of the built-in&nbsp;<a href="../../../../GML_Overview/Variables/Constants.htm#enumhead">Enums</a>&nbsp;that&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;provides. Pass a value from this Enum to&nbsp;<span class="inline3_func"><a href="audio_effect_create.htm">audio_effect_create</a></span>&nbsp;to determine the type of audio effect that you want to create.</p>
+  <p>Below is a list of audio effects that are currently available to choose from. See&nbsp;<a href="AudioEffect.htm">AudioEffect Struct</a>&nbsp;for the parameters you can set for each effect.</p>
   <h2 id="h2">AudioEffectType.Bitcrusher</h2>
   <p>This is a <a href="https://en.wikipedia.org/wiki/Bitcrusher">bitcrusher</a> effect to create <strong>distortion</strong>. It does this in four steps (or <i>stages</i>), that take place in the following order:&nbsp;</p>
-  <p>Gain&nbsp;<span><span><b>→</b></span></span> Clipper&nbsp;<span><span><b>→</b></span></span> Sample rate reduction&nbsp;<span><span><b>→</b></span></span> Resolution reduction</p>
+  <p class="dropspot"><em>Gain&nbsp;<span><span><b>→</b></span></span> Clipper&nbsp;<span><span><b>→</b></span></span> Sample rate reduction&nbsp;<span><span><b>→</b></span></span> Resolution reduction</em></p>
   <p>First the gain factor is applied to the input signal.</p>
   <p>The resulting signal is then&nbsp;<a href="https://en.wikipedia.org/wiki/Clipping_(audio)">clipped</a>&nbsp;between -1 and 1 (essentially doing&nbsp;<span class="inline3_func"><a href="../../../Maths_And_Numbers/Number_Functions/clamp.htm">clamp</a></span>&nbsp;on every sample). This is the first step that introduces distortion.</p>
   <p>Next, sample rate reduction reduces the quality of the audio by <a class="tooltip" title="Downsampling is the process of reducing samples in audio and, more generally, in signals. For audio it means that samples are thrown away and less samples remain, leading to a loss of information. The sample frequency of the audio is lowered as well as the quality of the audio. This change distorts the audio.">downsampling</a>&nbsp;it. This leads to distortion.</p>
   <p>Resolution reduction reduces the quality of the audio by decreasing the number of bits to represent a sample. As there are less bits to store the same value, some information is lost. This also leads to distortion.</p>
-  <p>See <a href="AudioEffect.htm#h">Distortion (AudioEffectType.Bitcrusher)</a>&nbsp;for the full list of properties that you can adjust for this effect type.</p>
   <h2 id="h1">AudioEffectType.Delay</h2>
   <p>This is a <a href="https://en.wikipedia.org/wiki/Delay_(audio_effect)">delay</a> effect, which delays the input signal by a given amount of time and mixes this delayed version with the original signal.</p>
-  <p>See <a href="AudioEffect.htm#h1">Delay (AudioEffectType.Delay)</a>&nbsp;for the full list of properties that you can adjust for this effect type.</p>
   <h2 id="h5">AudioEffectType.Gain</h2>
   <p>This is a gain effect, which amplifies the input signal by the given gain factor.</p>
-  <p>See <a href="AudioEffect.htm#h2">Gain (AudioEffectType.Gain)</a>&nbsp;for the full list of properties that you can adjust for this effect type.</p>
   <div data-conref="../../../../../assets/snippets/Note_Gain_Linear_dB.hts">
   <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;Use&nbsp;<span class="inline3_func"><a href="../db_to_lin.htm">db_to_lin</a></span>&nbsp;and&nbsp;<span class="inline3_func"><a href="../lin_to_db.htm">lin_to_db</a></span>&nbsp;to convert back and forth between linear gains and gains expressed in decibels (dB).</p>
 
@@ -1029,20 +1026,32 @@
   <p>This is a <a href="https://en.wikipedia.org/wiki/High-pass_filter">high-pass filter</a> (shortened to <i>HPF</i>). A filter is used for filtering out certain frequencies.</p>
   <p>A high-pass filter lets higher frequencies pass and mutes lower frequencies. The frequency at which this happens is called the <i>cutoff</i> frequency. All frequencies below this frequency are filtered.</p>
   <p>A whistle at a high pitch is an example of a high frequency.</p>
-  <p>See <a href="AudioEffect.htm#h3">HPF (AudioEffectType.HPF2)</a>&nbsp;for the full list of properties that you can adjust for this effect type.</p>
   <h2 id="h3">AudioEffectType.LPF2</h2>
   <p>This is a <a href="https://en.wikipedia.org/wiki/Low-pass_filter">low-pass</a> filter (shortened to <i>LPF</i>). A filter is used for filtering out certain frequencies.</p>
   <p>A low-pass filter lets lower frequencies pass and mutes higher frequencies.&nbsp;The frequency at which this happens is called the <i>cutoff</i> frequency. All frequencies above this frequency are filtered.</p>
   <p>Bass and drum kicks are typically low frequencies in audio.</p>
-  <p>See <a href="AudioEffect.htm#h4">LPF (AudioEffectType.LPF2)</a>&nbsp;for the full list of properties that you can adjust for this effect type.</p>
   <h2 id="h">AudioEffectType.Reverb1</h2>
   <p>This is a <a href="https://en.wikipedia.org/wiki/Reverb_effect">reverb</a> effect. It combines the original signal with a reverberated version of it. High frequencies can be <i>dampened</i>&nbsp;(reduced).</p>
   <p>A reverb effect is typically used to change the environment in which the audio is heard. You can configure reverb to make the environment appear anywhere between a small room and a grand hall or a vast open space.</p>
-  <p>See <a href="AudioEffect.htm#h5">Reverb (AudioEffectType.Reverb1)</a>&nbsp;for the full list of properties that you can adjust for this effect type.</p>
   <h2 id="h6">AudioEffectType.Tremolo</h2>
   <p>This is a <a href="https://en.wikipedia.org/wiki/Tremolo_(electronic_effect)">tremolo</a> effect. It makes use of an <a href="AudioLFOType.htm#LFO">LFO</a>&nbsp;(Low-Frequency Oscillator) to modulate&nbsp;audio effect parameters at audio rates (as opposed to game-frame rates).</p>
   <p>A tremolo effect changes the amplitude of a sound.</p>
-  <p>See&nbsp;<a href="AudioEffect.htm#h6">Tremolo (AudioEffectType.Tremolo)</a>&nbsp;for the full list of properties that you can adjust for this effect type.</p>
+  <h2 id="h7">AudioEffectType.EQ</h2>
+  <p>This is a Parametric EQ (<a href="https://en.wikipedia.org/wiki/Equalization_(audio)">equalizer</a>) effect. It combines multiple filters, each at a different frequency, to modify the frequency content of audio.</p>
+  <p>This effect contains a high-pass, a low-pass, 4 peak EQs, a high-shelf and a low-shelf filter.</p>
+  <p>Here is an example of how this allows you to control frequencies:</p>
+  <p><img class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/AudioEQExample.png"></p>
+  <h2 id="h9">AudioEffectType.PeakEQ</h2>
+  <p>This filter creates a peak or a dip in the spectrum by a specified gain around a specified centre frequency.</p>
+  <h2 id="h10">AudioEffectType.HiShelf</h2>
+  <p>This filter passes all frequencies, but increases or reduces frequencies above the shelf frequency by a specified gain.</p>
+  <h2 id="h8">AudioEffectType.LoShelf</h2>
+  <p>This filter passes all frequencies, but increases or reduces frequencies below the shelf frequency by a specified gain.</p>
+  <h2 id="h11">AudioEffectType.Compressor</h2>
+  <p>This is a <a href="https://en.wikipedia.org/wiki/Dynamic_range_compression">compressor</a> effect. It reduces the dynamic range of the audio going into it, resulting in an&nbsp;output with smaller level differences.</p>
+  <p>This effect performs&nbsp;<em>downward</em> compression, which reduces&nbsp;the volume of loud sounds&nbsp;<em>above</em>&nbsp;a certain threshold. The quiet sounds&nbsp;<em>below</em>&nbsp;the threshold remain unaffected.</p>
+  <p>The audio channels are linked when evaluating the input signal's current level. This means that each channel will have the same gain reduction applied to it. This is done in order to prevent image shifting changing the user's localisation of positioned audio.</p>
+  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">

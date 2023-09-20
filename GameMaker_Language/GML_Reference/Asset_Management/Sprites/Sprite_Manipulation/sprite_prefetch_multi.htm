@@ -947,7 +947,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>sprite_prefetch_multi</title>
-  <meta name="generator" content="Adobe RoboHelp 2020">
+  <meta name="generator" content="Adobe RoboHelp 2022">
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css">
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
@@ -976,7 +976,12 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_prefetch_multi</h1>
   <p>This function can be used to prefetch (place into texture memory) a number of texture pages that contain the sprites given. You supply an array populated with the sprite indices (as defined when you created the sprite asset) and the texture pages that they are on will be loaded into memory. Note that the function will return <span class="inline">-1</span> if prefetch is not supported for the chosen resource or the target platform is HTML5, or it will return <span class="inline">0</span> if all worked correctly.</p>
-  <p class="note"><b>NOTE</b>: There is a performance hit as the texture is uploaded to texture memory on most devices, so it's recommended that you call <span style="font-size:1px;"><span class="inline">sprite_prefetch_multi()</span></span> on any required graphics at the start of a level to avoid any stalls.</p>
+  <div data-conref="../../../../../assets/snippets/Note_Sprite_Prefetch_To_Avoid_Performance_Hit.hts">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;There is a performance hit as the texture is uploaded to texture memory on most devices, so it's recommended that you call&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">sprite_prefetch_multi</span></span>
+    <font face="menlo, consolas, monospace"><span style="font-size: 17px;"><b> </b></span></font>on any required graphics at the start of a level to avoid any stalls.
+  </p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">sprite_prefetch_multi</p>
