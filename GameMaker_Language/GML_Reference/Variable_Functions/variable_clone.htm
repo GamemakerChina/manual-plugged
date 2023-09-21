@@ -301,6 +301,7 @@
     "Example":"示例",
     "Example 1:":"示例1：",
     "Example 1: Basic Movement":"例1：基本运动",
+    "Example 1: Basic Reference to an Instance Variable":"示例1：实例变量的基本引用",
     "Example 1: Basic Use":"示例1：基本使用",
     "Example 1: Check if any of the given values is present in an array":"示例1：检查数组中是否存在任何给定值",
     "Example 1: Copying an entire buffer\u0027s contents":"示例 1：复制整个缓冲区的内容",
@@ -311,9 +312,12 @@
     "Example 1: Replace an object ID with another object ID":"示例 1：用另一个对象 ID 替换对象 ID",
     "Example 1: Showing the output&nbsp;":"示例1：显示输出",
     "Example 2:":"示例2：",
+    "Example 2: Assigning a Static Struct to a Pure Data Struct":"示例2：将静态结构分配给纯数据结构",
+    "Example 2: Basic Reference to an Array Index":"示例2：对数组索引的基本引用",
     "Example 2: Check if all values are present in an array":"示例2：检查数组中是否存在所有值",
     "Example 2: Copying from a buffer, starting at an offset":"示例 2：从偏移量开始从缓冲区复制",
     "Example 2: Deleting the last 3 elements":"示例2：删除最后3个元素",
+    "Example 2: Including Static Variables":"示例2：包括静态变量",
     "Example 2: Inserting multiple values":"示例2：插入多个值",
     "Example 2: Listing Emitter Names":"示例2：列出发射器名称",
     "Example 2: Negative Length":"示例2：负长度",
@@ -326,9 +330,11 @@
     "Example 2: array of arrays":"示例2：数组的数组",
     "Example 2:&nbsp;Animated Sprite That Starts Playing at Sub-image":"示例2：在子图像处开始播放的动画精灵",
     "Example 2:&nbsp;Finding the top-left corner position of a tile":"示例2：查找拼贴的左上角位置",
+    "Example 3: Complex Reference":"示例3：复杂引用",
     "Example 3: Deleting a range":"示例3：删除范围",
     "Example 3: Playing a sound at a given position in 3D audio space (similar to audio_play_sound_at)":"示例 3：在 3D 音频空间中的给定位置播放声音 (类似于 audio_play_sound_at)",
     "Example 3: Rotate an Array":"示例3：旋转数组",
+    "Example 4: Complex Array Reference":"示例4：复数数组引用",
     "Example:":"例子:",
     "Example: Particle System Following an Instance":"示例：跟随实例的粒子系统",
     "Example: Sprite View for an Instance\u0027s Sprite":"示例：一个实例的精灵的精灵视图",
@@ -836,11 +842,13 @@
 }
 	var json={
     "It clones nested structs and arrays up to a given depth (128 by default), which you can override by providing the&nbsp;optional {}depth{} parameter.":"它克隆嵌套的结构和数组，直到给定深度(默认情况下为 128)，您可以通过提供可选的 {}depth{} 参数来覆盖该深度。",
+    "It clones nested structs and arrays up to a given depth ({}128{} by default), which you can override by providing the&nbsp;optional {}depth{} parameter.":"它克隆嵌套的结构和数组，直到给定深度(默认情况下为 {}128{})，您可以通过提供可选的 {}depth{} 参数来覆盖该深度。",
     "The above code first defines a temporary struct variable {}_the_original{}. A clone is then created from this variable using&nbsp;{}{}variable_clone{}{}. The new variable is stored in another variable {}_the_clone{}.":"上面的代码首先定义了一个临时结构变量 {}_the_original{}。然后使用 {}{}variable_clone{}{} 从此变量创建克隆。新变量存储在另一个变量 {}_the_clone{} 中。",
     "The value to clone":"要克隆的值",
     "This function clones the value you pass it and returns the new clone.":"此函数克隆您传递给它的值，并返回新的克隆。",
     "{}{}NOTE{}{}&nbsp;The built-in&nbsp;{}Data Structures{}&nbsp;and&nbsp;{}Instances{}&nbsp;are {}not{} cloned; for this type of variable the actual value (data structure ID&nbsp;or instance ID, respectively) is written.":"{}{}注意{}{} 内置的{}数据结构{}和{}实例{}是{}未{}克隆的，对于此类型的变量写入实际值(分别为数据结构 ID 或实例 ID)。",
-    "{}{}OPTIONAL{}{}&nbsp;The maximum depth level to clone the variable, in case this is e.g. a nested struct. The default is 128, the maximum possible value.":"{}{}可选{}{} 克隆变量的最大深度级别，如果这是嵌套结构的话。默认值为 128，这是可能的最大值。"
+    "{}{}OPTIONAL{}{}&nbsp;The maximum depth level to clone the variable, in case this is e.g. a nested struct. The default is 128, the maximum possible value.":"{}{}可选{}{} 克隆变量的最大深度级别，如果这是嵌套结构的话。默认值为 128，这是可能的最大值。",
+    "{}{}OPTIONAL{}{}&nbsp;The maximum depth level to clone the variable, in case this is e.g. a nested struct. The default is {}128{}, the maximum possible value.":"{}{}可选{}{} 克隆变量的最大深度级别，如果这是嵌套结构的话。默认值为 {}128{}，这是可能的最大值。"
 }
 
 	$(function(){
