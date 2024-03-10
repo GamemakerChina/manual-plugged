@@ -301,7 +301,6 @@
     "Example":"示例",
     "Example 1:":"示例1：",
     "Example 1: Basic Movement":"例1：基本运动",
-    "Example 1: Basic Reference to an Instance Variable":"示例1：实例变量的基本引用",
     "Example 1: Basic Use":"示例1：基本使用",
     "Example 1: Check if any of the given values is present in an array":"示例1：检查数组中是否存在任何给定值",
     "Example 1: Copying an entire buffer\u0027s contents":"示例 1：复制整个缓冲区的内容",
@@ -312,12 +311,9 @@
     "Example 1: Replace an object ID with another object ID":"示例 1：用另一个对象 ID 替换对象 ID",
     "Example 1: Showing the output&nbsp;":"示例1：显示输出",
     "Example 2:":"示例2：",
-    "Example 2: Assigning a Static Struct to a Pure Data Struct":"示例2：将静态结构分配给纯数据结构",
-    "Example 2: Basic Reference to an Array Index":"示例2：对数组索引的基本引用",
     "Example 2: Check if all values are present in an array":"示例2：检查数组中是否存在所有值",
     "Example 2: Copying from a buffer, starting at an offset":"示例 2：从偏移量开始从缓冲区复制",
     "Example 2: Deleting the last 3 elements":"示例2：删除最后3个元素",
-    "Example 2: Including Static Variables":"示例2：包括静态变量",
     "Example 2: Inserting multiple values":"示例2：插入多个值",
     "Example 2: Listing Emitter Names":"示例2：列出发射器名称",
     "Example 2: Negative Length":"示例2：负长度",
@@ -330,11 +326,9 @@
     "Example 2: array of arrays":"示例2：数组的数组",
     "Example 2:&nbsp;Animated Sprite That Starts Playing at Sub-image":"示例2：在子图像处开始播放的动画精灵",
     "Example 2:&nbsp;Finding the top-left corner position of a tile":"示例2：查找拼贴的左上角位置",
-    "Example 3: Complex Reference":"示例3：复杂引用",
     "Example 3: Deleting a range":"示例3：删除范围",
     "Example 3: Playing a sound at a given position in 3D audio space (similar to audio_play_sound_at)":"示例 3：在 3D 音频空间中的给定位置播放声音 (类似于 audio_play_sound_at)",
     "Example 3: Rotate an Array":"示例3：旋转数组",
-    "Example 4: Complex Array Reference":"示例4：复数数组引用",
     "Example:":"例子:",
     "Example: Particle System Following an Instance":"示例：跟随实例的粒子系统",
     "Example: Sprite View for an Instance\u0027s Sprite":"示例：一个实例的精灵的精灵视图",
@@ -841,9 +835,15 @@
     "{}{}Mouse Button Constant{}{}":"{}{}鼠标按钮常量{}{}"
 }
 	var json={
+    "The default format is no extra spaces on the left, and only two decimal places on the right, e.g.&nbsp;{}\"265.73\"{}.":"默认格式是左边没有多余的空格，右边只有两位小数，例如{}\"265.73\"{}。",
+    "The number of decimal places to be included (right side of decimal). Zeroes will be inserted to match this.":"要包含的小数位数(小数点右侧)。将插入零以与此匹配。",
     "The number of decimal places to be included.":"要包括的小数位数。",
+    "The number of places of the main number to be shown (left side of decimal). Spaces will be inserted to match this.":"要显示的主数字的位数(小数点左边)。将插入空格以匹配此位数。",
+    "The real number to be converted to a string.":"要转换为字符串的真实的数字。",
     "The real number to be turned into a string.":"要变成字符串的实数。",
     "The total number of places of the main number to be shown. Zeroes or spaces will be inserted to match this.":"要显示的主数字的总位数。零或空格将被插入，以符合这个要求。",
+    "The {}total{} argument is the number of digits on the left side of the decimal, and if this is higher than your value allows, spaces are inserted to fill the remaining digits. The {}dec{} argument is the number of digits on the right side of the decimal, and if this is more than the decimal digits in your number, zeroes are inserted to keep your given number of digits.":"{}total{}参数是小数点左边的位数，如果这比您的值允许的要高，则插入空格以填充剩余的位数。{}dec{}参数是小数点右边的位数，如果这比您的数字中的小数点位数要多，则插入零以保持给定的位数。",
+    "This function converts a real number into a string, where you can specify how many digits are visible on each side of the decimal.":"此函数将真实的数字转换为字符串，您可以在其中指定小数点两侧可见的位数。",
     "This will set {}str1{} to \"&nbsp;&nbsp;&nbsp;&nbsp;1234\", {}str2{} to \"3.1415926535\" and {}str3{} to \"&nbsp;&nbsp;&nbsp;&nbsp;3.14159\".":"这会将 {} str1{} 设置为 “1234”，{} str2{} 设置为 “3.1415926535”，将 {} str3{} 设置为 “3.14159”。",
     "Turns a real number into a string using your own formatting, where you can choose how many \"places\" are saved to the string and how many decimal places are saved also. Both can be very handy, some games prefer to display a score as a set number of digits, while control over decimal places can be good for a high accuracy the two decimal places of {}{}string(){}{} cannot provide. If the number of places specified is greater than the value to be shown and/or the number plus the decimal places that have been specified is less than the total places, then spaces will be added before the value to make up the difference (see the example below). Zeros will be added to the right of the decimal point if the value given is less than the total and the number of decimal places to include. The default format is no extra spaces on the left, and only two decimal places on the right, eg \"265.73\".":"将一个实数变成一个使用你自己格式的字符串，你可以选择多少个 \"位 \"被保存到字符串中，以及多少个小数位也被保存。这两种方法都很方便，有些游戏喜欢将分数显示为一个固定的数字，而对小数点位的控制可以达到{}{}string(){}{}的两个小数点位无法提供的高精确度。如果指定的位数大于要显示的数值，并且/或者指定的数值加上小数点后的位数小于总的位数，那么在数值前会加上空格以弥补差值(见下面的例子)。如果给定的数值小于总数和要包括的小数位数，小数点右边将加零。默认格式是左边没有多余的空格，右边只有两个小数位，例如 \"265.73\"。"
 }
