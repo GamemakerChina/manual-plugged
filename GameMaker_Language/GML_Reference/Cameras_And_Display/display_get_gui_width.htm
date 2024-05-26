@@ -1031,12 +1031,16 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">display_get_gui_width</span></h1>
   <p>This function gets the width (in pixels) of the GUI as used in the <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a>.</p>
+  <div data-conref="../../../assets/snippets/Note_display_result_not_reliable_before_draw.hts">
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;When your <span class="inline2"><a href="../Drawing/Surfaces/application_surface.htm">application_surface</a></span> is larger than the display's size (roughly), and you call this function before the current room's initialisation has finished, e.g. in a global script, a room's Creation Code or an instance's Create event, the value returned may not be accurate. For accurate results in such cases, call this in a Draw event.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">display_get_gui_width</span>();</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code_heading">Draw GUI Event</p>
@@ -1055,7 +1059,7 @@
         <div style="float:right">Next:&nbsp;<a href="display_get_gui_height.htm">display_get_gui_height</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 display_get_gui_width

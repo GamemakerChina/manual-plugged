@@ -1043,8 +1043,16 @@
     <li>[3] = Destination alpha component (default is <span class="inline">bm_inv_src_alpha</span> (1-As))</li>
   </ul>
   <p>The values of the array will be one of the following constants ("s" denotes a value taken from the source while a "d" denotes a value from the destination):</p>
+  <div data-conref="../../../../assets/snippets/Table_Gpu_blend_modes_ext.hts">
   <table>
+    <colgroup>
+      <col>
+      <col>
+    </colgroup>
     <tbody>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span></th>
+      </tr>
       <tr>
         <th>Constant</th>
         <th>Blend factor (Red, Green, Blue, Alpha)</th>
@@ -1095,6 +1103,8 @@
       </tr>
     </tbody>
   </table>
+
+</div>
   <p>When creating the extended blend modes in this way, the RGB components will be taken from one blend mode and the Alpha component will be taken from another, so that - for example - if you use <span class="inline">bm_zero</span> (0, 0, 0, 0) as the RGB blend mode and <span class="inline">bm_one</span> as the alpha blend mode, you will get a composite blend of (0,0,0,1).</p>
   <p>Note that you can change these values directly within the array and pass the full array to the function as a single argument (as shown in the example below).</p>
   <p>&nbsp;</p>
@@ -1102,7 +1112,7 @@
   <p class="code">gpu_get_blendmode_ext_sepalpha();</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (4 elements only; see above for constants)</p>
+  <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../GML_Overview/Arrays.htm">Array</a></span> (4 elements only; see above for constants)</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var bm = gpu_get_blendmode_ext_sepalpha();<br>
@@ -1120,7 +1130,7 @@
         <div style="float:right">Next:&nbsp;<a href="gpu_get_blendmode_src.htm">gpu_get_blendmode_src</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_blendmode_ext_sepalpha

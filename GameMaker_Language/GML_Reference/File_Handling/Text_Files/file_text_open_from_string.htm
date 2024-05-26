@@ -1032,26 +1032,32 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>file_text_open_from_string</h1>
   <p>This function will create a text file from a string and open it for reading, returning the file "handle" that should be used in all further file function calls to read from this file. Note that this file is temporary and <i>read only</i>, and as such it will be removed from memory the moment it is closed.</p>
-  <p class="note"><b>NOTE</b>: You can only have a maximum of 32 files open at any one time. You should also <b>always</b> close files when finished as this writes the information and frees the memory associated with the file.</p>
-  <p class="note"><b></b><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">File System</a>&nbsp;for more information.</p>
+  <p><span data-conref="../../../../assets/snippets/File_text_open_error_description.hts">In the case of an error, the function will return -1. However, in some cases where the file could not be loaded (like an invalid filename being passed), the function may still return a file ID, in which case the return value of the <a href="file_text_close.htm">file closing</a> function will be <span class="inline2">false</span>.</span></p>
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;</b>You can only have a maximum of 32 files open at any one time. You should also <b>always</b> close files when finished as this writes the information and frees the memory associated with the file.<b></b></p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_GM_FileSystem_Sandboxed.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>This may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">The File System</a> for more information.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">file_text_open_from_string(string);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>string</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>string</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The string to create the file from.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_File_Text"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/File_Handling/Text_Files/file_text_open_read.htm">Text File ID</a></span>&nbsp;or -1</p>
+  <p class="code"><span data-keyref="Type_ID_File_Text"><a target="_blank" href="file_text_open_read.htm">Text File ID</a></span>&nbsp;or -1</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">file = file_text_open_from_string(reset_str);</p>
@@ -1066,7 +1072,7 @@
         <div style="float:right">Next:&nbsp;<a href="file_text_read_real.htm">file_text_read_real</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_text_open_from_string

@@ -1067,12 +1067,15 @@
     <li><a href="sequence_instance_override_object.htm">sequence_instance_override_object</a></li>
   </ul>
   <p>&nbsp;</p>
-  <p>There is also a&nbsp;<strong>built-in variable</strong>&nbsp;associated with instances that can be used to determine of the instance has been used in a sequence or not:</p>
+  <p>There is also a&nbsp;<strong>built-in variable</strong>&nbsp;associated with instances that can be used to determine if the instance has been used in a sequence or not:</p>
   <p>&nbsp;</p>
   <ul class="colour">
     <li><a href="in_sequence.htm">in_sequence</a></li>
   </ul>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;If your sequence has any instances in it, these instances shouldn't change their&nbsp;<span class="inline2"><a href="../Sprites/Sprite_Instance_Variables/image_xscale.htm">image_xscale</a></span> /&nbsp;<span class="inline2"><a href="../Sprites/Sprite_Instance_Variables/image_yscale.htm">image_yscale</a></span> / <span class="inline2"><a href="../Sprites/Sprite_Instance_Variables/image_angle.htm">image_angle</a></span>&nbsp;/ <span class="inline2">x</span>&nbsp;/ <span class="inline2">y</span>&nbsp;variables as they will be&nbsp;overwritten when the sequence updates each step after starting to be played.</p>
+  <div data-conref="../../../../assets/snippets/Note_Instances_In_Sequence_Shouldnt_Update_Transform_Vars.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;</b>If your sequence has any instances in it, these instances shouldn't change their <span class="inline2"><a href="../Sprites/Sprite_Instance_Variables/image_xscale.htm">image_xscale</a></span>&nbsp; /&nbsp;<span class="inline2"><a href="../Sprites/Sprite_Instance_Variables/image_yscale.htm">image_yscale</a></span> /&nbsp;<span class="inline2"><a href="../Sprites/Sprite_Instance_Variables/image_angle.htm">image_angle</a></span> /&nbsp;<span class="inline2"><a href="../Instances/Instance_Variables/x.htm">x</a></span> /&nbsp;<span class="inline2"><a href="../Instances/Instance_Variables/y.htm">y</a></span> variables as they will be&nbsp;overwritten when the sequence updates each step after starting to be played. You can check&nbsp;<span class="inline2"><a href="in_sequence.htm">in_sequence</a></span>&nbsp;and only update the properties of such an instance when this variable is <span class="inline2">false</span>.</p>
+
+</div>
   <p>&nbsp;</p>
   <p>Before using these functions to create or edit sequences, we recommend that you read the detailed descriptions given below for the struct properties. A general overview of how to create a new sequence would be:</p>
   <ul class="colour">
@@ -1080,7 +1083,7 @@
   </ul>
   <p class="code">myseq = sequence_create();</p>
   <ul class="colour">
-    <li>Set the sequence object top level values like length, play mode, play speed, etc. For example:</li>
+    <li>Set the sequence object top-level values like length, play mode, play speed, etc. For example:</li>
   </ul>
   <p class="code">myseq.length = 120;<br>
     myseq.loopmode = seqplay_pingpong</p>
@@ -1090,7 +1093,7 @@
   <p class="code">var mytracks = array_create(1);<br>
     mytracks[0] = sequence_track_new(seqtracktype_graphic);</p>
   <ul class="colour">
-    <li>Each asset track needs to have some data to tell the sequence how it will look, or its position , etc... and this is added in the form of <i>keyframes</i>. At the top level for an asset track, you can set keyframes for various things (listed in the section on the Track Struct, below), but note that as these are asset track keyframes, they won't be interpolated and will simply change the value they refer to when the given frame is reached. Each keyframe is a struct that is added to an array, and then this array is assigned to the asset track. To create the keyframe struct we would call the function&nbsp;<span class="inline3_func"><a href="sequence_keyframe_new.htm">sequence_keyframe_new</a></span> and to populate the keyframe with the required data, we would use the function <span class="inline3_func"><a href="sequence_keyframedata_new.htm">sequence_keyframedata_new</a></span>:</li>
+    <li>Each asset track needs to have some data to tell the sequence how it will look, what its position is, etc. This is added in the form of <i>keyframes</i>. At the top level for an asset track, you can set keyframes for various things (listed in the section on the Track Struct, below), but note that as these are asset track keyframes, they won't be interpolated and will simply change the value they refer to when the given frame is reached. Each keyframe is a struct that is added to an array, and then this array is assigned to the asset track. To create the keyframe struct we would call the function&nbsp;<span class="inline3_func"><a href="sequence_keyframe_new.htm">sequence_keyframe_new</a></span> and to populate the keyframe with the required data, we would use the function <span class="inline3_func"><a href="sequence_keyframedata_new.htm">sequence_keyframedata_new</a></span>:</li>
   </ul>
   <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br>
     var graphickeys = array_create(1);<br>
@@ -1173,7 +1176,7 @@
         <div style="float:right">Next: <a href="../Fonts/Fonts.htm">Fonts</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Sequences

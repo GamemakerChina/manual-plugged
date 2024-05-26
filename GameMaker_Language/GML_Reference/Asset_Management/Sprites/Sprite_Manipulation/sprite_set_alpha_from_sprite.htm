@@ -1014,7 +1014,7 @@
   <meta name="topic-comment" content="Page explaining the function sprite_set_alpha_from_sprite">
   <meta name="rh-index-keywords" content="sprite_set_alpha_from_sprite">
   <meta name="search-keywords" content="sprite_set_alpha_from_sprite">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_delete.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_nineslice_create.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_merge.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1051,12 +1051,12 @@
       </tr>
       <tr>
         <td>ind</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a target="_blank" href="../../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></td>
+        <td><span data-keyref="Type_Asset_Sprite"><a target="_blank" href="../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></td>
         <td>The index of the sprite to change the transparency map of.</td>
       </tr>
       <tr>
         <td>spr</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a target="_blank" href="../../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></td>
+        <td><span data-keyref="Type_Asset_Sprite"><a target="_blank" href="../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></td>
         <td>The index of the sprite to take the transparency map data from.</td>
       </tr>
     </tbody>
@@ -1069,7 +1069,7 @@
   <p>In this extended example we show how you can create a special effect sprite from two sprite resources. To start with we need to have a controller variable in the <b>Create Event</b> of the instance. This variable is to ensure that the sprite is only created once:</p>
   <p class="code">spr_create = true;</p>
   <p>Once that is done we need to then go to the <b>Draw Event</b> and add in this code:</p>
-  <p class="code">if spr_create<br>
+  <p class="code">if (spr_create) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;spr_create = false;<br>
     &nbsp; &nbsp; var _sw =&nbsp;sprite_get_width(spr_Explosion_Alpha);<br>
@@ -1105,7 +1105,7 @@
         <div style="float:right">Next:&nbsp;<a href="sprite_set_cache_size.htm">sprite_set_cache_size</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_alpha_from_sprite

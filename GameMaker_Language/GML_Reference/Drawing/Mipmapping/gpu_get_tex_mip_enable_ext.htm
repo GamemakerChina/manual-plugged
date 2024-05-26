@@ -1046,14 +1046,14 @@
       </tr>
       <tr>
         <td>sampler_index</td>
-        <td><span data-keyref="Type_Handle_Shader_Sampler"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_get_sampler_index.htm">Shader Sampler Handle</a></span></td>
+        <td><span data-keyref="Type_Handle_Shader_Sampler"><a target="_blank" href="../../Asset_Management/Shaders/shader_get_sampler_index.htm">Shader Sampler Handle</a></span></td>
         <td>The index of the shader sampler to get</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Constant"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Variables/Constants.htm">Constant</a></span></p>
+  <p class="code"><span data-keyref="Type_Constant"><a target="_blank" href="../../../GML_Overview/Variables/Constants.htm">Constant</a></span></p>
   <table>
     <tbody>
       <tr>
@@ -1079,7 +1079,7 @@
   <p class="code">var _sampleIndex = shader_get_sampler_index(shd_Glass, "s_Background");<br>
     var _spriteTex = sprite_get_texture(sprite_index, 0);<br>
     shader_set(shd_Glass);<br>
-    if gpu_get_tex_mip_enable_ext(_sampleIndex) != mip_on<br>
+    if (gpu_get_tex_mip_enable_ext(_sampleIndex) != mip_on) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;gpu_set_tex_mip_enable_ext(_sampleIndex, mip_on);<br>
     }<br>
@@ -1096,7 +1096,7 @@
         <div style="float:right">Next:&nbsp;<a href="gpu_set_tex_mip_filter.htm">gpu_set_tex_mip_filter</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_tex_mip_enable_ext

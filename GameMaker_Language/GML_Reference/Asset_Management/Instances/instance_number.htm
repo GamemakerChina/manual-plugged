@@ -1037,21 +1037,23 @@
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"><a target="_blank" href="../../../../../The_Asset_Editors/Objects.htm">Object Asset</a></span></td>
-        <td>The object to total the number of instances of.</td>
-     </tr>
+        <td>obj</td>
+        <td><span data-keyref="Type_Asset_Object"><a target="_blank" href="../../../../The_Asset_Editors/Objects.htm">Object Asset</a></span></td>
+        <td>The object to get the number of instances of, or the keyword <span class="inline2">all</span> to count all instances</td>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if instance_number(object_index) &lt; 50<br>
+  <p class="code">if (instance_number(object_index) &lt; 50) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;instance_create_layer(random(room_width), random(room_height), "Instances", object_index);<br>
     }</p>
@@ -1066,7 +1068,7 @@
         <div style="float:right">Next: <a href="instance_place.htm">instance_place</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_number

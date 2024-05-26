@@ -1041,7 +1041,7 @@
   <meta name="rh-index-keywords" content="sprite_add_ext,sprite_add_ext_error_unknown,sprite_add_ext_error_cancelled,sprite_add_ext_error_spritenotfound,sprite_add_ext_error_loadfailed,sprite_add_ext_error_decompressfailed,sprite_add_ext_error_setupfailed">
   <meta name="search-keywords" content="sprite_add_ext,sprite_add_ext_error_unknown,sprite_add_ext_error_cancelled,sprite_add_ext_error_spritenotfound,sprite_add_ext_error_loadfailed,sprite_add_ext_error_decompressfailed,sprite_add_ext_error_setupfailed">
   <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt">
-</head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_delete.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1063,20 +1063,20 @@
   <h1><span data-field="title" data-format="default">sprite_add_ext</span></h1>
   <p>This function loads an image from an external file or URL <em>asynchronously</em> and adds it as a new sprite.</p>
   <p>This is the asynchronous version of&nbsp;<span class="inline3_func"><a href="sprite_add.htm">sprite_add</a></span>; instead of blocking execution of code and thereby freezing the game, it continues execution of the game's code after the function is called and triggers an asynchronous&nbsp;<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">Image Loaded</a>&nbsp;event once the sprite is fully loaded.</p>
-  <p>The supported image file formats are&nbsp;<span>PNG, JPEG, GIF, QOIF and Spine JSON files (the Spine JSON files require that their associated atlas and image files are placed next to them).</span></p>
+  <p>The supported image file formats are&nbsp;PNG, JPEG, GIF, QOIF and Spine JSON files (the Spine JSON files require that their associated atlas and image files are placed next to them).</p>
   <p class="note"><span><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;Spine JSON files are only supported for locally stored files, not for files requested via HTTP (the same as for&nbsp;<span class="inline3_func"><a href="sprite_add.htm">sprite_add</a></span>).</span></p>
   <p>The&nbsp;<span class="inline2"><a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span>&nbsp;<a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> will contain the following fields in the async&nbsp;<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">Image Loaded</a>&nbsp;event:&nbsp;</p>
   <ul class="colour">
     <li><strong>"filename"</strong> - the path to the file that was originally passed to the function</li>
     <li><strong>"id"</strong> - the sprite ID, as returned by the function</li>
-    <li><strong>"http_status"</strong> -&nbsp;<span>contains the status value of the HTTP request if one was made, or 200 ("OK") if the image was loaded from a file</span></li>
+    <li><strong>"http_status"</strong> -&nbsp;contains the status value of the HTTP request if one was made, or 200 ("OK") if the image was loaded from a file</li>
     <li><strong>"status"</strong> - contains a value of 0 or greater to indicate the load was successful, or one of the following (negative) error codes in case something went wrong:&nbsp;</li>
   </ul>
   <div>
     <table>
       <tbody>
         <tr>
-          <th colspan="3"><span data-keyref="Type_Constant_Sprite_Add_Error"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_add_ext.htm">Sprite Add Error Constant</a></span></th>
+          <th colspan="3"><span data-keyref="Type_Constant_Sprite_Add_Error"><a target="_blank" href="sprite_add_ext.htm">Sprite Add Error Constant</a></span></th>
         </tr>
         <tr>
           <th>Constant</th>
@@ -1085,32 +1085,32 @@
         </tr>
         <tr>
           <td><span class="inline">sprite_add_ext_error_unknown</span><span class="inline"></span></td>
-          <td><span>This is a generic error code when none of the others apply (the HTML5 runner only returns this constant in case of failure).</span></td>
+          <td>This is a generic error code when none of the others apply (the HTML5 runner only returns this constant in case of failure).</td>
           <td>-1</td>
         </tr>
         <tr>
           <td><span class="inline">sprite_add_ext_error_cancelled</span><span class="inline"></span></td>
-          <td><span>This constant indicates that the request was cancelled while it was in progress.</span></td>
+          <td>This constant indicates that the request was cancelled while it was in progress.</td>
           <td>-2</td>
         </tr>
         <tr>
           <td><span class="inline">sprite_add_ext_error_spritenotfound</span></td>
-          <td><span>This <span>constant </span>indicates that a sprite was removed somehow partway through the loading process.</span></td>
+          <td>This constant indicates that a sprite was removed somehow partway through the loading process.</td>
           <td>-3</td>
         </tr>
         <tr>
           <td><span class="inline">sprite_add_ext_error_loadfailed</span></td>
-          <td><span>This&nbsp;<span>constant </span> indicates that a file loading operation failed.</span></td>
+          <td>This&nbsp;constant indicates that a file loading operation failed.</td>
           <td>-4</td>
         </tr>
         <tr>
           <td><span class="inline">sprite_add_ext_error_decompressfailed</span></td>
-          <td><span>This constant indicates that image decompression failed (which could be due to e.g. a corrupted file or unsupported image format).</span></td>
+          <td>This constant indicates that image decompression failed (which could be due to e.g. a corrupted file or unsupported image format).</td>
           <td>-5</td>
         </tr>
         <tr>
           <td><span class="inline">sprite_add_ext_error_setupfailed</span></td>
-          <td><span>Indicates that, even though all data was loaded and decompressed, sprite resource creation itself failed.</span></td>
+          <td>Indicates that, even though all data was loaded and decompressed, sprite resource creation itself failed.</td>
           <td>-6</td>
         </tr>
       </tbody>
@@ -1133,34 +1133,34 @@
       </tr>
       <tr>
         <td>fname</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The path to the image file to add as a sprite (either a local file path or a web address)</td>
       </tr>
       <tr>
         <td>imgnum</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The number of subimages in the file (1 for a single image, GIF or Spine sprite)</td>
       </tr>
       <tr>
         <td>xorig</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x position of the new sprite's origin</td>
       </tr>
       <tr>
         <td>yorig</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y position of the new sprite's origin</td>
       </tr>
       <tr>
         <td>prefetch</td>
-        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">Boolean</a></span></td>
         <td>Whether to immediately load the sprite into GPU memory</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Asset_Sprite"><a target="_blank" href="../../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></p>
+  <p class="code"><span data-keyref="Type_Asset_Sprite"><a target="_blank" href="../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code_heading">Create Event</p>
@@ -1189,7 +1189,7 @@
         <div>Next:&nbsp;<a href="sprite_replace.htm">sprite_replace</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_add_ext

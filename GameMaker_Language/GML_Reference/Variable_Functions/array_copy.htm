@@ -1069,27 +1069,27 @@
       </tr>
       <tr>
         <td>dest</td>
-        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../GML_Overview/Arrays.htm">Array</a></span></td>
         <td>The reference to the array to copy to.</td>
       </tr>
       <tr>
         <td>dest_index</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The index within the array to copy to.&nbsp;Negative indices are supported and count from the end of the array. An offset of -1 refers to the last element of the array, an offset of -2 to the one before last element, etc. (see&nbsp;<a href="Array_Functions.htm#h1">Offset And Length</a>)</td>
       </tr>
       <tr>
         <td>src</td>
-        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../GML_Overview/Arrays.htm">Array</a></span></td>
         <td>The reference to the array to copy from.</td>
       </tr>
       <tr>
         <td>src_index</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The index within the array to start copying from.&nbsp;Negative indices are supported and count from the end of the array. An offset of -1 refers to the last element of the array, an offset of -2 to the one before last element, etc. (see&nbsp;<a href="Array_Functions.htm#h1">Offset And Length</a>)</td>
       </tr>
       <tr>
         <td>length</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The length (number of array indices) to copy, starting with the value at src_index. A negative value&nbsp;can be provided for length; in this case copying also starts at index src_index, but the next elements that are copied are src_index-1, src_index-2, etc. I.e. elements are copied "backwards". Note that the first value is always written at dest_index, the second value at dest_index+1, etc.</td>
       </tr>
     </tbody>
@@ -1099,7 +1099,7 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example 1: Basic Use</h4>
-  <p class="code">if !array_equals(inventory_array, item_array)<br>
+  <p class="code">if (!array_equals(inventory_array, item_array)) <br>
     {<br>
     &nbsp; &nbsp; var _len = array_length(inventory_array);<br>
     &nbsp; &nbsp; array_copy(item_array, 0, inventory_array, 0, _len);<br>
@@ -1124,7 +1124,7 @@
         <div style="float:right">Next:&nbsp;<a href="array_equals.htm">array_equals</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 array_copy

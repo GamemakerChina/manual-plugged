@@ -1028,22 +1028,21 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mouse_lastbutton</h1>
+  <h1><span data-field="title" data-format="default">mouse_lastbutton</span></h1>
   <p>This variable returns the last mouse button that was pressed and can return any of the special <a href="Mouse_Input.htm">mouse constants</a> except <span class="inline">mb_any</span>&nbsp;(you may also set this variable to one of the constants).</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">mouse_lastbutton;</p>
+  <p class="code"><span data-field="title" data-format="default">mouse_lastbutton</span></p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Constant_Mouse_Button"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Mouse_Input/mouse_check_button.htm">Mouse Button Constant</a></span> (except mb_any)</p>
+  <p class="code"><span data-keyref="Type_Constant_Mouse_Button"><a target="_blank" href="mouse_check_button.htm">Mouse Button Constant</a></span> (except mb_any)</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if mouse_lastbutton = mb_left<br>
+  <p class="code">if (mouse_lastbutton ==&nbsp;mb_left)<br>
     {<br>
     &nbsp; &nbsp; x -= 1;<br>
     }</p>
-  <p>This moves the current instance left if the last button pressed was the left mouse button.</p>
-  <p>&nbsp;</p>
+  <p>This code moves the current instance left if the last button pressed was the left mouse button.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1053,7 +1052,7 @@
         <div style="float:right">Next:&nbsp;<a href="mouse_wheel_up.htm">mouse_wheel_up</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mouse_lastbutton

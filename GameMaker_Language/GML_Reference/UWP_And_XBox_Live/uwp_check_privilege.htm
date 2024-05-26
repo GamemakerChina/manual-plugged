@@ -82,7 +82,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>uwp_check_privilege <span data-conref="../../../assets/snippets/Tag_obsolete.hts"><span class="warning">OBSOLETE</span></span></h1>
   <p>With this function you can check that a given user has a chosen privilege. The function will return true or false in the System Asynchronous Event depending on whether the privilege is enabled or not, and if you set the attempt_resolution argument to true and the privilege isn&#39;t enabled, it will also open a system dialog (suspending the game) to prompt the user to upgrade the account or whatever is required to get the privilege. If the user then enables the required option, the function will return true.</p>
-  <p>The function requires that you use one of the following <span data-keyref="Type_Constant_UWP_Priv"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/uwp_check_privilege.htm">UWP Privilege Constant</a></span>s for the privilege request:</p>
+  <p>The function requires that you use one of the following <span data-keyref="Type_Constant_UWP_Priv"><a target="_blank" href="uwp_check_privilege.htm">UWP Privilege Constant</a></span>s for the privilege request:</p>
   <table>
     <colgroup>
       <col/>
@@ -90,7 +90,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_UWP_Priv"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/uwp_check_privilege.htm">UWP Privilege Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_UWP_Priv"><a target="_blank" href="uwp_check_privilege.htm">UWP Privilege Constant</a></span></th>
       </tr>
       <tr>
         <th>Constant</th>
@@ -141,7 +141,7 @@
   </ul>
   <p>If the event type relates to this function, then there will also be the following additional keys when the function is called on XBox:</p>
   <ul class="colour">
-    <li>&quot;<b>result</b>&quot; - Will be one or more of the following <span data-keyref="Type_Constant_UWP_Priv_Result"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/uwp_check_privilege.htm">UWP Privilege Result Constant</a></span>s (combined values):
+    <li>&quot;<b>result</b>&quot; - Will be one or more of the following <span data-keyref="Type_Constant_UWP_Priv_Result"><a target="_blank" href="uwp_check_privilege.htm">UWP Privilege Result Constant</a></span>s (combined values):
       <table>
         <colgroup>
           <col/>
@@ -150,7 +150,7 @@
         </colgroup>
         <tbody>
           <tr>
-            <th colspan="3"><span data-keyref="Type_Constant_UWP_Priv_Result"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/uwp_check_privilege.htm">UWP Privilege Result Constant</a></span></th>
+            <th colspan="3"><span data-keyref="Type_Constant_UWP_Priv_Result"><a target="_blank" href="uwp_check_privilege.htm">UWP Privilege Result Constant</a></span></th>
           </tr>
           <tr>
             <th>Constant</th>
@@ -206,24 +206,24 @@
       </tr>
       <tr>
         <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_get_user.htm">Xbox User ID</a></span></td>
+        <td><span data-keyref="Type_ID_Xbox_User"><a target="_blank" href="Users_And_Accounts/xboxlive_get_user.htm">Xbox User ID</a></span></td>
         <td>The User ID pointer to check.</td>
       </tr>
       <tr>
         <td>privilege</td>
-        <td><span data-keyref="Type_Constant_UWP_Priv"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/uwp_check_privilege.htm">UWP Privilege Constant</a></span></td>
+        <td><span data-keyref="Type_Constant_UWP_Priv"><a target="_blank" href="uwp_check_privilege.htm">UWP Privilege Constant</a></span></td>
         <td>The privilege constant to check (see description, above).</td>
       </tr>
       <tr>
         <td>attempt_resolution</td>
-        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Boolean</a></span></td>
         <td>Enable attempting a resolution if set to <span class="inline">true</span>, or ignore if set to <span class="inline">false</span>.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></p>
   <p> </p>
   <h4>Example:</h4>
   <p class="code">var user_one = xboxlive_get_user(0);<br/>
@@ -242,7 +242,7 @@
         <div style="float:right">Next: <a href="uwp_suspend.htm">uwp_suspend</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_check_privilege

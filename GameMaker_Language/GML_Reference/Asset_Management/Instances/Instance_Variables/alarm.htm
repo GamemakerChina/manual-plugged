@@ -1041,17 +1041,21 @@
   <p>It should be noted that the alarm is not finished when it reaches 0 (although the event has been triggered) as the next step it will go down to -1, so if you need to stop an alarm for any reason you should set its array value to -1 <i>not</i> 0. Alarm times are calculated in <i>game steps</i>, with a value of 30 being 30 steps, 60 being 60 steps, etc.</p>
   <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;An alarm with no actions or code in it will not run. However, even with just a comment and no code, the alarm will count down.</p>
   <p>You can set the alarm array directly (and retrieve the current alarm value directly by using the array too), but under some circumstances this is not the most appropriate method, so you can also use the function <span class="inline3_func"><a href="../alarm_set.htm">alarm_set</a></span>&nbsp;to set an alarm, and the function&nbsp;<span class="inline3_func"><a href="../alarm_get.htm">alarm_get</a></span> to get the value of an alarm.</p>
+  <div data-conref="../../../../../assets/snippets/GML_Not_real_array.hts">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This variable does not hold a real GML array, so you cannot run any <a href="../../../Variable_Functions/Array_Functions.htm">array functions</a> on it or serialise it (convert it to a string). The only operation you can run on it is accessing a value at an index, with the <span class="inline2"><span data-field="title" data-format="default">alarm</span>[index]</span> syntax.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">alarm</span>[val];</p>
+  <p class="code"><span data-field="title" data-format="default">alarm</span>[index]</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> (-1 if the alarm isn't running)</p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">Real</a></span> (-1 if the alarm isn't running)</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if canshoot<br>
+  <p class="code">if (canshoot) <br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;if keyboard_check_pressed(vk_space)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (keyboard_check_pressed(vk_space)) <br>
     &nbsp; &nbsp; {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canshoot = false;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alarm[0] = game_get_speed(gamespeed_fps);<br>
@@ -1068,7 +1072,7 @@
         <div style="float:right">Next: <a href="direction.htm">direction</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 alarm

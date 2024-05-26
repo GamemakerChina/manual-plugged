@@ -1026,14 +1026,18 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>view_visible</h1>
-  <p>This variable can be used to find out if a particular view port is currently visible or not. You can also set this variable to effectively turn "on" or "off" a view by setting the value to <span class="inline">true</span> (visible) or <span class="inline">false</span> (invisible). Note that even if you have a view port set to visible, if view ports are not enabled (using the built-in variable&nbsp;<a href="view_enabled.htm"><span class="inline">view_enabled</span></a> or enabling them in the Room Editor) then they will not be drawn to the screen.</p>
+  <h1><span data-field="title" data-format="default">view_visible</span></h1>
+  <p>This variable can be used to find out if a particular view port is currently visible or not. You can also set this variable to effectively turn "on" or "off" a view by setting the value to <span class="inline">true</span> (visible) or <span class="inline">false</span> (invisible). Note that even if you have a view port set to visible, if view ports are not enabled (using the built-in variable&nbsp;<a href="view_enabled.htm"><span class="inline">view_enabled</span></a> or enabling them in <a href="../../../../The_Asset_Editors/Rooms.htm">The Room Editor</a>) then they will not be drawn to the screen.</p>
+  <div data-conref="../../../../assets/snippets/GML_Not_real_array.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This variable does not hold a real GML array, so you cannot run any <a href="../../Variable_Functions/Array_Functions.htm">array functions</a> on it or serialise it (convert it to a string). The only operation you can run on it is accessing a value at an index, with the <span class="inline2"><span data-field="title" data-format="default">view_visible</span>[index]</span> syntax.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">view_visible[0 ... 7];</p>
+  <p class="code"><span data-field="title" data-format="default">view_visible</span>[0 ... 7]</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> (<span class="inline">true</span>: enabled, <span class="inline">false</span>: disabled)</p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span> (<span class="inline">true</span>: enabled, <span class="inline">false</span>: disabled)</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">if !view_visible[0]<br>
@@ -1051,7 +1055,7 @@
         <div style="float:right">Next:&nbsp;<a href="view_xport.htm">view_xport</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 view_visible

@@ -1033,24 +1033,30 @@
   <h1>layer_sequence_yscale</h1>
   <p>With this function you can set the Y&nbsp;scale for the given sequence element. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a> along with the new scale to set on the Y&nbsp;axis and the sequence will be scaled by this amount.&nbsp;A scale of 1 indicates no scaling (1:1), smaller values will scale down (0.5, for example, will half the width of the sequence), larger values will scale up and negative values will flip the sequence about its origin&nbsp;<i>and</i> scale it unless the value used is exactly -1 (in which case the sequence is just flipped about its origin with no scaling).</p>
   <p>It is very important to note that applying <em>uneven</em>&nbsp;scaling (eg: scaling the X axis by 3 and the Y axis by 2) to sequence elements that contain any instance which uses <em>rotation</em>, <strong>may cause issues with the instance drawing, collisions, culling, and many other things</strong>. Basically, if your sequence relies on&nbsp;<em>any</em>&nbsp;instance properties then we do not recommend that you combine uneven scaling along with instance rotation.</p>
-  <p>Also note that you shouldn't change the <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> variables for any instances in a sequence that uses this function as they will be&nbsp;overwritten as soon as the sequence updates after calling the function.</p>
+  <div data-conref="../../../../../assets/snippets/Note_Instances_In_Sequence_Shouldnt_Update_Transform_Vars.hts">
+  <p class="note"><b><span data-conref="../../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;</b>If your sequence has any instances in it, these instances shouldn't change their <span class="inline2"><a href="../../Sprites/Sprite_Instance_Variables/image_xscale.htm">image_xscale</a></span>&nbsp; /&nbsp;<span class="inline2"><a href="../../Sprites/Sprite_Instance_Variables/image_yscale.htm">image_yscale</a></span> /&nbsp;<span class="inline2"><a href="../../Sprites/Sprite_Instance_Variables/image_angle.htm">image_angle</a></span> /&nbsp;<span class="inline2"><a href="../../Instances/Instance_Variables/x.htm">x</a></span> /&nbsp;<span class="inline2"><a href="../../Instances/Instance_Variables/y.htm">y</a></span> variables as they will be&nbsp;overwritten when the sequence updates each step after starting to be played. You can check&nbsp;<span class="inline2"><a href="../../Sequences/in_sequence.htm">in_sequence</a></span>&nbsp;and only update the properties of such an instance when this variable is <span class="inline2">false</span>.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">layer_sequence_yscale(sequence_element_id, xscale)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>sequence_element_id</td><td><span data-keyref="Type_ID_Element_Sequence"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Sequence_Layers/layer_sequence_create.htm">Sequence Element ID</a></span></td>
+        <td>sequence_element_id</td>
+        <td><span data-keyref="Type_ID_Element_Sequence"><a target="_blank" href="layer_sequence_create.htm">Sequence Element ID</a></span></td>
         <td>The unique ID value of the sequence element to target</td>
-     </tr>
+      </tr>
       <tr>
-        <td>yscale</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>yscale</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The new Y axis scale value to apply to the sequence element</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1058,7 +1064,7 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if seq_scale&nbsp;&lt; 2<br>
+  <p class="code">if (seq_scale&nbsp;&lt; 2)<br>
     {<br>
     &nbsp; &nbsp; seq_scale&nbsp;+= 0.01;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;layer_sequence_xscale(my_seq, seq_scale);<br>
@@ -1075,7 +1081,7 @@
         <div style="float:right">Next: <a href="layer_sequence_get_angle.htm">layer_sequence_get_angle</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_yscale

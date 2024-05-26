@@ -1036,10 +1036,10 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(ord("P"))<br>
+  <p class="code">if (keyboard_check_pressed(ord("P")))<br>
     {<br>
     &nbsp; &nbsp; global.Pause = !global.Pause;<br>
-    &nbsp; &nbsp; if global.Pause<br>
+    &nbsp; &nbsp; if (global.Pause)<br>
     &nbsp; &nbsp; {<br>
     &nbsp; &nbsp; &nbsp; &nbsp; <span data-field="title" data-format="default">audio_pause_all</span>();<br>
     &nbsp; &nbsp; }<br>
@@ -1048,7 +1048,7 @@
     &nbsp; &nbsp; &nbsp; &nbsp; audio_resume_all();<br>
     &nbsp; &nbsp; }<br>
     }</p>
-  <p>The above code checks for a press of the keyboard key "P" and if it detects one it sets the global variable "Pause" to <span class="inline">true</span> or false and then either pauses all sounds or restarts all previously paused sounds.</p>
+  <p>The above code checks for a press of the keyboard key "P" and if it detects one it sets the global variable "Pause" to <span class="inline2">true</span> or <span class="inline2">false</span> and then either pauses all sounds or restarts all previously paused sounds.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1058,7 +1058,7 @@
         <div style="float:right">Next:&nbsp;<a href="audio_resume_sound.htm">audio_resume_sound</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_pause_all

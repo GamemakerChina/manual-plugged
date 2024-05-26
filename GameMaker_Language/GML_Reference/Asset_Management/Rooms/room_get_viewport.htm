@@ -995,7 +995,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.3.14.0_26";
+    gTopicId = "8.2.2.3.14.0_27";
   
 //]]></script>
 
@@ -1039,9 +1039,10 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">room_get_viewport</span></h1>
-  <p>With this function you can retrieve the details of a view port in a room other than the current one. You give the room ID and the index of the view port to retrieve (from 0 to 7) and the function will return an <a href="../../../GML_Overview/Arrays.htm">array</a> of 5 indices, where:</p>
+  <p>This function retrieves the details of a view port in a room other than the current one.</p>
+  <p>You give the room and the index of the view port to retrieve (from 0 to 7) and the function will return an <a href="../../../GML_Overview/Arrays.htm">array</a> of 5 indices, where:</p>
   <ul class="colour">
-    <li>[0] = visible (Boolean: <span class="inline">true</span> / <span class="inline">false</span>)</li>
+    <li>[0] = visible (Boolean: <span class="inline2">true</span>&nbsp;/ <span class="inline2">false</span>)</li>
     <li>[1] = x position (real)</li>
     <li>[2] = y position (real)</li>
     <li>[3] = width (real)</li>
@@ -1059,19 +1060,19 @@
       </tr>
       <tr>
         <td>rm</td>
-        <td><span data-keyref="Type_Asset_Room"><a target="_blank" href="../../../../../The_Asset_Editors/Rooms.htm">Room Asset</a></span></td>
-        <td>The index of the room to get viewport data from</td>
+        <td><span data-keyref="Type_Asset_Room"><a target="_blank" href="../../../../The_Asset_Editors/Rooms.htm">Room Asset</a></span></td>
+        <td>The room to get viewport data from</td>
       </tr>
       <tr>
         <td>vind</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The index of the view port to get</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (5 elements: visible, x, y, width, height)</p>
+  <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../GML_Overview/Arrays.htm">Array</a></span> (5 elements: visible, x, y, width, height)</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var _view_values = <span data-field="title" data-format="default">room_get_viewport</span>(rm_Game, 0);<br>
@@ -1087,7 +1088,7 @@
         <div style="float:right">Next:&nbsp;<a href="room_set_camera.htm">room_set_camera</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 room_get_viewport

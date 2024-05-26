@@ -3354,3 +3354,11 @@ body.media-desktop {
 div.topic {
 	background-color: #282828 !important;
 }
+
+body.media-landscape div.idx-holder div.Index {
+    color: #505050;
+}
+
+body.media-landscape div.glo-holder div.Glossary {
+    color: #505050;
+}

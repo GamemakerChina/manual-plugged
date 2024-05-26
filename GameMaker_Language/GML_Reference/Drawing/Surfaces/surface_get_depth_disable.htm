@@ -1029,26 +1029,26 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_get_depth_disable</h1>
-  <p>This function checks to see if the automatic depth buffer generation for surfaces is enabled. Normally all surfaces have depth buffers so if you draw 3D objects to them then it'll sort them properly by depth, however allocating depth buffers essentially doubles the size of surfaces, which could be an excessive and unnecessary overhead especially if your game is very memory intensive or predominantly 2D. In these cases you can check this using this function and disable the depth buffer for surfaces if required using the function <a href="surface_depth_disable.htm"><span class="inline">surface_depth_disable()</span></a>.</p>
+  <h1><span data-field="title" data-format="default">surface_get_depth_disable</span></h1>
+  <p>This function checks to see if the automatic depth buffer generation for surfaces is enabled.</p>
+  <p>Normally all surfaces have depth buffers so if you draw 3D objects to them then it'll sort them properly by depth, however allocating depth buffers essentially doubles the size of surfaces, which could be an excessive and unnecessary overhead especially if your game is very memory intensive or predominantly 2D. In these cases you can check this using this function and disable the depth buffer for surfaces if required using the function <span class="inline3_func"><a href="surface_depth_disable.htm">surface_depth_disable</a></span>.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">surface_get_depth_disable();</p>
+  <p class="code"><span data-field="title" data-format="default">surface_get_depth_disable</span>();</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">if (!surface_exists(surf))<br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;if surface_get_depth_disable() == false<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if <span data-field="title" data-format="default">surface_get_depth_disable</span>() == false<br>
     &nbsp; &nbsp; {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;surface_depth_disable(true);<br>
     &nbsp; &nbsp; }<br>
     &nbsp;&nbsp;&nbsp;&nbsp;surf = surface_create(room_width, room_height);<br>
     }</p>
   <p>The above code will check to see if the given surface exists, and if it does not, then it checks the current state of the surface depth buffer and if it is enabled, it will disable it instead, before finally creating the surface.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1058,7 +1058,7 @@
         <div style="float:right">Next:&nbsp;<a href="surface_getpixel.htm">surface_getpixel</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 surface_get_depth_disable

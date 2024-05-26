@@ -1029,7 +1029,7 @@
   <meta name="topic-comment" content="Page that explains how to use Configurations">
   <meta name="rh-index-keywords" content="Configurations">
   <meta name="search-keywords" content="configs,configurations,config editor,configuratuon editor">
-<meta name="brsnext" value="Additional_Information/Error_Reporting.htm"><meta name="brsprev" value="Settings/Texture_Information/Non-Bitmap_Sprites.htm"></head>
+<meta name="brsnext" value="Additional_Information/Error_Reporting.htm"><meta name="brsprev" value="Settings/Texture_Information/Dynamic_Textures.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1066,7 +1066,8 @@
   <p>Once you have set up the default configuration, you can then add a new one to the Configuration Editor by right clicking <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21">&nbsp;on the configurations folder and selecting <strong>Add Config</strong>, or by clicking the "<em>Create</em>" button at the bottom of the window. The new configuration will be shown as a "child" of the default config - all user defined configurations are children of the default - and you can give it an appropriate name.</p>
   <p>To edit the config, you must either double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21">&nbsp;on it or use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21">&nbsp;menu option "<em>Set Config</em>", which will select the configuration in the editor and once that has been done, you can go ahead and customise it. This is done by simply going through the options listed above and changing them to the desired settings for the newly created configuration. <span data-keyref="GameMaker Name">GameMaker</span> will store these values automatically for the config, and you can change between configs at any time by simply using the RMB <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21">&nbsp;menu option or double clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21">.</p>
   <p>Further configurations can be added as either children of the default configuration, or children of the user defined configurations that you've created, depending on which configuration has been highlighted in the editor when you created it. In the example image below, you can see we have three custom configs defined, two of which are children of the default config, and another that is the child of a user defined config:</p>
-  <p><img alt="Child Configurations In The Configuration Editor" class="center" src="../assets/Images/Settings/Configs_Children.png">It is worth noting that you can use any given configuration with any given target platform when compiling or testing your projects. This is done by selecting the config you require from within the <strong>Config</strong>&nbsp;section of the <strong>Target Manager</strong>:</p>
+  <p><img alt="Child Configurations In The Configuration Editor" class="center" src="../assets/Images/Settings/Configs_Children.png">A child configuration will inherit values for&nbsp;<a href="../GameMaker_Language/GML_Overview/Variables/Constants.htm#h">Macros</a> that are set for its parent configuration (whichever closest parent has a macro override assigned). See:&nbsp;<a href="../GameMaker_Language/GML_Overview/Variables/Constants.htm#h1">Configuration Override</a></p>
+  <p>You can use any given configuration with any given target platform when compiling or testing your projects. This is done by selecting the config you require from within the <strong>Config</strong>&nbsp;section of the <strong>Target Manager</strong>:</p>
   <p><img alt="Configurations In The Target Manager" class="center" src="../assets/Images/Settings/Configs_TargetManager.png">You can also open the Configuration Editor at any time from the Target Manager by clicking the menu button at the top right (as highlighted in the image above).</p>
   <p>Once you have set a configuration to be used in this way, any time you compile to a target, either for testing or to create a final asset package, the chosen configuration will be used. For more information on the Targets Window, please see the section on <a href="../Introduction/Compiling.htm">Compiling</a>.</p>
   <p>&nbsp;</p>
@@ -1078,7 +1079,7 @@
         <div style="float:right">Next:&nbsp;<a href="../Additional_Information/Error_Reporting.htm">Error Reporting</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Conifgurations

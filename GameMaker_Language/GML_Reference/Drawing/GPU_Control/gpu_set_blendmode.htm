@@ -994,7 +994,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.6.2.0_29";
+    gTopicId = "8.2.2.6.2.0_30";
   
 //]]></script>
 
@@ -1014,8 +1014,8 @@
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander">
   <meta name="topic-comment" content="Reference for the function gpu_set_blendmode">
-  <meta name="rh-index-keywords" content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_max">
-  <meta name="search-keywords" content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_max">
+  <meta name="rh-index-keywords" content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_reverse_subtract,bm_min,bm_max">
+  <meta name="search-keywords" content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_reverse_subtract,bm_min,bm_max">
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode_ext.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_cullmode.htm"></head>
 
 <body>
@@ -1037,38 +1037,68 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_blendmode</h1>
-  <p>When <span data-keyref="GameMaker Name">GameMaker</span> goes to draw a pixel there is a source colour (the colour of the pixel we're going to draw) and a destination colour(the colour that's already in the pixel we're drawing to), so when determining the new colour of the pixel, the source and destination colours are calculated according to the chosen blend mode. Each component of the colours is stored as a floating point value between 0 and 1, and the new colour is calculated by multiply each component of the source colour by some factor and by multiplying each component of destination colour by some other factor and then adding the results together component by component.</p>
-  <p>This function permits you to set the blend mode in four basic ways using the following constants:</p>
+  <p>When <span data-keyref="GameMaker Name">GameMaker</span> goes to draw a pixel there is a source colour (the colour of the pixel we're going to draw) and a destination colour (the colour that's already in the pixel we're drawing to), so when determining the new colour of the pixel, the source and destination colours are calculated according to the chosen blend mode.</p>
+  <p>Each component of the colours is stored as a floating point value between 0 and 1, and the new colour is calculated by multiplying each component of the source colour by some factor and by multiplying each component of destination colour by some other factor and then adding the results together component by component. The source and destination can also be mixed differently depending on the selected <a href="gpu_set_blendequation.htm">equation</a>.</p>
+  <p>This function permits you to set the blend mode in six basic ways using the following constants:</p>
+  <div data-conref="../../../../assets/snippets/Table_Gpu_blend_modes.hts">
   <table>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
     <tbody>
+      <tr>
+        <th colspan="4"><span data-keyref="Type_Constant_Draw_Blend_Mode"><a target="_blank" href="gpu_get_blendmode.htm">Blend Mode Constant</a></span></th>
+      </tr>
       <tr>
         <th>Constant</th>
         <th>Description</th>
-        <th>Extended Blend Mode</th>
+        <th><a href="gpu_set_blendmode_ext.htm">Extended Blend Mode</a></th>
+        <th><a href="gpu_set_blendequation.htm">Blend Equation</a></th>
       </tr>
       <tr>
         <td><span class="inline">bm_normal</span></td>
         <td>Normal blending (the default blend mode).</td>
         <td>(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_inv_src_alpha</span>)</td>
+        <td><span class="inline">bm_eq_add</span></td>
       </tr>
       <tr>
         <td><span class="inline">bm_add</span></td>
         <td>Additive blending. Luminosity values of light areas are added.</td>
         <td>(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_one</span>)</td>
+        <td><span class="inline">bm_eq_add</span></td>
       </tr>
       <tr>
         <td><span class="inline">bm_subtract</span></td>
-        <td>Subtractive blending. Luminosity values of light areas are subtracted.</td>
-        <td>(<span class="inline">bm_zero</span>, <span class="inline">bm_inv_src_colour</span>)</td>
+        <td>Subtractive blending. Source is subtracted from the destination.</td>
+        <td>(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_one</span>)</td>
+        <td><span class="inline">bm_eq_subtract</span></td>
+      </tr>
+      <tr>
+        <td><span class="inline">bm_reverse_subtract</span></td>
+        <td>Reverse subtractive blending. Destination is subtracted from the source.</td>
+        <td>(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_one</span>)</td>
+        <td><span class="inline">bm_eq_reverse_subtract</span></td>
+      </tr>
+      <tr>
+        <td><span class="inline">bm_min</span></td>
+        <td>Smaller value from source and destination is selected.</td>
+        <td>(<span class="inline">bm_one</span>, <span class="inline">bm_one</span>)</td>
+        <td><span class="inline">bm_eq_min</span></td>
       </tr>
       <tr>
         <td><span class="inline">bm_max</span></td>
         <td>Max blending. Similar to additive blending.</td>
         <td>(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_inv_src_colour</span>)</td>
+        <td><span class="inline">bm_eq_add</span></td>
       </tr>
     </tbody>
   </table>
-  <p>As you can see from the above table, these four blend modes are really composites of <i>extended</i> blend modes which can be found on the page describing <a href="gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a>.</p>
+
+</div>
+  <p>As you can see from the above table, these blend modes are really composites of <i>extended</i> blend modes which can be found on the page describing <a href="gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a>. Some of them also make use of a different <a href="gpu_set_blendequation.htm">blend equation</a>.</p>
   <p>To help you get the most from blend modes and to help understand how they work and how they affect the final image being drawn to the screen, we recommend that you read the following guide:</p>
   <ul class="colour">
     <li><a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guide To Using Blendmodes</a></li>
@@ -1085,7 +1115,7 @@
       </tr>
       <tr>
         <td>mode</td>
-        <td><span data-keyref="Type_Constant_Draw_Blend_Mode"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode.htm">Blend Mode Constant</a></span></td>
+        <td><span data-keyref="Type_Constant_Draw_Blend_Mode"><a target="_blank" href="gpu_get_blendmode.htm">Blend Mode Constant</a></span></td>
         <td>The blend mode to use (see the table above)</td>
       </tr>
     </tbody>
@@ -1109,7 +1139,7 @@
         <div style="float:right">Next:&nbsp;<a href="gpu_set_blendmode_ext.htm">gpu_set_blendmode_ext</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_blendmode
@@ -1117,6 +1147,8 @@ bm_normal
 bm_add
 bm_subtract
 bm_max
+bm_reverse_subtract
+bm_min
 -->
   <!-- TAGS
 gpu_set_blendmode

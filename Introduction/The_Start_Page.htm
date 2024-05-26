@@ -1072,6 +1072,7 @@
   <p><img class="center" src="../assets/Images/Introduction/QS_Start_Helper.png">Here, you&nbsp;can click on the <strong>"SKIP to Setup Wizard"</strong> button to start creating your first project with the help of the Setup Wizard, which will take you through the steps necessary for creating your first game in <span data-keyref="GameMaker Name">GameMaker</span>.</p>
   <p><img class="center" src="../assets/Images/Introduction/QS_Start_Wizard.png"></p>
   <p>You can also click on "Close" to close the wizard and continue using <span data-keyref="GameMaker Name">GameMaker</span> manually, and optionally enable the "Don't show me again" checkbox if you do not wish to see the wizard when you start <span data-keyref="GameMaker Name">GameMaker</span> again.</p>
+  <p class="note"><span data-conref="../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;A warning message will be shown if&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;detects that your "My Projects" directory is set to a cloud storage location, as saving projects to cloud storage may cause problems when saving and building projects.&nbsp;You'll be asked to change it in the&nbsp;<a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Paths.htm">Path Preferences</a>:</p>
   <h2 id="h">Start Page Elements</h2>
   <p>The Start Page contains&nbsp;the following elements:</p>
   <ul class="colour">
@@ -1099,11 +1100,16 @@
   <h1 id="newproj">Starting A New Project</h1>
   <p>You can click the <strong>New </strong>button to create a new project, the <strong>Open </strong>button to open an existing project or the <strong>Import </strong>button to open&nbsp;a compressed <span class="inline"> <span class="inlinecode">YYZ</span></span> <span data-keyref="GameMaker Name">GameMaker</span> project file or a legacy&nbsp;<a class="tooltip" title="A previous version of the GameMaker software (often called Legacy GameMaker) that is no longer available nor supported. ">GameMaker: Studio 1.4</a> <span class="inline"> <span class="inlinecode">GMX</span></span> project file. Both Open and Import will open the file explorer for you to browse to the project file you require.</p>
   <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;<span data-keyref="GameMaker Name">GameMaker</span> is not completely backwards compatible with GameMaker: Studio 1.4 projects but imported 1.4 projects should still run, as obsolete functionality has been recreated for you automatically using <strong>compatibility scripts</strong>. For full details of the possible issues and the changes made to GML, please see the Help Center article <a href="https://help.yoyogames.com/hc/en-us/articles/231719468-Porting-A-GMS-1-4-Game-To-GameMaker-Studio-2">Porting A GMS 1.4 Project To <span data-keyref="GameMaker Name">GameMaker</span></a>, as well as the section of the manual on <a href="../Additional_Information/Obsolete_Functions.htm">Obsolete Functions</a>.</p>
-  <p>To create a new project simply click the button labelled <strong>New</strong>, which will&nbsp;open the Template menu:</p>
+  <p>To create a new project simply click the button labelled <strong>New</strong>, which will&nbsp;open the Project Type and Template menu:</p>
   <p><img alt="New Project Buttons" class="center" src="../assets/Images/Introduction/QS_NewProject.png"></p>
-  <p>First select a project type, in most cases you would select "Game". This allows you to select "Blank Game" to start a project from scratch.</p>
-  <p>After selecting a template, choose a name and save location for your project. If you selected a non-blank template, you may need to choose between <a href="../GameMaker_Language.htm">GML Code</a> and <a href="../GameMaker_Language.htm">GML Visual</a> versions.</p>
-  <p>Finally, click on <strong>"Let's Go!"</strong>&nbsp;to enter your new project.</p>
+  <p>First select a project type, which should be&nbsp;<strong>Game</strong>&nbsp;unless you are making a Live Wallpaper or Game Strip for Opera GX.</p>
+  <p>After choosing your project type, select <strong>Blank</strong> or choose a template.</p>
+  <p>Then choose a name and save location for your project. If you selected a non-blank template, you may need to choose between <a href="../GameMaker_Language.htm">GML Code</a> and <a href="../GameMaker_Language.htm">GML Visual</a> versions.</p>
+  <p>Finally, click on <strong>Let's Go!</strong>&nbsp;to enter your new project.</p>
+  <div data-conref="../assets/snippets/Note_Warning_Project_Saved_In_Cloud_Storage_Location.hts">
+  <p class="note"><span data-conref="../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;A warning message is shown if&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;detects that the path you try to save the project to refers to a cloud storage location. Saving projects to cloud storage may cause problems when saving and building projects. See the&nbsp;<a href="https://help.gamemaker.io/hc/en-us/articles/360022953052-User-Permissions-and-Internet-Access-Required-by-GameMaker#h_01GSTA4T4JBX2HHBRENJ7B56B1">Permissions Guide</a>&nbsp;for more information.</p>
+
+</div>
   <p class="note"><span data-conref="../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span>&nbsp;You can create your own template by opening a project, and <a href="../IDE_Navigation/Menus/The_File_Menu.htm#exportproject">exporting as a template</a>.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
@@ -1115,7 +1121,7 @@
         <div style="float:right">Next: <a href="Workspaces.htm">Workspaces</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Start Page

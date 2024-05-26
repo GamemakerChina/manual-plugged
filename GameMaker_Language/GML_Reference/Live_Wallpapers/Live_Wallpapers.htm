@@ -997,7 +997,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.23";
+    gTopicId = "8.2.2.24";
   
 //]]></script>
 
@@ -1020,7 +1020,7 @@
   <meta name="topic-comment" content="Intro page for Live Wallpapers function reference">
   <meta name="search-keywords" content="Live Wallpaper">
   <meta name="rh-index-keywords" content="Live Wallpapers">
-</head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Live_Wallpapers/wallpaper_set_config.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Steam/Steam.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1043,15 +1043,23 @@
   </div>
   <div>
   <h1><span data-field="title" data-format="default">Live Wallpapers</span></h1>
-  <p>This page lists the functions for use with the Live Wallpaper functionality.</p>
+  <p>This page lists functions for use with the Live Wallpaper functionality.</p>
   <p>For information on how to set these up, see the <a href="https://help.yoyogames.com/hc/en-us/articles/10070287968285">helpdesk article on GX Live Wallpapers</a>.</p>
   <h2 id="func_ref">Functions</h2>
+  <p>The following functions are given for Live Wallpapers:</p>
   <ul class="Disc">
     <li><a href="wallpaper_set_config.htm">wallpaper_set_config</a></li>
+    <li><a href="wallpaper_set_subscriptions.htm">wallpaper_set_subscriptions</a></li>
   </ul>
-  <h2>Events</h2>
-  <ul class="Disc">
-    <li><a href="../../../The_Asset_Editors/Object_Properties/Wallpaper_Config_Event.htm">Wallpaper Config Event</a></li>
+  <p>Also see:&nbsp;<a href="../../../The_Asset_Editors/Object_Properties/Wallpaper_Config_Event.htm">Wallpaper Events</a></p>
+  <h2>Restrictions</h2>
+  <p>The following restrictions apply to a Live Wallpaper, after being installed through the store:</p>
+  <ul class="colour">
+    <li><strong>Mouse Input</strong>: Disabled by default, enabled with&nbsp;<span class="inline3_func"><a href="wallpaper_set_subscriptions.htm">wallpaper_set_subscriptions</a></span></li>
+    <li><strong>File Access</strong>: The standard <a href="../../../Additional_Information/The_File_System.htm">file sandbox</a> applies; <a href="../../../Settings/Game_Options/Windows.htm">disabling sandbox</a> does nothing</li>
+    <li><strong>Networking</strong>: Completely disabled (including TCP, UDP, HTTP, etc.)</li>
+    <li><strong>Microphone</strong>: Disabled</li>
+    <li><strong>Extensions</strong>: Calls to DLL functions included in <a href="../../../The_Asset_Editors/Extensions.htm">extensions</a> are disabled (including&nbsp;<span class="inline3_func"><a href="../OS_And_Compiler/external_call.htm">external_call</a></span>,&nbsp;<span class="inline3_func"><a href="../OS_And_Compiler/external_define.htm">external_define</a></span>, etc.)</li>
   </ul>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
@@ -1062,7 +1070,7 @@
         <div>Next:&nbsp;<a href="../Variable_Functions/Variable_Functions.htm">Variable Functions</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
 
 </div>

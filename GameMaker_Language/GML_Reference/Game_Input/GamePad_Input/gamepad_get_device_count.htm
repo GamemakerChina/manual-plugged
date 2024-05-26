@@ -1036,13 +1036,13 @@
   <p class="code">gamepad_get_device_count();</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br>
     for (var i = 0; i &lt; gp_num; i++;)<br>
     {<br>
-    &nbsp; &nbsp; if gamepad_is_connected(i)<br>
+    &nbsp; &nbsp; if (gamepad_is_connected(i)) <br>
     &nbsp; &nbsp; {<br>
     &nbsp; &nbsp; &nbsp; &nbsp; global.gp[i] = true;<br>
     &nbsp; &nbsp; }<br>
@@ -1062,7 +1062,7 @@
         <div style="float:right">Next: <a href="gamepad_get_description.htm"> gamepad_get_description </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_device_count

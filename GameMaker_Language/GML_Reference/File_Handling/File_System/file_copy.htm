@@ -1036,21 +1036,30 @@
   <p>This function will copy the specified file, giving it the new name that you choose.</p>
   <p>If you are copying a file on Android from within your <b>Included Files</b> area (which will be inside your APK) it will copy into memory first, so, be aware that copying very large files from the APK may cause devices to run out of memory. On the HTML5 target, we use the HTML5 <b>Local Storage API</b> for client side saving, and the functions does not support binary file operations, so assumes you are copying a text file.</p>
   <p>The function will fail if the&nbsp;<span class="inline2">newname</span>&nbsp;file already exists.</p>
-  <p class="note"><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on <a href="../../../../Additional_Information/The_File_System.htm">File System Limits</a> for more information.</p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_GM_FileSystem_Sandboxed.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>This may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">The File System</a> for more information.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">file_copy(fname, newname);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>        <th>Description</th>
-     </tr>
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
       <tr>
-        <td>fname</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>        <td>The name of the file to copy.</td>
-     </tr>
+        <td>fname</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>The name of the file to copy.</td>
+      </tr>
       <tr>
-        <td>newname</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>        <td>The name of the new, copied file.</td>
-     </tr>
+        <td>newname</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>The name of the new, copied file.</td>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1058,7 +1067,7 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if file_exists("level1.txt")<br>
+  <p class="code">if (file_exists("level1.txt")) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;file_copy("level1.txt", "level2.txt");<br>
     }</p>
@@ -1073,7 +1082,7 @@
         <div style="float:right">Next: <a href="file_find_first.htm">file_find_first</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_copy

@@ -1041,28 +1041,33 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>working_directory</h1>
-  <p><span class="inline">Working_directory</span> can actually return two different values depending on what you are using it for.</p>
-  <p>If you are writing a file to disk, <span class="inline">working_directory</span> points to the area of local storage that is reserved for your game on the target device (in Windows this is "<span class="inline">%LOCALAPPDATA%/gamedir/</span>" where the "gamedir" is the directory with the name of your game).</p>
-  <p>However, when reading from disk, <span class="inline">working_directory</span> can be <i>either</i> the local storage (<span class="inline"><a href="../../General_Game_Control/game_save_id.htm">game_save_id</a></span>)&nbsp;<i>or</i> the area where the <a href="../../../../Settings/Included_Files.htm#h">Included Files</a> are stored.</p>
-  <p class="note"><span class="note">NOTE</span>&nbsp;The <span class="inline">working_directory</span> variable will return the path <b>including</b> the final backslash.</p>
-  <p>For example, if you have a default <span class="inline">*.txt</span> file included with your game and read it into memory using <span class="inline">working_directory</span>, then that file will be taken from the area where the Included Files are stored. If you then choose to write that information to a text file using <span class="inline">working_directory</span>, this will write the file to the target platform's local storage, where it will be read from the next time unless you instruct <span data-keyref="GameMaker Name">GameMaker</span> to delete the file, in which case <span class="inline">working_directory</span> will once more point to the area where the Included Files are stored.</p>
-  <p>It is worth noting that&nbsp;<em>in general</em>&nbsp;you do not need to use this and simply specify the file name itself (plus any additional path information), which is sufficient. For example, this:</p>
-  <p class="code">file_text_open_read(working_directory + "my_file.txt");</p>
-  <p>would be better done as this:</p>
-  <p class="code">file_text_open_read("my_file.txt");</p>
-  <p class="note"><span class="warning">WARNING</span>&nbsp;This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">File System</a>&nbsp;for more information.</p>
+  <h1><span data-field="title" data-format="default">working_directory</span></h1>
+  <p>This returns a path that points to where the game's files are stored.</p>
+  <p>In most cases, this is the same as the&nbsp;<span class="inline2"><a href="program_directory.htm">program_directory</a></span>, which is the path to the game's runner (executable). However if the game's files happen to be in a different directory than the runner (say you use&nbsp;<span class="inline3_func"><a href="../../General_Game_Control/game_change.htm">game_change</a></span> to use a different working directory or use command line to run a runner in a different location), then this will point to where the game files are, not the runner.</p>
+  <p>It may also be a different directory when testing your project through the IDE, as then the game files and the runner are in different locations as well.</p>
+  <p>When using this directory to write out a file, <span data-keyref="GameMaker Name">GameMaker</span>&nbsp;will redirect it to the&nbsp;<span class="inline2"><a href="../../General_Game_Control/game_save_id.htm">game_save_id</a></span>&nbsp;location if the <a href="../../../../Additional_Information/The_File_System.htm">file system sandbox</a> does not allow writing to the working directory (this is the default behaviour, which can be disabled in the <a href="../../../../Settings/Game_Options.htm">Game Options</a>&nbsp;for Desktop targets only).</p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_GM_FileSystem_Sandboxed.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>This may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">The File System</a> for more information.</p>
+
+</div>
+  <div data-conref="../../../../assets/snippets/Warning_directory_os_permissions.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;doesn't limit writing to this directory so whether this is possible depends&nbsp;on OS permissions.&nbsp;It is however discouraged that you write to <span class="inline2"><span data-field="title" data-format="default">working_directory</span></span>, as it is possible to damage the game installation this way.</p>
+
+</div>
+  <div data-conref="../../../../assets/snippets/Note_Variable_Contains_Path_Including_Final_Slash.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The&nbsp;<span class="inline2"><span data-field="title" data-format="default">working_directory</span></span> variable stores the path <b>including</b> the final slash.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">working_directory</p>
+  <p class="code"><span data-field="title" data-format="default">working_directory</span></p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
+  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">ini_open(working_directory + "temp_ini.ini");</p>
-  <p>This will open an ini file from the working directory of the game (creating it if it does not already exist). This could be the local storage, or the area where the included files are depending on whether the file being looked for exists in either place.</p>
-  <p>&nbsp;</p>
+  <p>This will open an INI file from the working directory of the game (creating it if it does not already exist). This could be the save area or the program directory depending on the sandbox level.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1072,7 +1077,7 @@
         <div style="float:right">Next:&nbsp;<a href="program_directory.htm">program_directory</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 working_directory

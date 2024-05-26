@@ -1081,7 +1081,7 @@
   <meta name="topic-comment" content="Reference section for string functions">
   <meta name="rh-index-keywords" content="\r,\b,\f,\t,\v,\\,\a,\u,\x,\,\r,\b,\f,\t,\v,\\,\a,\u,\x,\">
   <meta name="search-keywords" content="Strings,\n,\r,\b,\f,\t,\v,\\,\a,\u,\x,\,string literal,@">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Strings/ansi_char.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Data_Structures/ds_set_precision.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Strings/string.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Data_Structures/ds_set_precision.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1106,7 +1106,7 @@
   <p>In GML, text is created as a&nbsp;<em>string</em>, which can be stored in a variable. "String" refers to&nbsp;a "<em>string</em> of characters" which makes up your text.</p>
   <p><span data-keyref="GameMaker Name">GameMaker</span> has a complete set of functions that permit you to manipulate&nbsp;<span data-field="title" data-format="lower-alpha">strings</span> in many ways, including the insertion of one string in another, the copying of strings and the ability to parse&nbsp;<span data-field="title" data-format="lower-alpha">strings</span> for the digits or the letters that they contain.</p>
   <p>It also has more advanced functions to deal with strings, including trimming, splitting into an array, concatenating from an array and iterating over characters.</p>
-  <p>Lastly,&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;also provides a convenient way to convert&nbsp;<a href="../../GML_Overview/Structs.htm">structs</a>&nbsp;and&nbsp;<a href="../Asset_Management/Instances/Instances.htm">instances</a>&nbsp;to a string representation by assigning them a&nbsp;<a href="Strings.htm#h3">toString() Method</a>.</p>
+  <p>Lastly,&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;also provides a convenient way to convert&nbsp;<a href="../../GML_Overview/Structs.htm">structs</a>&nbsp;and&nbsp;<a href="../Asset_Management/Instances/Instances.htm">instances</a>&nbsp;to a string representation by assigning them a <a href="Strings.htm#tostring_method">toString method</a>.</p>
   <h2>String Basics</h2>
   <p>A string is a type of <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">variable</a>. The simplest way to create one is by adding text within double quotes <span class="inline2">" "</span>:</p>
   <p class="code">my_first_string = "Hello World!";</p>
@@ -1216,7 +1216,7 @@
     {invalid}<br>
     way to split&nbsp;a template across multiple lines";
   </p>
-  <h2 id="h3">toString() Method</h2>
+  <h2 id="tostring_method">toString() Method</h2>
   <p>When a reference to a struct or an instance of an object is passed as an argument to any of&nbsp;<span class="inline2"><a href="string.htm">string</a></span>&nbsp;/ <span class="inline2"><a href="string_ext.htm">string_ext</a></span>&nbsp;/&nbsp;<span class="inline2"><a href="../Debugging/show_debug_message.htm">show_debug_message</a></span>&nbsp;/ <span class="inline2"><a href="show_debug_message_ext.htm">show_debug_message_ext</a></span>, it will have its <span class="inline2">toString</span> method called, if it has one set.</p>
   <p class="code">toString = function()<br>
     {<br>
@@ -1305,7 +1305,7 @@
   </ul>
   <h3>Methods</h3>
   <ul class="Disc">
-    <li><a href="Strings.htm#h3">toString() Method</a></li>
+    <li><a href="Strings.htm#tostring_method">toString Method</a></li>
   </ul>
   <h3>Related functions</h3>
   <ul class="Disc">
@@ -1322,7 +1322,7 @@
         <div style="float:right">Next: <a href="../Maths_And_Numbers/Maths_And_Numbers.htm">Maths And Numbers</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Strings

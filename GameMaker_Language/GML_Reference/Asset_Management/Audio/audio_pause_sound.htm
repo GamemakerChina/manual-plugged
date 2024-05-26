@@ -1041,7 +1041,7 @@
       </tr>
       <tr>
         <td>index</td>
-        <td><span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span>&nbsp;or&nbsp;<span data-keyref="Type_ID_Sound_Instance"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_play_sound.htm">Sound Instance ID</a></span>&nbsp;or&nbsp;<span data-keyref="Type_ID_Audio_Queue"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_create_play_queue.htm">Audio Queue ID</a></span></td>
+        <td><span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span>&nbsp;or&nbsp;<span data-keyref="Type_ID_Sound_Instance"><a target="_blank" href="audio_play_sound.htm">Sound Instance ID</a></span>&nbsp;or&nbsp;<span data-keyref="Type_ID_Audio_Queue"><a target="_blank" href="Audio_Buffers/audio_create_play_queue.htm">Audio Queue ID</a></span></td>
         <td>The index of the sound to pause.</td>
       </tr>
     </tbody>
@@ -1051,19 +1051,19 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(ord("P"))<br>
+  <p class="code">if (keyboard_check_pressed(ord("P")))<br>
     {<br>
     &nbsp; &nbsp; global.Pause = !global.Pause;<br>
-    &nbsp; &nbsp; if global.Pause<br>
+    &nbsp; &nbsp; if (global.Pause)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;{<br>
     &nbsp; &nbsp; &nbsp; &nbsp; <span data-field="title" data-format="default">audio_pause_sound</span>(snd_Waterfall);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
     &nbsp; &nbsp; else<br>
     &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-    &nbsp; &nbsp; &nbsp; &nbsp; <span data-field="title" data-format="default">audio_pause_sound</span>(snd_Waterfall);<br>
+    &nbsp; &nbsp; &nbsp; &nbsp; audio_resume_sound(snd_Waterfall);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
     }</p>
-  <p>The above code checks for a press of the keyboard key "P" and if it detects one it sets the global variable "Pause" to <span class="inline">true</span> or false and then either pauses the sound indexed in the variable "snd_Waterfall" or it resumes the sound from its paused state.</p>
+  <p>The above code checks for a press of the keyboard key "P" and if it detects one it sets the global variable "Pause" to <span class="inline2">true</span> or <span class="inline2">false</span> and then either pauses the sound indexed in the variable "snd_Waterfall" or it resumes the sound from its paused state.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1073,7 +1073,7 @@
         <div style="float:right">Next:&nbsp;<a href="audio_pause_all.htm">audio_pause_all</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_pause_sound

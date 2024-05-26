@@ -1062,7 +1062,7 @@
   <h2>How to Use Time Sources?</h2>
   <p>Create and start a&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&nbsp;that calls a custom method:</p>
   <ul class="colour">
-    <li>Call <a href="time_source_create.htm"><span class="inline">time_source_create()</span></a>&nbsp;/&nbsp;<a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Create_Time_Source.htm">Create Time Source</a> to create a&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>
+    <li>Call <a href="time_source_create.htm"><span class="inline2">time_source_create()</span></a>&nbsp;/&nbsp;<a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Create_Time_Source.htm">Create Time Source</a> to create a&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>
       <ul>
         <li>Specify whether this inherits from the Global <span data-keyref="Type_Resource_TimeSource">Time Source</span>, the Game <span data-keyref="Type_Resource_TimeSource">Time Source</span> or a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span></li>
         <li>Specify the period of time it runs for, and the units used (seconds or frames)</li>
@@ -1074,9 +1074,10 @@
         </li>
       </ul>
     </li>
-    <li>Call <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a>&nbsp;/&nbsp;<a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Start_Time_Source.htm">Start Time Source</a> to start that&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&nbsp;immediately, or call it later when you need it to start</li>
+    <li>Call <a href="time_source_start.htm"><span class="inline2">time_source_start()</span></a>&nbsp;/&nbsp;<a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Start_Time_Source.htm">Start Time Source</a> to start that&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&nbsp;immediately, or call it later when you need it to start</li>
   </ul>
   <p>Doing this will cause the&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&nbsp;to run, and after the specified period, it will expire and call your specified method.</p>
+  <p>When you no longer need a Time Source, use&nbsp;<span class="inline3_func"><a href="time_source_destroy.htm">time_source_destroy</a></span>&nbsp;to remove it from memory.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;Even though&nbsp;<span data-field="title" data-format="default">Time Sources</span>&nbsp;can expire at any moment,&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;will only "know" about this when the&nbsp;<span data-field="title" data-format="default">Time Sources</span>&nbsp;are updated/"ticked", which happens between the Begin Step and Step event for all <span data-field="title" data-format="default">Time Sources</span>.&nbsp;At this moment the callback functions will also be executed for those&nbsp;<span data-field="title" data-format="default">Time Sources</span>&nbsp;that have expired or are about to expire (depending on their&nbsp;<a href="Time_Source_Expiry_Types.htm">expiry type</a>). See&nbsp;<a href="../../../The_Asset_Editors/Object_Properties/Event_Order.htm">Event Order</a>&nbsp;for more details.</p>
   <h2>Built-In Time Sources</h2>
   <p>A&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&nbsp;can inherit from either of the two built-in&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>s, or from a custom&nbsp;<span data-keyref="Type_Resource_TimeSource">Time Source</span>.</p>
@@ -1134,7 +1135,7 @@
         <div>Next:&nbsp;<a href="../Physics/Physics.htm">Physics</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
 
 </div>

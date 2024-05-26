@@ -1093,7 +1093,7 @@
     <p class="dropspot"><img alt="GML VisualActions For The Step Event" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_1_3.png"></p>
     <p class="code">var _dist = point_distance(x, y, mouse_x, mouse_y);<br>
       <br>
-      if _dist &lt;= speed<br>
+      if (_dist &lt;= speed) <br>
       {<br>
       &nbsp; &nbsp; speed = 0;<br>
       }
@@ -1109,19 +1109,19 @@
     <p class="dropspot">This type of movement is called <strong>positional </strong>movement, as we are essentially picking up the instance and placing it down again at a new position every time the code is run. What we're going to do in this example is show you how to use this type of movement to move an instance around in 4&nbsp;directions:&nbsp;up, down, left and right.</p>
     <p class="dropspot">To start with, open an object and assign it a sprite. Now, we could add in various <strong>Keyboard Events</strong> at this point, and in each one have the instance move in the desired direction, however, we only want the player to be able to move in one direction at a time and doing this with only the keyboard events&nbsp;is a bit more complicated than doing it using code. Instead we'll be using the <strong>Step Event</strong> - which you should add now to the object - with the following actions or code to use the Arrow Keys to move:</p>
     <p class="dropspot"><img alt="GML VisualStep Event Movement Actions" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_2_1.png"></p>
-    <p class="code">if keyboard_check(vk_left)<br>
+    <p class="code">if (keyboard_check(vk_left)) <br>
       {<br>
       &nbsp; &nbsp; x = x - 2;<br>
       }<br>
-      else if keyboard_check(vk_right)<br>
+      else if (keyboard_check(vk_right)) <br>
       {<br>
       &nbsp; &nbsp; x = x + 2;<br>
       }<br>
-      else if keyboard_check(vk_up)<br>
+      else if (keyboard_check(vk_up)) <br>
       {<br>
       &nbsp; &nbsp; y = y - 2;<br>
       }<br>
-      else if keyboard_check(vk_down)<br>
+      else if (keyboard_check(vk_down)) <br>
       {<br>
       &nbsp; &nbsp; y = y + 2;<br>
       }</p>
@@ -1129,38 +1129,38 @@
     <p class="dropspot"><img alt="Animation Showing 4-Way Keyboard Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_2_1.gif"></p>
     <p class="dropspot">We can modify this code to convert the 4-way movement into 8-way movement easily too... simply remove the " <span class="inline">else</span>" commands from the code blocks so that everything looks like this:</p>
     <p class="dropspot"><img alt="GML VisualStep Event Movement Actions" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_2_2.png"></p>
-    <p class="code">if keyboard_check(vk_left)<br>
+    <p class="code">if (keyboard_check(vk_left)) <br>
       {<br>
       &nbsp; &nbsp; x = x - 2;<br>
       }<br>
-      if keyboard_check(vk_right)<br>
+      if (keyboard_check(vk_right)) <br>
       {<br>
       &nbsp; &nbsp; x = x + 2;<br>
       }<br>
-      if keyboard_check(vk_up)<br>
+      if (keyboard_check(vk_up)) <br>
       {<br>
       &nbsp; &nbsp; y = y - 2;<br>
       }<br>
-      if keyboard_check(vk_down)<br>
+      if (keyboard_check(vk_down)) <br>
       {<br>
       &nbsp; &nbsp; y = y + 2;<br>
       }</p>
     <p class="dropspot">Now when you press the <strong>Play </strong>button <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"> it'll look something like this:</p>
     <p class="dropspot"><img alt="Animation Showing 8-Way Keyboard Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_2_2.gif"></p>
     <p class="dropspot">One final thing that's worth noting for users coding with GML... When using the GML Visual you can select the keyboard key that you want to use from a drop down list, but with GML it's not that simple. There are a number of <a href="../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">Keyboard Constants</a>&nbsp;that you can use - like the arrow key constants shown in the code above - but there are <em>no </em>constants for the alpha-numeric keys. These are handled slightly different, and require you to use the function <a href="../GameMaker_Language/GML_Reference/Strings/ord.htm"><span class="inline">ord()</span></a>. The code below shows you how this would work using WASD instead of the arrow keys:</p>
-    <p class="code">if keyboard_check(ord("A"))<br>
+    <p class="code">if (keyboard_check(ord("A"))) <br>
       {<br>
       &nbsp; &nbsp; x = x - 2;<br>
       }<br>
-      if keyboard_check(ord("D"))<br>
+      if (keyboard_check(ord("D"))) <br>
       {<br>
       &nbsp; &nbsp; x = x + 2;<br>
       }<br>
-      if keyboard_check(ord("W"))<br>
+      if (keyboard_check(ord("W"))) <br>
       {<br>
       &nbsp; &nbsp; y = y - 2;<br>
       }<br>
-      if keyboard_check(ord("S"))<br>
+      if (keyboard_check(ord("S"))) <br>
       {<br>
       &nbsp; &nbsp; y = y + 2;<br>
       }</p>
@@ -1175,7 +1175,7 @@
       <br>
       for (var i = 0; i &lt; 12; i += 1;)<br>
       {<br>
-      &nbsp; &nbsp; if gamepad_is_connected(i)<br>
+      &nbsp; &nbsp; if (gamepad_is_connected(i)) <br>
       &nbsp; &nbsp; {<br>
       &nbsp; &nbsp; &nbsp; &nbsp; gamepad_id = i;<br>
       &nbsp; &nbsp; &nbsp; &nbsp; gamepad_set_axis_deadzone(gamepad_id, 0.2);<br>
@@ -1187,7 +1187,7 @@
     <p class="dropspot">Notice that in the above code we set the <strong> <a class="tooltip" title="The deadzone is the distance you have to move an analog stick before the game recognizes it's being moved. A low deadzone will make any slight movement of the analog stick move your player or aim or whatever. A high deadzone value means that the analog stick needs a much greater movement before the game will detect it and move whatever is being controlled.">deadzone</a>&nbsp;</strong>for the gamepad. This is because analog sticks on different makes of gamepads will have different sensibility, and sometimes they can be so sensitive that if you don't set a deadzone then they can cause unwanted movement in your games. So we set the deadzone to a value like 0.2 to tell <span data-keyref="GameMaker Name">GameMaker</span> to ignore any gamepad stick values under that <a class="tooltip" title="An absolute value is one where the sign of the value is ignored, essentially converting all values into positive ones or zero. So - for example - an absolute value for -10 would be 10.">absolute</a> value.</p>
     <p class="dropspot">To add the actual movement, we'll need a <strong>Step Event</strong>, so add that now and give it the following GML Visual or GML:</p>
     <p class="dropspot"><img alt="Get Gamepad Input Using DnD" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_3_2.png"></p>
-    <p class="code">if gamepad_id &gt; -1<br>
+    <p class="code">if (gamepad_id &gt; -1) <br>
       {<br>
       &nbsp; &nbsp; var _h = gamepad_axis_value(gamepad_id, gp_axislh);<br>
       &nbsp; &nbsp; var _v = gamepad_axis_value(gamepad_id, gp_axislv);<br>
@@ -1251,7 +1251,7 @@
         <div style="float:right">Next:&nbsp;<a href="Summary.htm">Summary</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Movement

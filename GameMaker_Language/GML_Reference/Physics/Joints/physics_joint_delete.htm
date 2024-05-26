@@ -1043,7 +1043,7 @@
       </tr>
       <tr>
         <td>joint</td>
-        <td><span data-keyref="Type_ID_Physics_Joint"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Physics/Joints/Joints.htm">Physics Joint ID</a></span></td>
+        <td><span data-keyref="Type_ID_Physics_Joint"><a target="_blank" href="Joints.htm">Physics Joint ID</a></span></td>
         <td>The index of the joint that you wish to delete</td>
       </tr>
     </tbody>
@@ -1054,12 +1054,12 @@
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var reactionForceX, reactionForceY, reactionForce;<br>
-    if shipJoint<br>
+    if (shipJoint) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;reactionForceY = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;reactionForce = sqrt((reactionForceX + reactionForceX) + (reactionForceY + reactionForceY));<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;if reactionForce &gt; 2<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (reactionForce &gt; 2) <br>
     &nbsp; &nbsp; {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_joint_delete(shipJoint);<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipJoint = -1;<br>
@@ -1076,7 +1076,7 @@
         <div style="float:right">Next:&nbsp;<a href="physics_joint_enable_motor.htm">physics_joint_enable_motor</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_delete

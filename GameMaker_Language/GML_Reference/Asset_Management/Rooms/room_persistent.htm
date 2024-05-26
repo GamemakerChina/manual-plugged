@@ -1006,7 +1006,7 @@
   <meta name="topic-comment" content="Page outlining the function room_persistent">
   <meta name="rh-index-keywords" content="room_persistent">
   <meta name="search-keywords" content="room_persistent">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_get_name.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_width.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_exists.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_width.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1026,33 +1026,32 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_persistent</h1>
+  <h1><span data-field="title" data-format="default">room_persistent</span></h1>
   <p>This variable can be used to get and to set the persistent flag for the current room. If set to <span class="inline">true</span> the room is considered persistent, in which case each time you leave the room and come back again the state of the instances within that room will have been maintained. However if it is flagged as <span class="inline">false</span>, each time you return to the room it will be reset to its initial state. You should note that a persistent room uses considerably more memory than a normal room and it is not recommended to have too many of them in your game.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">room_persistent;</p>
+  <p class="code"><span data-field="title" data-format="default">room_persistent</span>;</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if lives &lt; 1<br>
+  <p class="code">if (lives &lt; 1) <br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;room_persistent = false;<br>
+    &nbsp; &nbsp; <span data-field="title" data-format="default">room_persistent</span>&nbsp;= false;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;room_goto(rm_start);<br>
     }</p>
   <p>The above code checks the variable "lives" and if it is less than 1, it will set the room persistence to <span class="inline">false</span> and then change rooms.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back: <a href="Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next:&nbsp;<a href="room_get_name.htm">room_get_name</a></div>
+        <div style="float:right">Next:&nbsp;<a href="room_exists.htm">room_exists</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 room_persistent

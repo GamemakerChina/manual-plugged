@@ -1026,17 +1026,19 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>view_hport</h1>
-  <p>This variable can be used to get or to set the height of the specified view port. The height of the view port (or combined view ports if more than one are active) define the height of the game window or background canvas <i>at the start of the game</i>,
-    so changing this value after the game has started will have no visible effect on the game window size unless called along with the function <a href="../The_Game_Window/window_set_size.htm"><span class="inline">window_set_size()</span></a>. If you have a larger or smaller
-    port size than that assigned to the camera, then the camera view will be scaled down - or up - to fit, as illustrated by the image below.</p>
+  <h1><span data-field="title" data-format="default">view_hport</span></h1>
+  <p>This variable can be used to get or to set the height of the specified view port. The height of the view port (or combined view ports if more than one are active) define the height of the game window or background canvas <i>at the start of the game</i>, so changing this value after the game has started will have no visible effect on the game window size unless called along with the function <a href="../The_Game_Window/window_set_size.htm"><span class="inline">window_set_size()</span></a>. If you have a larger or smaller port size than that assigned to the camera, then the camera view will be scaled down - or up - to fit, as illustrated by the image below.</p>
+  <div data-conref="../../../../assets/snippets/GML_Not_real_array.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This variable does not hold a real GML array, so you cannot run any <a href="../../Variable_Functions/Array_Functions.htm">array functions</a> on it or serialise it (convert it to a string). The only operation you can run on it is accessing a value at an index, with the <span class="inline2"><span data-field="title" data-format="default">view_hport</span>[index]</span> syntax.</p>
+
+</div>
   <p><img alt="view_hport example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/View_wh.png"></p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">view_hport[0 ... 7];</p>
+  <p class="code"><span data-field="title" data-format="default">view_hport</span>[0 ... 7]</p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">camera_set_view_size(view_camera[0], view_wport[0], view_hport[0]);</p>
@@ -1051,7 +1053,7 @@
         <div style="float:right">Next:&nbsp;<a href="view_surface_id.htm">view_surface_id</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 view_hport

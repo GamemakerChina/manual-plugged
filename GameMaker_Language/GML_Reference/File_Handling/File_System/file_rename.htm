@@ -1032,33 +1032,39 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>file_rename</h1>
-  <p>This function will rename the specified file with the specified name. The function will return <span class="inline">true</span> if the file has successfully been renamed, or <span class="inline">false</span> in any other circumstances.</p>
-  <p class="note"><b></b><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">File System</a>&nbsp;for more information.</p>
+  <p>This function will rename the specified file with the specified name. The function will return <span class="inline">true</span> if the file has successfully been renamed, or <span class="inline">false</span> in any other circumstances.<b></b></p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_GM_FileSystem_Sandboxed.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>This may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">The File System</a> for more information.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">file_rename(oldname, newname);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>oldname</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>oldname</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The name of the file to change.</td>
-     </tr>
+      </tr>
       <tr>
-        <td>newname</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>newname</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The new name to give the file.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if file_exists("level1.txt")<br>
+  <p class="code">if (file_exists("level1.txt")) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;file_rename("level1.txt", "level.txt");<br>
     }</p>
@@ -1073,7 +1079,7 @@
         <div style="float:right">Next: <a href="file_copy.htm">file_copy</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_rename

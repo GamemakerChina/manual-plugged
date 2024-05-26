@@ -991,7 +991,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.18.0_41";
+    gTopicId = "8.2.2.18.0_19";
   
 //]]></script>
 
@@ -1013,7 +1013,7 @@
   <meta name="topic-comment" content="Reference page for buffer_set_used_size">
   <meta name="rh-index-keywords" content="buffer_set_used_size">
   <meta name="search-keywords" content="buffer_set_used_size">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/UWP_And_XBox_Live/UWP_And_XBox_Live.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Buffers/buffer_base64_decode_ext.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Buffers/buffer_copy.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Buffers/buffer_sizeof.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1033,27 +1033,29 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_set_used_size</h1>
-  <p>This function is primarily for use within extensions, and allows you to set the "used" size of the given buffer, which is the number of bytes that have been written to it.</p>
-  <p>When you write data to a buffer from an extension, GameMaker does not know how much of the buffer was filled by the extension code and is not able to read that data. This function can be called by the extension to tell the engine how many bytes of data
-    was written to the buffer, so the engine can read that data.</p>
+  <h1><span data-field="title" data-format="default">buffer_set_used_size</span></h1>
+  <p>This function sets the "used" size of the given buffer, which is the number of bytes that have been written to it.&nbsp;It is primarily for use within extensions.</p>
+  <p>When you write data to a buffer from an extension,&nbsp;<span data-keyref="GameMaker Name">GameMaker</span> doesn't know how much of the buffer was filled by the extension code and is not able to read that data. This function can be called by the extension to tell the engine how many bytes of data was written to the buffer, so the engine can read that data.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_set_used_size(buffer, size);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_set_used_size</span>(buffer, size);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer ID</a></span></td>
-        <td>The index of the buffer to use.</td>
-     </tr>
+        <td>buffer</td>
+        <td><span data-keyref="Type_ID_Buffer"><a target="_blank" href="buffer_create.htm">Buffer</a></span></td>
+        <td>The buffer to use.</td>
+      </tr>
       <tr>
-        <td>size</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>size</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The number of bytes to set as the "used" size.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1061,19 +1063,23 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">buffer_write(_bufferAddress, buffer_u8, 1);<br> buffer_write(_bufferAddress, buffer_u8, 2);<br> buffer_write(_bufferAddress, buffer_u16, 400);<br>
-    <br> buffer_set_used_size(_bufferAddress, 4);</p>
-  <p>The above functions would be called in an extension to write some data to a GameMaker buffer (through its memory address),&nbsp;and then set the number of bytes that were written to it so the engine can read that data.</p>
+  <p class="code">buffer_write(_bufferAddress, buffer_u8, 1);<br>
+    buffer_write(_bufferAddress, buffer_u8, 2);<br>
+    buffer_write(_bufferAddress, buffer_u16, 400);<br>
+    <br>
+    buffer_set_used_size(_bufferAddress, 4);
+  </p>
+  <p>The above functions would be called in an extension to write some data to a&nbsp;<span data-keyref="GameMaker Name">GameMaker</span> buffer (through its memory address),&nbsp;and then set the number of bytes that were written to it so the engine can read that data.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next:&nbsp;<a href="buffer_exists.htm">buffer_exists</a></div>
+        <div style="float:right">Next:&nbsp;<a href="buffer_copy.htm">buffer_copy</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_set_used_size

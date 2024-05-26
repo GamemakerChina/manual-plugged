@@ -1019,7 +1019,7 @@
   <meta name="topic-comment" content="Page explaining the function audio_debug">
   <meta name="rh-index-keywords" content="audio_debug">
   <meta name="search-keywords" content="audio_debug">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_system_is_available.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_channel_num.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/lin_to_db.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_system_is_initialised.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1040,17 +1040,7 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_debug</span></h1>
-  <p>This function can be used to display debug information about the audio system, with <span class="inline">true</span> switching it on and <span class="inline">false</span> to switch it off. When you are debugging audio in this way, the overlay will show the following information:</p>
-  <p><img alt="Audio Debug Overview" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Debug.png"></p>
-  <ul class="colour">
-    <li><strong>Handle </strong>- The OpenAL source handle (unique for every sound played)</li>
-    <li><strong>Data Handle</strong> - The OpenAL buffer handle (shows the same value for multiple sounds with the same source handle)</li>
-    <li><strong>Processed Buffers</strong> - how many buffers have been played</li>
-    <li><strong>Queued Buffers</strong> - how many buffers have been queued (and are still waiting to play)</li>
-    <li><strong>Gain </strong>- The gain value for the audio (0 - 65536)</li>
-    <li><strong>Play Offset</strong> - the sample position (current play position) into the current buffer</li>
-    <li><strong>Queued Buffers Bars</strong> - a small box diagram of the processed/queued buffers with the play offset (current position) drawn as a blue line</li>
-  </ul>
+  <p>This function can be used to display debug information about the audio system, with <span class="inline">true</span> switching it on and <span class="inline">false</span>&nbsp;switching it off. Enabling this will display the&nbsp;<a href="../../Debugging/The_Debug_Overlay.htm#audio">Audio</a>&nbsp;window of&nbsp;<a href="../../Debugging/The_Debug_Overlay.htm">The Debug Overlay</a>.</p>
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;For synchronised groups of audio, you also have the function&nbsp;<span class="inline2"><a href="Audio_Synchronisation/audio_sync_group_debug.htm">audio_sync_group_debug</a></span>.</p>
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function does not work on the HTML5 target platform.</p>
   <p>&nbsp;</p>
@@ -1065,7 +1055,7 @@
       </tr>
       <tr>
         <td>enable</td>
-        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span></td>
         <td>Enable (set to <span class="inline">true</span>) or disable (<span class="inline">false</span>) audio debugging.</td>
       </tr>
     </tbody>
@@ -1093,7 +1083,7 @@
         <div style="float:right">Next:&nbsp;<a href="lin_to_db.htm">lin_to_db</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_debug

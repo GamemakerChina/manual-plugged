@@ -1050,7 +1050,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_AnimCurve"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm">Animation Curve Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_AnimCurve"><a target="_blank" href="animcurve_get.htm">Animation Curve Struct</a></span></th>
       </tr>
       <tr>
         <th>Variable Name</th>
@@ -1059,18 +1059,18 @@
       </tr>
       <tr>
         <td><span class="inline">name</span></td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>This is the name of the animation curve.</td>
       </tr>
       <tr>
         <td><span class="inline">channels</span></td>
-        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span>&nbsp;of&nbsp;<span data-keyref="Type_Struct_AnimCurve_Channel"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get_channel.htm">Animation Curve Channel Struct</a></span>s</td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../GML_Overview/Arrays.htm">Array</a></span>&nbsp;of&nbsp;<span data-keyref="Type_Struct_AnimCurve_Channel"><a target="_blank" href="animcurve_get_channel.htm">Animation Curve Channel Struct</a></span>s</td>
         <td>This is an array, where each item in the array is a channel struct.</td>
       </tr>
     </tbody>
   </table>
   <p><br>
-    The <span class="inline">channels</span>&nbsp;variable in the struct is an&nbsp;<a href="../../../GML_Overview/Arrays.htm">array</a>&nbsp;where each array item is an&nbsp;<span data-keyref="Type_Struct_AnimCurve_Channel"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get_channel.htm">Animation Curve Channel Struct</a></span> with data relating to a channel within the curve. The channel struct is explained <a href="animcurve_channel_new.htm">on this page</a>.</p>
+    The <span class="inline">channels</span>&nbsp;variable in the struct is an&nbsp;<a href="../../../GML_Overview/Arrays.htm">array</a>&nbsp;where each array item is an&nbsp;<span data-keyref="Type_Struct_AnimCurve_Channel"><a target="_blank" href="animcurve_get_channel.htm">Animation Curve Channel Struct</a></span> with data relating to a channel within the curve. The channel struct is explained <a href="animcurve_channel_new.htm">on this page</a>.</p>
   <p>As with channels, the points on a single channel are stored as structs in an array, where each item in the array is a single point struct. The point struct is explained <a href="animcurve_point_new.htm">on this page</a>.</p>
   <p>Note that if the function fails (e.g. the given Animation Curve asset does not exist) then the function will return -1.</p>
   <p>&nbsp;</p>
@@ -1085,19 +1085,19 @@
       </tr>
       <tr>
         <td>curve_id</td>
-        <td><span data-keyref="Type_Asset_Animation_Curve"><a target="_blank" href="../../../../../The_Asset_Editors/Animation_Curves.htm">Animation Curve Asset</a></span></td>
+        <td><span data-keyref="Type_Asset_Animation_Curve"><a target="_blank" href="../../../../The_Asset_Editors/Animation_Curves.htm">Animation Curve Asset</a></span></td>
         <td>The asset ID (index) of the animation curve to get.</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Struct_AnimCurve"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm">Animation Curve Struct</a></span>&nbsp;or -1</p>
+  <p class="code"><span data-keyref="Type_Struct_AnimCurve"><a target="_blank" href="animcurve_get.htm">Animation Curve Struct</a></span>&nbsp;or -1</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var _curve = animcurve_get(ac_ButtonTween);<br>
     var _channel = _curve.channels[0];<br>
-    if _channel.type != animcurvetype_linear<br>
+    if (_channel.type != animcurvetype_linear) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;_channel.type = animcurvetype_linear;<br>
     }</p>
@@ -1112,7 +1112,7 @@
         <div style="float:right">Next:&nbsp;<a href="animcurve_get_channel.htm">animcurve_get_channel</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 animcurve_get

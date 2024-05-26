@@ -1058,7 +1058,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_File_Attribute"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/File_Handling/File_System/file_find_first.htm">File Attribute Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_File_Attribute"><a target="_blank" href="file_find_first.htm">File Attribute Constant</a></span></th>
       </tr>
       <tr>
         <th>Constant</th>
@@ -1094,8 +1094,11 @@
       </tr>
     </tbody>
   </table>
-  <p>Attributes can only be used on Windows. For all other platforms, use 0 or <span class="inline">fa_none</span>.</p>
-  <p class="note"><b></b><span class="warning">WARNING</span>&nbsp;This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">File System</a>&nbsp;for more information.</p>
+  <p>Attributes can only be used on Windows. For all other platforms, use 0 or <span class="inline">fa_none</span>.<b></b></p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_GM_FileSystem_Sandboxed.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>This may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">The File System</a> for more information.</p>
+
+</div>
   <p class="note"><span class="note">NOTE</span>&nbsp;This function will not work at all on the HTML5 target.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
@@ -1109,22 +1112,22 @@
       </tr>
       <tr>
         <td>mask</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The mask to use for searching.</td>
       </tr>
       <tr>
         <td>attr</td>
-        <td><span data-keyref="Type_Constant_File_Attribute"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/File_Handling/File_System/file_find_first.htm">File Attribute Constant</a></span>(s)</td>
+        <td><span data-keyref="Type_Constant_File_Attribute"><a target="_blank" href="file_find_first.htm">File Attribute Constant</a></span>(s)</td>
         <td>The specific file attribute to look for.</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
+  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if directory_exists("\User Content")<br>
+  <p class="code">if (directory_exists("\User Content")) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;fileA = file_find_first("/User Content/*.doc", fa_readonly);<br>
     &nbsp; &nbsp; fileB = file_find_next();<br>
@@ -1155,7 +1158,7 @@
         <div style="float:right">Next: <a href="file_find_next.htm">file_find_next</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_find_first

@@ -486,6 +486,10 @@
     </topic>
     
     <topic>
+      IDE_Tools\Project_Tool.htm
+    </topic>
+    
+    <topic>
       Settings\Game_Settings.htm
     </topic>
     
@@ -542,6 +546,10 @@
     </topic>
     
     <topic>
+      Additional_Information\The_File_System.htm
+    </topic>
+    
+    <topic>
       Settings\Audio_Groups.htm
     </topic>
     
@@ -551,6 +559,10 @@
     
     <topic>
       Settings\Texture_Information\Texture_Pages.htm
+    </topic>
+    
+    <topic>
+      Settings\Texture_Information\Texture_Compression.htm
     </topic>
     
     <topic>
@@ -826,6 +838,10 @@
     </topic>
     
     <topic>
+      The_Asset_Editors\Sequence_Properties\Sound_in_Sequences.htm
+    </topic>
+    
+    <topic>
       The_Asset_Editors\Sequence_Properties\Clipping_Masks.htm
     </topic>
     
@@ -898,15 +914,15 @@
     </topic>
     
     <topic>
-      Additional_Information\The_File_System.htm
-    </topic>
-    
-    <topic>
       Additional_Information\Bitwise_Operators.htm
     </topic>
     
     <topic>
       Additional_Information\Type_Tables.htm
+    </topic>
+    
+    <topic>
+      Additional_Information\Whitespace_Characters.htm
     </topic>
     
     <topic>
@@ -931,6 +947,10 @@
     
     <topic>
       Additional_Information\Guide_To_Using_Blendmodes.htm
+    </topic>
+    
+    <topic>
+      Additional_Information\Guide_To_Using_JSON.htm
     </topic>
     
     <topic>
@@ -2578,11 +2598,15 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\ref_create.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\int64.htm
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Variable_Functions\ref_create.htm
+      GameMaker_Language\GML_Reference\Variable_Functions\handle.htm
     </topic>
     
     <topic>
@@ -2775,6 +2799,10 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Assets_And_Tags\tag_get_assets.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Assets_And_Tags\asset_get_ids.htm
     </topic>
     
     <topic>
@@ -4714,7 +4742,15 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Rooms\room_exists.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Rooms\room_get_name.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Rooms\room_get_info.htm
     </topic>
     
     <topic>
@@ -4731,10 +4767,6 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Rooms\room_restart.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Rooms\room_exists.htm
     </topic>
     
     <topic>
@@ -5978,6 +6010,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Drawing\GPU_Control\gpu_get_blendequation.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Drawing\GPU_Control\gpu_get_alphatestenable.htm
     </topic>
     
@@ -6043,6 +6079,14 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Drawing\GPU_Control\gpu_set_blendmode_ext_sepalpha.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Drawing\GPU_Control\gpu_set_blendequation.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Drawing\GPU_Control\gpu_set_blendequation_sepalpha.htm
     </topic>
     
     <topic>
@@ -6482,6 +6526,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Drawing\Primitives\vertex_format_get_info.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Drawing\Primitives\vertex_create_buffer.htm
     </topic>
     
@@ -6495,6 +6543,14 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Drawing\Primitives\vertex_create_buffer_from_buffer_ext.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Drawing\Primitives\vertex_update_buffer_from_buffer.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Drawing\Primitives\vertex_update_buffer_from_vertex.htm
     </topic>
     
     <topic>
@@ -6567,6 +6623,10 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Drawing\Primitives\vertex_submit.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Drawing\Primitives\vertex_submit_ext.htm
     </topic>
     
     <topic>
@@ -7114,6 +7174,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Drawing\Textures\texturegroup_get_names.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Drawing\Textures\texturegroup_load.htm
     </topic>
     
@@ -7527,6 +7591,14 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_get_showborder.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_enable_borderless_fullscreen.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_Window\window_get_borderless_fullscreen.htm
     </topic>
     
     <topic>
@@ -8366,6 +8438,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Data_Structures\DS_Maps\ds_map_destroy.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Data_Structures\DS_Maps\ds_map_add.htm
     </topic>
     
@@ -8431,10 +8507,6 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Data_Structures\DS_Maps\ds_map_write.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Data_Structures\DS_Maps\ds_map_destroy.htm
     </topic>
     
     <topic>
@@ -10490,6 +10562,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\File_Handling\File_Directories\cache_directory.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\File_Handling\Encoding_And_Hashing\Encoding_And_Hashing.htm
     </topic>
     
@@ -10618,6 +10694,46 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_get_type.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_get_alignment.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_get_address.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_get_size.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_resize.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_sizeof.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_set_used_size.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_copy.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_copy_stride.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Buffers\buffer_copy_from_vertex_buffer.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Buffers\buffer_save.htm
     </topic>
     
@@ -10666,43 +10782,11 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_copy.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_copy_from_vertex_buffer.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_get_type.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_get_alignment.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_get_address.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_get_size.htm
-    </topic>
-    
-    <topic>
       GameMaker_Language\GML_Reference\Buffers\buffer_get_surface.htm
     </topic>
     
     <topic>
       GameMaker_Language\GML_Reference\Buffers\buffer_set_surface.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_resize.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_sizeof.htm
     </topic>
     
     <topic>
@@ -10730,7 +10814,7 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Buffers\buffer_set_used_size.htm
+      GameMaker_Language\GML_Reference\Buffers\Transferring_Data_Between_Buffers.htm
     </topic>
     
     <topic>
@@ -10974,6 +11058,14 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\GXC\GXC_Functions.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\GXC\File_System\gxc_file_sync.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\OS_And_Compiler\OS_And_Compiler.htm
     </topic>
     
@@ -11055,6 +11147,10 @@
     
     <topic>
       GameMaker_Language\GML_Reference\OS_And_Compiler\GM_project_filename.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\OS_And_Compiler\GM_is_sandboxed.htm
     </topic>
     
     <topic>
@@ -11186,6 +11282,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Debugging\dbg_add_font_glyphs.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Debugging\dbg_view.htm
     </topic>
     
@@ -11226,6 +11326,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Debugging\dbg_slider_int.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Debugging\dbg_sprite.htm
     </topic>
     
@@ -11239,6 +11343,14 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Debugging\dbg_watch.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Debugging\is_mouse_over_debug_overlay.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Debugging\is_keyboard_used_debug_overlay.htm
     </topic>
     
     <topic>
@@ -11294,7 +11406,15 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_replace.htm
+      GameMaker_Language\GML_Reference\Live_Wallpapers\wallpaper_set_subscriptions.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_WIndow\window_enable_borderless_fullscreen.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Cameras_And_Display\The_Game_WIndow\window_get_borderless_fullscreen.htm
     </topic>
     
   </topiclist>

@@ -1005,7 +1005,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.6.7.0_38";
+    gTopicId = "8.2.2.6.7.0_41";
   
 //]]></script>
 
@@ -1027,7 +1027,7 @@
   <meta name="topic-comment" content="Reference for vertex_submit">
   <meta name="rh-index-keywords" content="vertex_submit,pr_pointlist,pr_linelist,pr_linestrip,pr_trianglelist,pr_trianglestrip">
   <meta name="search-keywords" content="vertex_submit,pr_pointlist,pr_linelist,pr_linestrip,pr_trianglelist,pr_trianglestrip">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Drawing/Surfaces/Surfaces.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_freeze.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_submit_ext.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_freeze.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1047,42 +1047,68 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>vertex_submit</h1>
-  <p>You can use this function to submit the contents of a vertex buffer to the graphics pipeline for use with a shader. You supply the buffer index to use, the base primitive type to use (see the constants below) and the texture that is to be used. The base primitive type is only used for assigning the order in which the vertexes that you stored in the buffer are drawn and connected, but the actual data used for each of the vertexes will be that which you defined when creating the vertex buffer.</p>
-  <p class="note"><b>NOTE</b>: This function can only be used in the <b>Draw Event</b>.</p>
-  <p>For a visual example of the different base primitives available, see the image below:</p>
+  <h1><span data-field="title" data-format="default">vertex_submit</span></h1>
+  <p>This function submits the contents of a vertex buffer to the graphics pipeline for use with a shader.</p>
+  <p>You supply the vertex buffer, the base primitive type (see the constants below) and the texture to be used. The base primitive type is only used for assigning the order in which the vertices that you stored in the buffer are drawn and connected, but the actual data used for each of the vertices will be that which you defined when creating the vertex buffer.</p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_Surface_Must_Exist.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;When using a surface as the texture (returned by&nbsp;<span class="inline3_func"><a href="../Surfaces/surface_get_texture.htm">surface_get_texture</a></span>), you should make sure that the surface itself exists (<span class="inline3_func"><a href="../Surfaces/surface_exists.htm">surface_exists</a></span>).</p>
+
+</div>
+  <h3>Usage Notes</h3>
+  <ul class="colour">
+    <li>This function can only be used in the&nbsp;<a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a>.</li>
+    <li>The number&nbsp;of vertices in the vertex buffer must be in accordance with the primitive type you're using.</li>
+    <li>You can use&nbsp;<span class="inline3_func"><a href="vertex_submit_ext.htm">vertex_submit_ext</a></span>&nbsp;instead to submit only a range of vertices in the vertex buffer.</li>
+    <li>Triangle fans (<span class="inline2">pr_trianglefan</span>) are converted to <span class="inline2">pr_trianglelist</span> internally on platforms that don't support them when you call this function.</li>
+  </ul>
+  <p>For a visual example of the different base primitives available, see the image below:&nbsp;</p>
   <p><img alt="The different primitive types" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/primitive_types.png"></p>
-  <table>
+  <div data-conref="../../../../assets/snippets/Primitive_Type_Constants.hts">
+  <table style="caption-side: top">
+    <caption><span data-keyref="Type_Constant_Draw_Primitive_Type"><a target="_blank" href="draw_primitive_begin.htm">Primitive Type Constant</a></span></caption>
+    <colgroup>
+      <col>
+      <col>
+    </colgroup>
     <tbody>
       <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>pr_pointlist</td>
-        <td>A primitive consisting of a list of points.</td>
+        <td><span class="inline">pr_pointlist</span></td>
+        <td>A point list - A point is drawn for every vertex.</td>
       </tr>
       <tr>
-        <td>pr_linelist</td>
-        <td>A primitive made up of a individual lines in a list.</td>
+        <td><span class="inline">pr_linelist</span></td>
+        <td>A line list - A line is drawn between the first and the second vertex, between the third and fourth vertex, etc.</td>
       </tr>
       <tr>
-        <td>pr_linestrip</td>
-        <td>A primitive made up of a consecutive strip of lines.</td>
+        <td><span class="inline">pr_linestrip</span></td>
+        <td>A line strip - A line is drawn between the first and the second vertex, between the second and the third vertex, the third and the fourth vertex, etc.</td>
       </tr>
       <tr>
-        <td>pr_trianglelist</td>
-        <td>A primitive made up of individual triangles in a list.</td>
+        <td><span class="inline">pr_trianglelist</span></td>
+        <td>A triangle list - A triangle is drawn for the first, second and third vertex, then for the fourth, fifth and sixth vertex, etc.</td>
       </tr>
       <tr>
-        <td>pr_trianglestrip</td>
-        <td>A primitive made up of a consecutive strip of triangles.</td>
+        <td><span class="inline">pr_trianglestrip</span></td>
+        <td>A triangle strip - A triangle is drawn for the first, second and third vertex, then for the second, third and fourth vertex, etc.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">pr_trianglefan</span></td>
+        <td>A triangle fan - Every two vertices connect to the first vertex to make a triangle.<br>
+          <br>
+          <span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;<span>This primitive type is not natively supported on some platforms and there could be a performance hit if you use it.</span>
+        </td>
       </tr>
     </tbody>
   </table>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">vertex_submit(buffer, primitive, texture);</p>
+  <p class="code"><span data-field="title" data-format="default">vertex_submit</span>(buffer, primitive, texture);</p>
   <table>
     <tbody>
       <tr>
@@ -1092,18 +1118,18 @@
       </tr>
       <tr>
         <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer_Vertex"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_create_buffer.htm">Vertex Buffer ID</a></span></td>
-        <td>The buffer to use.</td>
+        <td><span data-keyref="Type_ID_Buffer_Vertex"><a target="_blank" href="vertex_create_buffer.htm">Vertex Buffer</a></span></td>
+        <td>The vertex buffer to use.</td>
       </tr>
       <tr>
         <td>primitive</td>
-        <td><span data-keyref="Type_Constant_Draw_Primitive_Type"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/draw_primitive_begin.htm">Primitive Type Constant</a></span></td>
+        <td><span data-keyref="Type_Constant_Draw_Primitive_Type"><a target="_blank" href="draw_primitive_begin.htm">Primitive Type Constant</a></span></td>
         <td>The primitive base type.</td>
       </tr>
       <tr>
         <td>texture</td>
-        <td><span data-keyref="Type_Pointer_Texture"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm">Texture</a></span></td>
-        <td>The texture to use (or -1 for no texture).</td>
+        <td><span data-keyref="Type_Pointer_Texture"><a target="_blank" href="../../Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm">Texture</a></span></td>
+        <td>The texture to use (or <span class="inline2">-1</span> for no texture).</td>
       </tr>
     </tbody>
   </table>
@@ -1113,20 +1139,20 @@
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">shader_set(shader_prim);<br>
-    vertex_submit(buff, pr_trianglelist, sprite_get_texture(sprite_index));<br>
-    shader_reset();</p>
-  <p>The above code will submit the vertex buffer indexed in the variable "buff" for drawing with the shader "shader_prim", using a triangle list as the base primitive and the texture of the sprite for the instance running the code.</p>
-  <p>&nbsp;</p>
+    <span data-field="title" data-format="default">vertex_submit</span>(buff, pr_trianglelist, sprite_get_texture(sprite_index, 0));<br>
+    shader_reset();
+  </p>
+  <p>The above code submits the vertex buffer in the variable <span class="inline2">buff</span> for drawing with the shader <span class="inline2">shader_prim</span>, using a triangle list as the base primitive and the texture of the sprite for the instance running the code.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back:&nbsp;<a href="Primitives_And_Vertex_Formats.htm">Primitives&nbsp;And Vertex Formats</a></div>
-        <div style="float:right">Next:&nbsp;<a href="draw_primitive_begin.htm">draw_primitive_begin</a></div>
+        <div style="float:right">Next:&nbsp;<a href="vertex_submit_ext.htm">vertex_submit_ext</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_submit

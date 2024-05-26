@@ -1047,44 +1047,44 @@
         <th>Description</th>
      </tr>
       <tr>
-        <td>x1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>x1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x coordinate of the first component of the vector</td>
      </tr>
       <tr>
-        <td>y1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>y1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y coordinate of the first component of the vector</td>
      </tr>
       <tr>
-        <td>z1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>z1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The z coordinate of the first component of the vector</td>
      </tr>
       <tr>
-        <td>x2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>x2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x coordinate of the second component of the vector</td>
      </tr>
       <tr>
-        <td>y2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>y2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y coordinate of the second component of the vector</td>
      </tr>
       <tr>
-        <td>z2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>z2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The z coordinate of the second component of the vector</td>
      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var inst, ex, ey, ez;<br>
     inst = instance_nearest(x, y, enemy);<br>
-    if inst<br>
+    if (instance_exists(inst))<br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;ex = inst.x;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;ey = inst.y;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;ez = inst.z;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;if point_distance_3d(x, y, z, ex, ey, ez) &lt; 200<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (point_distance_3d(x, y, z, ex, ey, ez) &lt; 200) <br>
     &nbsp; &nbsp; {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Bullets", obj_Missile)<br>
     &nbsp; &nbsp; }<br>
@@ -1100,7 +1100,7 @@
         <div style="float:right">Next:&nbsp;<a href="distance_to_object.htm">distance_to_object</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 point_distance_3d

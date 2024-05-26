@@ -1049,7 +1049,7 @@
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Fonts">
   <meta name="rh-index-keywords" content="">
   <meta name="search-keywords" content="Fonts">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Fonts/font_get_name.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Fonts/font_exists.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1080,7 +1080,7 @@
   <p>Text in&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;is drawn using the font set with&nbsp;<span class="inline3_func"><a href="../../Drawing/Text/draw_set_font.htm">draw_set_font</a></span>. Text drawn using a font will be drawn in a different way depending on whether SDF is enabled or not.</p>
   <h3>Regular</h3>
   <p>This is the normal way of drawing text in&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>. The font's <a class="tooltip" title="A glyph is a particular visual appearance of a character. It is the appearance of a character using a given font.">glyph</a>s for the chosen font size (<span class="inline3_func"><a href="font_get_size.htm">font_get_size</a></span>) are placed on a texture page (<span class="inline3_func"><a href="font_get_texture.htm">font_get_texture</a></span>) and each character is rendered as it is from the&nbsp;texture page.</p>
-  <p>A disadvantage of this is that scaling up text using regular fonts makes them look pixelated. To fix this, GameMaker provides an SDF rendering option for fonts added at runtime.</p>
+  <p>A disadvantage of this is that scaling up text using regular fonts makes them look pixelated. To fix this,&nbsp;<span data-keyref="GameMaker Name">GameMaker</span> provides an SDF rendering option for fonts added at runtime.</p>
   <h3 id="h">SDF Rendering</h3>
   <p>This&nbsp;is&nbsp;<em>disabled by default</em> for newly added fonts and enabled <em>per font</em>&nbsp;through <a href="../../../../The_Asset_Editors/Fonts.htm">The Font Editor</a>, or by calling&nbsp;<span class="inline3_func"><a href="font_enable_sdf.htm">font_enable_sdf</a></span>:</p>
   <p class="code">new_font = font_add("STENCIL.TTF", 32, false, false, 32, 128);<br>
@@ -1088,7 +1088,7 @@
   <p>When SDF rendering is enabled, all characters in the given font's range are stored differently on the texture page. Instead of an actual render of the different characters at the font's set size, an SDF (<em>Signed Distance Field)</em> is stored.</p>
   <p>In this case,&nbsp;every texel stores the <em>signed distance</em> to the closest point on the character. All texels on this texture combined make up a&nbsp;<em>field</em>&nbsp;of signed distances.</p>
   <p>With this feature enabled for a font, text can be scaled up without the characters becoming pixelated.</p>
-  <p>You can also apply <a href="font_enable_effects.htm">effects</a> to SDF-enabled fonts:<span></span></p>
+  <p>You can also apply <a href="font_enable_effects.htm">effects</a> to SDF-enabled fonts:</p>
   <p><img class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Fonts/font_effects.png"></p>
   <h3>Visual Comparison</h3>
   <p>The following table shows a visual comparison between&nbsp;text drawn using a regular font,&nbsp;and drawn using a font that has SDF enabled:&nbsp;</p>
@@ -1172,7 +1172,7 @@
         <div style="float:right">Next: <a href="../Timelines/Timelines.htm">Timelines</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Fonts

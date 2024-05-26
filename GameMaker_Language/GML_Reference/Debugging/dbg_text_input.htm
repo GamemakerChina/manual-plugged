@@ -1001,7 +1001,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.21.1.0_16";
+    gTopicId = "8.2.2.22.1.0_18";
   
 //]]></script>
 
@@ -1021,10 +1021,10 @@
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="">
   <meta name="topic-comment" content="">
-  <meta name="rh-index-keywords" content="">
-  <meta name="search-keywords" content="">
+  <meta name="rh-index-keywords" content="dbg_text_input">
+  <meta name="search-keywords" content="dbg_text_input">
   <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt">
-</head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Debugging/dbg_watch.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Debugging/dbg_text.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1044,14 +1044,23 @@
 
 
   <h1><span data-field="title" data-format="default">dbg_text_input</span></h1>
-  <p>This function creates a text field within the current debug section. You can use this to modify a string variable.</p>
+  <p>This function creates a text field within the current debug section.</p>
+  <p>By default, the text input modifies the variable referenced as a string variable. You can change this <a href="../../GML_Overview/Data_Types.htm">data type</a> by setting the optional <span class="inline2">type</span> parameter to one of the following values:&nbsp;</p>
+  <ul class="colour">
+    <li><span class="inline2">"s"</span> or <span class="inline2">"t"</span>: a string, for which&nbsp;<span class="inline3_func"><a href="../Variable_Functions/typeof.htm">typeof</a></span>&nbsp;returns <span class="inline2">"string"</span></li>
+    <li><span class="inline2">"i"</span> or <span class="inline2">"d"</span>: an integer, for which&nbsp;<span class="inline3_func"><a href="../Variable_Functions/typeof.htm">typeof</a></span>&nbsp;returns <span class="inline2">"int64"</span></li>
+    <li><span class="inline2">"f"</span>, <span class="inline2">"r"</span> or <span class="inline2">"g"</span>: a real number, for which&nbsp;<span class="inline3_func"><a href="../Variable_Functions/typeof.htm">typeof</a></span>&nbsp;returns <span class="inline2">"number"</span></li>
+  </ul>
+  <p><span>The text field also accepts hexadecimal and binary as input for both integers and real numbers, i.e. <span class="inline2">0xcafebabe</span> or <span class="inline2">0b1010101</span>. It converts this input to the correct value for the given data type.</span></p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;If the variable referenced stores a value of a different type than the type you provide to this function, any change you make to the text will change the referenced variable's type.</p>
   <div data-conref="../../../assets/snippets/Note_Debug_Control_Two_Columns.hts">
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This debug control spans two columns.</p>
 
 </div>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;On Android, editing a text field will bring up the on-screen keyboard.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">dbg_text_input</span>(ref[, label]);</p>
+  <p class="code"><span data-field="title" data-format="default">dbg_text_input</span>(ref[, label, type]);</p>
   <table>
     <colgroup>
       <col>
@@ -1066,13 +1075,23 @@
       </tr>
       <tr>
         <td>ref</td>
-        <td><span data-keyref="Type_DbgRef"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Debugging/ref_create.htm">Reference</a></span></td>
+        <td><span data-keyref="Type_DbgRef"><a target="_blank" href="../Variable_Functions/ref_create.htm">Reference</a></span></td>
         <td>A reference to a variable created using&nbsp;<span class="inline3_func"><a href="../Variable_Functions/ref_create.htm">ref_create</a></span></td>
       </tr>
       <tr>
         <td>label</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;The label to show next to the text input</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;The type to store the value as in the variable that's referenced. This is indicated by a single letter:&nbsp;<br>
+          <br>
+          - string: <span class="inline2">"s"</span> or <span class="inline2">"t"</span> (default)<br>
+          - integer: <span class="inline2">"i"</span> or <span class="inline2">"d"</span><br>
+          - real: <span class="inline2">"f"</span>, <span class="inline2">"r"</span> or <span class="inline2">"g"</span>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -1080,13 +1099,36 @@
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
-  <h4>Example:</h4>
+  <h4>Example 1: Basic Use</h4>
   <p class="code_heading">Create Event</p>
   <p class="code">description = "This description can be changed";<br>
     var _ref = ref_create(self, "description");<br>
     <span data-field="title" data-format="default">dbg_text_input</span>(_ref, "Enter the description here:");
   </p>
   <p>The above code first assigns some text to an instance variable <span class="inline2">description</span>. It then creates a reference to this variable using&nbsp;<span class="inline3_func"><a href="../Variable_Functions/ref_create.htm">ref_create</a></span>. Next, it creates a text input control using&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">dbg_text_input</span></span>, the reference <em>links</em>&nbsp;the control to the variable.</p>
+  <p>&nbsp;</p>
+  <h4>Example 2: Custom Data Types</h4>
+  <p class="code_heading">Create Event</p>
+  <p class="code">an_integer = 5;<br>
+    a_real = 0.3583;<br>
+    a_string = "3289430";<br>
+    <br>
+    ref_to_count = ref_create(self, "an_integer");<br>
+    ref_to_some_value = ref_create(self, "a_real");<br>
+    ref_to_a_string = ref_create(self, "a_string");<br>
+    <br>
+    dbg_text_input(ref_to_count, "An Integer", "i");<br>
+    dbg_text_input(ref_to_some_value, "A Real", "f");<br>
+    dbg_text_input(ref_to_a_string, "A String", "s");
+  </p>
+  <p class="code_heading">Draw Event</p>
+  <p class="code">draw_text(5, 600, $"An Integer ({typeof(an_integer)}): {an_integer}");<br>
+    draw_text(5, 620, $"A Real ({typeof(a_real)}): {a_real}");<br>
+    draw_text(5, 640, $"A String ({typeof(a_string)}): {a_string}");</p>
+  <p>This code example shows how to use custom data types with the text input debug control.</p>
+  <p>In the Create event of an object a couple of variables are first defined. They are assigned a real, another real and a string value. Then, a reference is created to each of these instance variables. After that, a text input is created using&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">dbg_text_input</span></span> to modify each of these variables through the reference to it. The function calls to&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">dbg_text_input</span></span>&nbsp;will&nbsp;bring up&nbsp;<a href="The_Debug_Overlay.htm">The Debug Overlay</a>,&nbsp;so no call to&nbsp;<span class="inline3_func"><a href="show_debug_overlay.htm">show_debug_overlay</a></span>&nbsp;is required.</p>
+  <p>In the object's Draw event a line of text is displayed using&nbsp;<span class="inline3_func"><a href="../Drawing/Text/draw_text.htm">draw_text</a></span>&nbsp;for each of the variables. Each line shows a descriptive text and the type of value between parentheses, followed by the value itself. Any change made in the text inputs will show in the drawn text.</p>
+  <p>Note that the type of the first variable changes immediately from <span class="inline2">"number"</span> to <span class="inline2">"int64"</span>&nbsp;as soon as you make a change in its text input control.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1096,7 +1138,7 @@
         <div>Next:&nbsp;<a href="dbg_watch.htm">dbg_watch</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 dbg_text_input

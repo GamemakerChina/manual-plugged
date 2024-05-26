@@ -988,7 +988,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.22.0_4";
+    gTopicId = "8.2.2.23.0_4";
   
 //]]></script>
 
@@ -1031,8 +1031,8 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gc_target_frame_time</h1>
-  <p>With this function you can&nbsp;<span>indicate to the garbage collector that it shoulde&nbsp;aim to spend no more than the time specified running each frame. The function takes a time value&nbsp;<span>specified in microseconds (where 1,000,000 microseconds equals one second) and the default target frame time is 100 microseconds.</span></span></p>
-  <p><span><span>Please note that this is simply a&nbsp;</span></span><span><em>target</em> value, as some operations still need to run completely in one frame and may sometimes take longer than the target time. Also note that i<span>ncreasing the target time will make the garbage collector more responsive to rapid changes in memory usage and will cause memory to be freed more quickly, though in practice this is unlikely to be required in most cases. Also note that setting the target frame time to 0 will <em>not </em>cause the collector to stop completely - it will still do a minimal amount of work each frame. To completely disable the collector use the <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> function.</span> </span></p>
+  <p>With this function you can&nbsp;indicate to the garbage collector that it shoulde&nbsp;aim to spend no more than the time specified running each frame. The function takes a time value&nbsp;specified in microseconds (where 1,000,000 microseconds equals one second) and the default target frame time is 100 microseconds.</p>
+  <p>Please note that this is simply a&nbsp;<em>target</em> value, as some operations still need to run completely in one frame and may sometimes take longer than the target time. Also note that increasing the target time will make the garbage collector more responsive to rapid changes in memory usage and will cause memory to be freed more quickly, though in practice this is unlikely to be required in most cases. Also note that setting the target frame time to 0 will <em>not</em> cause the collector to stop completely - it will still do a minimal amount of work each frame. To completely disable the collector use the <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> function.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">gc_target_frame_time(time);</p>
@@ -1043,7 +1043,7 @@
         <th>Description</th>
      </tr>
       <tr>
-        <td>time</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>time</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The target time - in microseconds -&nbsp; that the garbage collector should work each frame</td>
      </tr>
     </tbody>
@@ -1068,7 +1068,7 @@
         <div style="float:right">Next:&nbsp;<a href="gc_get_target_frame_time.htm">gc_get_target_frame_time</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gc_target_frame_time

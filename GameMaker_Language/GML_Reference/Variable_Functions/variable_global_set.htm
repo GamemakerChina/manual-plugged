@@ -1008,7 +1008,7 @@
   <meta name="topic-comment" content="Page explaining the function variable_global_set">
   <meta name="rh-index-keywords" content="variable_global_set">
   <meta name="search-keywords" content="variable_global_set">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_struct_exists.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_global_get.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/nameof.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_global_get.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1028,11 +1028,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_global_set</h1>
+  <h1><span data-field="title" data-format="default">variable_global_set</span></h1>
   <p>With this function you can set the value of a given global variable. You supply the name of the global variable to set the value of <i>as a string</i> (see example code below), and then the value to set (can be any valid <a href="../../GML_Overview/Data_Types.htm">data type</a>). If the global variable does not exist already in the game it will be created and then assigned the value.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">variable_global_set(name, val);</p>
+  <p class="code"><span data-field="title" data-format="default">variable_global_set</span>(name, val);</p>
   <table>
     <tbody>
       <tr>
@@ -1042,12 +1042,12 @@
       </tr>
       <tr>
         <td>name</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The name of the global variable to set (as a string)</td>
       </tr>
       <tr>
         <td>val</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+        <td><span data-keyref="Type_Any"><a target="_blank" href="../../GML_Overview/Data_Types.htm#variable">Any</a></span></td>
         <td>The value to set the global variable to</td>
       </tr>
     </tbody>
@@ -1057,12 +1057,11 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if !variable_global_exists("enemy_num")<br>
+  <p class="code">if (!variable_global_exists("enemy_num")) <br>
     {<br>
     &nbsp; &nbsp; variable_global_set("enemy_num", 0);<br>
     }</p>
   <p>The above code will check to see if a global variable exists and if it does not then it is created and set to 0.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1072,7 +1071,7 @@
         <div style="float:right">Next:&nbsp;<a href="nameof.htm">nameof</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variable_global_set

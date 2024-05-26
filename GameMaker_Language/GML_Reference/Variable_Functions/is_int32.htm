@@ -1031,7 +1031,8 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">is_int32</span></h1>
-  <p>This function returns whether a given variable is a 32bit integer or not. In some cases you want to check and see what data type a variable holds in <span data-keyref="GameMaker Name">GameMaker</span> and that's when you would use this function. It returns <span class="inline">true</span> or <span class="inline">false</span> depending on whether the value is an int 32 or not.</p>
+  <p>This function returns whether a given variable is a 32bit integer or not.</p>
+  <p>In some cases you want to check and see what data type a variable holds in <span data-keyref="GameMaker Name">GameMaker</span> and that's when you would use this function. It returns <span class="inline2">true</span> or <span class="inline2">false</span> depending on whether the value is an int32 or not.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">is_int32</span>(n);</p>
@@ -1044,22 +1045,21 @@
       </tr>
       <tr>
         <td>n</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+        <td><span data-keyref="Type_Any"><a target="_blank" href="../../GML_Overview/Data_Types.htm#variable">Any</a></span></td>
         <td>The argument to check.</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4><b>Example:</b></h4>
-  <p class="code">if !is_int32(val)<br>
+  <p class="code">if (!is_int32(val)) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("Not a 32 bit integer!");<br>
     }</p>
   <p>The above code checks the variable "val" to see if it contains an int32 and if it is not then it shows a message in the debug console.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1069,7 +1069,7 @@
         <div style="float:right">Next:&nbsp;<a href="is_int64.htm">is_int64</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 is_int32

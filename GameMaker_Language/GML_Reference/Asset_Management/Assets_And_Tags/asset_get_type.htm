@@ -1046,11 +1046,11 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">asset_get_type</span></h1>
-  <p>This function gets the type of asset being referenced from its name (a string).</p>
+  <p>This function gets the type of asset being referenced from its name or handle.</p>
   <p>One of the <b>constants</b> listed below will be returned.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">asset_get_type</span>(name);</p>
+  <p class="code"><span data-field="title" data-format="default">asset_get_type</span>(name_or_ref);</p>
   <table>
     <tbody>
       <tr>
@@ -1059,15 +1059,15 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td>name</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>The name of the game asset to get the type of (a string).</td>
+        <td>name_or_ref</td>
+        <td><span data-keyref="Type_Asset"><a target="_blank" href="../../../../The_Asset_Editors/The_Asset_Editors.htm">Asset</a></span>&nbsp;or <span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>The name of&nbsp;or a reference to the game asset to get the type of.</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Constant_Asset_Type"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Assets_And_Tags/asset_get_type.htm">Asset Type Constant</a></span></p>
+  <p class="code"><span data-keyref="Type_Constant_Asset_Type"><a target="_blank" href="asset_get_type.htm">Asset Type Constant</a></span></p>
   <blockquote>&nbsp;</blockquote>
   <div data-conref="../../../../assets/snippets/Asset_Type_Constants.hts">
   <table style="caption-side: top">
@@ -1157,7 +1157,7 @@
         <div style="float:right">Next:&nbsp;<a href="tag_get_asset_ids.htm">tag_get_asset_ids</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 asset_get_type

@@ -1041,7 +1041,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.21.1.0_1";
+    gTopicId = "8.2.2.22.1.0_1";
   
 //]]></script>
 
@@ -1063,7 +1063,7 @@
   <meta name="topic-comment" content="Reference page for show_debug_overlay">
   <meta name="rh-index-keywords" content="show_debug_overlay">
   <meta name="search-keywords" content="show_debug_overlay">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Debugging/code_is_compiled.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Debugging/show_debug_log.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Debugging/The_Debug_Overlay.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1084,7 +1084,7 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">show_debug_overlay</span></h1>
-  <p>This function opens&nbsp;<a href="The_Debug_Overlay.htm">The Debug Overlay</a> with the <a href="The_Debug_Overlay.htm#fps"><strong>FPS</strong></a> window open. This overlay is disabled by default.</p>
+  <p>This function toggles&nbsp;<a href="The_Debug_Overlay.htm">The Debug Overlay</a>. This overlay is disabled by default.</p>
   <p>The debug overlay enables a menu with three options: <strong>FPS</strong>&nbsp;(open by default),&nbsp;<strong>Log</strong>, and <strong>Audio</strong>. It displays the <span data-keyref="GameMaker Name">GameMaker</span>&nbsp;version in the top-right corner, along with the version and name of the project:&nbsp;</p>
   <p><img class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Debug/debug_overlay_1.png" style="cursor: nesw-resize;">If the optional&nbsp;<span class="inline2">minimised</span>&nbsp;parameter is set to <span class="inline2">false</span>, the overlay is opened with the&nbsp;<strong>FPS</strong> window minimised, only showing basic info in the header.</p>
   <p>To create custom debug views that will appear under the <strong>Views</strong> menu, see&nbsp;<a href="The_Debug_Overlay.htm#creating_debug_views">Creating Debug Views</a>.</p>
@@ -1102,22 +1102,22 @@
       </tr>
       <tr>
         <td>enable</td>
-        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Boolean</a></span></td>
         <td>Enable (<span class="inline2">true</span>) or disable (<span class="inline2">false</span>) the debug overlay</td>
       </tr>
       <tr>
         <td>minimised</td>
-        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Boolean</a></span></td>
         <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;Whether to open the <strong>FPS</strong> window minimised (doesn't apply to any other windows or debug views)</td>
       </tr>
       <tr>
         <td>scale</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;The scale factor to draw the overlay&nbsp;with (default is <span data-keyref="DebugOverlay_Scale_Default">1</span>)</td>
       </tr>
       <tr>
         <td>alpha</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;The alpha value to draw the&nbsp;overlay with (default is <span data-keyref="DebugOverlay_Alpha_Default">0.8</span>)</td>
       </tr>
     </tbody>
@@ -1127,7 +1127,7 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4><b>Example 1: Basic Use</b></h4>
-  <p class="code">if keyboard_check_pressed(ord("O"))<br>
+  <p class="code">if (keyboard_check_pressed(ord("O"))) <br>
     {<br>
     &nbsp; &nbsp; global.debug = !global.debug;<br>
     &nbsp; &nbsp; <span data-field="title" data-format="default">show_debug_overlay</span>(global.debug);<br>
@@ -1146,7 +1146,7 @@
         <div style="float:right">Next:&nbsp;<a href="show_debug_log.htm">show_debug_log</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 show_debug_overlay

@@ -1030,21 +1030,26 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">phy_collision_points</span></h1>
-  <p>This <b>read-only</b> variable returns the number of points of collision detected between the two objects in the collision</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This variable is only available in the collision event of a physics enabled instance.</p>
+  <p>This <b>read-only</b> variable returns the number of points of collision detected between the two instances in the collision.</p>
+  <p>The number returned by this function is the number of items in the built-in&nbsp;<span class="inline2"><a href="phy_collision_x.htm">phy_collision_x</a></span>,&nbsp;<span class="inline2"><a href="phy_collision_y.htm">phy_collision_y</a></span>,&nbsp;<span class="inline2"><a href="phy_col_normal_x.htm">phy_col_normal_x</a></span>&nbsp;and&nbsp;<span class="inline2"><a href="phy_col_normal_y.htm">phy_col_normal_y</a></span>&nbsp;arrays in the current collision event.</p>
+  <div data-conref="../../../../assets/snippets/Note_Physics_Variable_Only_Available_In_Collision_Event.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This variable is only available in the collision event of a physics-enabled instance.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">phy_collision_points</span></p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> (integer value, or <span class="inline">undefined</span> if the instance is not physics enabled)</p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span> (integer value, or undefined if the instance doesn't have physics enabled)</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
+  <p class="code_heading">Collision Event</p>
   <p class="code">for(var i = 0; i &lt; <span data-field="title" data-format="default">phy_collision_points</span>; i += 1;)<br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;part_particles_create(global.Sname, phy_collision_x[i], phy_collision_y[i], global.Spark, 5);<br>
     }</p>
-  <p>The above code creates particles at all the defined points of a collision between two physics enabled instances.</p>
+  <p>The above code creates particles at all the defined points of a collision between two physics-enabled instances.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1054,7 +1059,7 @@
         <div style="float:right">Next:&nbsp;<a href="phy_collision_x.htm">phy_collision_x</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 phy_collision_points

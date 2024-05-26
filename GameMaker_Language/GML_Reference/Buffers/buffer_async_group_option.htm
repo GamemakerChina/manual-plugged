@@ -998,7 +998,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.18.0_23";
+    gTopicId = "8.2.2.18.0_33";
   
 //]]></script>
 
@@ -1040,19 +1040,19 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_async_group_option</h1>
-  <p>With this function you can set some platform specific options for the buffer group being saved/loaded. The options available are as follows:</p>
+  <h1><span data-field="title" data-format="default">buffer_async_group_option</span></h1>
+  <p>This function sets some platform-specific options for the buffer group being saved/loaded. The options available are as follows:</p>
   <ul class="colour">
-    <li>"<b>subtitle</b>" or "<b>slottitle</b>" - The value for this option would be a string, which will be shown to the user when managing their save data in the OS. This is only important when saving data, not when loading again.</li>
-    <li>"<b>showdialog</b>" - The value for this option is a boolean <span class="inline">true</span> or <span class="inline">false</span>. If set to <span class="inline">true</span>, when you save <i>or</i> load <span data-keyref="GameMaker Name">GameMaker</span> will show the System UI, otherwise it will do a quicksave/quickload with no UI shown. You normally only need this if you're supporting multiple save slots to allow the user to pick a slot, but if you just support one slot per user, set this to <span class="inline">false</span>.</li>
+    <li>"<b>subtitle</b>" or "<b>slottitle</b>" - The value for this option is a string, which is shown to the user when managing their save data in the OS. This is only important when saving data, not when loading again.</li>
+    <li>"<b>showdialog</b>" - The value for this option is a boolean <span class="inline2">true</span>&nbsp;or <span class="inline2">false</span>. If set to <span class="inline2">true</span>, when you save <i>or</i> load <span data-keyref="GameMaker Name">GameMaker</span> will show the System UI, otherwise it will do a quicksave/quickload with no UI shown. You normally only need this if you're supporting multiple save slots to allow the user to pick a slot, but if you just support one slot per user, set this to <span class="inline2">false</span>.</li>
     <li>"<b>savepadindex</b>" - For this option you would specify the <i>pad index</i> of the player who is saving <i>or</i> loading and the system will write data to and read data from this player's save folder.</li>
-    <li>"<b>saveslotsize</b>" - This option requires that you specify the actual size in bytes you want to save (so you can do a <a href="buffer_seek.htm"><span class="inline">buffer_seek()</span></a> and <a href="buffer_tell.htm"><span class="inline">buffer_tell()</span></a> to get that, for example). Note that it is not obligatory to supply this value as all saves are pre-assigned a minimum space, which usually varies with the target platform.</li>
+    <li>"<b>saveslotsize</b>" - This option requires that you specify the actual size in bytes you want to save (so you can do a&nbsp;<span class="inline3_func"><a href="buffer_seek.htm">buffer_seek</a></span> and&nbsp;<span class="inline3_func"><a href="buffer_tell.htm">buffer_tell</a></span> to get that, for example). Note that it is not obligatory to supply this value as all saves are pre-assigned a minimum space, which usually varies with the target platform.</li>
     <li>These are some options for PlayStation only. Please refer to <a href="https://help.yoyogames.com/hc/en-us/articles/216756278">this Helpdesk article</a> for information (you'll need to be logged in with your developer access account).</li>
   </ul>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;This function is only valid for PlayStation, Xbox and Nintendo Switch targets. On all the other targets it will do nothing.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_async_group_option(option, value);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_async_group_option</span>(option, value);</p>
   <table>
     <tbody>
       <tr>
@@ -1062,12 +1062,12 @@
       </tr>
       <tr>
         <td>option</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The option to set.</td>
       </tr>
       <tr>
         <td>value</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span>&nbsp;or&nbsp;<span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span>&nbsp;or&nbsp;<span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The value to set (can be a real or string, depending on the option).</td>
       </tr>
     </tbody>
@@ -1078,11 +1078,12 @@
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">buffer_async_group_begin("save_folder_name");<br>
-    buffer_async_group_option("showdialog", false);<br>
-    buffer_async_group_option("slottitle", "Catch The Haggis Save");<br>
-    buffer_async_group_option("subtitle", "All your haggis are saved here!");<br>
+    <span data-field="title" data-format="default">buffer_async_group_option</span>("showdialog", false);<br>
+    <span data-field="title" data-format="default">buffer_async_group_option</span>("slottitle", "Catch The Haggis Save");<br>
+    <span data-field="title" data-format="default">buffer_async_group_option</span>("subtitle", "All your haggis are saved here!");<br>
     save = buffer_save_async(buff, "Player_Save.sav", 0, 16384);<br>
-    buffer_async_group_end();</p>
+    buffer_async_group_end();
+  </p>
   <p>The above code starts a buffer group then sets the group options before it sets 4 files to save asynchronously. The group definition is then ended (at which point saving will begin).</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
@@ -1093,7 +1094,7 @@
         <div style="float:right">Next:&nbsp;<a href="buffer_async_group_end.htm">buffer_async_group_end</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_async_group_option

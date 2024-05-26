@@ -1066,21 +1066,23 @@
     &nbsp;&nbsp;&nbsp;&nbsp;inventory[_i] = 0;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;_i += 1;<br>
     }</p>
-  <p>The above code creates a local variable called "<span class="inline">_i</span>" and sets it to 0, all in the same line. Note that in previous versions of <i>GameMaker</i> you had to declare your local variables first and <i>then</i> assign them values, but in this version you can declare <i>and</i> assign them a value at the same time. The above code then uses this variable to initialize an <a href="../Arrays.htm">array</a>. As the variable "<span class="inline">_i</span>" is not going to be used for any further functions in the instance other than this, it can be local in scope. Here is one more example:</p>
+  <p>The above code creates a local variable called "<span class="inline">_i</span>" and sets it to 0, all in the same line. Note that in previous versions of&nbsp;<span data-keyref="GameMaker Name">GameMaker</span> you had to declare your local variables first and <i>then</i> assign them values, but in this version you can declare <i>and</i> assign them a value at the same time. The above code then uses this variable to initialise an <a href="../Arrays.htm">array</a>. As the variable "<span class="inline">_i</span>" is not going to be used for any further functions in the instance other than this, it can be local in scope. Here is one more example:</p>
   <p class="code">var _x, _y;<br>
     _x = x - 32 + irandom(64);<br>
     _y = y - 32 + irandom(64);<br>
     instance_create_layer(_x, _y, "Effects", obj_blood);</p>
   <p>Here we have used the local variables "<span class="inline">_x</span>" and "<span class="inline">_y</span>" to store some random coordinates that we then use to create an instance. In this example you can see that it is not strictly necessary that we use these variables but for the sake of readability and ease of use, we do. It is MUCH clearer and obvious what we are doing there than if we used this code:</p>
   <p class="code">instance_create_layer(x - 32 + irandom(64), y - 32 + irandom(64), "Effects", obj_guts);</p>
-  <p>One other thing about <span class="inline">var</span> declared local variables should be noted... Since they are unique to the event or function that runs them, they can be used in any other instances through code too! This means that we can use these variables to set and change things in other instances using the "<span class="inline">with()</span>" construct (see the section on <a href="../Variables_And_Variable_Scope.htm">variable scope</a> for more information). The actual code itself would look something like this:</p>
+  <p>You can also declare multiple variables in a single local variable statement and assign each of them a value at the same time:&nbsp;</p>
+  <p class="code">var a = 10, b = "a text", c = {index: 0, previous: -1};</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;You can also use the above multiple variable initialisation in the&nbsp;<span class="inline2">&lt;assignment&gt;</span> part of a&nbsp;<a href="../Language_Features/for.htm">for</a> loop.</p>
+  <p>One final thing about <span class="inline">var</span> declared local variables should be noted... Since they are unique to the event or function that runs them, they can be used in any other instances through code too! This means that we can use these variables to set and change things in other instances using the "<span class="inline">with()</span>" construct (see the section on <a href="../Variables_And_Variable_Scope.htm">variable scope</a> for more information). The actual code itself would look something like this:</p>
   <p class="code">var num = instance_number(obj_Enemy);<br>
     with (obj_Enemy)<br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;if num&gt;10 instance_destroy();<br>
     }</p>
   <p>The above code works because the <span class="inline">var</span> declared variable is local to the <i>event</i> (or function) it is contained in, not the instance, nor the game world, and so can be used in any function in any object as long as it is in the same code block.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1090,7 +1092,7 @@
         <div style="float:right">Next: <a href="Instance_Variables.htm">Instance Variables</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 local variables

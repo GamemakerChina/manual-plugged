@@ -1064,27 +1064,33 @@
   <p>The following are the options under the IDE section:&nbsp;</p>
   <ul class="colour">
     <li><strong>Temp directory</strong>: The location for saving all the temporary folders. By default on Windows this is:&nbsp;
-      <p class="code">\Users\&lt;Username&gt;\AppData\Local\Temp\GameMaker</p>
+      <p class="code">\Users\&lt;Username&gt;\AppData\Local\Temp\<span data-keyref="GameMaker_Paths_Directory_Name">GameMakerStudio2</span></p>
       And on macOS it's:&nbsp;
-      <p class="code">/var/folders/&lt;Path_Hash&gt;/GameMaker</p>
+      <p class="code">/var/folders/&lt;Path_Hash&gt;/<span data-keyref="GameMaker_Paths_Directory_Name">GameMakerStudio2</span></p>
       <p>&nbsp;</p>
     </li>
     <li><strong>IDE cache directory</strong>: The location for saving the IDE cache. By default on Windows this is:&nbsp;
-      <p class="code">\Users\&lt;Username&gt;\AppData\Roaming\GameMaker\Cache</p>
+      <p class="code">\Users\&lt;Username&gt;\AppData\Roaming\<span data-keyref="GameMaker_Paths_Directory_Name">GameMakerStudio2</span>\Cache</p>
       And on macOS it's:&nbsp;
-      <p class="code">/Users/&lt;Username&gt;/.config/GameMaker/Cache</p>
+      <p class="code">/Users/&lt;Username&gt;/.config/<span data-keyref="GameMaker_Paths_Directory_Name">GameMakerStudio2</span>/Cache</p>
       <p>&nbsp;</p>
     </li>
     <li><strong>Asset cache directory</strong>: The location for saving the asset cache for each project. By default on Windows this is:&nbsp;
-      <p class="code">\Users\&lt;Username&gt;\AppData\Roaming\GameMaker\Cache</p>
+      <p class="code">\Users\&lt;Username&gt;\AppData\Roaming\<span data-keyref="GameMaker_Paths_Directory_Name">GameMakerStudio2</span>\Cache</p>
       And on macOS it's:&nbsp;
-      <p class="code">/Users/&lt;Username&gt;/.config/GameMaker/Cache</p>
+      <p class="code">/Users/&lt;Username&gt;/.config/<span data-keyref="GameMaker_Paths_Directory_Name">GameMakerStudio2</span>/Cache</p>
       <p>&nbsp;</p>
     </li>
-    <li><strong>"My Projects" Location</strong>: The location where <span data-keyref="GameMaker Name">GameMaker</span> will initially create new projects. By default on Windows this is:&nbsp;
-      <p class="code">\Users\&lt;Username&gt;\Documents\GameMaker</p>
+    <li><strong>"My Projects" directory</strong>: The location where <span data-keyref="GameMaker Name">GameMaker</span> will initially create new projects. By default on Windows this is:&nbsp;
+      <p class="code">\Users\&lt;Username&gt;\<span data-keyref="Const_IDE_MyProjects_Directory_Name">GameMakerProjects</span></p>
       And on macOS it's:&nbsp;
-      <p class="code">/Users/&lt;Username&gt;/GameMaker</p>
+      <p class="code">/Users/&lt;Username&gt;/<span data-keyref="Const_IDE_MyProjects_Directory_Name">GameMakerProjects</span></p>
+      <p>&nbsp;</p>
+    </li>
+    <li><strong>Template Projects directory</strong>: The location where&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;stores the custom template projects that you create. By default on Windows this is:
+      <p class="code">\Users\&lt;Username&gt;\<span data-keyref="Const_IDE_MyProjects_Directory_Name">GameMakerProjects</span>\<span data-keyref="Const_IDE_TemplateProjects_Directory_Name">TemplateProjects</span></p>
+      And on macOS it's:&nbsp;
+      <p class="code">/Users/&lt;Username&gt;/<span data-keyref="Const_IDE_MyProjects_Directory_Name">GameMakerProjects</span>/<span data-keyref="Const_IDE_TemplateProjects_Directory_Name">TemplateProjects</span></p>
       <p>&nbsp;</p>
     </li>
     <li><strong>Automatically delete temp directory on close</strong>: Checking this will force <span data-keyref="GameMaker Name">GameMaker</span> to automatically delete the Temp folder that it creates per project for compiling, etc. This setting is on by default, and un-checking it will switch it off (meaning that you'll have to manually remove any temp files later).</li>
@@ -1099,19 +1105,17 @@
   <p>The following are the options under the External Editors section:&nbsp;</p>
   <ul class="colour">
     <li><strong>Sound files</strong>: The path to the external editor to use for <a href="../../../The_Asset_Editors/Sounds.htm">Sounds</a>. If empty (the default), the OS'es file associations are used.</li>
-    <li><strong>SWF files</strong>:&nbsp;The path to the external editor to use for <a href="../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm#h">Vector Sprites (SWF)</a>. If empty (the default), the OS'es file associations are used.</li>
-    <li><strong>Spine files</strong>: The path to the external editor to use for&nbsp;<a href="../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm#h1">Skeletal Animation Sprites (Spine)</a>. If empty (the default), the&nbsp;OS'es file associations are used.</li>
-    <li><strong>Bitmap files</strong>: The path to the external editor to use for bitmap <a href="../../../The_Asset_Editors/Sprites.htm">Sprites</a>. If empty (the default), the&nbsp;OS'es file associations are used.</li>
-    <li><strong>Automatic response to external bitmap editor warning</strong>: When y<span>ou use b<span>oth <a href="../../../The_Asset_Editors/Image_Editor.htm">The Image Editor</a></span></span><span>&nbsp;and an external editor for editing the same bitmap <a href="../../../Quick_Start_Guide/Creating_Sprites.htm">sprite</a>, the Image Editor will overwrite the changes.&nbsp;</span>This&nbsp;<span><span>opti<span><span>on lets&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;<span><span><span>sh<span>ow</span></span></span></span>&nbsp;a warning message</span></span></span></span><span>&nbsp;when y<span>ou</span>&nbsp;try to externally edit a bitmap sprite: <strong>Sh</strong><span><strong>ow Message</strong> sh<span>ows a warning (the default), <strong>OK</strong> sh<span>ows n<span>one.</span></span></span></span></span></li>
-    <li><strong>Automatic response to external spine re-import warning</strong>: <span>Any changes done to a sprite in the Spine external editor will need to be re-imported as a new&nbsp;sprite.&nbsp;<span><span data-keyref="GameMaker Name">GameMaker</span>&nbsp;will show a warning message f<span>or this</span></span>&nbsp;if&nbsp;<span><strong>Show Message</strong> is selected (the default),&nbsp;</span><span>or n<span><span>o message</span></span>&nbsp;<span>if y<span>ou select <strong>OK</strong>.</span></span></span></span></li>
+    <li><strong>SWF files</strong>:&nbsp;The path to the external editor to use for <a href="../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm#h">Vector Sprites (SWF)</a>. If empty (the default), <span data-keyref="GameMaker Name">GameMaker</span>&nbsp;warns you that no path is set and opens the&nbsp;<a href="Paths.htm">Path Preferences</a>. If set, clicking the <strong>Edit Image</strong> button in the Sprite Editor or the <strong>Edit Image</strong> button in the Object Editor will open the sprite in the given program.</li>
+    <li><strong>Spine files</strong>: The path to the external editor to use for&nbsp;<a href="../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm#h1">Skeletal Animation Sprites (Spine)</a>. If empty (the default), <span data-keyref="GameMaker Name">GameMaker</span>&nbsp;warns you that no path is set and opens the&nbsp;<a href="Paths.htm">Path Preferences</a>.&nbsp;If set, clicking the <strong>Edit Image</strong> button in the Sprite Editor or the <strong>Edit Image</strong> button in the Object Editor will open the sprite in the given program.</li>
+    <li><strong>Bitmap files</strong>: The path to the external editor to use for bitmap <a href="../../../The_Asset_Editors/Sprites.htm">Sprites</a>. If empty (the default), the&nbsp;sprite is opened in <a href="../../../The_Asset_Editors/Image_Editor.htm">The Image Editor</a>.&nbsp;If set, clicking the <strong>Edit Image</strong> button in the Sprite Editor or the <strong>Edit Image</strong> button in the Object Editor will open the sprite in the given program.</li>
+    <li><strong>Automatic response to external bitmap editor warning</strong>: When you use both <a href="../../../The_Asset_Editors/Image_Editor.htm">The Image Editor</a>&nbsp;and an external editor for editing the same bitmap <a href="../../../Quick_Start_Guide/Creating_Sprites.htm">sprite</a>, the Image Editor will overwrite the changes.&nbsp;This&nbsp;option lets&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;show&nbsp;a warning message&nbsp;when you&nbsp;try to externally edit a bitmap sprite: <strong>Show Message</strong> shows a warning (the default), <strong>OK</strong> shows none.</li>
+    <li><strong>Automatic response to external spine re-import warning</strong>: Any changes done to a sprite in the Spine external editor will need to be re-imported as a new&nbsp;sprite.&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;will show a warning message for this&nbsp;if&nbsp;<strong>Show Message</strong> is selected (the default),&nbsp;or no message&nbsp;if you select <strong>OK</strong>.</li>
     <li><strong>Default option for opening included files</strong>: This&nbsp;option sets the default behaviour when double-clicking&nbsp;<img class="icon" src="../../../assets/Images/Icons/Icon_LMB.png">&nbsp;a file in the&nbsp;<a href="../../../Settings/Included_Files.htm">Included Files</a>.
       <ul>
         <li><strong>Properties</strong>: This&nbsp;opens the included file in&nbsp;<a href="../../../IDE_Tools/The_Inspector.htm">The Inspector</a>.</li>
         <li><strong>External Editor</strong>: This&nbsp;opens the file in an external editor, using the file associations&nbsp;of the OS.</li>
       </ul>
     </li>
-    <li><strong>Path to external editor/viewer for SWF files</strong>: If you are working with SWF format sprites, you can set this to the path of your preferred viewer/editor and when you click the <em>Edit Image</em> button in the Sprite Editor then it will open the given program. The default value here is to have no path.</li>
-    <li><strong>Path to external editor/viewer for Spine files</strong>: If you are working with Spine format sprites, you can set this to the path of your preferred viewer/editor and when you click the <em>Edit Image</em> button in the Sprite Editor then it will open the given program. The default value here is to have no path.</li>
   </ul>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
@@ -1122,7 +1126,7 @@
         <div style="float:right">Next:&nbsp;<a href="Power_Saving.htm">Power Saving Preferences</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Asset Explorer

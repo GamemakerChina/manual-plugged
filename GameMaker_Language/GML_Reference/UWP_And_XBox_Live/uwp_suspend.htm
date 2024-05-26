@@ -80,7 +80,7 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>uwp_suspend<span class="misspell-word"> <span data-conref="../../../assets/snippets/Tag_obsolete.hts"><span class="warning">OBSOLETE</span></span></span></h1>
+  <h1>uwp_suspend <span data-conref="../../../assets/snippets/Tag_obsolete.hts"><span class="warning">OBSOLETE</span></span></h1>
   <p>This function indicates to the system that the app has finished saving data following detection of a suspension request. Calling this function is a requirement for Xbox One submission, and it should always be used in conjunction with the function <a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a>, as shown in the example below.</p>
   <p> </p>
   <h4>Syntax:</h4>
@@ -90,7 +90,7 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">if uwp_is_suspending()<br/>
+  <p class="code">if (uwp_is_suspending()) <br/>
     {<br/>
         scr_Save_Game_Data();<br/>
         uwp_suspend();<br/>
@@ -106,7 +106,7 @@
         <div style="float:right">Next: <a href="uwp_is_suspending.htm">uwp_is_suspending</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_suspend

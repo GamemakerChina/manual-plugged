@@ -61,7 +61,7 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Audio Loop Start"/>
   <meta name="search-keywords" content="set audio loop start"/>
   <meta name="template" content="../../../assets/masterpages/Manual_Action_Page.htt"/>
-</head>
+<meta name="brsnext" value="Drag_And_Drop/Drag_And_Drop_Reference/Audio/Get_Audio_Loop_Start.htm"/><meta name="brsprev" value="Drag_And_Drop/Drag_And_Drop_Reference/Audio/Get_Audio_Loop_State.htm"/></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -98,7 +98,7 @@
       </tr>
       <tr>
         <td>Sound</td>
-        <td>The <span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span> or sound instance</td>
+        <td>The <span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span> or sound instance</td>
       </tr>
       <tr>
         <td>Offset</td>
@@ -109,7 +109,7 @@
   <p> </p>
   <h4>Example:</h4>
   <div data-conref="../../../assets/snippets/Example_Audio_Loop_Setters.hts">
-  <p><img alt="Set Audio Loop Start Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Loop_Setters.png"/>The above action block code plays a sound looped upon first pressing the Space key (<span class="inline2">vk_space</span>) and turns off looping of the sound the second time the key is pressed. If the sound reaches the end of the track, another press of the Space key plays another instance of the <span class="inline2">snd_Loop</span> <span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span> looped.</p>
+  <p><img alt="Set Audio Loop Start Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Loop_Setters.png"/>The above action block code plays a sound looped upon first pressing the Space key (<span class="inline2">vk_space</span>) and turns off looping of the sound the second time the key is pressed. If the sound reaches the end of the track, another press of the Space key plays another instance of the <span class="inline2">snd_Loop</span> <span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span> looped.</p>
   <p>The first action block checks for a key press of the Space key. The next block checks if any instances of the sound asset <span class="inline2">snd_Loop</span> are playing. If not (indicated by the Not checkbox <em>checked</em>), the loop start and end position (Offset) are first set for the <span class="inline2">snd_Loop</span> asset. The loop start offset is set to 3 seconds, the end offset to 8 seconds. A new instance of the sound is then played looped (Loop checked) using the <a href="Play_Audio.htm">Play Audio</a> action and its ID stored in an <em>instance</em> variable <span class="inline2">ins_snd_loop</span> (Target) of the calling instance.</p>
   <p>When Space is pressed again, the <a href="If_Audio_Is_Playing.htm">If Audio Is Playing</a> block returns <span class="inline2">true</span> and the part under the <a href="../Common/Else.htm">Else</a> block is executed. <a href="Set_Audio_Loop_State.htm">Set Audio Loop State</a> turns off looping for the playing sound <span class="inline2">ins_snd_loop</span> so it will continue playing to the end when it reaches the loop end position.</p>
 
@@ -123,13 +123,13 @@
         <div style="float:right">Next: <a href="Get_Audio_Loop_Start.htm">Get Audio Loop Start</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Set Audio Pitch
+Action - Set Audio Loop Start
 -->
   <!-- TAGS
-action_audio_set_pitch
+action_audio_set_loop_start
 -->
 
 </div>

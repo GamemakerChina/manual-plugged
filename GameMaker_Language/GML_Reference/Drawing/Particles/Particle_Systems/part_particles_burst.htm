@@ -1015,7 +1015,7 @@
   <meta name="rh-index-keywords" content="part_particles_burst">
   <meta name="search-keywords" content="part_particles_burst">
   <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt">
-</head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/Particle_Types.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_particles_create_colour.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1035,10 +1035,10 @@
 
 
   <h1><span data-field="title" data-format="default">part_particles_burst</span></h1>
-  <p>This function creates a single burst&nbsp;of all the particles&nbsp;contained in the given&nbsp;<span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>. The particles are created in the given particle system instance&nbsp;<span class="inline2">ind</span>.</p>
+  <p>This function creates a single burst&nbsp;of all the particles&nbsp;contained in the given&nbsp;<span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>. The particles are created in the given particle system instance&nbsp;<span class="inline2">ind</span>.</p>
   <p>The function gives you a quick way to add a particle effect that you made in&nbsp;<a href="../../../../../The_Asset_Editors/Particle_Systems.htm">The Particle System Editor</a> to an existing particle system.</p>
   <p>This is as if you'd add the emitters&nbsp;inside that particle system asset to the given particle system and then call&nbsp;<span class="inline3_func"><a href="../Particle_Emitters/part_emitter_burst.htm">part_emitter_burst</a></span>&nbsp;on all&nbsp;of&nbsp;them.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;Particles won't be created for any disabled emitters in the&nbsp;<span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>&nbsp;(which is <strong>Enabled</strong> unchecked).</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;Particles won't be created for any disabled emitters in the&nbsp;<span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>&nbsp;(which is <strong>Enabled</strong> unchecked).</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">part_particles_burst</span>(ind, x, y, partsys);</p>
@@ -1056,22 +1056,22 @@
       </tr>
       <tr>
         <td>ind</td>
-        <td><span data-keyref="Type_ID_PartSys"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create.htm">Particle System Instance</a></span></td>
+        <td><span data-keyref="Type_ID_PartSys"><a target="_blank" href="part_system_create.htm">Particle System Instance</a></span></td>
         <td>The index&nbsp;of the particle system in which to create the particles</td>
       </tr>
       <tr>
         <td>x</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x position to burst the particles</td>
       </tr>
       <tr>
         <td>y</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y position to burst the particles</td>
       </tr>
       <tr>
         <td>partsys</td>
-        <td><span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span></td>
+        <td><span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span></td>
         <td>The particle system asset&nbsp;of which to burst particles</td>
       </tr>
     </tbody>
@@ -1091,7 +1091,7 @@
     &nbsp; &nbsp;&nbsp;<span data-field="title" data-format="default">part_particles_burst</span>(ps, _x, _y, ps_Fireworks);<br>
     }
   </p>
-  <p>The code above first creates a new particle system on a room layer named <span class="inline2">"Effects"</span> and stores the index in an instance variable <span class="inline2">ps</span>. The&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">part_particles_burst</span></span>&nbsp;function is then called 10 times in a&nbsp;<a href="../../../../GML_Overview/Language_Features/repeat.htm">repeat</a> loop to add particles from a&nbsp;<span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>&nbsp;<span class="inline2">ps_Fireworks</span>&nbsp;to the particle system <span class="inline2">ps</span>.</p>
+  <p>The code above first creates a new particle system on a room layer named <span class="inline2">"Effects"</span> and stores the index in an instance variable <span class="inline2">ps</span>. The&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">part_particles_burst</span></span>&nbsp;function is then called 10 times in a&nbsp;<a href="../../../../GML_Overview/Language_Features/repeat.htm">repeat</a> loop to add particles from a&nbsp;<span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>&nbsp;<span class="inline2">ps_Fireworks</span>&nbsp;to the particle system <span class="inline2">ps</span>.</p>
   <p>&nbsp;</p>
   <h4>Example 2:</h4>
   <p class="code_heading">Create Event</p>
@@ -1102,7 +1102,7 @@
     &nbsp;&nbsp; &nbsp;part_particles_burst(ps, random(room_width), random(room_height), ps_Fireworks);<br>
     }));
   </p>
-  <p>The code above also creates a new particle system&nbsp;on a room layer named <span class="inline2">"Effects"</span>. It then sets a <a href="../../../Variable_Functions/method.htm">method</a> as the layer begin script. The method gets the particle system ID <span class="inline2">ps</span> via the struct. Inside it, the function&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">part_particles_burst</span></span>&nbsp;is used to create particles&nbsp;of the <span class="inline2">ps_Fireworks</span>&nbsp;<span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>&nbsp;at random positions in the room. This way, particles are created continuously, since the layer begin scripts run every step. The layer begin script can be removed to end the creation&nbsp;of particles from the asset.</p>
+  <p>The code above also creates a new particle system&nbsp;on a room layer named <span class="inline2">"Effects"</span>. It then sets a <a href="../../../Variable_Functions/method.htm">method</a> as the layer begin script. The method gets the particle system ID <span class="inline2">ps</span> via the struct. Inside it, the function&nbsp;<span class="inline3_func"><span data-field="title" data-format="default">part_particles_burst</span></span>&nbsp;is used to create particles&nbsp;of the <span class="inline2">ps_Fireworks</span>&nbsp;<span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>&nbsp;at random positions in the room. This way, particles are created continuously, since the layer begin scripts run every step. The layer begin script can be removed to end the creation&nbsp;of particles from the asset.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1112,7 +1112,7 @@
         <div>Next:&nbsp;<a href="part_system_exists.htm">part_system_exists</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 part_particles_burst

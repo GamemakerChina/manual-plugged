@@ -1034,7 +1034,7 @@
   <meta name="rh-index-keywords" content="typeof">
   <meta name="search-keywords" content="typeof">
   <meta name="is_pure" content="true">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/bool.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/is_infinity.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/method.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/nameof.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1055,7 +1055,8 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">typeof</span></h1>
-  <p>This function returns the data type of any given variable as a string. The possible return values are listed in the table below:</p>
+  <p>This function returns the data type of any given variable as a string.</p>
+  <p>The possible return values are listed in the table below:</p>
   <table>
     <tbody>
       <tr>
@@ -1080,7 +1081,7 @@
       </tr>
       <tr>
         <td><span class="inline">"int32"</span></td>
-        <td>The variable holds a 32bit integer</td>
+        <td>The variable holds a 32bit integer. This type isn't supported on HTML5.</td>
       </tr>
       <tr>
         <td><span class="inline">"int64"</span></td>
@@ -1108,7 +1109,7 @@
       </tr>
       <tr>
         <td><span class="inline">"ref"</span></td>
-        <td>The variable holds an instance reference</td>
+        <td>The variable holds a <a href="../../GML_Overview/Data_Types.htm">handle</a> reference</td>
       </tr>
       <tr>
         <td><span class="inline">"unknown"</span></td>
@@ -1116,7 +1117,7 @@
       </tr>
     </tbody>
   </table>
-  <p>Please note that there are cases when this function may not return the correct value for a <strong>method</strong>. Consider the following two function definitions:</p>
+  <p>Please note that there are cases when this function may not return the correct value for a <strong>method</strong>. Consider the following two function definitions written in a <span data-keyref="Type_Asset_Script"><a target="_blank" href="../../../The_Asset_Editors/Scripts.htm">Script Asset</a></span>:</p>
   <p class="code">a = function()<br>
     {<br>
     &nbsp; &nbsp; // something<br>
@@ -1127,7 +1128,7 @@
     &nbsp; &nbsp; // Something<br>
     }
   </p>
-  <p>Technically, these are both considered methods as they are binding a function to an instance scope variable, however calling&nbsp;<span class="inline3_func"><a href="typeof.htm">typeof</a></span>&nbsp;on function <span class="inline3_func">b</span> will return "number" and <em>not </em>"method", while calling it on <span class="inline3_func">a</span> will return "method". This is due to the fact that methods created like the one for <span class="inline3_func">b</span> are assigned script indices (which are integer values), since this is the way that the compiler recognises script&nbsp;functions, even if the function was not defined in a script.</p>
+  <p>Technically, these are both considered methods as they are binding a function to a variable, however calling&nbsp;<span class="inline3_func"><a href="typeof.htm">typeof</a></span>&nbsp;on function <span class="inline3_func">b</span> will return "ref" and <em>not </em>"method", while calling it on <span class="inline3_func">a</span> will return "method". This is due to the fact that methods created like the one for <span class="inline3_func">b</span> are assigned script references (<a href="../../GML_Overview/Data_Types.htm">handles</a>), since this is the way that the compiler recognises script&nbsp;functions.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">typeof</span>(variable);</p>
@@ -1140,14 +1141,14 @@
       </tr>
       <tr>
         <td>variable</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+        <td><span data-keyref="Type_Any"><a target="_blank" href="../../GML_Overview/Data_Types.htm#variable">Any</a></span></td>
         <td>The variable to get the data type of.</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span> (see table above)</p>
+  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span> (see table above)</p>
   <p>&nbsp;</p>
   <h4><b>Example:</b></h4>
   <p class="code">var _str = <span data-field="title" data-format="default">typeof</span>(global.ExtensionInput);<br>
@@ -1162,7 +1163,7 @@
         <div style="float:right">Next:&nbsp;<a href="method.htm">method</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 typeof

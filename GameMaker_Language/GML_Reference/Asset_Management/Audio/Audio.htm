@@ -1067,7 +1067,7 @@
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Audio">
   <meta name="rh-index-keywords" content="">
   <meta name="search-keywords" content="Audio">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_exists.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Tilsets/tileset_get_uvs.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Properties.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Tilsets/tileset_get_info.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1103,10 +1103,14 @@
   <h3>Playing Sounds</h3>
   <p>The most straightforward way to play a sound is using&nbsp;<span class="inline2"><a href="audio_play_sound.htm">audio_play_sound</a></span>:&nbsp;</p>
   <p class="code">audio_play_sound(snd_Explode, 10, false);</p>
-  <p>At a minimum you have to provide the <span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span>, a priority for the new sound instance and whether the sound should loop.</p>
-  <p>Another way to play sounds is using&nbsp;<span class="inline2"><a href="audio_play_sound_ext.htm">audio_play_sound_ext</a></span>. This function is identical to <span class="inline2"><a href="audio_play_sound.htm">audio_play_sound</a></span>&nbsp;but allows you to pass various audio parameters in a struct. Using this function, you only need to provide a&nbsp;<span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span>&nbsp;through the "sound" key of the struct:&nbsp;</p>
+  <p>At a minimum you have to provide the <span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span>, a priority for the new sound instance and whether the sound should loop.</p>
+  <p>Another way to play sounds is using&nbsp;<span class="inline2"><a href="audio_play_sound_ext.htm">audio_play_sound_ext</a></span>. This function is identical to <span class="inline2"><a href="audio_play_sound.htm">audio_play_sound</a></span>&nbsp;but allows you to pass various audio parameters in a struct. Using this function, you only need to provide a&nbsp;<span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span>&nbsp;through the "sound" key of the struct:&nbsp;</p>
   <p class="code">audio_play_sound_ext({ sound: snd_Explode&nbsp;});</p>
   <p><span>Here the priority will default to 0 and the sound will not be looped. You can supply <a href="audio_play_sound_ext.htm">additional keys</a> in the struct to change the properties of the sound.</span></p>
+  <div data-conref="../../../../assets/snippets/Note_Triggers_Audio_Playback_Event.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;An <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback_Ended.htm">Audio Playback Ended</a>&nbsp;event is triggered for the sound when it stops playing.</p>
+
+</div>
   <h3>Sound Instances (Voices)</h3>
   <p>The functions&nbsp;<span class="inline2"><a href="audio_play_sound.htm">audio_play_sound</a></span>&nbsp;and&nbsp;<span class="inline2"><a href="audio_play_sound_ext.htm">audio_play_sound_ext</a></span>&nbsp;create a new&nbsp;<em>instance</em> of a sound (also called a "voice") and return its ID:&nbsp;</p>
   <p class="code">ins_sound = audio_play_sound(snd_Explode, 10, false);</p>
@@ -1114,18 +1118,19 @@
   <p>In case you pass a sound <strong>asset</strong> ID to the functions, the audio property at the <strong>asset</strong> level will be set to the given value.</p>
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;<span class="inline2"><a href="audio_play_sound_at.htm">audio_play_sound_at</a></span>&nbsp;and&nbsp;<span class="inline2"><a href="Audio_Emitters/audio_play_sound_on.htm">audio_play_sound_on</a></span>&nbsp;work in the same way and also return the ID of the sound instance they create.</p>
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span>&nbsp;The maximum number of sound instances/voices is&nbsp;<span data-keyref="Max_Audio_Channels_Default">128</span> by default. This can be changed using the function&nbsp;<span class="inline2"><a href="audio_channel_num.htm">audio_channel_num</a></span>.</p>
-  <h3>Audio Properties</h3>
+  <h3 id="h">Audio Properties</h3>
   <p>Every sound has basic properties that are applied on different "levels". Depending on the property, it either acts as a multiplier, or overrides the value set at a previous level.</p>
   <p>These audio properties are:&nbsp;</p>
   <ul class="Disc">
-    <li><a href="audio_sound_gain.htm"><strong>Gain</strong></a>: This is a multiplier for the volume. The default value for gain on the asset level is the value of the "Volume" slider in the <a href="../../../../The_Asset_Editors/Sounds.htm">Sound Editor</a>. The default value on all other levels is 1. Gain can also be added using&nbsp;<a href="Audio_Effects/Audio_Effects.htm">Audio Effects</a>.</li>
+    <li><a href="audio_sound_gain.htm"><strong>Gain</strong></a>: This is a multiplier for the volume. The default value for gain on the asset level is the value of the "Volume" slider in <a href="../../../../The_Asset_Editors/Sounds.htm">The Sound Editor</a>.&nbsp;The default value on all other levels is 1. Gain can also be added using&nbsp;<a href="Audio_Effects/Audio_Effects.htm">Audio Effects</a>.</li>
     <li><a href="audio_sound_pitch.htm"><strong>Pitch</strong></a>: This is a multiplier for the sound's pitch. The default value for pitch on all levels is set to 1.</li>
     <li><a href="audio_sound_set_track_position.htm"><strong>Offset/Track Position</strong></a>: This is the offset from the start of the audio track where it starts playing. If this value is set at the instance level, it overrides the value set at the asset level. By default this is 0 (i.e. no offset).</li>
     <li><a href="audio_sound_set_listener_mask.htm"><strong>Listener Mask</strong></a>: This is a bitmask value that determines the listeners that audio is heard on. The default value is 1 (or <span class="inline2">0x01</span>), which stands for the default listener.</li>
   </ul>
   <p>For an overview of all audio properties, levels and how their values are calculated, see <a href="Audio_Properties.htm">Audio Properties Overview</a>.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The optional parameters that you can pass to the <span class="inline2">audio_play_sound_*</span> functions set the instance-level value of the property.</p>
   <h3>Audio Looping</h3>
-  <p>A sound can be looped by setting it to loop. This can either be done when playing the sound using any of the <span class="inline2">audio_play_sound_</span> functions:&nbsp;</p>
+  <p>A sound can be looped by setting it to loop. This can either be done when playing the sound using any of the <span class="inline2">audio_play_sound_*</span> functions:&nbsp;</p>
   <p class="code">ins_sound = audio_play_sound(snd_Engine, 100, true);</p>
   <p>or afterwards, when the sound is already playing, using the function&nbsp;<span class="inline3_func"><a href="Audio_Loop_Points/audio_sound_loop.htm">audio_sound_loop</a></span>:&nbsp;</p>
   <p class="code">audio_sound_loop(ins_sound, true);</p>
@@ -1155,7 +1160,7 @@
   <ul class="colour">
     <li><a href="audio_system_is_available.htm">audio_system_is_available</a></li>
   </ul>
-  <p>or using the <b>Asynchronous System Event</b>, which will be triggered whenever the Web Audio status changes. In this event you will get the built in&nbsp;<span class="inline2"><a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span>&nbsp;<span>DS map</span> populated with the key "<span class="inline">event_type</span>" which in turn will hold the string "<span class="inline">audio_system_status</span>" if it is an audio event. When this key exists, there will also be a further "<span class="inline">status</span>" key which will be either "<span class="inline">available</span>" or "<span class="inline">unavailable</span>".</p>
+  <p>or using the <b>Asynchronous System Event</b>, which will be triggered whenever the Web Audio status changes. In this event you will get the built-in&nbsp;<span class="inline2"><a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span>&nbsp;DS map populated with the key "<span class="inline">event_type</span>" which in turn will hold the string "<span class="inline">audio_system_status</span>" if it is an audio event. When this key exists, there will also be a further "<span class="inline">status</span>" key which will be either "<span class="inline">available</span>" or "<span class="inline">unavailable</span>".</p>
   <p>For more information please see the section:&nbsp;</p>
   <ul class="colour">
     <li><a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">The Asynchronous System Event</a></li>
@@ -1247,7 +1252,7 @@
         <div style="float:right">Next:&nbsp;<a href="../Paths/Paths.htm">Paths</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Audio

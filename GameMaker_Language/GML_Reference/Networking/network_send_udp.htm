@@ -1042,7 +1042,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">network_send_udp</span></h1>
   <p>This function sends data over the network using UDP to a server.</p>
-  <p>The function takes the&nbsp;<span data-keyref="Type_ID_Network_Socket"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm">Network Socket ID</a></span>&nbsp;to connect through, the URL to connect to and the port to use. You must then supply the&nbsp;<span data-keyref="Type_ID_Buffer"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer ID</a></span> which contains the data to be sent (for more information on buffers see <a href="../Buffers/Buffers.htm">Reference - Buffers</a>) and finally the size (in bytes) of the data.</p>
+  <p>The function takes the&nbsp;<span data-keyref="Type_ID_Network_Socket"><a target="_blank" href="network_create_socket.htm">Network Socket ID</a></span>&nbsp;to connect through, the URL to connect to and the port to use. You must then supply the&nbsp;<span data-keyref="Type_ID_Buffer"><a target="_blank" href="../Buffers/buffer_create.htm">Buffer</a></span> which contains the data to be sent (for more information on buffers see <a href="../Buffers/Buffers.htm">Reference - Buffers</a>) and finally the size (in bytes) of the data.</p>
   <p>The function will return the number of bytes of data sent, or a number less than 0 if the send has failed. It is worth noting that the final size of the data being sent that is returned by this function will also include the <span data-keyref="GameMaker Name">GameMaker</span>&nbsp;header information, which is an additional 12 bytes.</p>
   <p>UDP is "connectionless" in that you don't actually do a connect, you just send a packet directly to an IP, and the server gets incoming data from an IP address and has to deal with it "as is".</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function will not work when used in a project running on the HTML5 target, and neither will HTML5 projects be able to receive UDP.</p>
@@ -1062,38 +1062,38 @@
       </tr>
       <tr>
         <td>socket</td>
-        <td><span data-keyref="Type_ID_Network_Socket"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm">Network Socket ID</a></span></td>
+        <td><span data-keyref="Type_ID_Network_Socket"><a target="_blank" href="network_create_socket.htm">Network Socket ID</a></span></td>
         <td>The id of the socket to use.</td>
       </tr>
       <tr>
         <td>url</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The URL or IP to connect to (a string, can be IPv4 or IPv6).</td>
       </tr>
       <tr>
         <td>port</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The port to connect to.</td>
       </tr>
       <tr>
         <td>bufferid</td>
-        <td><span data-keyref="Type_ID_Buffer"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer ID</a></span></td>
-        <td>The id of the buffer to get the data from.</td>
+        <td><span data-keyref="Type_ID_Buffer"><a target="_blank" href="../Buffers/buffer_create.htm">Buffer</a></span></td>
+        <td>The buffer to get the data from.</td>
       </tr>
       <tr>
         <td>size</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The size (in bytes) of the data.</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">network_send_udp(sock, "www.macsweeneygames.com", 6510, buff, buffer_tell(buff));</p>
-  <p>The above code will send a UDP packet to the server defined by the URL on the port 6510. The data is taken from the buffer indexed in the variable "buff".</p>
+  <p>The above code will send a UDP packet to the server defined by the URL on the port 6510. The data is taken from the buffer in the variable <span class="inline2">buff</span>.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1103,7 +1103,7 @@
         <div style="float:right">Next: <a href="network_send_udp_raw.htm">network_send_udp_raw</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 network_send_udp

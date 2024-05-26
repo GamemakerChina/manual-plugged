@@ -1055,7 +1055,7 @@
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Audio Emitters">
   <meta name="rh-index-keywords" content="">
   <meta name="search-keywords" content="Audio Emitters">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/audio_emitter_create.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_system_is_available.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/audio_emitter_create.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_destroy_stream.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1110,14 +1110,14 @@
   <p class="code">audio_emitter_position(emitter, x, y, 0);</p>
   <p>The velocity of an emitter is updated using&nbsp;<a href="audio_emitter_velocity.htm">audio_emitter_velocity</a>. The easiest way to set the velocity is by setting it to the <a href="../../Instances/Instance_Variables/hspeed.htm">hspeed</a> and <a href="../../Instances/Instance_Variables/vspeed.htm">vspeed</a> of an instance, like this:&nbsp;</p>
   <p class="code">audio_emitter_velocity(emitter, hspeed, vspeed, 0);</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The <i>velocity</i> of an audio emitter is expressed in <i>pixels per step</i>.<span><span></span></span></p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The <i>velocity</i> of an audio emitter is expressed in <i>pixels per step</i>.</p>
   <h3>Audio emitters created by&nbsp;<span data-keyref="GameMaker Name">GameMaker</span></h3>
-  <p>When working with <a href="../../Sequences/Sequences.htm">Sequences</a>,&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;adds creates audio emitter for every audio track (<span><span class="inline2">seqtracktype_audio</span>) in the sequence.&nbsp;</span>The ID of these emitters can be found in the&nbsp;<a href="../../Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm">Sequence Instance's</a>&nbsp;<span class="inline2">activeTracks[i].emitterIndex</span>&nbsp;property.</p>
+  <p>When working with <a href="../../Sequences/Sequences.htm">Sequences</a>,&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;adds creates audio emitter for every audio track (<span class="inline2">seqtracktype_audio</span>) in the sequence.&nbsp;The ID of these emitters can be found in the&nbsp;<a href="../../Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm">Sequence Instance's</a>&nbsp;<span class="inline2">activeTracks[i].emitterIndex</span>&nbsp;property.</p>
   <p><span data-keyref="GameMaker Name">GameMaker</span>&nbsp;automatically updates the position of such an emitter. It does not update the velocity of an audio track emitter but this is something you can do yourself by calling&nbsp;<a href="audio_emitter_velocity.htm">audio_emitter_velocity</a>&nbsp;in one of the <a href="../../Sequences/Sequence_Events_Moments_Broadcast.htm">Sequence Step Events</a>.</p>
   <h3>Playing sounds on an emitter</h3>
   <p>Sounds can be played <strong>on</strong> an emitter using&nbsp;<a href="audio_play_sound_on.htm">audio_play_sound_on</a>:&nbsp;</p>
   <p class="code">sound_instance = audio_play_sound_on(emitter,&nbsp;snd_Explosion, false, 10);<br>
-    <span></span>
+    
   </p>
   <h3>Keeping track of playing sound instances</h3>
   <p>Every time you call one of <a href="../audio_play_sound.htm">audio_play_sound</a>,&nbsp;<a href="../audio_play_sound_at.htm">audio_play_sound_at</a>&nbsp;or&nbsp;<a href="audio_play_sound_on.htm">audio_play_sound_on</a>&nbsp;you create a new sound <strong>instance</strong>.</p>
@@ -1171,7 +1171,7 @@
         <div style="float:right">Next:&nbsp;<a href="../Audio_Listeners/Audio_Listeners.htm">Audio Listeners</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Audio Emitters

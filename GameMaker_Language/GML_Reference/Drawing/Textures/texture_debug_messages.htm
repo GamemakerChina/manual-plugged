@@ -1029,21 +1029,24 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>texture_debug_messages</h1>
-  <p>This function can be used to enable or disable texture debug messages. When enabled (set to <span class="inline">true</span>), additional information about texture page use will be sent to the output window. Set to <span class="inline">false</span> to disable this output again.</p>
+  <h1><span data-field="title" data-format="default">texture_debug_messages</span></h1>
+  <p>This function enables or disables texture debug messages.</p>
+  <p>When enabled (set to <span class="inline2">true</span>), additional information about texture page use will be sent to the output window. Set to <span class="inline2">false</span> to disable this output again.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">texture_debug_messages(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">texture_debug_messages</span>(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>enable</td><td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td>enable</td>
+        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span></td>
         <td>Enable or disable the texture debug messages</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1051,12 +1054,11 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if global.debug<br>
+  <p class="code">if (global.debug) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;texture_debug_messages(true);<br>
     }</p>
-  <p>The above code will check the value of a global variable and if it is set to <span class="inline">true</span> then texture debug messages are enabled.</p>
-  <p>&nbsp;</p>
+  <p>The above code will check the value of a global variable and if it is set to <span class="inline2">true</span> then texture debug messages are enabled.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1066,7 +1068,7 @@
         <div style="float:right">Next:&nbsp;<a href="texture_is_ready.htm">texture_is_ready</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 texture_debug_messages

@@ -1014,7 +1014,7 @@
   <meta name="topic-comment" content="This page outlines the function game_save_buffer">
   <meta name="rh-index-keywords" content="game_save_buffer">
   <meta name="search-keywords" content="game_save_buffer">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/General_Game_Control/game_get_speed.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/General_Game_Control/game_save.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/General_Game_Control/game_set_speed.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/General_Game_Control/game_save.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1034,23 +1034,25 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_save_buffer</h1>
-  <p>This is a variant of the <span class="inline"><a href="game_save.htm">game_save()</a></span> function, so please read <a href="game_save.htm">its&nbsp;page</a> first as it contains important information related to its use and to this function's as well.</p>
-  <p>With this function you can save the current state of the game to a previously created "grow" buffer (see <a href="../Buffers/Buffers.htm">Buffers</a>) which can then be loaded again at any time using <a href="game_load_buffer.htm"><span class="inline">game_load_buffer()</span></a> function. This function is designed for use in a single room at a time (ie: it's not advised to do a buffer save in one room, then try and load the buffer from another one) and should ideally be used only for checkpoints or level restarts.</p>
-  <p class="note"><b>NOTE</b>: This function is <i>very</i> limited and it is designed for the beginner to get a checkpoint system up and running quickly, but more advanced users may prefer to code their own system using the <a href="../File_Handling/File_Handling.htm">File</a>&nbsp;functions, due to the fact that the game will <i>not</i> save any of the dynamic resources like data structures, surfaces, added sprites etc.</p>
+  <h1><span data-field="title" data-format="default">game_save_buffer</span></h1>
+  <p>This is a variant of the&nbsp;<span class="inline3_func"><a href="game_save.htm">game_save</a></span> function, so please read <a href="game_save.htm">its&nbsp;page</a> first as it contains important information related to its use and to this function's as well.</p>
+  <p>With this function you can save the current state of the game to a previously created "grow" buffer (see <a href="../Buffers/Buffers.htm">Buffers</a>) which can then be loaded again at any time using the&nbsp;<span class="inline3_func"><a href="game_load_buffer.htm">game_load_buffer</a></span> function. This function is designed for use in a single room at a time (i.e.: it's not advised to do a buffer save in one room, then try and load the buffer from another one) and should ideally be used only for checkpoints or level restarts.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;This function is <i>very</i> limited and it is designed for the beginner to get a checkpoint system up and running quickly, but more advanced users may prefer to code their own system using the <a href="../File_Handling/File_Handling.htm">File</a>&nbsp;functions, due to the fact that the game will <i>not</i> save any of the dynamic resources like data structures, surfaces, added sprites etc.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">game_save_buffer(buffer);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer ID</a></span></td>
-        <td>The buffer id to save to.</td>
-     </tr>
+        <td>buffer</td>
+        <td><span data-keyref="Type_ID_Buffer"><a target="_blank" href="../Buffers/buffer_create.htm">Buffer</a></span></td>
+        <td>The buffer to save to.</td>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1058,13 +1060,12 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(ord("S"))<br>
+  <p class="code">if (keyboard_check_pressed(ord("S"))) <br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;global.Checkpoint = true;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;game_save_buffer(save_buff);<br>
     }</p>
-  <p>The above code will set a global variable to <span class="inline">true</span> and then save the current game state to the buffer indexed in the variable "save_buff" when the key "S" is pressed.</p>
-  <p>&nbsp;</p>
+  <p>The above code will set a global variable to <span class="inline">true</span> and then save the current game state to the buffer st<span data-offset-key="5eku6-0-0"><span data-text="true">ored in</span></span> the variable "save_buff" when the key "S" is pressed.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1074,7 +1075,7 @@
         <div style="float:right">Next:&nbsp;<a href="game_get_speed.htm">game_get_speed</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 game_save_buffer

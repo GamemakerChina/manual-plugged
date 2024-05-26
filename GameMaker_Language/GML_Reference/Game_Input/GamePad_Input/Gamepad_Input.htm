@@ -1092,10 +1092,11 @@
   <p>It is worth noting that when using DirectInput gamepads on Windows, or generic gamepads on other platforms, the constants given below <strong>may not match exactly the buttons that you expect when they are pressed</strong>, due to the fragmented and non-standardised way that the API is implemented by controller manufacturers. Because of this, it is recommend that you have some kind of gamepad setup screen in your games where people can redefine the gamepad buttons based on input from any connected device to mitigate any issues (there are gamepad "mapping" functions that can help with this on Windows Desktop, Ubuntu, macOS, and Android targets, while on all others you would need to do this yourself using code).</p>
   <h2>Input Constants</h2>
   <p>When working with the gamepad functions, input can come from <strong>axes</strong>, <strong>buttons</strong> or&nbsp;<strong>hats</strong>,&nbsp;which&nbsp;<span data-keyref="GameMaker Name">GameMaker</span> will assign to the following built-in constants (note that "hats" are generally only detected on non-standard controllers):</p>
+  <div data-conref="../../../../assets/snippets/Gamepad_button_constants.hts">
   <table>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Button"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm">Gamepad Button Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Button"><a target="_blank" href="Gamepad_Input.htm">Gamepad Button Constant</a></span></th>
       </tr>
       <tr>
         <th>Constant</th>
@@ -1103,19 +1104,19 @@
       </tr>
       <tr>
         <td><span class="inline">gp_face1</span></td>
-        <td>Top button 1 (this maps to the <i>"A"</i> on an Xbox 360 controller and the <i>cross</i> on a PS controller)</td>
+        <td>Top button 1 (this maps to the <i>"A"</i> on an Xbox controller and the <i>cross</i> on a PS controller)</td>
       </tr>
       <tr>
         <td><span class="inline">gp_face2</span></td>
-        <td>Top button 2 (this maps to the <i>"B"</i> on an Xbox 360 controller and the <i>circle</i> on a PS controller)</td>
+        <td>Top button 2 (this maps to the <i>"B"</i> on an Xbox controller and the <i>circle</i> on a PS controller)</td>
       </tr>
       <tr>
         <td><span class="inline">gp_face3</span></td>
-        <td>Top button 3 (this maps to the <i>"X"</i> on an Xbox 360 controller and the <i>square</i> on a PS controller)</td>
+        <td>Top button 3 (this maps to the <i>"X"</i> on an Xbox controller and the <i>square</i> on a PS controller)</td>
       </tr>
       <tr>
         <td><span class="inline">gp_face4</span></td>
-        <td>Top button 4 (this maps to the <i>"Y"</i> on an Xbox 360 controller and the <i>triangle</i> on a PS controller)</td>
+        <td>Top button 4 (this maps to the <i>"Y"</i> on an Xbox controller and the <i>triangle</i> on a PS controller)</td>
       </tr>
       <tr>
         <td><span class="inline">gp_shoulderl</span></td>
@@ -1135,11 +1136,11 @@
       </tr>
       <tr>
         <td><span class="inline">gp_select</span></td>
-        <td>The select button (on a DS4 controller, this triggers when you press the touchpad down)</td>
+        <td>The select button (on a PS controller, this triggers when you press the touchpad down)</td>
       </tr>
       <tr>
         <td><span class="inline">gp_start</span></td>
-        <td>The start button (this is the "options" button on a PS4 controller)</td>
+        <td>The start button (this is the "options" button on a PS controller)</td>
       </tr>
       <tr>
         <td><span class="inline">gp_stickl</span></td>
@@ -1165,8 +1166,58 @@
         <td><span class="inline">gp_padr</span></td>
         <td>D-pad right</td>
       </tr>
+      <tr>
+        <td><span class="inline">gp_home</span></td>
+        <td>The "home" button on Switch controllers, and the PS/XBOX logo buttons on some controllers</td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_touchpadbutton</span></td>
+        <td>The touchpad button on a PS controller</td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_paddler</span></td>
+        <td><span>Upper or primary paddle, under your right hand (e.g. Xbox Elite paddle P1)</span></td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_paddlel</span></td>
+        <td><span>Upper or primary paddle, under your left hand (e.g. Xbox Elite paddle P3)</span></td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_paddlerb</span></td>
+        <td><span>Lower or secondary paddle, under your right hand (e.g. Xbox Elite paddle P2)</span></td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_paddlelb</span></td>
+        <td><span>Lower or secondary paddle, under your left hand (e.g. Xbox Elite paddle P4)</span></td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_extra1</span></td>
+        <td>An extra button that may be mapped to anything</td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_extra2</span></td>
+        <td>An extra button that may be mapped to anything</td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_extra3</span></td>
+        <td>An extra button that may be mapped to anything</td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_extra4</span></td>
+        <td>An extra button that may be mapped to anything</td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_extra5</span></td>
+        <td>An extra button that may be mapped to anything</td>
+      </tr>
+      <tr>
+        <td><span class="inline">gp_extra6</span></td>
+        <td>An extra button that may be mapped to anything</td>
+      </tr>
     </tbody>
   </table>
+
+</div>
   <table>
     <colgroup>
       <col>
@@ -1174,7 +1225,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Axis"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm">Gamepad Axis Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Axis"><a target="_blank" href="Gamepad_Input.htm">Gamepad Axis Constant</a></span></th>
       </tr>
       <tr>
         <th>Constant</th>
@@ -1318,7 +1369,7 @@
         <div style="float:right">Next: <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Virtual Keys and Virtual Keyboards</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Gamepad Input Functions

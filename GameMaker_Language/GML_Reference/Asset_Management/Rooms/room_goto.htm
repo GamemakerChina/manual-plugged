@@ -987,7 +987,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.3.14.0_11";
+    gTopicId = "8.2.2.3.14.0_13";
   
 //]]></script>
 
@@ -1009,7 +1009,7 @@
   <meta name="topic-comment" content="Page outlining the function room_goto">
   <meta name="rh-index-keywords" content="room_goto">
   <meta name="search-keywords" content="room_goto">
-<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto_next.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_get_name.htm"></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto_next.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_get_info.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1032,7 +1032,10 @@
   <h1>room_goto</h1>
   <p>This function permits you to go to any room in your game project, whether created using code or in the Asset Browser. You supply the room index (stored in the variable for the room name, or as a variable returned from the function <a href="room_add.htm"><span class="inline">room_add()</span></a>). Note that the room will not change until the end of the event where the function was called, so any code after this has been called will still run if in the same event.&nbsp;This function will also trigger the <b>Room End</b> event.</p>
   <div data-conref="../../../../assets/snippets/changing_room_stops_instance_creation.hts">
-  <p class="note"><span class="note">NOTE</span>&nbsp;You will not be able to create new instances in the same event after this function has been called.</p>
+  <p class="note"><span class="note">NOTE</span>&nbsp;You will not be able to <a href="../Instances/instance_create_layer.htm">create new instances</a> of objects in the same event after this function is called. There is one exception: if the object you're creating an instance of is already <a href="../../../../The_Asset_Editors/Objects.htm">marked persistent</a>, or its <span class="inline2"><a href="../Instances/Instance_Variables/persistent.htm">persistent</a></span> variable is set to <span class="inline2">true</span> in the <a href="../Instances/instance_create_layer.htm">variable struct</a> passed into the <span class="inline2">instance_create_*()</span> function, it will be created.<br>
+    <br>
+    In the latter case (making the new instance persistent through the variable struct), the <a href="../../../../The_Asset_Editors/Object_Properties/Object_Variables.htm">Variable Definitions</a> for that instance will not be executed.
+  </p>
 
 </div>
   <p class="note"><span class="note">NOTE</span> Room IDs are not based on their order in the Asset Browser or the Room Manager, and so you should avoid supplying a number value directly. Instead, use the room&nbsp;<a class="tooltip" title="A constant is a term used to describe a named value that does not change throughout the execution of the program. GameMaker Studio 2 has a number of built-in constants - for example os_windows - but you can also create your own constant values for use in your projects (called Macros) and extensions.">constant</a>&nbsp;for the asset you want to reference (which is simply its name) or retrieve it through a function.</p>
@@ -1041,13 +1044,15 @@
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Room"><a target="_blank" href="../../../../../The_Asset_Editors/Rooms.htm">Room Asset</a></span></td>
+        <td>index</td>
+        <td><span data-keyref="Type_Asset_Room"><a target="_blank" href="../../../../The_Asset_Editors/Rooms.htm">Room Asset</a></span></td>
         <td>The index of the room to go to.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1072,7 +1077,7 @@
         <div style="float:right">Next:&nbsp;<a href="room_goto_next.htm">room_goto_next</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 room_goto

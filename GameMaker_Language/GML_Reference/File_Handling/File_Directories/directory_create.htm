@@ -1032,23 +1032,28 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>directory_create</h1>
-  <p>This function will creates a directory with the given name in the save area.</p>
-  <p class="note"><strong>NOTE</strong>: This function will not work on HTML5 as you cannot create or remove directories in the browser local storage.</p>
-  <p class="note"><b></b><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">File System</a>&nbsp;for more information.</p>
+  <h1><span data-field="title" data-format="default">directory_create</span></h1>
+  <p>This function creates a directory with the given name in the save area.</p>
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;</b>This function will not work on HTML5 as you cannot create or remove directories in the browser local storage.<b></b></p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_GM_FileSystem_Sandboxed.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>This may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">The File System</a> for more information.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">directory_create(dname)</p>
+  <p class="code"><span data-field="title" data-format="default">directory_create</span>(dname)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>dname</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>dname</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The name of the directory to create.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1056,12 +1061,11 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">if !directory_exists("Games")<br>
+  <p class="code">if (!directory_exists("Games")) <br>
     {<br>
     &nbsp; &nbsp; directory_create("Games");<br>
     }</p>
   <p>This will check to see if the specified directory exists in the local data folder and, if it does not, it creates it for you.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1071,7 +1075,7 @@
         <div style="float:right">Next:&nbsp;<a href="directory_destroy.htm">directory_destroy</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 directory_create

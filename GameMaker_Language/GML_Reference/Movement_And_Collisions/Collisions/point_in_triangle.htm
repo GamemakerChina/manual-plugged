@@ -1047,52 +1047,52 @@
         <th>Description</th>
      </tr>
       <tr>
-        <td>px</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>px</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x coordinate of the point to check.</td>
      </tr>
       <tr>
-        <td>py</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>py</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y coordinate of the point to check.</td>
      </tr>
       <tr>
-        <td>x1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>x1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x coordinate of the first corner of the triangle to check.</td>
      </tr>
       <tr>
-        <td>y1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>y1</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y coordinate of the first corner of the triangle to check.</td>
      </tr>
       <tr>
-        <td>x2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>x2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x coordinate of the second corner of the triangle to check.</td>
      </tr>
       <tr>
-        <td>y2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>y2</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y coordinate of the second corner of the triangle to check.</td>
      </tr>
       <tr>
-        <td>x3</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>x3</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x coordinate of the third corner of the triangle to check.</td>
      </tr>
       <tr>
-        <td>y3</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>y3</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y coordinate of the third corner of the triangle to check.</td>
      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var inst = instance_nearest(x, y, obj_Player);<br>
-    if instance_exists(inst)<br>
+    if (instance_exists(inst)) <br>
     {<br>
     &nbsp; &nbsp; var x1 = x + lengthdir_x(100, image_angle - 45);<br>
     &nbsp; &nbsp; var y1 = y + lengthdir_y(100, image_angle - 45);<br>
     &nbsp; &nbsp; var x2 = x + lengthdir_x(100, image_angle + 45);<br>
     &nbsp; &nbsp; var y2 = y + lengthdir_y(100, image_angle + 45);<br>
-    &nbsp; &nbsp; if point_in_triangle(inst.x, inst.y, x, y, x1, y1, x2, y2)<br>
+    &nbsp; &nbsp; if (point_in_triangle(inst.x, inst.y, x, y, x1, y1, x2, y2)) <br>
     &nbsp; &nbsp; {<br>
     &nbsp; &nbsp; &nbsp; &nbsp; can_see = true;<br>
     &nbsp; &nbsp; }<br>
@@ -1108,7 +1108,7 @@
         <div style="float:right">Next: <a href="point_in_circle.htm">point_in_circle</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 point_in_triangle

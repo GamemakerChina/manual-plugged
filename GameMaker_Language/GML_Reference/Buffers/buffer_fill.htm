@@ -1035,39 +1035,44 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_fill</h1>
-  <p>This function can be used to fill a previously created buffer with a given data type and value. The data you fill the buffer with must be in agreement with the "type" argument of this function, meaning that you can't try to fill with a
-    string and use the unsigned 16bit integer type, for example. The type constants are the same as those used by the <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a> and <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> functions. The "size"
-    is the size of the buffer (in bytes) that you wish to fill, while the offset is the offset value (also in bytes) from the start of the buffer to start the fill from.</p>
+  <h1><span data-field="title" data-format="default">buffer_fill</span></h1>
+  <p>This function fills a previously created buffer with a given data type and value.</p>
+  <p>The data you fill the buffer with must be in agreement with the "type" argument of this function, meaning that you can't try to fill with a string and use the unsigned 16bit integer type, for example. The type constants are the same as those used by the&nbsp;<span class="inline3_func"><a href="buffer_read.htm">buffer_read</a></span> and&nbsp;<span class="inline3_func"><a href="buffer_write.htm">buffer_write</a></span> functions. The "size" is the size of the buffer (in bytes) that you wish to fill, while the offset is the offset value (also in bytes) from the start of the buffer to start the fill from.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_fill(buffer, offset, type, value, size);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_fill</span>(buffer, offset, type, value, size);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer ID</a></span></td>
-        <td>The index of the buffer to fill.</td>
-     </tr>
+        <td>buffer</td>
+        <td><span data-keyref="Type_ID_Buffer"><a target="_blank" href="buffer_create.htm">Buffer</a></span></td>
+        <td>The reference to the buffer to fill.</td>
+      </tr>
       <tr>
-        <td>offset</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>offset</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The data offset value (in bytes).</td>
-     </tr>
+      </tr>
       <tr>
-        <td>type</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>type</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</td>
-     </tr>
+      </tr>
       <tr>
-        <td>value</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>value</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The data to write.</td>
-     </tr>
+      </tr>
       <tr>
-        <td>size</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>size</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The size of the buffer (in bytes) that you wish to fill.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1075,9 +1080,9 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">map_buffer = buffer_create(16384, buffer_fixed, 0);<br> buffer_fill(map_buffer, 0, buffer_u16, 0, 16384);</p>
-  <p>The above code finds the start of the buffer with the id stored in the variable "buff" them writes a series of signed 16bit integer values to it.</p>
-  <p>&nbsp;</p>
+  <p class="code">map_buffer = buffer_create(16384, buffer_fixed, 0);<br>
+    buffer_fill(map_buffer, 0, buffer_u16, 0, 16384);</p>
+  <p>The above code finds the start of the buffer stored in the variable <span class="inline2">buff</span> then writes a series of signed 16bit integer values to it.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1087,7 +1092,7 @@
         <div style="float:right">Next:&nbsp;<a href="buffer_seek.htm">buffer_seek</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_fill

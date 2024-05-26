@@ -1014,7 +1014,7 @@
   <meta name="rh-index-keywords" content="variable_clone">
   <meta name="search-keywords" content="variable_clone">
   <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt">
-</head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/is_string.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_get_hash.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1036,7 +1036,10 @@
   <h1><span data-field="title" data-format="default">variable_clone</span></h1>
   <p>This function clones the value you pass it and returns the new clone.</p>
   <p>It clones nested structs and arrays up to a given depth (<span data-keyref="Const_Data_Clone_Depth">128</span> by default), which you can override by providing the&nbsp;optional <span class="inline2">depth</span> parameter.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;When cloning a struct created using a Constructor, the new struct will also be an instance of the original Constructor.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;When cloning a struct that contains a function whose <span class="inline2">self</span> exists within the struct being cloned, a copy of the function will be created and bound to the new struct, mirroring the relationships of the original.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The built-in&nbsp;<a href="../Data_Structures/Data_Structures.htm">Data Structures</a>&nbsp;and&nbsp;<a href="../Asset_Management/Instances/Instances.htm">Instances</a>&nbsp;are <em>not</em> cloned; for this type of variable the actual value (data structure ID&nbsp;or instance ID, respectively) is written.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;Built-in structs, such as the structs related to sequences and animation curves, cannot be cloned using this function.</p>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">variable_clone</span>(value[, depth]);</p>
@@ -1054,19 +1057,19 @@
       </tr>
       <tr>
         <td>value</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+        <td><span data-keyref="Type_Any"><a target="_blank" href="../../GML_Overview/Data_Types.htm#variable">Any</a></span></td>
         <td>The value to clone</td>
       </tr>
       <tr>
         <td>depth</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;The maximum depth level to clone the variable, in case this is e.g. a nested struct. The default is <span data-keyref="Const_Data_Clone_Depth">128</span>, the maximum possible value.</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></p>
+  <p class="code"><span data-keyref="Type_Any"><a target="_blank" href="../../GML_Overview/Data_Types.htm#variable">Any</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">var _the_original = {a: "some text", b: [1, 2, 3, 4, 5], c: 6};<br>
@@ -1081,7 +1084,7 @@
         <div>Next:&nbsp;<a href="is_string.htm">is_string</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variable_clone
@@ -1089,5 +1092,6 @@ variable_clone
   <!-- TAGS
 variable_clone
 -->
+
 
 </body></html>

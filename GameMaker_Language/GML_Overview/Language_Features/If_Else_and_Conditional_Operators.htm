@@ -1054,7 +1054,7 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>if / else and Conditional Operators</h1>
+  <h1><span data-field="title" data-format="default">if / else and Conditional Operators</span></h1>
   <p>A fundamental feature of most programming languages is the ability to ask a simple question that gives a boolean <span class="inline">true</span> or <span class="inline">false</span> answer, and in GML this is achieved using the <span class="inline">if</span> keyword. A simple <span class="inline">if</span> condition takes an <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a> and will perform one or more <a class="tooltip" title="In programming, a statement is a single line of code written legally in a programming language that expresses an action to be carried out. A statement might have internal components of its own, including expressions, operators and functions. An example of a statement is A = B + 5. A GameMaker Studio 2 program is nothing but a sequence of one or more statements that together perform a task (like move the player). ">statement</a><span class="glossextra">s</span> if the expression resolves as <span class="inline">true</span>, with the following basic form:</p>
   <p class="code">if (&lt;expression&gt;)<br>
     {<br>
@@ -1062,8 +1062,7 @@
     &nbsp; &nbsp; &lt;statement&gt;;<br>
     &nbsp; &nbsp; ...<br>
     }</p>
-  <p><br>
-    Here you are saying that if an expression resolves as <span class="inline">true</span> then do something. Note that the "then" part of the condition is <em>implicit</em>, but there is a <span class="inline">then</span> keyword that can be used (although it's almost always omitted), so you can also create conditionals like this:</p>
+  <p>Here you are saying that if an expression resolves to&nbsp;<span class="inline">true</span> then do something. Note that the "then" part of the condition is <em>implicit</em>, but there is a <span class="inline">then</span> keyword that can be used (although it's almost always omitted), so you can also create conditionals like this:</p>
   <p class="code">if (&lt;expression&gt;) then<br>
     {<br>
     &nbsp; &nbsp; &lt;statement&gt;;<br>
@@ -1079,9 +1078,10 @@
     {<br>
     &nbsp; &nbsp; &lt;statement&gt;;<br>
     }</p>
-  <p>In this case the expression will be evaluated, and if it evaluates as <span class="inline">false</span>, the statement after <span class="inline">else</span> is executed, otherwise the initial statement is executed (it's <span class="inline">true</span>).</p>
+  <p>In this case the expression will be evaluated, and if it evaluates to&nbsp;<span class="inline">false</span>, the statement after <span class="inline">else</span> is executed, otherwise the initial statement is executed (it's <span class="inline">true</span>).</p>
   <p class="note"><span class="note">NOTE</span> In the GameMaker language any&nbsp;value that is less than or equal to 0 will evaluate as <span class="inline">false</span>, while any value that is greater than 0 will evaluate as <span class="inline">true</span>.</p>
-  <p>It is a good habit to always put brackets around the expressions and curly brackets {} around the statements in the <span class="inline">if</span> (otherwise only the first statement will be executed), and take a new line in the block for each statement, for example:</p>
+  <h2>Grouping Expressions &amp; Statements</h2>
+  <p>It is a good habit to always put parentheses <span class="inline2">()</span> around the expressions and curly brackets <span class="inline2">{}</span> around the statements in the <span class="inline">if</span> (otherwise only the first statement will be executed), and take a new line in the block for each statement, for example:</p>
   <p class="code">// This will work<br>
     if &lt;expression&gt; &lt;statement&gt;;<br>
     <br>
@@ -1119,29 +1119,33 @@
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;x = 200;<br>
     }</p>
+  <h2>Compound Checks</h2>
   <p>Note that you can also do <i>compound</i> checks in an <span class="inline">if</span>, ie: check various values or expressions in the same statement. These checks can use the various <a href="../Expressions_And_Operators.htm">Combining Operators</a> (<span class="inline">&amp;&amp;</span> and, <span class="inline">||</span> or, and <span class="inline">^^</span> xor). When you do this, <span data-keyref="GameMaker Name">GameMaker</span> will evaluate each of them one at a time, and depending on how they evaluate, then the rest may be skipped. For example:</p>
   <p class="code">if (keyboard_check_pressed(vk_enter)) &amp;&amp; (instance_exists(obj_Player))<br>
     {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;go = false;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;alarm[0] = game_get_speed(gamespeed_fps);<br>
     }</p>
-  <p>Here we are checking using the <span class="inline">&amp;&amp;</span> "and" operator, so it's checking if <em>both </em>of the conditions in the <span class="inline">if</span> evaluate to <span class="inline">true</span>, and if the first one is <span class="inline">false</span> then the second one won't even be checked. This is called "short circuiting" the code, so when combining expressions to check, you should ensure that the "cheapest" one for performance is always the first to avoid evaluating the more expensive ones if the first evaluates to <span class="inline">false</span>. In a similar vein, if a condition will can be evaluated as&nbsp;<span class="inline">true</span> or <span class="inline">false</span> at compile time, then the entire condition will be removed from the code, for example, say you have a <a href="../Variables/Constants.htm">macro</a> <span class="inline">DEBUG_ON </span>for debugging and it can be either <span class="inline">true</span> or <span class="inline">false</span> - when it is set to <span class="inline">false</span> then the following code block will be stripped from the game when it is compiled:</p>
-  <p class="code">if DEBUG_ON == true<br>
+  <p>Here we are checking using the <span class="inline">&amp;&amp;</span> "and" operator, so it's checking if <em>both </em>of the conditions in the <span class="inline">if</span> evaluate to <span class="inline">true</span>, and if the first one is <span class="inline">false</span> then the second one won't even be checked.</p>
+  <p>This is called "short circuiting" the code, so when combining expressions to check, you should ensure that the "cheapest" one for performance is always the first to avoid evaluating the more expensive ones if the first evaluates to <span class="inline">false</span>.</p>
+  <p>In a similar vein, if a condition will can be evaluated as&nbsp;<span class="inline">true</span> or <span class="inline">false</span> at compile time, then the entire condition will be removed from the code, for example, say you have a <a href="../Variables/Constants.htm">macro</a> <span class="inline">DEBUG_ON</span>&nbsp;for debugging and it can be either <span class="inline">true</span> or <span class="inline">false</span> - when it is set to <span class="inline">false</span> then the following code block will be stripped from the game when it is compiled:</p>
+  <p class="code">if (DEBUG_ON == true) <br>
     {<br>
     &nbsp; &nbsp; show_debug_message("Instances = " + string(instance_count));<br>
     }</p>
-  <p>You can also perform <b>conditional operations</b> (also know as <b>ternary</b> operations), which are essentially a "shortcut" way of performing a basic <span class="inline">if</span>. It has the following syntax:</p>
+  <h2>Ternary Operators</h2>
+  <p>You can also perform <b>conditional operations</b> (also know as <b>ternary</b> operations), which is essentially a "shortcut" way of performing a basic <span class="inline">if</span>. It has the following syntax:</p>
   <p class="code">variable = &lt;condition&gt; ? &lt;statement1 (if <i>true</i>)&gt; : &lt;statement2 (if <i>false</i>)&gt;</p>
   <p>The conditional operator "<span class="inline">?</span>" will return one of two given values depending on whether the condition expression evaluates to <span class="inline">true</span> or <span class="inline">false</span>, for example:</p>
   <p class="code">var temp_x = (x &lt; (room_width / 2)) ? 32 : (room_width - 32);</p>
   <p>The above code will check the value of "x" against the value of half the room width and then if it is less it will set "<span class="inline">temp_x</span>" to 32 otherwise "<span class="inline">temp_x</span>" will be room width - 32. Here are a few more examples of use:</p>
   <p class="code">draw_text(x, y, "The fee is " + (global.Member ? "$2.00" : "$10.00"));<br>
-    path_start(((global.level &gt; 10) ? path_hard : path_easy;), 2, path_action_reverse, true);<br>
-    (--hp &lt;= 0) ? instance_destroy() : score += 10;</p>
-  <p>It is worth noting too that you can nest conditional operations but that if you do then each operation will need to be enclosed in brackets, for example:</p>
+    path_start(((global.level &gt; 10) ? path_hard : path_easy;), 2, path_action_reverse, true);</p>
+  <p>You can nest conditional operations, but if you do then each operation will need to be enclosed in brackets, for example:</p>
   <p class="code">var c = a ? "foo" : (b ? "bar" : "whee"); // Correct<br>
     var c = a ? "foo" : b ? "bar" : "whee";&nbsp;&nbsp; // Will cause an error</p>
-  <p>&nbsp;</p>
+  <p>Note that conditional operations must be part of an expression and cannot go on the left-hand side of an assignment. For example, the following statement doesn't work:&nbsp;</p>
+  <p class="code">(--hp &lt;= 0) ? instance_destroy() : score += 10;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1151,7 +1155,7 @@
         <div style="float:right">Next:&nbsp;<a href="../Addressing_Variables_In_Other_Instances.htm">Addressing Variables In Other Instances</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 if

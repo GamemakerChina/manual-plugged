@@ -1624,7 +1624,7 @@
       <h4>Rotate End Event</h4>
       <p class="code">rotating = false;</p>
       <h4>Step Event</h4>
-      <p class="code">if !rotating<br> &nbsp; &nbsp; {<br> &nbsp; &nbsp; var _a = camera_get_view_angle(view_camera[0]);<br> &nbsp; &nbsp; var _adif = angle_difference(view_a, _a);<br> &nbsp; &nbsp; _a += median(-5, _adif, 5);<br> &nbsp; &nbsp; camera_set_view_angle(view_camera[0], _a);<br> &nbsp; &nbsp; }</p>
+      <p class="code">if (!rotating) <br> &nbsp; &nbsp; {<br> &nbsp; &nbsp; var _a = camera_get_view_angle(view_camera[0]);<br> &nbsp; &nbsp; var _adif = angle_difference(view_a, _a);<br> &nbsp; &nbsp; _a += median(-5, _adif, 5);<br> &nbsp; &nbsp; camera_set_view_angle(view_camera[0], _a);<br> &nbsp; &nbsp; }</p>
       <p class="dropspot">The above code uses the Rotate End event to detect when the user stops the gesture and then sets a variable. This variable is then used in the step event to rotate the view camera back to its original position.</p>
       <p class="dropspot">&nbsp;</p>
     </div>
@@ -1640,7 +1640,7 @@
         <div style="float:right">Next: <a href="Event_Order.htm">Event Order</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Gesture Events

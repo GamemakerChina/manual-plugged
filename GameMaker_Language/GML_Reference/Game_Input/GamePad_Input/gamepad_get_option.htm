@@ -1066,25 +1066,25 @@
         <th>Description</th>
      </tr>
       <tr>
-        <td>device</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>device</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>Which gamepad device "slot" to check.</td>
      </tr>
       <tr>
-        <td>option_name</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>option_name</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The name of the option to get the value from (a string, see the table above)</td>
      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span>, <span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span>, <span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span>, or&nbsp;<span data-keyref="Type_Void">N/A</span> (depends on platform and option)</p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span>, <span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span>, <span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span>, or&nbsp;<span data-keyref="Type_Void">N/A</span> (depends on platform and option)</p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">for(var i = 0; i &lt; 12; ++i;)<br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;if gamepad_is_connected(i) &amp;&amp; gamepad_get_description(i) == "tvOS Siri Remote"<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (gamepad_is_connected(i) &amp;&amp; gamepad_get_description(i) == "tvOS Siri Remote") <br>
     &nbsp; &nbsp; {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if gamepad_get_option(i, "allow_rotation") == false<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (gamepad_get_option(i, "allow_rotation") == false) <br>
     &nbsp; &nbsp; &nbsp; &nbsp; {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gamepad_set_option(i, "allow_rotation", true);<br>
     &nbsp; &nbsp; &nbsp; &nbsp; }<br>
@@ -1101,7 +1101,7 @@
         <div style="float:right">Next: <a href="gamepad_set_button_threshold.htm"> gamepad_set_button_threshold </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_option

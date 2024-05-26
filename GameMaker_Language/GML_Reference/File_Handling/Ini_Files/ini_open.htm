@@ -1032,24 +1032,27 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ini_open</h1>
-  <p>This opens an ini_file for reading and/writing. If the ini_file does not exist at the location you are checking, <span data-keyref="GameMaker Name">GameMaker</span> may create one, but only if you write data to it. If you have only read information from the ini file, then the
-    default values for the read function will be returned, but the ini file will <i>not</i> actually be created.</p>
-  <p>Please note that you can only have <b>one</b> ini file open at any one time and remember to use <a href="ini_close.htm"><span class="inline">ini_close()</span></a> once you're finished reading/writing from the .ini file as the information is not actually stored to
-    disk until then (it is also stored in memory until the file is closed).</p>
-  <p class="note"><b></b><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">File System</a>&nbsp;for more information.</p>
+  <p>This opens an ini_file for reading and/writing. If the ini_file does not exist at the location you are checking, <span data-keyref="GameMaker Name">GameMaker</span> may create one, but only if you write data to it. If you have only read information from the ini file, then the default values for the read function will be returned, but the ini file will <i>not</i> actually be created.</p>
+  <p>Please note that you can only have <b>one</b> ini file open at any one time and remember to use <a href="ini_close.htm"><span class="inline">ini_close()</span></a> once you're finished reading/writing from the .ini file as the information is not actually stored to disk until then (it is also stored in memory until the file is closed).<b></b></p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_GM_FileSystem_Sandboxed.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>This may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">The File System</a> for more information.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
   <p class="code">ini_open(name);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td>name</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>name</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The filename for the .ini file.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -1057,10 +1060,10 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">ini_open("Settings/savedata.ini");<br> score = ini_read_real("save1", "score", 0);<br> ini_close();
-  </p>
-  <p>This will open 'savedata.ini' and read the score value under the section "save1" with the key "score" in it, then close the .ini again. Should there be no value under "save1", "score" or there is no "savedata.ini"
-    file present, score will be set to 0 (the default value). Note that the ini file has been placed in the sub-directory "Settings", which is the folder that holds the ini file in the Asset Browser included files.</p>
+  <p class="code">ini_open("Settings/savedata.ini");<br>
+    score = ini_read_real("save1", "score", 0);<br>
+    ini_close();</p>
+  <p>This will open 'savedata.ini' and read the score value under the section "save1" with the key "score" in it, then close the .ini again. Should there be no value under "save1", "score" or there is no "savedata.ini" file present, score will be set to 0 (the default value). Note that the ini file has been placed in the sub-directory "Settings", which is the folder that holds the ini file in the Asset Browser included files.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
@@ -1071,7 +1074,7 @@
         <div style="float:right">Next:&nbsp;<a href="ini_close.htm">ini_close</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ini_open

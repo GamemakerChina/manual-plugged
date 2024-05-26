@@ -1013,7 +1013,7 @@
   <meta name="rh-index-keywords" content="string_trim_start">
   <meta name="search-keywords" content="string_trim_start">
   <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt">
-</head>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Strings/string_trim_end.htm"><meta name="brsprev" value="GameMaker_Language/GML_Reference/Strings/string_trim.htm"></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -1033,14 +1033,15 @@
 
 
   <h1><span data-field="title" data-format="default">string_trim_start</span></h1>
-  <p><span>This function returns a new string with all leading white-space characters removed.</span></p>
+  <p><span>This function returns a new string with all leading white-space characters removed (i.e. on the left side of the string).</span></p>
+  <p>Passing an array of strings as the second argument (<span class="inline2">substr</span>)&nbsp;will make the function remove any of those substrings at the start of the string, instead of white-space. These substrings may be repeated at the start, in which case all continuous occurrences will be removed. See <strong>Example 3</strong> below.</p>
   <div data-conref="../../../assets/snippets/Note_whitespace_characters.hts">
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The following characters are white-space characters: space (" "), tab ("\t"), carriage return ("\r"), newline ("\n"), form feed ("\f") and vertical tab ("\v"). See&nbsp;<a href="../../../Additional_Information/Whitespace_Characters.htm">White-space Characters</a>&nbsp;for the full list, including Unicode characters.</p>
 
 </div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">string_trim_start</span>(str);</p>
+  <p class="code"><span data-field="title" data-format="default">string_trim_start</span>(str, [<span class="misspell-word">substr</span>]);</p>
   <table>
     <colgroup>
       <col>
@@ -1055,20 +1056,33 @@
       </tr>
       <tr>
         <td>str</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The string to trim</td>
+      </tr>
+      <tr>
+        <td>substr</td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../GML_Overview/Arrays.htm">Array</a></span>&nbsp;of&nbsp;<span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span><a href="Strings.htm">s</a></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span>&nbsp;An array containing strings to trim from the start of the string</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
+  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></p>
   <p>&nbsp;</p>
-  <h4>Example:</h4>
+  <h4>Example 1:</h4>
   <p class="code">var _string_with_a_bit_of_everything = "&nbsp; &nbsp; &nbsp;\t\t\t\tHello World";<br>
     var _trimmed_string = <span data-field="title" data-format="default">string_trim_start</span>(_string_with_a_bit_of_everything);<br>
     show_debug_message(_trimmed_string);</p>
   <p>The above code first creates a temporary string named&nbsp;<span class="inline2">_string_with_a_bit_of_everything</span>. This string contains a couple of leading spaces and tabs before the actual text. It then trims all whitespace from the start of the string by calling&nbsp;<span class="inline2"><span data-field="title" data-format="default">string_trim_start</span></span>&nbsp;and the result is stored in a new temporary variable&nbsp;<span class="inline2">_trimmed_string</span>. Finally this new string is shown in a debug message.</p>
+  <h4>Example 2 (Using An Array):</h4>
+  <p class="code">var _string = "ThisThis is an object I love"<br>
+    var _remove = ["This", "is", "love"]<br>
+    var _trimmed = <span data-field="title" data-format="default">string_trim_start</span>(_string, _remove);<br>
+    <br>
+    show_debug_message(_trimmed) // Prints "&nbsp;is an object I love"
+  </p>
+  <p>This removes the word&nbsp;<span class="inline2">"This"</span>&nbsp;from&nbsp;the start of the string.&nbsp;<span class="inline2">"This"</span> appears twice at the start and is removed both times. The word <span class="inline2">"is"</span> is not removed, because it's not at the very start of the string, and <span class="inline2">"love"</span> is not removed as it's at the <a href="string_trim_end.htm">end</a>.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
@@ -1078,7 +1092,7 @@
         <div>Next:&nbsp;<a href="string_trim_end.htm">string_trim_end</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 string_trim_start

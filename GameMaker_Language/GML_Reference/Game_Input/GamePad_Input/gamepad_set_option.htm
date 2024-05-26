@@ -1068,17 +1068,17 @@
       </tr>
       <tr>
         <td>device</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>Which gamepad device "slot" to set.</td>
       </tr>
       <tr>
         <td>option_name</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The name of the option to set (a string, see the table above)</td>
       </tr>
       <tr>
         <td>value</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span>,&nbsp;<span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span>, or&nbsp;<span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span>,&nbsp;<span data-keyref="Type_Bool"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Boolean</a></span>, or&nbsp;<span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The value to set the option to (can be boolean, real or string - see the table above)</td>
       </tr>
     </tbody>
@@ -1090,9 +1090,9 @@
   <h4>Example:</h4>
   <p class="code">for(var i = 0; i &lt; 12; ++i;)<br>
     {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;if gamepad_is_connected(i) &amp;&amp; gamepad_get_description(i) == "tvOS Siri Remote"<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (gamepad_is_connected(i) &amp;&amp; gamepad_get_description(i) == "tvOS Siri Remote") <br>
     &nbsp; &nbsp; {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if gamepad_get_option(i, "allow_rotation") == false<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (gamepad_get_option(i, "allow_rotation") == false) <br>
     &nbsp; &nbsp; &nbsp; &nbsp; {<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gamepad_set_option(i, "allow_rotation", true);<br>
     &nbsp; &nbsp; &nbsp; &nbsp; }<br>
@@ -1109,7 +1109,7 @@
         <div style="float:right">Next: <a href="gamepad_axis_count.htm"> gamepad_axis_count </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_option

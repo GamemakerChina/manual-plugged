@@ -1069,7 +1069,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Constant_Network_Config"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm">Network Config Constant</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Constant_Network_Config"><a target="_blank" href="network_set_config.htm">Network Config Constant</a></span></th>
       </tr>
       <tr>
         <th>Constant</th>
@@ -1125,7 +1125,7 @@
     <li>It is possible to have two separate UDP sockets, one with reliable UDP enabled for one with reliable UDP disabled for the other.</li>
   </ul>
   <h3>TCP Timeout</h3>
-  <p>The option&nbsp;<span class="inline">network_config_avoid_time_wait</span>&nbsp;is for&nbsp;<strong>TCP connections only</strong>&nbsp;and can be used to set the <span class="inline">SO_LINGER</span> value to <span class="inline2">0</span>&nbsp;t<span>o avoid large numbers of connections sitting in the <span class="inline">TIME_WAIT</span>&nbsp;</span><span>state, tying up all the available resources on a server.</span>&nbsp;This change is permanent while the socket is alive and cannot be undone.</p>
+  <p>The option&nbsp;<span class="inline">network_config_avoid_time_wait</span>&nbsp;is for&nbsp;<strong>TCP connections only</strong>&nbsp;and can be used to set the <span class="inline">SO_LINGER</span> value to <span class="inline2">0</span>&nbsp;to avoid large numbers of connections sitting in the <span class="inline">TIME_WAIT</span>&nbsp;state, tying up all the available resources on a server.&nbsp;This change is permanent while the socket is alive and cannot be undone.</p>
   <h3>Multicast</h3>
   <p>The options <span class="inline">network_config_enable_multicast</span> and <span class="inline">network_config_disable_multicast</span> can be used to enable/disable multicast support on UDP.&nbsp;</p>
   <p>When multicast is enabled on a UDP socket, it will be joined to the all-hosts (FF02::1) multicast group on each network interface in the system, and calls to <span class="inline3_func"><a href="network_send_broadcast.htm">network_send_broadcast</a></span> will transmit multicast packets on those groups in addition to IPv4 broadcasts.</p>
@@ -1142,19 +1142,19 @@
       </tr>
       <tr>
         <td>config_value</td>
-        <td><span data-keyref="Type_Constant_Network_Config"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm">Network Config Constant</a></span></td>
+        <td><span data-keyref="Type_Constant_Network_Config"><a target="_blank" href="network_set_config.htm">Network Config Constant</a></span></td>
         <td>The config constant to set (refer to the table at the top of this page).</td>
       </tr>
       <tr>
         <td>setting</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+        <td><span data-keyref="Type_Any"><a target="_blank" href="../../GML_Overview/Data_Types.htm#variable">Any</a></span></td>
         <td>The setting value of the config.</td>
       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
+  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../GML_Overview/Data_Types.htm">String</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
   <p class="code">network_set_config(network_config_connect_timeout, 1000);<br>
@@ -1169,7 +1169,7 @@
         <div style="float:right">Next: <a href="network_set_timeout.htm">network_set_timeout</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 network_set_config

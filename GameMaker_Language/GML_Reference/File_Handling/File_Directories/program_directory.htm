@@ -1033,31 +1033,41 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>program_directory</h1>
-  <p>This will return the directory where the game executable is stored. However this may not always be useful, particularly as some devices run the exe from a *.zip file, so this would return the same no matter where the game is actually running from.</p>
-  <p class="note"><b></b><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">File System</a>&nbsp;for more information.</p>
-  <p class="note"><b>NOTE</b>: If you disable the sandbox then you still will not be able to write to this directory to prevent any possible issue with deleting required game files.</p>
+  <h1><span data-field="title" data-format="default">program_directory</span></h1>
+  <p>This function returns the directory where the game's runner (executable) is stored. However, this may not always be useful, particularly as some devices run the executable from a *.zip file, so this would return that location no matter where the extracted executable is actually running from.</p>
+  <p>This is different from <span class="inline2"><a href="working_directory.htm">working_directory</a></span>, which stores where the game's files are stored, however by default they are in the same location.</p>
+  <div data-conref="../../../../assets/snippets/Note_Warning_GM_FileSystem_Sandboxed.hts">
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;</b>This may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on&nbsp;<a href="../../../../Additional_Information/The_File_System.htm">The File System</a> for more information.</p>
+
+</div>
+  <div data-conref="../../../../assets/snippets/Warning_directory_os_permissions.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span>&nbsp;<span data-keyref="GameMaker Name">GameMaker</span>&nbsp;doesn't limit writing to this directory so whether this is possible depends&nbsp;on OS permissions.&nbsp;It is however discouraged that you write to <span class="inline2"><span data-field="title" data-format="default">program_directory</span></span>, as it is possible to damage the game installation this way.</p>
+
+</div>
+  <div data-conref="../../../../assets/snippets/Note_Variable_Contains_Path_Including_Final_Slash.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span>&nbsp;The&nbsp;<span class="inline2"><span data-field="title" data-format="default">program_directory</span></span> variable stores the path <b>including</b> the final slash.</p>
+
+</div>
   <p>&nbsp;</p>
   <h4>Syntax:</h4>
-  <p class="code">program_directory</p>
+  <p class="code"><span data-field="title" data-format="default">program_directory</span></p>
   <p>&nbsp;</p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
+  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></p>
   <p>&nbsp;</p>
   <h4>Example:</h4>
-  <p class="code">dir = program_directory;</p>
+  <p class="code">dir = <span data-field="title" data-format="default">program_directory</span>;</p>
   <p>This will store the directory where the executable is stored in a variable.</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_Directories.htm">File Directories</a></div>
-        <div style="float:right">Next:&nbsp;<a href="directory_exists.htm">directory_exists</a></div>
+        <div style="float:left">Back:&nbsp;<a href="File_Directories.htm">File Directories</a></div>
+        <div style="float:right">Next:&nbsp;<a href="cache_directory.htm">cache_directory</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 program_directory

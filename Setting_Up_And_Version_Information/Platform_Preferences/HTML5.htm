@@ -1045,7 +1045,10 @@
   <ul class="colour">
     <li><strong>Obfuscate</strong>: Whether the HTML5 runner code should be obfuscated in debug mode or not.</li>
     <li><strong>Pretty Print</strong>: Whether the game code should be pretty printed (formatted) or not.</li>
-    <li><strong>Remove Unused Functions</strong>: Whether unused functions should be removed from the final JavaScript code (removes both built-in GameMaker functions and custom GML functions which are unused).</li>
+    <li><strong>Remove Unused Functions</strong>: Whether unused functions should be removed from the final JavaScript code (removes both built-in <span data-keyref="GameMaker Name">GameMaker</span>&nbsp;functions and custom GML functions which are unused). Enabling this reduces runtime size.</li>
+    <li><strong>Enable Debug Rename</strong>: This option prefixes identifiers in the minified code with <span class="inline2">obf_</span>&nbsp;instead of renaming them to short ones, making it easier to look for things when debugging.</li>
+    <li><strong>Enable Conditional Compilation</strong>: This option enables conditional compilation of the runtime code,&nbsp;<span>which will strip parts that are unused by your game. It can be used together with <strong>Remove Unused Functions</strong> for best results.</span></li>
+    <li><strong>Keep JSDoc</strong>:&nbsp;This enables or disables JSDoc comments in the game code.</li>
     <li><strong>Verbose</strong>: Enable or disable verbose logging in the Output Log while building for HTML5.</li>
     <li><strong>Default packaging type</strong>: When building a final HTML5 executable package, you can choose between <strong>Package as loose files</strong> - which will simply generate all the required files in a folder - or <strong>Package as Zip</strong> - which will create a compressed <span class="inline">ZIP </span>file that will have the game and any additional files within. By default you will be given a choice of which of these two options you wish to choose on compile, but you can set this preference to always use one or the other. Note that when this option is set to <em>Show Dialogue</em>, in the actual dialogue window that pops up on compile, choosing "Remember Packaging Option" will set this preference to the option you select.</li>
     <li><strong>Default Web Server Port</strong>: This lets you change the default port for the HTML5 web server. Default value is 51264.</li>
@@ -1056,7 +1059,6 @@
   <p class="note"><span data-conref="../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span>&nbsp;When using a particular target device (i.e. browser), the IP and port values set for that particular device are used instead of these preferences. Check <a href="../The_Device_Manager.htm#h">The Device Manager</a>&nbsp;to see a list of your devices with their details.</p>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
-  <p>&nbsp;</p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -1064,7 +1066,7 @@
         <div style="float:right">Next:&nbsp;<a href="GX_Games_Preferences.htm">GX.games</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 HTML5 Preferences
