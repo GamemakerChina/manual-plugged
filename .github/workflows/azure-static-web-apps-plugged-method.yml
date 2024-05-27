@@ -26,11 +26,12 @@ jobs:
 
       - name: Replace assets URL
         run: |
-          npm install -g glob
-          wget https://raw.githubusercontent.com/GamemakerChina/manual-assets/buildfiles/forazure_ReplaceAssetsSrc.js -O forazure_ReplaceAssetsSrc.js
-          node forazure_ReplaceAssetsSrc.js
-          rm -rf assets/Images
-          rm -rf assets/Videos
+          git clone https://github.com/GamemakerChina/manual-assets -b buildfiles --depth 1 build
+          cd build
+          npm install
+          npm run replace
+          rm -rf ../assets/Images
+          rm -rf ../assets/Videos
           
       - name: Build And Deploy
         id: builddeploy
@@ -44,6 +45,7 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "." # Built app content directory - optional
+          app_build_command: "rm -rf build"
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
