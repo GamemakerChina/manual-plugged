@@ -37,6 +37,12 @@ jobs:
           cd build
           npm install
           npm run replace
+
+      - name: Minify all files
+        run: |
+          cd build/build
+          npm install -g minify
+          minify ../*
           
       - name: Build And Deploy
         id: builddeploy
