@@ -41,8 +41,10 @@ jobs:
       - name: Minify all files
         run: |
           cd build/build
-          npm install -g minify
-          minify ../*
+          wget https://github.com/tdewolff/minify/releases/download/v2.20.32/minify_linux_amd64.tar.gz
+          tar -zxvf minify_linux_amd64.tar.gz
+          chmod +x minify
+          ./minify -a ../
           
       - name: Build And Deploy
         id: builddeploy
