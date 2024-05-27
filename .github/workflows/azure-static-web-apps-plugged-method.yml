@@ -28,7 +28,7 @@ jobs:
           MODE: local
           SOURCE: ./
           TARGET: ./build/
-          ARGS: -avz --delete --exclude=/.git/ --exclude=/.github/
+          ARGS: -avz --delete --exclude=/.git/ --exclude=/.github/ --exclude /assets/Images/ --exclude /assets/Videos/
 
       - name: Replace assets URL
         run: |
