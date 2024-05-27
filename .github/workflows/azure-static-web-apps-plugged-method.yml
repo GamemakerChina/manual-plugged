@@ -19,6 +19,19 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Set Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Replace assets URL
+        run: |
+          npm install -g glob
+          wget https://raw.githubusercontent.com/GamemakerChina/manual-assets/buildfiles/forazure_ReplaceAssetsSrc.js -O forazure_ReplaceAssetsSrc.js
+          node forazure_ReplaceAssetsSrc.js
+          rm -rf assets/Images
+          rm -rf assets/Videos
+          
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
