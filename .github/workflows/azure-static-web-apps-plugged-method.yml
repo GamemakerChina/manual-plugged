@@ -31,6 +31,11 @@ jobs:
           cd build
           npm install
           npm run replace
+
+      - name: Output files
+        run: |
+          ls -a
+          ls -a assets
           
       - name: Build And Deploy
         id: builddeploy
