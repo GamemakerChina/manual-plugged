@@ -39,12 +39,9 @@ jobs:
           npm run replace
 
       - name: Minify all files
-        run: |
-          cd build/build
-          wget https://github.com/tdewolff/minify/releases/download/v2.20.32/minify_linux_amd64.tar.gz
-          tar -zxvf minify_linux_amd64.tar.gz
-          chmod +x minify
-          ./minify -a ../
+        uses: docker://devatherock/minify-js:3.1.0
+        with:
+          directory: 'build'      # Optional
           
       - name: Build And Deploy
         id: builddeploy
@@ -59,6 +56,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           skip_app_build: true
+          api_build_command: "rm -rf ./build/build"
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
