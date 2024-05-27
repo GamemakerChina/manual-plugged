@@ -31,8 +31,11 @@ jobs:
           cd build
           npm install
           npm run replace
-          rm -rf ../assets/Images
-          rm -rf ../assets/Videos
+
+      - name: Remove assets
+        run: |
+          rm -rf assets/Images
+          rm -rf assets/Videos
           
       - name: Build And Deploy
         id: builddeploy
