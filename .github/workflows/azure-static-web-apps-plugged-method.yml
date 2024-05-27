@@ -41,7 +41,8 @@ jobs:
       - name: Minify all files
         uses: docker://devatherock/minify-js:3.1.0
         with:
-          directory: 'build'      # Optional
+          directory: 'build'
+          add_suffix: false
           
       - name: Build And Deploy
         id: builddeploy
